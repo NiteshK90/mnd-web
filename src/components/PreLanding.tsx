@@ -16,13 +16,11 @@ export default function PreLanding() {
           <span className="text-white text-sm">The boring one</span>
           <button
             onClick={() => setIsFun(!isFun)}
-            className={`relative w-12 h-6 rounded-full transition-colors duration-300 ${
-              isFun ? "bg-white" : "bg-zinc-600"
-            }`}
+            className="relative w-20 h-6 rounded-full bg-transparent border border-white cursor-pointer"
           >
             <span
-              className={`absolute left-0 top-1 w-4 h-4 rounded-full transition-transform duration-300 ${
-                isFun ? "translate-x-7 bg-black" : "translate-x-1 bg-white"
+              className={`absolute left-1 top-1 w-4 h-4 rounded-full border border-white bg-transparent transition-transform duration-300 ease-in-out ${
+                isFun ? "translate-x-14" : "translate-x-0"
               }`}
             />
           </button>
