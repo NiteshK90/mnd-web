@@ -35,8 +35,8 @@ export default function PreLanding() {
         <span className="text-white text-sm font-semibold tracking-[0.3em]">
           PRIVACY
         </span>
-        <div className="w-px h-6 bg-white" />
-        <Image src="/mnd-white-logo.png" alt="MND Logo" width={60} height={20} />
+        <div className="w-px h-8 bg-white" />
+        <Image src="/mnd-white-logo.png" alt="MND Logo" width={80} height={20} />
       </div>
     </div>
   );
