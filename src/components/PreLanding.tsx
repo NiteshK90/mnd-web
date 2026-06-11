@@ -1,10 +1,35 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 export default function PreLanding() {
   const [isFun, setIsFun] = useState(false);
+  const router = useRouter();
+  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  useEffect(() => {
+    timerRef.current = setTimeout(() => {
+      router.push("/boring");
+    }, 20000);
+
+    return () => {
+      if (timerRef.current) clearTimeout(timerRef.current);
+    };
+  }, [router]);
+
+  const handleToggle = () => {
+    if (!isFun) {
+      setIsFun(true);
+      if (timerRef.current) clearTimeout(timerRef.current);
+      timerRef.current = setTimeout(() => {
+        router.push("/fun");
+      }, 2000);
+    } else {
+      setIsFun(false);
+    }
+  };
 
   return (
     <div className="flex flex-col min-h-screen bg-black">
@@ -18,7 +43,7 @@ export default function PreLanding() {
           <div className="flex items-center justify-center gap-3">
             <span className="text-white text-sm">The boring one</span>
             <button
-              onClick={() => setIsFun(!isFun)}
+              onClick={handleToggle}
               className="relative w-20 h-6 rounded-full bg-transparent border border-white cursor-pointer"
             >
               <span
@@ -29,6 +54,7 @@ export default function PreLanding() {
             </button>
             <span className="text-white text-sm">The fun one!</span>
           </div>
+
         </div>
       </div>
       <div className="flex justify-end items-center gap-4 pb-6 pr-6">
