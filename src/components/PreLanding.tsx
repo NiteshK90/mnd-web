@@ -52,7 +52,7 @@ export default function PreLanding() {
                 }`}
               />
             </button>
-            <span className="text-white text-sm">The fun one!</span>
+            <span className="text-white text-sm italic font-bold">The Fun One!</span>
           </div>
 
         </div>
