@@ -12,7 +12,7 @@ export default function PreLanding() {
   const handleToggle = () => {
     setIsFun(!isFun);
     setTimeout(() => {
-      router.push("/fun");
+      router.push("/landing");
     }, 2000);
   };
 
