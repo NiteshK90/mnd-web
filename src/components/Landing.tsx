@@ -6,13 +6,13 @@ import Link from "next/link";
 import ArrowRight from "@/components/icons/ArrowRight";
 
 const sections = [
-  { label: "About",        bg: "bg-indigo-900" },
-  { label: "Services",     bg: "bg-emerald-900" },
-  { label: "Work",         bg: "bg-amber-900" },
-  { label: "Process",      bg: "bg-cyan-900" },
-  { label: "Team",         bg: "bg-violet-900" },
-  { label: "Testimonials", bg: "bg-teal-900" },
-  { label: "Contact",      bg: "bg-fuchsia-900" },
+  { label: "About" },
+  { label: "Services" },
+  { label: "Work" },
+  { label: "Process" },
+  { label: "Team" },
+  { label: "Testimonials" },
+  { label: "Contact" },
 ];
 
 const TOTAL_SECTIONS = sections.length + 2; // Hero + sections + Footer
@@ -69,11 +69,11 @@ export default function Landing() {
         </div>
       </section>
 
-      {sections.map(({ label, bg }, i) => (
+      {sections.map(({ label }, i) => (
         <section
           key={label}
           ref={(el) => { sectionRefs.current[i + 1] = el; }}
-          className={`${bg} h-screen w-full snap-start flex items-center justify-center`}
+          className="bg-mnd-linen h-screen w-full snap-start flex items-center justify-center"
         >
           <h2 className="text-white text-4xl font-bold">{label}</h2>
         </section>
@@ -81,21 +81,27 @@ export default function Landing() {
 
       <footer
         ref={(el) => { sectionRefs.current[TOTAL_SECTIONS - 1] = el; }}
-        className="bg-[url('/landing/footer.png')] bg-cover bg-center h-screen w-full snap-start flex items-center justify-center"
+        className="bg-mnd-linen bg-[url('/landing/footer.png')] bg-cover bg-center h-screen w-full snap-start flex items-center justify-center"
       >
         <p className="text-white text-sm tracking-widest">© MND</p>
       </footer>
 
       <div className="fixed right-6 top-1/2 -translate-y-1/2 flex flex-col gap-3 z-50">
-        {Array.from({ length: TOTAL_SECTIONS }).map((_, i) => (
-          <button
-            key={i}
-            onClick={() => scrollTo(i)}
-            className={`h-4 w-4 border border-white rounded-full transition-all duration-300 cursor-pointer ${
-              i === activeIndex ? "bg-white" : "bg-transparent"
-            }`}
-          />
-        ))}
+        {Array.from({ length: TOTAL_SECTIONS }).map((_, i) => {
+          const isHero = activeIndex === 0;
+          const isActive = i === activeIndex;
+          return (
+            <button
+              key={i}
+              onClick={() => scrollTo(i)}
+              className={`h-4 w-4 rounded-full transition-all duration-300 cursor-pointer border ${
+                isHero
+                  ? `border-white ${isActive ? "bg-white" : "bg-transparent"}`
+                  : `border-black ${isActive ? "bg-black" : "bg-transparent"}`
+              }`}
+            />
+          );
+        })}
       </div>
     </div>
   );
