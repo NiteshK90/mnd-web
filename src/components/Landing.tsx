@@ -2,6 +2,7 @@
 
 import { useRef, useState, useEffect } from "react";
 import Navbar from "@/components/Navbar";
+import StickyNavbar from "@/components/StickyNavbar";
 import Link from "next/link";
 import ArrowRight from "@/components/icons/ArrowRight";
 
@@ -69,15 +70,18 @@ export default function Landing() {
         </div>
       </section>
 
-      {sections.map(({ label }, i) => (
-        <section
-          key={label}
-          ref={(el) => { sectionRefs.current[i + 1] = el; }}
-          className="bg-mnd-linen h-screen w-full snap-start flex items-center justify-center"
-        >
-          <h2 className="text-white text-4xl font-bold">{label}</h2>
-        </section>
-      ))}
+      <div className="relative py-6 bg-mnd-linen">
+        <StickyNavbar />
+        {sections.map(({ label }, i) => (
+          <section
+            key={label}
+            ref={(el) => { sectionRefs.current[i + 1] = el; }}
+            className="h-screen w-full snap-start flex items-center justify-center"
+          >
+            <h2 className="text-white text-4xl font-bold">{label}</h2>
+          </section>
+        ))}
+      </div>
 
       <footer
         ref={(el) => { sectionRefs.current[TOTAL_SECTIONS - 1] = el; }}
@@ -88,14 +92,14 @@ export default function Landing() {
 
       <div className="fixed right-6 top-1/2 -translate-y-1/2 flex flex-col gap-3 z-50">
         {Array.from({ length: TOTAL_SECTIONS }).map((_, i) => {
-          const isHero = activeIndex === 0;
+          const isWhiteSection = activeIndex === 0 || activeIndex === TOTAL_SECTIONS - 1;
           const isActive = i === activeIndex;
           return (
             <button
               key={i}
               onClick={() => scrollTo(i)}
               className={`h-4 w-4 rounded-full transition-all duration-300 cursor-pointer border ${
-                isHero
+                isWhiteSection
                   ? `border-white ${isActive ? "bg-white" : "bg-transparent"}`
                   : `border-black ${isActive ? "bg-black" : "bg-transparent"}`
               }`}
