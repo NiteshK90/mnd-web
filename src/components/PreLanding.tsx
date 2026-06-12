@@ -9,26 +9,11 @@ export default function PreLanding() {
   const router = useRouter();
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  useEffect(() => {
-    timerRef.current = setTimeout(() => {
-      router.push("/boring");
-    }, 20000);
-
-    return () => {
-      if (timerRef.current) clearTimeout(timerRef.current);
-    };
-  }, [router]);
-
   const handleToggle = () => {
-    if (!isFun) {
-      setIsFun(true);
-      if (timerRef.current) clearTimeout(timerRef.current);
-      timerRef.current = setTimeout(() => {
-        router.push("/fun");
-      }, 2000);
-    } else {
-      setIsFun(false);
-    }
+    setIsFun(!isFun);
+    setTimeout(() => {
+      router.push("/fun");
+    }, 2000);
   };
 
   return (
