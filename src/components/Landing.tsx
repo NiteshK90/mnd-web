@@ -48,10 +48,16 @@ export default function Landing() {
     <div ref={containerRef} className="h-screen overflow-y-scroll snap-y snap-mandatory">
       <section
         ref={(el) => { sectionRefs.current[0] = el; }}
-        className="relative bg-[url('/landing/hero.png')] bg-cover bg-center h-screen w-full snap-start flex items-center justify-center"
+        className="relative bg-[url('/landing/hero.png')] bg-cover bg-center h-screen w-full snap-start py-6 px-20 flex flex-col"
       >
-        <div className="absolute top-6 left-0 right-0 flex justify-center px-6">
+        <div className="flex justify-center px-6">
           <Navbar />
+        </div>
+
+        <div className="flex-1 flex items-center">
+          <div className="font-canela text-[104px] font-semibold leading-[96px] tracking-[-2.5px] w-[550px] text-mnd-dark">
+            Stellar engineers on bench for you
+          </div>
         </div>
       </section>
 

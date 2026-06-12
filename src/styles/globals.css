@@ -1,4 +1,11 @@
 @import "tailwindcss";
+
+@font-face {
+  font-family: "Canela";
+  src: url("/fonts/Canela.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+}
 @config "../../tailwind.config.ts";
 
 :root {

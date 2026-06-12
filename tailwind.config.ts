@@ -4,6 +4,10 @@ export default {
       colors: {
         "mnd-cream": "#EAE7E3",
         "mnd-navy": "#083B5C",
+        "mnd-dark": "#17141A",
+      },
+      fontFamily: {
+        canela: ["Canela", "serif"],
       },
     },
   },
