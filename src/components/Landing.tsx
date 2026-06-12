@@ -1,3 +1,6 @@
+"use client";
+
+import { useRef, useState, useEffect } from "react";
 import Navbar from "@/components/Navbar";
 
 const sections = [
@@ -10,27 +13,76 @@ const sections = [
   { label: "Contact",      bg: "bg-fuchsia-900" },
 ];
 
+const TOTAL_SECTIONS = sections.length + 2; // Hero + sections + Footer
+
 export default function Landing() {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const sectionRefs = useRef<(HTMLElement | null)[]>([]);
+
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const index = sectionRefs.current.indexOf(entry.target as HTMLElement);
+            if (index !== -1) setActiveIndex(index);
+          }
+        });
+      },
+      { root: container, threshold: 0.5 }
+    );
+
+    sectionRefs.current.forEach((el) => el && observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
+
+  const scrollTo = (index: number) => {
+    sectionRefs.current[index]?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
-    <div className="h-screen overflow-y-scroll snap-y snap-mandatory">
-      <section className="relative bg-[url('/landing/hero.png')] bg-cover bg-center h-screen w-full snap-start flex items-center justify-center">
+    <div ref={containerRef} className="h-screen overflow-y-scroll snap-y snap-mandatory">
+      <section
+        ref={(el) => { sectionRefs.current[0] = el; }}
+        className="relative bg-[url('/landing/hero.png')] bg-cover bg-center h-screen w-full snap-start flex items-center justify-center"
+      >
         <div className="absolute top-6 left-0 right-0 flex justify-center px-6">
           <Navbar />
         </div>
       </section>
 
-      {sections.map(({ label, bg }) => (
+      {sections.map(({ label, bg }, i) => (
         <section
           key={label}
+          ref={(el) => { sectionRefs.current[i + 1] = el; }}
           className={`${bg} h-screen w-full snap-start flex items-center justify-center`}
         >
           <h2 className="text-white text-4xl font-bold">{label}</h2>
         </section>
       ))}
 
-      <footer className="bg-[url('/landing/footer.png')] bg-cover bg-center h-screen w-full snap-start flex items-center justify-center">
+      <footer
+        ref={(el) => { sectionRefs.current[TOTAL_SECTIONS - 1] = el; }}
+        className="bg-[url('/landing/footer.png')] bg-cover bg-center h-screen w-full snap-start flex items-center justify-center"
+      >
         <p className="text-white text-sm tracking-widest">© MND</p>
       </footer>
+
+      <div className="fixed right-6 top-1/2 -translate-y-1/2 flex flex-col gap-3 z-50">
+        {Array.from({ length: TOTAL_SECTIONS }).map((_, i) => (
+          <button
+            key={i}
+            onClick={() => scrollTo(i)}
+            className={`h-4 w-4 border border-white rounded-full transition-all duration-300 cursor-pointer ${
+              i === activeIndex ? "bg-white" : "bg-transparent"
+            }`}
+          />
+        ))}
+      </div>
     </div>
   );
 }
