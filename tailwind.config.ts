@@ -6,6 +6,7 @@ export default {
         "mnd-navy": "#083B5C",
         "mnd-dark": "#17141A",
         "mnd-linen": "#FAF6F1",
+        "mnd-ivory": "#FDFBF9",
       },
       fontFamily: {
         canela: ["Canela", "serif"],
