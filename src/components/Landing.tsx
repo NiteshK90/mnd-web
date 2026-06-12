@@ -1,4 +1,4 @@
-export default function FunLanding() {
+export default function Landing() {
   return (
     <div>
       <h1>The Fun One!</h1>
