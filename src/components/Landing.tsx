@@ -2,6 +2,8 @@
 
 import { useRef, useState, useEffect } from "react";
 import Navbar from "@/components/Navbar";
+import Link from "next/link";
+import ArrowRight from "@/components/icons/ArrowRight";
 
 const sections = [
   { label: "About",        bg: "bg-indigo-900" },
@@ -54,9 +56,15 @@ export default function Landing() {
           <Navbar />
         </div>
 
-        <div className="flex-1 flex items-center">
-          <div className="font-canela text-[104px] font-semibold leading-[96px] tracking-[-2.5px] w-[550px] text-mnd-dark">
-            Stellar engineers on bench for you
+        <div className="flex-1 flex flex-col justify-center">
+          <div className="font-canela text-[98px] font-semibold leading-[96px] tracking-[-2.5px] w-[600px] text-mnd-dark">
+            Stellar engineers on bench for you.
+          </div>
+          <div className="mt-6 flex items-center gap-6">
+            <Link href="#" className="flex items-center gap-2 px-8 py-2 bg-mnd-navy text-white rounded-full">
+              <div>Ready when you are</div>
+              <ArrowRight color="white" />
+            </Link>
           </div>
         </div>
       </section>
