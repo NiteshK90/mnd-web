@@ -8,6 +8,7 @@ export default {
         "mnd-linen": "#FAF6F1",
         "mnd-ivory": "#FDFBF9",
         "mnd-charcoal": "#231F20",
+        "mnd-stone": "#4A4643",
       },
       fontFamily: {
         canela: ["Canela", "serif"],
