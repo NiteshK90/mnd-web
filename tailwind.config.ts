@@ -10,6 +10,7 @@ export default {
         "mnd-charcoal": "#231F20",
         "mnd-stone": "#4A4643",
         "mnd-silver": "#A7A3A0",
+        "mnd-espresso": "#1F1A1D",
       },
       fontFamily: {
         canela: ["Canela", "serif"],

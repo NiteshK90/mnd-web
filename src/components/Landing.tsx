@@ -48,7 +48,7 @@ export default function Landing() {
       <HeroSection ref={(el) => { sectionRefs.current[0] = el; }} />
 
       <div className="relative py-6 bg-mnd-linen">
-        <StickyNavbar />
+        <StickyNavbar dark={activeIndex === 6} />
         <AboutSection       ref={(el) => { sectionRefs.current[1] = el; }} />
         <ServicesSection    ref={(el) => { sectionRefs.current[2] = el; }} />
         <WorkSection        ref={(el) => { sectionRefs.current[3] = el; }} />
@@ -62,7 +62,7 @@ export default function Landing() {
 
       <div className="fixed right-6 top-1/2 -translate-y-1/2 flex flex-col gap-3 z-50">
         {Array.from({ length: TOTAL_SECTIONS }).map((_, i) => {
-          const isWhiteSection = activeIndex === 0 || activeIndex === TOTAL_SECTIONS - 1;
+          const isWhiteSection = activeIndex === 0 || activeIndex === 6 || activeIndex === TOTAL_SECTIONS - 1;
           const isActive = i === activeIndex;
           return (
             <button
