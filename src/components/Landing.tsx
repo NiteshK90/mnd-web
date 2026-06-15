@@ -8,7 +8,6 @@ import ArrowRight from "@/components/icons/ArrowRight";
 import ClientTicker from "@/components/ClientTicker";
 
 const sections = [
-  { label: "About" },
   { label: "Services" },
   { label: "Work" },
   { label: "Process" },
@@ -76,13 +75,30 @@ export default function Landing() {
 
       <div className="relative py-6 bg-mnd-linen">
         <StickyNavbar />
+
+        {/* About */}
+        <section
+          ref={(el) => { sectionRefs.current[1] = el; }}
+          className="h-screen w-full snap-start flex flex-col items-center justify-center gap-20 text-center"
+        >
+          <p className="font-canela text-[42px] font-normal leading-[1.15] tracking-[-0.03em] text-mnd-charcoal w-[650px]">
+            <span>Building a great software development team is tough. </span>
+            <span className="italic">Especially now.</span>
+          </p>
+          <div className="w-[62px] h-[5px] bg-mnd-charcoal" />
+          <p className="font-canela text-[42px] font-semibold leading-[1.05] tracking-[-0.03em] text-mnd-charcoal w-[720px]">
+            <div>We&apos;re engineers ourselves.</div>
+            <div>We get it.</div>
+          </p>
+        </section>
+
         {sections.map(({ label }, i) => (
           <section
             key={label}
-            ref={(el) => { sectionRefs.current[i + 1] = el; }}
+            ref={(el) => { sectionRefs.current[i + 2] = el; }}
             className="h-screen w-full snap-start flex items-center justify-center"
           >
-            <h2 className="text-white text-4xl font-bold">{label}</h2>
+            <h2 className="text-4xl font-bold">{label}</h2>
           </section>
         ))}
       </div>
