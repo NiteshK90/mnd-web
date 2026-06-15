@@ -1,4 +1,5 @@
 import { forwardRef } from "react";
+import SectionCard from "@/components/SectionCard";
 
 const blocks = [
   { label: "FOR EVERY", number: "10", description: "Engineers Invited To Apply" },
@@ -52,22 +53,12 @@ const ProcessSection = forwardRef<HTMLElement>((_, ref) => {
         </div>
 
         <div className="mt-10 flex px-12">
-          <div className="bg-white rounded-[28px] shadow-card py-12 px-6 flex flex-col gap-6">
-            <h3 className="font-canela text-[24px] font-semibold leading-[1.1] text-mnd-charcoal">
-              Sourcing
-            </h3>
-            <div className="w-16 h-[3px] bg-mnd-charcoal" />
-            <div className="flex items-center gap-4 justify-end">
-              <div className="text-[58px] italic">"</div>
-              <p className="font-sans text-xs italic font-medium leading-[1.3]">
-                We find them. They don&apos;t find us.<br />
-                Engineers apply on invitation.
-              </p>
-            </div>
-            <p className="font-sans w-[250px] text-sm font-bold leading-[1.35] text-mnd-charcoal">
-              Hand-picked and filtered, we actually chat with each engineer before they begin the process with MND.
-            </p>
-          </div>
+          <SectionCard
+            title="Sourcing"
+            quote="We find them. They don't find us. Engineers apply on invitation."
+            body="Hand-picked and filtered, we actually chat with each engineer before they begin the process with MND."
+            className="w-[420px] h-[470px] px-12 py-12"
+          />
         </div>
       </div>
     </section>

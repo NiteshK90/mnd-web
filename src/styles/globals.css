@@ -34,3 +34,10 @@ body {
   color: var(--foreground);
   font-family: var(--font-inter), sans-serif;
 }
+
+@utility transition-cards {
+  transition:
+    width 400ms cubic-bezier(.22,1,.36,1),
+    opacity 300ms ease,
+    transform 400ms cubic-bezier(.22,1,.36,1);
+}
