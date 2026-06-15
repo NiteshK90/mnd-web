@@ -1,22 +1,18 @@
 "use client";
 
 import { useRef, useState, useEffect } from "react";
-import Navbar from "@/components/Navbar";
 import StickyNavbar from "@/components/StickyNavbar";
-import Link from "next/link";
-import ArrowRight from "@/components/icons/ArrowRight";
-import ClientTicker from "@/components/ClientTicker";
+import HeroSection from "@/components/sections/HeroSection";
+import AboutSection from "@/components/sections/AboutSection";
+import ServicesSection from "@/components/sections/ServicesSection";
+import WorkSection from "@/components/sections/WorkSection";
+import ProcessSection from "@/components/sections/ProcessSection";
+import TeamSection from "@/components/sections/TeamSection";
+import TestimonialsSection from "@/components/sections/TestimonialsSection";
+import ContactSection from "@/components/sections/ContactSection";
+import FooterSection from "@/components/sections/FooterSection";
 
-const sections = [
-  { label: "Services" },
-  { label: "Work" },
-  { label: "Process" },
-  { label: "Team" },
-  { label: "Testimonials" },
-  { label: "Contact" },
-];
-
-const TOTAL_SECTIONS = sections.length + 2; // Hero + sections + Footer
+const TOTAL_SECTIONS = 9; // Hero, About, Services, Work, Process, Team, Testimonials, Contact, Footer
 
 export default function Landing() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -49,66 +45,20 @@ export default function Landing() {
 
   return (
     <div ref={containerRef} className="h-screen overflow-y-scroll snap-y snap-mandatory">
-      <section
-        ref={(el) => { sectionRefs.current[0] = el; }}
-        className="relative bg-[url('/landing/hero.png')] bg-cover bg-center h-screen w-full snap-start py-6 px-20 flex flex-col"
-      >
-        <div className="flex justify-center px-6">
-          <Navbar />
-        </div>
-
-        <div className="flex-1 flex flex-col justify-center">
-          <div className="font-canela text-[98px] font-semibold leading-[96px] tracking-[-2.5px] w-[600px] text-mnd-dark">
-            Stellar engineers on bench for you.
-          </div>
-          <div className="mt-6 flex items-center gap-6">
-            <Link href="#" className="flex items-center gap-2 px-8 py-2 bg-mnd-navy text-white rounded-full">
-              <div>Ready when you are</div>
-              <ArrowRight color="white" />
-            </Link>
-          </div>
-        </div>
-        <div className="absolute bottom-8 left-0 right-0">
-          <ClientTicker />
-        </div>
-      </section>
+      <HeroSection ref={(el) => { sectionRefs.current[0] = el; }} />
 
       <div className="relative py-6 bg-mnd-linen">
         <StickyNavbar />
-
-        {/* About */}
-        <section
-          ref={(el) => { sectionRefs.current[1] = el; }}
-          className="h-screen w-full snap-start flex flex-col items-center justify-center gap-20 text-center"
-        >
-          <p className="font-canela text-[42px] font-normal leading-[1.15] tracking-[-0.03em] text-mnd-charcoal w-[650px]">
-            <span>Building a great software development team is tough. </span>
-            <span className="italic">Especially now.</span>
-          </p>
-          <div className="w-[62px] h-[5px] bg-mnd-charcoal" />
-          <p className="font-canela text-[42px] font-semibold leading-[1.05] tracking-[-0.03em] text-mnd-charcoal w-[720px]">
-            <div>We&apos;re engineers ourselves.</div>
-            <div>We get it.</div>
-          </p>
-        </section>
-
-        {sections.map(({ label }, i) => (
-          <section
-            key={label}
-            ref={(el) => { sectionRefs.current[i + 2] = el; }}
-            className="h-screen w-full snap-start flex items-center justify-center"
-          >
-            <h2 className="text-4xl font-bold">{label}</h2>
-          </section>
-        ))}
+        <AboutSection       ref={(el) => { sectionRefs.current[1] = el; }} />
+        <ServicesSection    ref={(el) => { sectionRefs.current[2] = el; }} />
+        <WorkSection        ref={(el) => { sectionRefs.current[3] = el; }} />
+        <ProcessSection     ref={(el) => { sectionRefs.current[4] = el; }} />
+        <TeamSection        ref={(el) => { sectionRefs.current[5] = el; }} />
+        <TestimonialsSection ref={(el) => { sectionRefs.current[6] = el; }} />
+        <ContactSection     ref={(el) => { sectionRefs.current[7] = el; }} />
       </div>
 
-      <footer
-        ref={(el) => { sectionRefs.current[TOTAL_SECTIONS - 1] = el; }}
-        className="bg-mnd-linen bg-[url('/landing/footer.png')] bg-cover bg-center h-screen w-full snap-start flex items-center justify-center"
-      >
-        <p className="text-white text-sm tracking-widest">© MND</p>
-      </footer>
+      <FooterSection ref={(el) => { sectionRefs.current[8] = el; }} />
 
       <div className="fixed right-6 top-1/2 -translate-y-1/2 flex flex-col gap-3 z-50">
         {Array.from({ length: TOTAL_SECTIONS }).map((_, i) => {
