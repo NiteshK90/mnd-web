@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import StickyNavbar from "@/components/StickyNavbar";
 import Link from "next/link";
 import ArrowRight from "@/components/icons/ArrowRight";
+import ClientTicker from "@/components/ClientTicker";
 
 const sections = [
   { label: "About" },
@@ -67,6 +68,9 @@ export default function Landing() {
               <ArrowRight color="white" />
             </Link>
           </div>
+        </div>
+        <div className="absolute bottom-8 left-0 right-0">
+          <ClientTicker />
         </div>
       </section>
 

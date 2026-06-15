@@ -11,6 +11,15 @@ export default {
       fontFamily: {
         canela: ["Canela", "serif"],
       },
+      animation: {
+        marquee: "marquee 35s linear infinite",
+      },
+      keyframes: {
+        marquee: {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(-50%)" },
+        },
+      },
     },
   },
 };
