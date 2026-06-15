@@ -9,9 +9,14 @@ export default {
         "mnd-ivory": "#FDFBF9",
         "mnd-charcoal": "#231F20",
         "mnd-stone": "#4A4643",
+        "mnd-silver": "#A7A3A0",
       },
       fontFamily: {
         canela: ["Canela", "serif"],
+      },
+      boxShadow: {
+        progress: "0 1px 2px rgba(0,0,0,.06), 0 4px 10px rgba(0,0,0,.04)",
+        card: "0 2px 4px rgba(0,0,0,.05), 0 8px 24px rgba(0,0,0,.06)",
       },
       animation: {
         marquee: "marquee 35s linear infinite",
