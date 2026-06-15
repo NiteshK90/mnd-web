@@ -5,7 +5,7 @@ const blocks = [
   { label: "ONLY", number: "3", description: "MAKE IT TO THE TALENT POOL" },
 ];
 
-const ProcessSection = forwardRef<HTMLElement>((_, ref) => {
+const CareerSection = forwardRef<HTMLElement>((_, ref) => {
   return (
     <section ref={ref} className="h-screen w-full snap-start flex items-center justify-center">
       <div className="w-[1050px]">
@@ -74,5 +74,5 @@ const ProcessSection = forwardRef<HTMLElement>((_, ref) => {
   );
 });
 
-ProcessSection.displayName = "ProcessSection";
-export default ProcessSection;
+CareerSection.displayName = "CareerSection";
+export default CareerSection;

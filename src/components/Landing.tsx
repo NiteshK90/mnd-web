@@ -6,10 +6,10 @@ import HeroSection from "@/components/sections/HeroSection";
 import AboutSection from "@/components/sections/AboutSection";
 import ServicesSection from "@/components/sections/ServicesSection";
 import WorkSection from "@/components/sections/WorkSection";
-import ProcessSection from "@/components/sections/ProcessSection";
-import TeamSection from "@/components/sections/TeamSection";
+import CareerSection from "@/components/sections/CareerSection";
+import GuaranteeSection from "@/components/sections/GuaranteeSection";
 import TestimonialsSection from "@/components/sections/TestimonialsSection";
-import ContactSection from "@/components/sections/ContactSection";
+import TeamSection from "@/components/sections/TeamSection";
 import FooterSection from "@/components/sections/FooterSection";
 
 const TOTAL_SECTIONS = 9; // Hero, About, Services, Work, Process, Team, Testimonials, Contact, Footer
@@ -52,10 +52,10 @@ export default function Landing() {
         <AboutSection       ref={(el) => { sectionRefs.current[1] = el; }} />
         <ServicesSection    ref={(el) => { sectionRefs.current[2] = el; }} />
         <WorkSection        ref={(el) => { sectionRefs.current[3] = el; }} />
-        <ProcessSection     ref={(el) => { sectionRefs.current[4] = el; }} />
-        <TeamSection        ref={(el) => { sectionRefs.current[5] = el; }} />
+        <CareerSection     ref={(el) => { sectionRefs.current[4] = el; }} />
+        <GuaranteeSection        ref={(el) => { sectionRefs.current[5] = el; }} />
         <TestimonialsSection ref={(el) => { sectionRefs.current[6] = el; }} />
-        <ContactSection     ref={(el) => { sectionRefs.current[7] = el; }} />
+        <TeamSection     ref={(el) => { sectionRefs.current[7] = el; }} />
       </div>
 
       <FooterSection ref={(el) => { sectionRefs.current[8] = el; }} />
