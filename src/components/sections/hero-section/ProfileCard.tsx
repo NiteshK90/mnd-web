@@ -1,8 +1,16 @@
-export const ProfileCard = () => {
+interface ProfileCardProps {
+  name: string;
+  years: number;
+  role: string;
+  mostLikelyTo: string;
+  quote: string;
+}
+
+export const ProfileCard = ({ name, years, role, mostLikelyTo, quote }: ProfileCardProps) => {
   return (
-    <div className="min-w-[250px] bg-white/90 backdrop-blur-[10px] rounded-[36px] py-6 px-4 overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,.08),0_2px_8px_rgba(0,0,0,.04)] flex flex-col gap-4">
+    <div className="min-w-[230px] bg-white/60 rounded-[36px] py-6 px-4 overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,.08),0_2px_8px_rgba(0,0,0,.04)] flex flex-col gap-4">
       <h3 className="font-sans text-[18px] font-bold leading-[1.2] text-mnd-charcoal">
-        Meet Shivam,
+        Meet {name},
       </h3>
 
       <div className="flex items-center gap-4">
@@ -13,20 +21,20 @@ export const ProfileCard = () => {
             <path d="M2 16h24" stroke="#231F20" strokeWidth="1.75" />
           </svg>
         </div>
-        <p className="font-sans text-sm font-medium text-mnd-charcoal">8 years of work ex iOS developer</p>
+        <p className="font-sans text-sm font-medium text-mnd-charcoal">{years} Yrs Work Ex {role}</p>
       </div>
 
       <div className="flex flex-col gap-1">
         <p className="font-sans text-[18px] font-bold text-mnd-charcoal">Most likely to:</p>
         <p className="font-sans text-sm font-medium leading-[1.35] text-mnd-charcoal">
-          Fix your phone but forget his own charger!
+          {mostLikelyTo}
         </p>
       </div>
 
       <div className="flex gap-3 items-start">
         <span className="font-sans text-[48px] font-extrabold text-mnd-charcoal leading-[0.8]">&ldquo;</span>
         <p className="font-sans text-sm font-medium leading-[1.35] text-mnd-charcoal mt-5">
-          Give me five minutes I&apos;ll fix it!
+          {quote}
         </p>
       </div>
 

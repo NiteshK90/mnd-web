@@ -7,10 +7,10 @@ import ClientTicker from "@/components/ClientTicker";
 import { ProfileCard } from "./ProfileCard";
 
 const dots = [
-  { left: 90,  top: 80,  cardLeft: -110,  cardTop: -305 },
-  { left: 230, top: 10,  cardLeft: -110,  cardTop: -305 },
-  { left: 310, top: 90,  cardLeft: -110,  cardTop: -305 },
-  { left: 440, top: 35,  cardLeft: -110,  cardTop: -305 },
+  { left: 90,  top: 80,  cardLeft: -110, cardTop: -305, name: "Shivam",  years: 8, role: "iOS Developer",    mostLikelyTo: "Fix your phone but forget his own charger!", quote: "Give me five minutes I'll fix it!" },
+  { left: 230, top: 10,  cardLeft: -110, cardTop: -305, name: "Jenifer", years: 9, role: "Product Designer", mostLikelyTo: "Turn your UX into an award winning design",    quote: "Every pixel has a purpose" },
+  { left: 310, top: 90,  cardLeft: -110, cardTop: -305, name: "Ryan",    years: 7, role: "React Engineer",   mostLikelyTo: "Refactor your entire codebase in a weekend!", quote: "Clean code or no code" },
+  { left: 440, top: 35,  cardLeft: -110, cardTop: -305, name: "Maya",    years: 6, role: "AI Engineer",      mostLikelyTo: "Build the API before you finish explaining it", quote: "If it's slow, it's wrong" },
 ];
 
 const HeroSection = forwardRef<HTMLElement>((_, ref) => {
@@ -52,7 +52,7 @@ const HeroSection = forwardRef<HTMLElement>((_, ref) => {
                   className="absolute z-50"
                   style={{ left: dot.cardLeft, top: dot.cardTop }}
                 >
-                  <ProfileCard />
+                  <ProfileCard name={dot.name} years={dot.years} role={dot.role} mostLikelyTo={dot.mostLikelyTo} quote={dot.quote} />
                 </div>
               )}
             </div>
