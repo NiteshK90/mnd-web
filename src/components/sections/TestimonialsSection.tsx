@@ -57,7 +57,7 @@ const TestimonialsSection = forwardRef<HTMLElement>((_, ref) => {
                 </p>
               </div>
             </div>
-            <p className="font-sans text-[10px] font-bold tracking-[0.18em] uppercase text-mnd-charcoal mt-4">
+            <p className="font-sans text-[10px] font-bold uppercase text-mnd-charcoal mt-4 text-center tracking-widest">
               Flip to hear from the engineer
             </p>
           </div>
