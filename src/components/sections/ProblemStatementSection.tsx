@@ -1,6 +1,6 @@
 import { forwardRef } from "react";
 
-const AboutSection = forwardRef<HTMLElement>((_, ref) => {
+const ProblemStatementSection = forwardRef<HTMLElement>((_, ref) => {
   return (
     <section
       ref={ref}
@@ -19,5 +19,5 @@ const AboutSection = forwardRef<HTMLElement>((_, ref) => {
   );
 });
 
-AboutSection.displayName = "AboutSection";
-export default AboutSection;
+ProblemStatementSection.displayName = "ProblemStatementSection";
+export default ProblemStatementSection;

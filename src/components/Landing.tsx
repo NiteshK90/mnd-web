@@ -1,10 +1,10 @@
 "use client";
 
 import { useRef, useState, useEffect } from "react";
-import StickyNavbar from "@/components/StickyNavbar";
+import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/sections/HeroSection";
-import AboutSection from "@/components/sections/AboutSection";
-import ServicesSection from "@/components/sections/ServicesSection";
+import ProblemStatementSection from "@/components/sections/ProblemStatementSection";
+import StartupEnterprisesCardsSection from "@/components/sections/StartupEnterprisesCardsSection";
 import WorkSection from "@/components/sections/WorkSection";
 import CareerSection from "@/components/sections/CareerSection";
 import GuaranteeSection from "@/components/sections/GuaranteeSection";
@@ -44,13 +44,15 @@ export default function Landing() {
   };
 
   return (
-    <div id="landing-container" ref={containerRef} className="h-screen overflow-y-scroll snap-y snap-mandatory">
+    <div id="landing-container" ref={containerRef} className="relative h-screen overflow-y-scroll snap-y snap-mandatory">
+      <div className="fixed top-6 left-0 right-0 flex justify-center z-50">
+        <Navbar />
+      </div>
       <HeroSection ref={(el) => { sectionRefs.current[0] = el; }} />
 
       <div className="relative py-6 bg-mnd-linen">
-        <StickyNavbar dark={activeIndex === 6} />
-        <AboutSection       ref={(el) => { sectionRefs.current[1] = el; }} />
-        <ServicesSection    ref={(el) => { sectionRefs.current[2] = el; }} />
+        <ProblemStatementSection       ref={(el) => { sectionRefs.current[1] = el; }} />
+        <StartupEnterprisesCardsSection    ref={(el) => { sectionRefs.current[2] = el; }} />
         <WorkSection        ref={(el) => { sectionRefs.current[3] = el; }} />
         <CareerSection     ref={(el) => { sectionRefs.current[4] = el; }} />
         <GuaranteeSection        ref={(el) => { sectionRefs.current[5] = el; }} />

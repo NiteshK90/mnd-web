@@ -1,5 +1,4 @@
 import { forwardRef } from "react";
-import Navbar from "@/components/Navbar";
 import Link from "next/link";
 import ArrowRight from "@/components/icons/ArrowRight";
 import ClientTicker from "@/components/ClientTicker";
@@ -10,10 +9,6 @@ const HeroSection = forwardRef<HTMLElement>((_, ref) => {
       ref={ref}
       className="relative bg-[url('/landing/hero.png')] bg-cover bg-center h-screen w-full snap-start py-6 px-20 flex flex-col"
     >
-      <div className="flex justify-center px-6">
-        <Navbar />
-      </div>
-
       <div className="flex-1 flex flex-col justify-center">
         <div className="font-canela text-[98px] font-semibold leading-[96px] tracking-[-2.5px] w-[600px] text-mnd-dark">
           Stellar engineers on bench for you.
