@@ -33,22 +33,24 @@ const NoteSection = forwardRef<HTMLElement>((_, ref) => {
           </h2>
 
           <div className="flex flex-col gap-6">
-            {[
-              "We, the four founders at MND, are a bunch of great friends who happened to become very, very good at software development. We love taking something complex and making it feel simple.",
-              "And to be completely honest, we know we are great at it. We know what happens when companies cut corners, hire the wrong people who might build their product with little or no real ownership.",
-              "We never wanted to be that kind of company.",
-              "Over the past 6 years, we have built MND with the belief that software should be built properly. Every line of code that comes out of MND should feel we give a damn. Because it is not just about functionality. It is about elegance. It is about clarity. It is about the craft.",
-            ].map((text, i) => (
-              <p key={i} className="font-sans text-[16px] font-medium leading-[1.3] text-mnd-dark max-w-[900px]">
-                {text}
-              </p>
-            ))}
+            <p className="font-sans text-[16px] font-medium leading-[1.3] text-mnd-dark max-w-[900px]">
+              We, the four founders at MND, are a bunch of great friends who happened to become very, very good at software development. <span className="font-bold">We love taking something complex and making it feel simple.</span>
+            </p>
+            <p className="font-sans text-[16px] font-medium leading-[1.3] text-mnd-dark max-w-[900px]">
+              And to be <span className="font-bold">completely</span> honest, we know we are great at it. We know what happens when companies cut corners, hire the wrong people who might build their product with little or no <span className="font-bold">real</span> ownership.
+            </p>
+            <p className="font-sans text-[16px] font-bold leading-[1.3] text-mnd-dark max-w-[900px]">
+              We never wanted to be that kind of company.
+            </p>
+            <p className="font-sans text-[16px] font-medium leading-[1.3] text-mnd-dark max-w-[900px]">
+              Over the past 6 years, we have built MND with the belief that software should be built properly. Every line of code that comes out of MND should feel we give a damn. Because it is not just about functionality. It is about elegance. It is about clarity. It is about the craft.
+            </p>
           </div>
 
           <div className="w-[72px] h-1.5 bg-mnd-dark" />
 
           <p className="font-sans text-[16px] font-medium leading-[1.3] text-mnd-dark">
-            And yet - MND was never only about code.
+            And yet - <span className="font-bold">MND was never only about code.</span>
           </p>
         </div>
 
