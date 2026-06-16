@@ -5,9 +5,9 @@ import Navbar from "@/components/Navbar";
 import ScrollIndicators from "@/components/ScrollIndicators";
 import HeroSection from "@/components/sections/mnd-way/HeroSection";
 import NoteSection from "@/components/sections/mnd-way/NoteSection";
-import Section2 from "@/components/sections/mnd-way/Section2";
-import Section3 from "@/components/sections/mnd-way/Section3";
-import Section4 from "@/components/sections/mnd-way/Section4";
+import NoteSection2 from "@/components/sections/mnd-way/NoteSection2";
+import NoteSection3 from "@/components/sections/mnd-way/NoteSection3";
+import ValuesSection from "@/components/sections/mnd-way/ValuesSection";
 import FooterSection from "@/components/sections/FooterSection";
 
 const TOTAL_SECTIONS = 6;
@@ -53,9 +53,9 @@ export default function MndWay() {
 
       <div className="relative bg-mnd-linen">
         <NoteSection ref={(el) => { sectionRefs.current[1] = el; }} />
-        <Section2 ref={(el) => { sectionRefs.current[2] = el; }} />
-        <Section3 ref={(el) => { sectionRefs.current[3] = el; }} />
-        <Section4 ref={(el) => { sectionRefs.current[4] = el; }} />
+        <NoteSection2 ref={(el) => { sectionRefs.current[2] = el; }} />
+        <NoteSection3 ref={(el) => { sectionRefs.current[3] = el; }} />
+        <ValuesSection ref={(el) => { sectionRefs.current[4] = el; }} />
       </div>
 
       <FooterSection ref={(el) => { sectionRefs.current[5] = el; }} />
@@ -63,7 +63,7 @@ export default function MndWay() {
       <ScrollIndicators
         total={TOTAL_SECTIONS}
         activeIndex={activeIndex}
-        white={activeIndex === 0 || activeIndex === TOTAL_SECTIONS - 1}
+        white={activeIndex === 0 || activeIndex === 3 || activeIndex === TOTAL_SECTIONS - 1}
         onScrollTo={scrollTo}
       />
     </div>
