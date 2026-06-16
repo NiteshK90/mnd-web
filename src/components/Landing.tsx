@@ -2,7 +2,7 @@
 
 import { useRef, useState, useEffect } from "react";
 import Navbar from "@/components/Navbar";
-import HeroSection from "@/components/sections/HeroSection";
+import HeroSection from "@/components/sections/hero-section/HeroSection";
 import ProblemStatementSection from "@/components/sections/ProblemStatementSection";
 import StartupEnterprisesCardsSection from "@/components/sections/StartupEnterprisesCardsSection";
 import WorkSection from "@/components/sections/WorkSection";
