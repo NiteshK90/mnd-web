@@ -10,7 +10,7 @@ export default function Navbar({ minimal = false }: NavbarProps) {
       <img src="/landing/mnd-black-logo.png" alt="MND Logo" className="h-14 w-auto" />
       {!minimal && (
         <>
-          <Link href="#">The MND way</Link>
+          <Link href="/mnd-way">The MND way</Link>
           <Link href="#">We do more stuff</Link>
           <Link href="#">The MND Corner</Link>
           <Link href="#">Be our people</Link>

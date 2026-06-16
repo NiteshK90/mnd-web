@@ -2,14 +2,15 @@
 
 import { useRef, useState, useEffect } from "react";
 import Navbar from "@/components/Navbar";
-import HeroSection from "@/components/sections/hero-section/HeroSection";
-import ProblemStatementSection from "@/components/sections/ProblemStatementSection";
-import StartupEnterprisesCardsSection from "@/components/sections/StartupEnterprisesCardsSection";
-import WorkSection from "@/components/sections/WorkSection";
-import CareerSection from "@/components/sections/CareerSection";
-import GuaranteeSection from "@/components/sections/GuaranteeSection";
-import TestimonialsSection from "@/components/sections/TestimonialsSection";
-import TeamSection from "@/components/sections/TeamSection";
+import ScrollIndicators from "@/components/ScrollIndicators";
+import HeroSection from "@/components/sections/landing/hero-section/HeroSection";
+import ProblemStatementSection from "@/components/sections/landing/ProblemStatementSection";
+import StartupEnterprisesCardsSection from "@/components/sections/landing/StartupEnterprisesCardsSection";
+import WorkSection from "@/components/sections/landing/WorkSection";
+import CareerSection from "@/components/sections/landing/CareerSection";
+import GuaranteeSection from "@/components/sections/landing/GuaranteeSection";
+import TestimonialsSection from "@/components/sections/landing/TestimonialsSection";
+import TeamSection from "@/components/sections/landing/TeamSection";
 import FooterSection from "@/components/sections/FooterSection";
 
 const TOTAL_SECTIONS = 9; // Hero, About, Services, Work, Process, Team, Testimonials, Contact, Footer
@@ -64,23 +65,12 @@ export default function Landing() {
 
       <FooterSection ref={(el) => { sectionRefs.current[8] = el; }} />
 
-      <div className="fixed right-6 top-1/2 -translate-y-1/2 flex flex-col gap-3 z-50">
-        {Array.from({ length: TOTAL_SECTIONS }).map((_, i) => {
-          const isWhiteSection = activeIndex === 0 || activeIndex === 6 || activeIndex === TOTAL_SECTIONS - 1;
-          const isActive = i === activeIndex;
-          return (
-            <button
-              key={i}
-              onClick={() => scrollTo(i)}
-              className={`h-4 w-4 rounded-full transition-all duration-300 cursor-pointer border ${
-                isWhiteSection
-                  ? `border-white ${isActive ? "bg-white" : "bg-transparent"}`
-                  : `border-black ${isActive ? "bg-black" : "bg-transparent"}`
-              }`}
-            />
-          );
-        })}
-      </div>
+      <ScrollIndicators
+        total={TOTAL_SECTIONS}
+        activeIndex={activeIndex}
+        white={activeIndex === 0 || activeIndex === 6 || activeIndex === TOTAL_SECTIONS - 1}
+        onScrollTo={scrollTo}
+      />
     </div>
   );
 }
