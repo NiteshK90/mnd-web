@@ -8,24 +8,24 @@ import { QuoteCard } from "./QuoteCard";
 
 const dots = [
   {
-    left: -105,
-    top: 120,
+    left: -25,
+    top: 145,
     cardLeft: -110,
     cardTop: -180,
     quote: "Oh, how did you do that? Wait, share your screen for a second?",
     body: "Usually followed by 3 new ideas and quietly learning something useful.",
   },
   {
-    left: 30,
-    top: -40,
+    left: 150,
+    top: -50,
     cardLeft: -110,
     cardTop: -180,
     quote: "Don't worry. We're already on it.",
     body: "Sometimes the most valuable thing you can give a client is the feeling that someone reliable showed up.",
   },
   {
-    left: 260,
-    top: -20,
+    left: 410,
+    top: -5,
     cardLeft: -120,
     cardTop: -180,
     quote: "Need exactly 1 hour of uninterrupted deep work and its done",
