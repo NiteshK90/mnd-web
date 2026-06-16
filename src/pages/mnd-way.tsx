@@ -4,7 +4,7 @@ import { useRef, useState, useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import ScrollIndicators from "@/components/ScrollIndicators";
 import HeroSection from "@/components/sections/mnd-way/HeroSection";
-import Section1 from "@/components/sections/mnd-way/Section1";
+import NoteSection from "@/components/sections/mnd-way/NoteSection";
 import Section2 from "@/components/sections/mnd-way/Section2";
 import Section3 from "@/components/sections/mnd-way/Section3";
 import Section4 from "@/components/sections/mnd-way/Section4";
@@ -51,8 +51,8 @@ export default function MndWay() {
 
       <HeroSection ref={(el) => { sectionRefs.current[0] = el; }} />
 
-      <div className="relative py-6 bg-mnd-linen">
-        <Section1 ref={(el) => { sectionRefs.current[1] = el; }} />
+      <div className="relative bg-mnd-linen">
+        <NoteSection ref={(el) => { sectionRefs.current[1] = el; }} />
         <Section2 ref={(el) => { sectionRefs.current[2] = el; }} />
         <Section3 ref={(el) => { sectionRefs.current[3] = el; }} />
         <Section4 ref={(el) => { sectionRefs.current[4] = el; }} />
