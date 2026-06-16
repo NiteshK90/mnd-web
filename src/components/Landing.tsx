@@ -45,9 +45,11 @@ export default function Landing() {
 
   return (
     <div id="landing-container" ref={containerRef} className="relative h-screen overflow-y-scroll snap-y snap-mandatory">
-      <div className="fixed top-6 left-0 right-0 flex justify-center z-50">
-        <Navbar />
-      </div>
+      {activeIndex !== TOTAL_SECTIONS - 1 && (
+        <div className="fixed top-6 left-0 right-0 flex justify-center z-50">
+          <Navbar minimal={activeIndex !== 0} />
+        </div>
+      )}
       <HeroSection ref={(el) => { sectionRefs.current[0] = el; }} />
 
       <div className="relative py-6 bg-mnd-linen">
