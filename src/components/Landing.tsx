@@ -44,7 +44,7 @@ export default function Landing() {
   };
 
   return (
-    <div ref={containerRef} className="h-screen overflow-y-scroll snap-y snap-mandatory">
+    <div id="landing-container" ref={containerRef} className="h-screen overflow-y-scroll snap-y snap-mandatory">
       <HeroSection ref={(el) => { sectionRefs.current[0] = el; }} />
 
       <div className="relative py-6 bg-mnd-linen">
