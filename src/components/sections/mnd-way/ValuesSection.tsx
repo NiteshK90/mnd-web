@@ -2,7 +2,7 @@
 
 import { forwardRef, useState, useRef, useLayoutEffect } from "react";
 
-const CARD_WIDTH = 420;
+const CARD_WIDTH = 450;
 const GAP = 56;
 const DRAG_THRESHOLD = 50;
 
@@ -66,7 +66,7 @@ const ValuesSection = forwardRef<HTMLElement>((_, ref) => {
   };
 
   return (
-    <section ref={ref} className="h-screen w-full snap-start overflow-hidden flex flex-col justify-center gap-10">
+    <section ref={ref} className="h-screen w-full snap-start overflow-hidden flex flex-col justify-center gap-10 pt-18">
 
       {/* Carousel track */}
       <div
@@ -84,26 +84,28 @@ const ValuesSection = forwardRef<HTMLElement>((_, ref) => {
           {values.map((v, i) => (
             <div
               key={i}
-              className="flex-shrink-0 w-[420px] bg-white rounded-[32px] py-8 px-6 flex flex-col gap-8 shadow-[0_2px_4px_rgba(0,0,0,.04),0_8px_24px_rgba(0,0,0,.06)]"
+              className="flex-shrink-0 w-[450px] bg-white rounded-[32px] py-8 px-8 flex flex-col gap-8 shadow-[0_2px_4px_rgba(0,0,0,.04),0_8px_24px_rgba(0,0,0,.06)]"
             >
-              <div className="flex items-center gap-3">
-                <div className="w-4 h-4 rounded-full bg-black shrink-0" />
-                <span className="font-sans text-[10px] tracking-[0.18em] uppercase">{v.label}</span>
-              </div>
+              <div className="flex flex-col gap-2">
+                <div className="flex items-center gap-3">
+                  <div className="w-4 h-4 rounded-full bg-black shrink-0" />
+                  <span className="font-sans text-[10px] tracking-[0.18em] uppercase">{v.label}</span>
+                </div>
 
-              <p className="font-sans text-[18px] font-extrabold tracking-[-0.02em] uppercase text-mnd-charcoal">
-                {v.name}
-              </p>
+                <p className="font-sans text-[22px] font-extrabold tracking-[-0.02em] uppercase text-mnd-charcoal">
+                  {v.name}
+                </p>
+              </div>
 
               <div className="w-[64px] h-[6px] bg-mnd-charcoal" />
 
-              <p className="font-canela text-[28px] font-semibold leading-[1.08] tracking-[-0.03em] text-mnd-charcoal">
+              <p className="font-canela text-[34px] font-semibold leading-[1.08] tracking-[-0.03em] text-mnd-charcoal">
                 {v.statement}
               </p>
 
               <div className="w-[64px] h-[6px] bg-mnd-charcoal" />
 
-              <p className="font-sans text-[16px] font-medium leading-[1.35] text-mnd-charcoal max-w-[460px]">
+              <p className="font-sans text-[18px] font-medium leading-[1.35] text-mnd-charcoal max-w-[460px]">
                 {v.description}
               </p>
             </div>
