@@ -54,7 +54,7 @@ const TeamSection = forwardRef<HTMLElement>((_, ref) => {
                   </div>
                 </div>
               </div>
-              <div className="w-[52px] h-[4px] bg-mnd-charcoal" />
+              <div className="w-[52px] h-[4px] bg-mnd-charcoal my-6" />
               <p className="font-sans text-[10px] font-medium leading-widest text-mnd-charcoal max-w-[280px]">
                 {member.body}
               </p>
