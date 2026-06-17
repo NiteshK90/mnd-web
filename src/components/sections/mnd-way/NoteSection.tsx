@@ -4,31 +4,31 @@ import ArrowRight from "@/components/icons/ArrowRight";
 const NoteSection = forwardRef<HTMLElement>((_, ref) => {
   return (
     <section ref={ref} className="h-screen w-full snap-start bg-[#F9BC10] overflow-y-auto">
-      <div className="grid grid-cols-[460px_1fr] gap-x-[120px] max-w-[1400px] mx-auto pt-[180px] px-[120px] pb-[120px]">
+      <div className="grid grid-cols-[400px_1fr] gap-x-[120px] max-w-[1400px] mx-auto pt-[180px] px-[80px] pb-[120px] items-end">
 
         {/* Left */}
         <div className="flex flex-col gap-8">
-          <span className="font-canela text-[120px] font-semibold leading-none text-mnd-dark">
+          <span className="font-canela text-[160px] font-bold leading-1 text-mnd-dark">
             &ldquo;
           </span>
 
-          <p className="font-canela text-[38px] font-semibold leading-[1.08] tracking-[-0.03em] text-mnd-dark w-[430px]">
+          <p className="font-canela text-[36px] font-semibold leading-[1.08] tracking-[-0.03em] text-mnd-dark w-[430px]">
             Over the past 6 years, we have built MND with the belief that software should be built properly.
           </p>
 
-          <p className="font-canela text-[38px] font-bold leading-[1.1] text-mnd-dark">
+          <p className="font-canela text-[34px] font-bold leading-[1.1] text-mnd-dark">
             Thoughtfully. Cleanly.
           </p>
 
-          <button className="mt-10 w-fit h-16 px-7 rounded-full bg-[#063A5A] text-white font-sans text-lg font-semibold inline-flex items-center gap-4 cursor-pointer border-0">
-            Skip to Our Values
-            <ArrowRight color="white" />
+          <button className="w-fit py-2 px-6 rounded-full bg-mnd-button text-white inline-flex items-center gap-4 cursor-pointer border-0">
+            <div className="text-sm font-semibold">Skip to Our Values</div>
+            <ArrowRight color="white" size={24} />
           </button>
         </div>
 
         {/* Right */}
-        <div className="flex flex-col gap-8">
-          <h2 className="font-canela text-[48px] font-bold leading-[1.1] text-mnd-dark">
+        <div className="flex flex-col gap-12">
+          <h2 className="font-canela text-[42px] font-bold text-mnd-dark">
             A note from the founders ~
           </h2>
 

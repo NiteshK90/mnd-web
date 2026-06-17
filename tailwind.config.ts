@@ -12,6 +12,7 @@ export default {
         "mnd-silver": "#A7A3A0",
         "mnd-espresso": "#1F1A1D",
         "mnd-parchment": "#F7F2ED",
+        "mnd-button": "#063A5A",
       },
       fontFamily: {
         canela: ["Canela", "serif"],
