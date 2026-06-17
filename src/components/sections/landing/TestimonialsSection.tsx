@@ -29,35 +29,37 @@ const testimonials = [
 
 const TestimonialsSection = forwardRef<HTMLElement>((_, ref) => {
   return (
-    <section ref={ref} className="h-screen w-full snap-start flex flex-col items-center justify-center gap-8 bg-mnd-espresso">
-      <div>
-        <p className="font-canela text-[52px] font-normal leading-[1.1] tracking-[-0.03em] text-mnd-parchment text-center">
+    <section ref={ref} className="h-screen w-full snap-start flex flex-col items-center justify-center gap-12 bg-mnd-espresso">
+      <div className="flex flex-col items-center gap-12 mt-12">
+        <p className="font-canela text-[36px] font-normal leading-[1.1] tracking-[-0.03em] text-mnd-parchment text-center">
           Trust us. We have shipped 436 products &amp; counting.
         </p>
         <div className="w-[76px] h-[6px] bg-mnd-parchment" />
-        <p className="font-canela text-[46px] font-semibold leading-[1.05] tracking-[-0.03em] text-mnd-parchment">
+        <p className="font-canela text-[34px] font-semibold leading-[1.05] tracking-[-0.03em] text-mnd-parchment">
           <span className="italic">fyi</span> - zero unsatisfied clients.
         </p>
       </div>
 
-      <div className="flex gap-10">
+      <div className="flex gap-10 mt-12">
         {testimonials.map(({ text, name, company, designation }) => (
           <div
             key={name}
-            className="w-[300px] bg-mnd-parchment rounded-[28px] p-10 shadow-testimonial flex flex-col justify-between gap-8"
+            className="w-[280px] bg-mnd-parchment rounded-[28px] py-8 px-6 shadow-testimonial flex flex-col justify-between gap-8"
           >
             <div className="flex items-start gap-4">
-              <span className="text-[54px] font-bold text-mnd-charcoal leading-none">&ldquo;</span>
+              <span className="text-[54px] font-bold text-mnd-charcoal leading-none italic">"</span>
               <div className="flex flex-col gap-8">
                 <p className="font-sans text-[16px] font-bold leading-[1.35] text-mnd-charcoal mt-2 flex-1">
                   {text}
                 </p>
-                <p className="font-sans text-[14px] italic font-medium leading-[1.3] text-mnd-charcoal">
-                  {name}<br />{company}<br />{designation}
-                </p>
+                <div className="font-sans text-xs italic font-medium leading-[1.3] text-mnd-charcoal">
+                  <div>{name}</div>
+                  <div>{company}</div>
+                  <div>{designation}</div>
+                </div>
               </div>
             </div>
-            <p className="font-sans text-[10px] font-bold uppercase text-mnd-charcoal mt-4 text-center tracking-widest">
+            <p className="font-sans text-[8px] uppercase text-mnd-charcoal mt-4 text-center tracking-widest">
               Flip to hear from the engineer
             </p>
           </div>
