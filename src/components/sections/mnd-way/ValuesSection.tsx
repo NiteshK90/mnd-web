@@ -86,10 +86,10 @@ const ValuesSection = forwardRef<HTMLElement>((_, ref) => {
               key={i}
               className="flex-shrink-0 w-[450px] bg-white rounded-[32px] py-8 px-8 flex flex-col gap-8 shadow-[0_2px_4px_rgba(0,0,0,.04),0_8px_24px_rgba(0,0,0,.06)]"
             >
-              <div className="flex flex-col gap-2">
+              <div className="flex flex-col gap-3">
                 <div className="flex items-center gap-3">
                   <div className="w-4 h-4 rounded-full bg-black shrink-0" />
-                  <span className="font-sans text-[10px] tracking-[0.18em] uppercase">{v.label}</span>
+                  <span className="font-sans text-[8px] tracking-[0.18em] uppercase">{v.label}</span>
                 </div>
 
                 <p className="font-sans text-[22px] font-extrabold tracking-[-0.02em] uppercase text-mnd-charcoal">
