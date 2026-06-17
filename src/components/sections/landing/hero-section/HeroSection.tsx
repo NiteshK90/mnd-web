@@ -27,9 +27,9 @@ const HeroSection = forwardRef<HTMLElement>((_, ref) => {
             Stellar engineers on bench for you.
           </div>
           <div className="mt-6 flex items-center gap-6">
-            <Link href="#" className="flex items-center gap-2 px-8 py-2 bg-mnd-navy text-white rounded-full">
-              <div>Ready when you are</div>
-              <ArrowRight color="white" />
+            <Link href="#" className="flex items-center gap-2 px-4 py-2 bg-mnd-navy text-white rounded-full">
+              <div className="font-sans text-xs font-semibold">Ready when you are</div>
+              <ArrowRight color="white" size={32} strokeWidth={1} />
             </Link>
           </div>
         </div>
