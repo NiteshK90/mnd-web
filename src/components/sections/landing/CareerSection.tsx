@@ -7,8 +7,8 @@ const blocks = [
 
 const CareerSection = forwardRef<HTMLElement>((_, ref) => {
   return (
-    <section ref={ref} className="h-screen w-full snap-start flex items-center justify-center">
-      <div className="w-[1050px]">
+    <section ref={ref} className="h-screen w-full snap-start flex items-center justify-center px-12">
+      <div>
         <p className="font-canela text-[42px] font-normal leading-[1.1] tracking-[-0.03em] text-mnd-charcoal">
           Oh, & we&apos;re very picky about our talent pool –
         </p>
@@ -27,7 +27,7 @@ const CareerSection = forwardRef<HTMLElement>((_, ref) => {
           </div>
 
           {/* Progress bar */}
-          <div className="flex-1 h-[68px] bg-white rounded-full shadow-progress flex items-center px-8 gap-0">
+          <div className="flex-1 w-[650px] h-[68px] bg-white rounded-full shadow-progress flex items-center px-8 gap-0">
             <div className="w-4 h-4 rounded-full border-1 border-mnd-charcoal bg-black shrink-0" />
             <div className="flex-1 h-1 bg-black" />
             <div className="w-4 h-4 rounded-full border-1 border-mnd-charcoal bg-white shrink-0" />

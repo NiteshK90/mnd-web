@@ -17,7 +17,7 @@ const WorkSection = forwardRef<HTMLElement>((_, ref) => {
         {["BY THE HOUR", "QUICK PLACEMENT & REPLACEMENT", "NO QUESTIONS ASKED"].map((text) => (
           <span
             key={text}
-            className="h-[52px] px-9 border-[1.5px] border-mnd-stone rounded-full bg-transparent font-sans text-sm font-semibold text-mnd-charcoal flex items-center justify-center"
+            className="py-3 px-8 border-1 border-mnd-stone rounded-full bg-transparent font-sans text-xs font-semibold text-mnd-charcoal flex items-center justify-center"
           >
             {text}
           </span>
