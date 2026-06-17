@@ -1,4 +1,6 @@
-import { forwardRef } from "react";
+"use client";
+
+import { forwardRef, useState } from "react";
 
 const testimonials = [
   {
@@ -6,26 +8,94 @@ const testimonials = [
     name: "Arjun Mehta",
     company: "Haystack",
     designation: "CEO & Co-Founder",
+    engineerText: "I joined mid-sprint and pushed to production by day three. The team trusted me immediately — that made all the difference.",
+    engineerName: "Rahul Verma",
+    engineerType: "Full-Stack Engineer",
   },
   {
     text: "We needed someone senior, fast. MND delivered in four days. The engineer knew our stack before the first call was over.",
     name: "Priya Nair",
     company: "Holocene",
     designation: "Head of Product",
+    engineerText: "Most contracts feel transactional. This one felt like I was actually part of something being built. Rarely get that.",
+    engineerName: "Sneha Iyer",
+    engineerType: "Backend Engineer",
   },
   {
     text: "The replacement guarantee isn't just a policy — they actually used it when we needed it. No drama, no delay.",
     name: "Rohan Sharma",
     company: "Quantiphi",
     designation: "CTO",
+    engineerText: "The honesty cuts both ways. They told me straight when something wasn't working. I respect that more than false positivity.",
+    engineerName: "Aditya Kulkarni",
+    engineerType: "Platform Engineer",
   },
   {
     text: "Working with MND felt different. Direct access to founders when things got tricky. That's rare, and it matters.",
     name: "Sana Kapoor",
     company: "Scrybe",
     designation: "VP Engineering",
+    engineerText: "No red tape, no approval chains. Just work that mattered and a team that actually wanted my opinion on things.",
+    engineerName: "Meera Pillai",
+    engineerType: "Frontend Engineer",
   },
 ];
+
+function TestimonialCard({ testimonial }: { testimonial: (typeof testimonials)[0] }) {
+  const [flipped, setFlipped] = useState(false);
+
+  return (
+    <div
+      className="w-[280px] h-[340px] [perspective:1200px] cursor-pointer"
+      onClick={() => setFlipped((f) => !f)}
+    >
+      <div
+        className={`relative w-full h-full transition-transform duration-500 [transform-style:preserve-3d] ${
+          flipped ? "[transform:rotateY(180deg)]" : ""
+        }`}
+      >
+        {/* Front */}
+        <div className="absolute inset-0 bg-mnd-parchment rounded-[28px] py-8 px-6 shadow-testimonial flex flex-col justify-between [backface-visibility:hidden]">
+          <div className="flex items-start gap-4">
+            <span className="text-[54px] font-bold text-mnd-charcoal leading-none italic">"</span>
+            <div className="flex flex-col gap-6">
+              <p className="font-sans text-[16px] font-bold leading-[1.35] text-mnd-charcoal mt-2">
+                {testimonial.text}
+              </p>
+              <div className="font-sans text-xs italic font-medium leading-[1.3] text-mnd-charcoal">
+                <div>{testimonial.name}</div>
+                <div>{testimonial.company}</div>
+                <div>{testimonial.designation}</div>
+              </div>
+            </div>
+          </div>
+          <p className="font-sans text-[8px] uppercase text-mnd-charcoal text-center tracking-widest">
+            Flip to hear from the engineer
+          </p>
+        </div>
+
+        {/* Back */}
+        <div className="absolute inset-0 bg-mnd-parchment rounded-[28px] py-8 px-6 shadow-testimonial flex flex-col justify-between [backface-visibility:hidden] [transform:rotateY(180deg)]">
+          <div className="flex items-start gap-4">
+            <span className="text-[54px] font-bold text-mnd-charcoal leading-none italic">"</span>
+            <div className="flex flex-col gap-6">
+              <p className="font-sans text-[16px] font-bold leading-[1.35] text-mnd-charcoal mt-2">
+                {testimonial.engineerText}
+              </p>
+              <div className="font-sans text-xs italic font-medium leading-[1.3] text-mnd-charcoal">
+                <div>{testimonial.engineerName}</div>
+                <div>{testimonial.engineerType}</div>
+              </div>
+            </div>
+          </div>
+          <p className="font-sans text-[8px] uppercase text-mnd-charcoal text-center tracking-widest">
+            Flip back
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 const TestimonialsSection = forwardRef<HTMLElement>((_, ref) => {
   return (
@@ -41,28 +111,8 @@ const TestimonialsSection = forwardRef<HTMLElement>((_, ref) => {
       </div>
 
       <div className="flex gap-10 mt-12">
-        {testimonials.map(({ text, name, company, designation }) => (
-          <div
-            key={name}
-            className="w-[280px] bg-mnd-parchment rounded-[28px] py-8 px-6 shadow-testimonial flex flex-col justify-between gap-8"
-          >
-            <div className="flex items-start gap-4">
-              <span className="text-[54px] font-bold text-mnd-charcoal leading-none italic">"</span>
-              <div className="flex flex-col gap-8">
-                <p className="font-sans text-[16px] font-bold leading-[1.35] text-mnd-charcoal mt-2 flex-1">
-                  {text}
-                </p>
-                <div className="font-sans text-xs italic font-medium leading-[1.3] text-mnd-charcoal">
-                  <div>{name}</div>
-                  <div>{company}</div>
-                  <div>{designation}</div>
-                </div>
-              </div>
-            </div>
-            <p className="font-sans text-[8px] uppercase text-mnd-charcoal mt-4 text-center tracking-widest">
-              Flip to hear from the engineer
-            </p>
-          </div>
+        {testimonials.map((t) => (
+          <TestimonialCard key={t.name} testimonial={t} />
         ))}
       </div>
     </section>
