@@ -8,29 +8,28 @@ const FooterSection = forwardRef<HTMLElement>((_, ref) => {
       ref={ref}
       className="bg-mnd-linen bg-[url('/landing/footer.png')] bg-cover bg-center h-screen w-full snap-start flex flex-col justify-between"
     >
-      <div className="flex justify-center pt-8">
-        <button
-          onClick={() => document.getElementById("landing-container")?.scrollTo({ top: 0, behavior: "smooth" })}
-          className="w-16 h-16 rounded-full border-[1.5px] border-white/70 bg-transparent flex items-center justify-center"
-        >
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M4 13l6-6 6 6" stroke="white" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
-        </button>
-      </div>
-
-      <div className="flex flex-col items-center justify-center gap-6">
-        <h2 className="font-canela text-[80px] font-normal leading-[0.92] tracking-[-0.04em] text-mnd-dark text-center w-[400px]">
+      <div className="flex flex-col items-center justify-center gap-4">
+        <div className="flex justify-center pt-8">
+          <button
+            onClick={() => document.getElementById("landing-container")?.scrollTo({ top: 0, behavior: "smooth" })}
+            className="w-16 h-16 rounded-full border-[1.5px] border-white/70 bg-transparent flex items-center justify-center cursor-pointer"
+          >
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 13l6-6 6 6" stroke="white" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </button>
+        </div>
+        <h2 className="font-canela text-[68px] font-medium leading-[0.92] mt-12 tracking-[-0.04em] text-mnd-dark text-center w-[400px]">
           Ready when you are.
         </h2>
 
-        <div className="w-[48px] h-[4px] bg-mnd-dark" />
+        <div className="w-[48px] h-[2px] bg-mnd-dark" />
 
-        <p className="font-sans text-[20px] font-medium leading-[1.4] text-mnd-dark">
+        <p className="font-sans text-lg font-medium leading-[1.4] text-mnd-dark">
           Let&apos;s build something great together.
         </p>
 
-        <button className="flex items-center gap-4 h-[72px] px-9 rounded-full bg-[#0D0D0F] text-white font-sans text-[18px] font-semibold">
+        <button className="flex items-center gap-4 py-2 px-6 rounded-full bg-[#0D0D0F] text-white font-sans text-lg font-normal">
           <span className="flex items-center justify-center w-7 h-7">
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect x="2" y="4" width="16" height="14" rx="2" stroke="white" strokeWidth="1.5" />
@@ -43,12 +42,12 @@ const FooterSection = forwardRef<HTMLElement>((_, ref) => {
         </button>
       </div>
 
-      <div className="h-[120px] bg-[#090909] flex items-center justify-between px-[72px]">
+      <div className="pt-6 bg-[#090909] flex items-center justify-between px-[72px]">
         <button className="flex items-center h-14 px-8 rounded-full border-[1.5px] border-white/35 text-white font-sans text-[18px] font-medium">
           Compliances
         </button>
 
-        <span className="font-canela text-[56px] font-semibold text-white">MND</span>
+        <span className="font-canela text-[38px] font-semibold text-white">MND</span>
 
         <button className="flex items-center h-14 px-8 rounded-full border-[1.5px] border-white/35 text-white font-sans text-[18px] font-medium">
           Privacy
