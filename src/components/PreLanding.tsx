@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useRef } from "react";
 import Image from "next/image";
 import { useRouter } from "next/router";
 
@@ -20,14 +20,14 @@ export default function PreLanding() {
     <div className="flex flex-col min-h-screen bg-black p-6">
       <div className="flex flex-1 items-center justify-center">
         <div className="flex flex-col gap-8 text-center">
-          <h1 className="text-white text-5xl font-bold tracking-[0.1] font-[Inter,sans-serif]">Welcome to MND</h1>
-          <div className="text-white mx-auto text-sm font-semibold max-w-100">
+          <h1 className="text-white text-3xl md:text-5xl font-bold tracking-[0.1] font-[Inter,sans-serif]">Welcome to MND</h1>
+          <div className="text-white mx-auto text-xs md:text-sm font-semibold max-w-xs md:max-w-100">
             <div>Before we begin,</div>
             <div>which website would you like to see?</div>
           </div>
           <hr className="border-2 border-t border-white w-6 mx-auto my-4" />
-          <div className="flex items-center justify-center gap-6">
-            <span className="font-[Inter,sans-serif] text-white text-sm font-semibold capitalize">The boring one</span>
+          <div className="flex items-center justify-center gap-4 md:gap-6">
+            <span className="font-[Inter,sans-serif] text-white text-xs md:text-sm font-semibold capitalize">The boring one</span>
             <button
               onClick={handleToggle}
               className="relative w-14 h-5 rounded-full bg-transparent border border-white cursor-pointer"
@@ -38,7 +38,7 @@ export default function PreLanding() {
                 }`}
               />
             </button>
-            <span className="font-[Cormorant-Garamond] text-white text-sm italic font-bold capitalize">The fun one!</span>
+            <span className="font-[Cormorant-Garamond] text-white text-xs md:text-sm italic font-bold capitalize">The fun one!</span>
           </div>
 
         </div>
