@@ -77,7 +77,7 @@ export default function Navbar({ minimal = false, showBorder = false }: NavbarPr
           ))}
         </div>
 
-        <Link href="#" className="px-5 md:px-8 py-2 bg-mnd-navy text-white rounded-full text-sm whitespace-nowrap">
+        <Link href="mailto:hello@mynextdeveloper.com" className="px-5 md:px-8 py-2 bg-mnd-navy text-white rounded-full text-sm whitespace-nowrap">
           Let&apos;s talk
         </Link>
       </nav>

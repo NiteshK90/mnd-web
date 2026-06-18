@@ -4,24 +4,28 @@ const members = [
   {
     name: "JIGAR MEHTA",
     role: "Co-founder",
+    image: "/founders/jigar.png",
     experience: ["12+ years of Experience", "Previously Book My Show", "B.E. (Computers)"],
     body: "Jigar - As a core engineer at BookMyShow, Jigar scaled systems to 100k+ requests per minute and delivered a PWA featured at Google Dev Fest that drove 80% conversion growth within months of launch. He founded MyNextDeveloper to bring that same standard to AI-native products, and has since co-founded Tabb and Transcrisp — proving he can go from idea to product.",
   },
   {
     name: "PALOMI JAIN",
     role: "Co-founder",
+    image: "/founders/palomi.png",
     experience: ["Business Management", "& Entrepreneurship", "7+ years of Experience", "Previously Studysid"],
     body: "Palomi has spent her career at the sharp end of building startups — driving a 3x increase in student enrolments for an edtech platform, then co-founding a Seed-backed global developer marketplace. She owns growth, operations and client experience end to end, and she knows how to make early-stage businesses scale.",
   },
   {
     name: "PARTH SHAH",
     role: "Co-founder",
+    image: "/founders/parth.png",
     experience: ["B.E. (Computers)", "12+ years of Experience", "Previously Housing, Mindtickle"],
     body: "Parth - As CTO and co-founder of Studysid, Parth raised $500K and took a consumer product from idea to launch - then went on to found MyNextDeveloper, bringing the same execution to AI-native products. His engineering foundation was built at Mindtickle, a VC-backed enterprise platform trusted by global sales teams and Housing.com. He's a repeat founder who knows how to build, raise, and ship.",
   },
   {
     name: "PURAB SHAH",
     role: "Co-founder",
+    image: "/founders/purab.png",
     experience: ["PGD in ML & AI & B.E. (IT)", "12+ years of Experience", "Previously Media.Net"],
     body: "Purab has already done what most technical founders only claim — built a product, taken it to market, and acquired paying customers with InvoiceStream, his AI invoicing and cash flow platform. He earned that right through a decade of high-stakes product work, including leading Forbes' web platform at 1 million+ users and designing Airpay's payment experience from scratch with a 50% load-time gain. He is the kind of builder who turns ambition into something investors can point to.",
   },
@@ -49,7 +53,9 @@ const TeamSection = forwardRef<HTMLElement>((_, ref) => {
             <div key={i} className="bg-white rounded-[20px] md:rounded-[28px] py-4 md:py-6 px-3 md:px-4 shadow-card flex flex-col justify-between gap-1 md:gap-2 flex-shrink-0 w-[72vw] md:w-auto">
               <div className="flex flex-col gap-2 md:gap-4">
                 <div className="flex gap-3 md:gap-7 items-start">
-                  <div className="w-[60px] h-[60px] md:w-[100px] md:h-[100px] rounded-full bg-[#E8E6E6] shrink-0" />
+                  <div className="w-[60px] h-[60px] md:w-[100px] md:h-[100px] rounded-full overflow-hidden shrink-0">
+                    <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
+                  </div>
                   <div className="flex flex-col gap-1 md:gap-2">
                     <p className="font-sans text-xs font-extrabold tracking-[0.12em] uppercase text-mnd-charcoal">{member.name}</p>
                     <div className="font-sans text-xs font-medium leading-[1.5] text-mnd-charcoal">
