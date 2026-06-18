@@ -2,11 +2,12 @@ import Link from "next/link";
 
 interface NavbarProps {
   minimal?: boolean;
+  showBorder?: boolean;
 }
 
-export default function Navbar({ minimal = false }: NavbarProps) {
+export default function Navbar({ minimal = false, showBorder = false }: NavbarProps) {
   return (
-    <nav className="flex items-center gap-12 px-6 py-3 rounded-full bg-mnd-cream">
+    <nav className={`flex items-center gap-12 px-6 rounded-full bg-mnd-cream/80 backdrop-blur-sm transition-all duration-300 ${showBorder ? "border border-black" : "border border-transparent"}`}>
       <img src="/landing/mnd-black-logo.png" alt="MND Logo" className="h-14 w-auto" />
       {!minimal && (
         <>

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useRef } from "react";
 import Image from "next/image";
 import { useRouter } from "next/router";
 
@@ -17,37 +17,38 @@ export default function PreLanding() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-black">
+    <div className="flex flex-col min-h-screen bg-black p-6">
       <div className="flex flex-1 items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-white text-5xl font-bold">Welcome to MND</h1>
-          <p className="text-white mt-4 mx-auto text-sm max-w-60">
-            Before we begin, which website would you like to see?
-          </p>
-          <hr className="border-2 border-t border-white my-18 w-10 mx-auto" />
-          <div className="flex items-center justify-center gap-3">
-            <span className="text-white text-sm">The boring one</span>
+        <div className="flex flex-col gap-8 text-center">
+          <h1 className="text-white text-3xl md:text-5xl font-bold tracking-[0.1] font-[Inter,sans-serif]">Welcome to MND</h1>
+          <div className="text-white mx-auto text-xs md:text-sm font-semibold max-w-xs md:max-w-100">
+            <div>Before we begin,</div>
+            <div>which website would you like to see?</div>
+          </div>
+          <hr className="border-2 border-t border-white w-6 mx-auto my-4" />
+          <div className="flex items-center justify-center gap-4 md:gap-6">
+            <span className="font-[Inter,sans-serif] text-white text-xs md:text-sm font-semibold capitalize">The boring one</span>
             <button
               onClick={handleToggle}
-              className="relative w-20 h-6 rounded-full bg-transparent border border-white cursor-pointer"
+              className="relative w-14 h-5 rounded-full bg-transparent border border-white cursor-pointer"
             >
               <span
-                className={`absolute left-1 top-1 w-4 h-4 rounded-full border border-white bg-transparent transition-transform duration-300 ease-in-out ${
-                  isFun ? "translate-x-14" : "translate-x-0"
+                className={`absolute left-1 top-1 w-3 h-3 rounded-full border border-white bg-transparent transition-transform duration-300 ease-in-out ${
+                  isFun ? "translate-x-8" : "translate-x-0"
                 }`}
               />
             </button>
-            <span className="text-white text-sm italic font-bold">The Fun One!</span>
+            <span className="font-[Cormorant-Garamond] text-white text-xs md:text-sm italic font-bold capitalize">The fun one!</span>
           </div>
 
         </div>
       </div>
-      <div className="flex justify-end items-center gap-4 pb-6 pr-6">
-        <span className="text-white text-sm font-semibold tracking-[0.3em]">
+      <div className="flex justify-end items-center gap-4 pb-6">
+        <span className="text-white text-xs font-bold tracking-[0.3em]">
           PRIVACY
         </span>
-        <div className="w-px h-8 bg-white" />
-        <Image src="/mnd-white-logo.png" alt="MND Logo" width={80} height={20} />
+        <div className="w-px h-6 bg-white" />
+        <Image src="/mnd-white-logo.png" alt="MND Logo" width={80} height={18} />
       </div>
     </div>
   );

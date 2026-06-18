@@ -43,15 +43,15 @@ const MndWayHeroSection = forwardRef<HTMLElement>((_, ref) => {
     >
       <div className="flex-1 flex items-center gap-6 relative">
         <div className="flex flex-col justify-center">
-          <div className="font-canela text-[72px] font-semibold leading-[96px] tracking-[-2.5px] text-mnd-dark w-[400px]">
+          <div className="font-canela text-[64px] font-semibold leading-[1] text-mnd-dark w-[400px]">
             The grass is greener at
             <div>MND.</div>
             <div className="italic">Seriously.</div>
           </div>
-          <div className="mt-6 flex items-center gap-6">
-            <Link href="#" className="flex items-center gap-2 px-8 py-2 bg-mnd-navy text-white rounded-full">
+          <div className="mt-6 flex items-center gap-8">
+            <Link href="#" className="flex items-center gap-2 px-4 py-2 bg-mnd-navy text-white rounded-full text-xs font-semibold">
               <div>Scroll to fall in love</div>
-              <ArrowRight color="white" />
+              <ArrowRight color="white" size={24} />
             </Link>
           </div>
         </div>
