@@ -6,19 +6,19 @@ import SectionCard from "@/components/SectionCard";
 const cards = [
   {
     id: 0,
-    title: "NO DISAPPEARING ACT",
+    title: "No disappearing act",
     quote: "What happens after the placement is done?",
     body: "We don't vanish after placement. You're not left managing alone. We stay close, check in, and step in when needed so things keep moving smoothly.",
   },
   {
     id: 1,
-    title: "NO QUESTIONS ASKED",
+    title: "No questions asked",
     quote: "What if we need some guidance or there's an issue with the talent?",
     body: "Bad fit engineer, drop in performance, or if something feels even slightly off. We're here for you - We step in immediately and make it right.",
   },
   {
     id: 2,
-    title: "ALWAYS JUST ONE CALL AWAY FROM THE FOUNDERS",
+    title: "Always just one call away from the founders",
     quote: "Who do we reach out to when we're at a crossroads?",
     body: "You always have direct access to us. No layers, no delays. Brainstorm, unblock, or sense-check decisions. We're around when you need us.",
   },
@@ -29,7 +29,7 @@ const GuaranteeSection = forwardRef<HTMLElement>((_, ref) => {
 
   return (
     <section ref={ref} className="h-screen w-full snap-start flex flex-col items-center justify-center gap-8 md:gap-16">
-      <h2 className="font-playfair text-[26px] md:text-[42px] font-normal leading-[1.1] text-mnd-charcoal text-center px-6 md:px-0">
+      <h2 className="font-playfair text-[26px] md:text-[36px] font-bold leading-[1.333] text-mnd-charcoal text-center px-6 md:px-0">
         All this, on our guarantee.
       </h2>
 
@@ -40,7 +40,7 @@ const GuaranteeSection = forwardRef<HTMLElement>((_, ref) => {
             <div
               key={card.id}
               className={`overflow-hidden rounded-[28px] transition-cards flex-shrink-0 w-[78vw] ${
-                isOpen ? "md:w-[420px]" : "md:w-[150px]"
+                isOpen ? "md:w-[340px]" : "md:w-[120px]"
               }`}
             >
               {/* Mobile: horizontal scroll — always expanded, SectionCard owns the card styling */}
@@ -60,10 +60,10 @@ const GuaranteeSection = forwardRef<HTMLElement>((_, ref) => {
                     title={card.title}
                     quote={card.quote}
                     body={card.body}
-                    className="w-[420px] px-10 py-8"
+                    className="w-[340px] px-8 py-8"
                   />
                 ) : (
-                  <div className="w-[150px] h-full bg-white rounded-[28px] shadow-card flex flex-col items-center justify-end gap-4 py-[44px]">
+                  <div className="w-[120px] h-full bg-white rounded-[28px] shadow-card flex flex-col items-center justify-end gap-4 py-[44px]">
                     <div className="w-[50px] h-[2px] bg-mnd-stone" />
                     <button
                       onClick={() => setActiveCard(card.id)}
