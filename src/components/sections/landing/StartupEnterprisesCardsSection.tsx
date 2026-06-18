@@ -112,7 +112,7 @@ function CardDeck({ cards, category }: { cards: typeof startupCards; category: s
               <div className="mt-4 md:mt-8 flex flex-col gap-2 md:gap-3">
                 <div className="flex items-start gap-2">
                   <span className="font-sans text-[36px] md:text-[60px] font-bold text-mnd-charcoal leading-none">&ldquo;</span>
-                  <p className="font-sans text-[13px] md:text-[12px] italic font-medium leading-[1.25] text-mnd-charcoal w-[150px] md:w-[190px] mt-2">
+                  <p className="font-sans text-[13px] md:text-[12px] italic font-medium leading-[1.2] text-mnd-charcoal w-[150px] md:w-[190px] mt-2">
                     {card.quote}
                   </p>
                 </div>
@@ -132,7 +132,7 @@ function CardDeck({ cards, category }: { cards: typeof startupCards; category: s
 const StartupEnterprisesCardsSection = forwardRef<HTMLElement>((_, ref) => {
   return (
     <section ref={ref} className="h-screen w-full snap-start flex flex-col items-center justify-center gap-12 md:gap-16">
-      <h2 className="w-full max-w-[720px] font-playfair text-[26px] md:text-[36px] font-normal leading-[1.25] tracking-[-0.03em] text-mnd-charcoal text-center px-6 md:px-0 mt-8 md:mt-32">
+      <h2 className="w-full max-w-[720px] font-playfair text-[26px] md:text-[36px] font-normal leading-[1.333] tracking-[-0.03em] text-mnd-charcoal text-center px-6 md:px-0 mt-8 md:mt-32">
         So, we built MND to plug into how you <br className="hidden md:block" />
         <span className="font-bold italic">actually</span> work.
       </h2>

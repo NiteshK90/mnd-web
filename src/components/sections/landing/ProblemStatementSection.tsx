@@ -6,12 +6,12 @@ const ProblemStatementSection = forwardRef<HTMLElement>((_, ref) => {
       ref={ref}
       className="h-screen w-full snap-start flex flex-col items-center justify-center gap-10 md:gap-20 text-center px-6 md:px-0"
     >
-      <p className="font-playfair text-[26px] md:text-[36px] font-normal leading-[1.15] tracking-[-0.035em] text-mnd-charcoal w-full max-w-[650px]">
+      <p className="font-playfair text-[26px] md:text-[36px] font-normal leading-[1.333] tracking-[-0.035em] text-mnd-charcoal w-full max-w-[650px]">
         <span>Building a great software development team is tough. </span>
         <span className="italic">Especially now.</span>
       </p>
       <div className="w-[62px] h-[5px] bg-mnd-charcoal" />
-      <p className="font-playfair text-[26px] md:text-[36px] font-bold leading-[1.2] tracking-[-0.03em] text-mnd-charcoal w-full max-w-[720px]">
+      <p className="font-playfair text-[26px] md:text-[36px] font-bold leading-[1.333] tracking-[-0.03em] text-mnd-charcoal w-full max-w-[720px]">
         <span className="block">We&apos;re engineers ourselves.</span>
         <span className="block italic">We get it.</span>
       </p>
