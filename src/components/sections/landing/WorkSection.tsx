@@ -4,20 +4,20 @@ const WorkSection = forwardRef<HTMLElement>((_, ref) => {
   return (
     <section
       ref={ref}
-      className="h-screen w-full snap-start flex flex-col items-center justify-center gap-20 text-center"
+      className="h-screen w-full snap-start flex flex-col items-center justify-center gap-10 md:gap-20 text-center px-6 md:px-0"
     >
-      <p className="font-canela text-[42px] font-normal leading-[1.15] tracking-[-0.03em] text-mnd-charcoal w-[650px]">
+      <p className="font-canela text-[26px] md:text-[42px] font-normal leading-[1.15] tracking-[-0.03em] text-mnd-charcoal w-full max-w-[650px]">
         Imagine, the best engineering talent <span className="italic">(yes, real people!)</span> - waiting to work with you.
       </p>
       <div className="w-[62px] h-[5px] bg-mnd-charcoal" />
-      <p className="font-canela text-[42px] font-semibold leading-[1.05] tracking-[-0.03em] text-mnd-charcoal w-[720px] italic">
+      <p className="font-canela text-[26px] md:text-[42px] font-semibold leading-[1.05] tracking-[-0.03em] text-mnd-charcoal w-full max-w-[720px] italic">
         On your terms.
       </p>
-      <div className="flex items-center gap-12 pt-10">
+      <div className="flex flex-wrap items-center justify-center gap-3 md:gap-12 pt-4 md:pt-10">
         {["BY THE HOUR", "QUICK PLACEMENT & REPLACEMENT", "NO QUESTIONS ASKED"].map((text) => (
           <span
             key={text}
-            className="py-3 px-8 border-1 border-mnd-stone rounded-full bg-transparent font-sans text-xs font-semibold text-mnd-charcoal flex items-center justify-center"
+            className="py-3 px-6 md:px-8 border-1 border-mnd-stone rounded-full bg-transparent font-sans text-xs font-semibold text-mnd-charcoal flex items-center justify-center"
           >
             {text}
           </span>

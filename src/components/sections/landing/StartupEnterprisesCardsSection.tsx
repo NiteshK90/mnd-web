@@ -32,10 +32,12 @@ const enterpriseCards = [
   },
 ];
 
+// Front card at bottom, back cards peek upward.
+// Container = 340px: left edge at 0, right edge at 40+300=340.
 const slotStyles = [
-  { left: 0,   top: 0,  rotate: 0,  zIndex: 3 },
-  { left: -8,  top: 6,  rotate: -2, zIndex: 2 },
-  { left: -24, top: 12, rotate: -4, zIndex: 1 },
+  { left: 20, top: 12, rotate: 0,  zIndex: 3 },
+  { left: 0,  top: 6,  rotate: -3, zIndex: 2 },
+  { left: 40, top: 0,  rotate: 3,  zIndex: 1 },
 ];
 
 function CardDeck({ cards, category }: { cards: typeof startupCards; category: string }) {
@@ -66,8 +68,18 @@ function CardDeck({ cards, category }: { cards: typeof startupCards; category: s
     else { setDragX(0); setDragging(false); }
   };
 
+  const onTouchStart = (e: React.TouchEvent) => {
+    startX.current = e.touches[0].clientX;
+    setDragging(true);
+  };
+
+  const onTouchMove = (e: React.TouchEvent) => {
+    if (!dragging) return;
+    setDragX(e.touches[0].clientX - startX.current);
+  };
+
   return (
-    <div className="relative w-[340px] h-[430px]">
+    <div className="relative flex-shrink-0 w-[280px] md:w-[340px] h-[350px] md:h-[430px]">
       {cards.map((card, i) => {
         const slot = (i - topIndex + n) % n;
         const pos = slotStyles[slot];
@@ -76,7 +88,7 @@ function CardDeck({ cards, category }: { cards: typeof startupCards; category: s
         return (
           <div
             key={i}
-            className={`absolute w-[300px] h-[380px] rounded-[28px] bg-white shadow-card ${isFront ? "cursor-grab active:cursor-grabbing" : ""}`}
+            className={`absolute w-[240px] md:w-[300px] h-[300px] md:h-[380px] rounded-[28px] bg-white shadow-card ${isFront ? "cursor-grab active:cursor-grabbing" : ""}`}
             style={{
               left: pos.left,
               top: pos.top,
@@ -91,19 +103,22 @@ function CardDeck({ cards, category }: { cards: typeof startupCards; category: s
             onMouseMove={isFront ? onMouseMove : undefined}
             onMouseUp={isFront ? onRelease : undefined}
             onMouseLeave={isFront && dragging ? onRelease : undefined}
+            onTouchStart={isFront ? onTouchStart : undefined}
+            onTouchMove={isFront ? onTouchMove : undefined}
+            onTouchEnd={isFront ? onRelease : undefined}
           >
-            <div className="p-9 flex flex-col h-full">
+            <div className="p-5 md:p-9 flex flex-col h-full">
               <p className="font-sans text-[14px] font-semibold text-mnd-charcoal">● {category}</p>
-              <div className="mt-8 flex flex-col gap-6">
+              <div className="mt-4 md:mt-8 flex flex-col gap-4 md:gap-6">
                 <div className="flex items-start gap-2">
-                  <span className="font-sans text-[46px] font-bold text-mnd-charcoal leading-none">&ldquo;</span>
-                  <p className="font-sans text-[16px] italic font-medium leading-[1.25] text-mnd-charcoal w-[190px] mt-2">
+                  <span className="font-sans text-[36px] md:text-[46px] font-bold text-mnd-charcoal leading-none">&ldquo;</span>
+                  <p className="font-sans text-[13px] md:text-[16px] italic font-medium leading-[1.25] text-mnd-charcoal w-[150px] md:w-[190px] mt-2">
                     {card.quote}
                   </p>
                 </div>
                 <div className="w-[42px] h-[5px] bg-mnd-charcoal" />
               </div>
-              <p className="mt-9 font-sans text-[24px] font-bold leading-[1.2] text-mnd-charcoal w-[210px]">
+              <p className="mt-5 md:mt-9 font-sans text-[18px] md:text-[24px] font-bold leading-[1.2] text-mnd-charcoal w-[170px] md:w-[210px]">
                 {card.mainText}
               </p>
             </div>
@@ -116,12 +131,12 @@ function CardDeck({ cards, category }: { cards: typeof startupCards; category: s
 
 const StartupEnterprisesCardsSection = forwardRef<HTMLElement>((_, ref) => {
   return (
-    <section ref={ref} className="h-screen w-full snap-start flex flex-col items-center justify-center gap-16">
-      <h2 className="max-w-[720px] font-canela text-[42px] font-normal leading-[1.1] tracking-[-0.03em] text-mnd-charcoal text-center mt-16">
+    <section ref={ref} className="h-screen w-full snap-start flex flex-col items-center justify-center gap-12 md:gap-16">
+      <h2 className="w-full max-w-[720px] font-canela text-[26px] md:text-[42px] font-normal leading-[1.1] tracking-[-0.03em] text-mnd-charcoal text-center px-6 md:px-0">
         So, we built MND to plug into how you <span className="font-semibold italic">actually</span> work.
       </h2>
 
-      <div className="flex justify-center gap-[180px]">
+      <div className="flex flex-row items-center justify-start md:justify-center gap-10 md:gap-[180px] overflow-x-auto md:overflow-visible w-full md:w-auto px-6 md:px-0 pb-4 md:pb-0">
         <CardDeck cards={startupCards} category="For Startups" />
         <CardDeck cards={enterpriseCards} category="For Enterprises" />
       </div>
