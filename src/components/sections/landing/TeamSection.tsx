@@ -45,12 +45,12 @@ const TeamSection = forwardRef<HTMLElement>((_, ref) => {
                   <div className="w-[100px] h-[100px] rounded-full bg-[#E8E6E6] shrink-0" />
                   <div className="flex flex-col gap-2">
                     <p className="font-sans text-xs font-extrabold tracking-[0.12em] uppercase text-mnd-charcoal">{member.name}</p>
-                    <p className="font-sans text-xs font-medium leading-[1.5] text-mnd-charcoal">
+                    <div className="font-sans text-xs font-medium leading-[1.5] text-mnd-charcoal">
                       <div>{member.role}</div>
                       {member.experience.map((line, j) => (
                         <div key={j}>{line}</div>
                       ))}
-                    </p>
+                    </div>
                   </div>
                 </div>
               </div>
