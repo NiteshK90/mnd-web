@@ -46,6 +46,7 @@ const ValuesSection = forwardRef<HTMLElement>((_, ref) => {
   const isDraggingRef = useRef(false);
 
   useLayoutEffect(() => {
+    if (window.innerWidth < 768) return;
     if (trackRef.current) {
       trackRef.current.style.transform = `translateX(calc((100vw - ${CARD_WIDTH}px) / 2 - ${activeIndex * (CARD_WIDTH + GAP)}px))`;
     }
@@ -70,7 +71,7 @@ const ValuesSection = forwardRef<HTMLElement>((_, ref) => {
 
       {/* Carousel track */}
       <div
-        className="overflow-hidden cursor-grab active:cursor-grabbing select-none"
+        className="overflow-x-auto md:overflow-hidden cursor-grab active:cursor-grabbing select-none scrollbar-none [&::-webkit-scrollbar]:hidden"
         onMouseDown={(e) => onDragStart(e.clientX)}
         onMouseUp={(e) => onDragEnd(e.clientX)}
         onMouseLeave={(e) => onDragEnd(e.clientX)}
@@ -79,33 +80,33 @@ const ValuesSection = forwardRef<HTMLElement>((_, ref) => {
       >
         <div
           ref={trackRef}
-          className="flex gap-[56px] transition-transform duration-500 ease-in-out py-2"
+          className="flex gap-4 md:gap-[56px] transition-transform duration-500 ease-in-out py-2 px-4 md:px-0"
         >
           {values.map((v, i) => (
             <div
               key={i}
-              className="flex-shrink-0 w-[450px] bg-white rounded-[32px] py-8 px-8 flex flex-col gap-8 shadow-[0_2px_4px_rgba(0,0,0,.04),0_8px_24px_rgba(0,0,0,.06)]"
+              className="flex-shrink-0 w-[75vw] md:w-[450px] bg-white rounded-[32px] py-6 px-6 md:py-8 md:px-8 flex flex-col gap-5 md:gap-8 shadow-[0_2px_4px_rgba(0,0,0,.04),0_8px_24px_rgba(0,0,0,.06)]"
             >
-              <div className="flex flex-col gap-3">
+              <div className="flex flex-col gap-2 md:gap-3">
                 <div className="flex items-center gap-3">
                   <div className="w-4 h-4 rounded-full bg-black shrink-0" />
                   <span className="font-sans text-[8px] tracking-[0.18em] uppercase">{v.label}</span>
                 </div>
 
-                <p className="font-sans text-[22px] font-extrabold tracking-[-0.02em] uppercase text-mnd-charcoal">
+                <p className="font-sans text-[16px] md:text-[22px] font-extrabold tracking-[-0.02em] uppercase text-mnd-charcoal">
                   {v.name}
                 </p>
               </div>
 
               <div className="w-[64px] h-[6px] bg-mnd-charcoal" />
 
-              <p className="font-canela text-[34px] font-semibold leading-[1.08] tracking-[-0.03em] text-mnd-charcoal">
+              <p className="font-canela text-[20px] md:text-[34px] font-semibold leading-[1.08] tracking-[-0.03em] text-mnd-charcoal">
                 {v.statement}
               </p>
 
               <div className="w-[64px] h-[6px] bg-mnd-charcoal" />
 
-              <p className="font-sans text-[18px] font-medium leading-[1.35] text-mnd-charcoal max-w-[460px]">
+              <p className="font-sans text-[13px] md:text-[18px] font-medium leading-[1.35] text-mnd-charcoal">
                 {v.description}
               </p>
             </div>
@@ -113,8 +114,8 @@ const ValuesSection = forwardRef<HTMLElement>((_, ref) => {
         </div>
       </div>
 
-      {/* Pagination */}
-      <div className="flex justify-center gap-3">
+      {/* Pagination — desktop only */}
+      <div className="hidden md:flex justify-center gap-3">
         {values.map((_, i) => (
           <button
             key={i}

@@ -39,11 +39,11 @@ const MndWayHeroSection = forwardRef<HTMLElement>((_, ref) => {
   return (
     <section
       ref={ref}
-      className="relative bg-[url('/mnd-way/hero.png')] bg-cover bg-center h-screen w-full snap-start py-6 px-20 flex flex-col"
+      className="relative bg-[url('/mnd-way/hero.png')] bg-cover bg-center min-h-screen w-full snap-start py-6 px-4 md:px-20 flex flex-col"
     >
-      <div className="flex-1 flex items-center gap-6 relative">
+      <div className="flex-1 flex flex-col md:flex-row items-center justify-center md:justify-start gap-6 relative">
         <div className="flex flex-col justify-center">
-          <div className="font-canela text-[64px] font-semibold leading-[1] text-mnd-dark w-[400px]">
+          <div className="font-canela text-[40px] md:text-[64px] font-semibold leading-[1] text-mnd-dark md:w-[400px]">
             The grass is greener at
             <div>MND.</div>
             <div className="italic">Seriously.</div>
@@ -56,7 +56,7 @@ const MndWayHeroSection = forwardRef<HTMLElement>((_, ref) => {
           </div>
         </div>
 
-        <div className="relative">
+        <div className="hidden md:block relative">
           {dots.map((dot, i) => (
             <div
               key={i}
