@@ -151,7 +151,7 @@ const CareerSection = forwardRef<HTMLElement>((_, ref) => {
         <p className="font-canela text-[22px] md:text-[42px] font-normal leading-[1.1] tracking-[-0.03em] text-mnd-charcoal">
           Oh, & we&apos;re very picky about our talent pool –
         </p>
-        <div className="flex items-center gap-3 md:gap-6 mt-6 md:mt-12">
+        <div className="flex items-center justify-between md:justify-normal gap-3 md:gap-6 mt-6 md:mt-12">
           {/* Block 1 */}
           <div className="flex flex-col items-center gap-2 justify-center shrink-0">
             <span className="font-sans text-[10px] font-semibold tracking-[0.2em] uppercase text-mnd-charcoal">
@@ -166,7 +166,7 @@ const CareerSection = forwardRef<HTMLElement>((_, ref) => {
           </div>
 
           {/* Progress bar */}
-          <div className="flex-1 h-[44px] md:h-[68px] bg-white rounded-full shadow-progress flex items-center px-4 md:px-8 gap-0">
+          <div className="hidden md:flex flex-1 h-[68px] bg-white rounded-full shadow-progress items-center px-8 gap-0">
             {cards.map((_, i) => (
               <Fragment key={i}>
                 <div
