@@ -148,7 +148,7 @@ const CareerSection = forwardRef<HTMLElement>((_, ref) => {
       className="h-screen w-full snap-start flex items-center justify-center px-4 md:px-12 overflow-hidden"
     >
       <div className="w-full">
-        <p className="font-canela text-[22px] md:text-[42px] font-normal leading-[1.1] tracking-[-0.03em] text-mnd-charcoal">
+        <p className="font-canela text-[22px] md:text-[42px] font-normal leading-[1.1] tracking-[-0.03em] text-mnd-charcoal md:pt-24">
           Oh, & we&apos;re very picky about our talent pool –
         </p>
         <div className="flex items-center justify-between md:justify-normal gap-3 md:gap-6 mt-6 md:mt-12">

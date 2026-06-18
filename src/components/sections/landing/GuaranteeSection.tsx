@@ -6,21 +6,21 @@ import SectionCard from "@/components/SectionCard";
 const cards = [
   {
     id: 0,
+    title: "NO DISAPPEARING ACT",
+    quote: "What happens after the placement is done?",
+    body: "We don't vanish after placement. You're not left managing alone. We stay close, check in, and step in when needed so things keep moving smoothly.",
+  },
+  {
+    id: 1,
     title: "NO QUESTIONS ASKED",
     quote: "What if we need some guidance or there's an issue with the talent?",
     body: "Bad fit engineer, drop in performance, or if something feels even slightly off. We're here for you - We step in immediately and make it right.",
   },
   {
-    id: 1,
+    id: 2,
     title: "ALWAYS JUST ONE CALL AWAY FROM THE FOUNDERS",
     quote: "Who do we reach out to when we're at a crossroads?",
     body: "You always have direct access to us. No layers, no delays. Brainstorm, unblock, or sense-check decisions. We're around when you need us.",
-  },
-  {
-    id: 2,
-    title: "NO DISAPPEARING ACT",
-    quote: "What happens after the placement is done?",
-    body: "We don't vanish after placement. You're not left managing alone. We stay close, check in, and step in when needed so things keep moving smoothly.",
   },
 ];
 
@@ -39,7 +39,7 @@ const GuaranteeSection = forwardRef<HTMLElement>((_, ref) => {
           return (
             <div
               key={card.id}
-              className={`overflow-hidden transition-cards flex-shrink-0 w-[78vw] ${
+              className={`overflow-hidden rounded-[28px] transition-cards flex-shrink-0 w-[78vw] ${
                 isOpen ? "md:w-[420px]" : "md:w-[150px]"
               }`}
             >
