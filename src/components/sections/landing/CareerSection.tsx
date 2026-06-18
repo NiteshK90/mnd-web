@@ -204,7 +204,7 @@ const CareerSection = forwardRef<HTMLElement>((_, ref) => {
           </div>
         </div>
 
-        <div className="mt-5 md:mt-8 flex gap-4 pb-3 md:pb-0">
+        <div className="mt-5 md:mt-8 flex gap-4 overflow-x-auto scrollbar-none [&::-webkit-scrollbar]:hidden md:overflow-visible pb-3 md:pb-0">
           {cards.map((card, i) => (
             <div
               key={i}
