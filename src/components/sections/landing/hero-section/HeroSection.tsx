@@ -7,10 +7,10 @@ import ClientTicker from "@/components/ClientTicker";
 import { ProfileCard } from "./ProfileCard";
 
 const dots = [
-  { left: 235,  top: 80,  cardLeft: -110, cardTop: -305, name: "Shivam",  years: 8, role: "iOS Developer",    mostLikelyTo: "Fix your phone but forget his own charger!", quote: "Give me five minutes I'll fix it!" },
-  { left: 365, top: 10,  cardLeft: -110, cardTop: -305, name: "Jenifer", years: 9, role: "Product Designer", mostLikelyTo: "Turn your UX into an award winning design",    quote: "Every pixel has a purpose" },
-  { left: 450, top: 90,  cardLeft: -110, cardTop: -305, name: "Ryan",    years: 7, role: "React Engineer",   mostLikelyTo: "Refactor your entire codebase in a weekend!", quote: "Clean code or no code" },
-  { left: 570, top: 35,  cardLeft: -110, cardTop: -305, name: "Maya",    years: 6, role: "AI Engineer",      mostLikelyTo: "Build the API before you finish explaining it", quote: "If it's slow, it's wrong" },
+  { left: 235,  top: 80,  cardLeft: -110, cardTop: -320, name: "Shivam",  years: 8, role: "iOS Developer",    mostLikelyTo: "Fix your phone but forget his own charger!", quote: "Give me five minutes I'll fix it!",          previousLogos: ["apple"] },
+  { left: 365, top: 10,  cardLeft: -110, cardTop: -320, name: "Jenifer", years: 9, role: "Product Designer", mostLikelyTo: "Turn your UX into an award winning design",    quote: "Every pixel has a purpose",                previousLogos: ["microsoft"] },
+  { left: 450, top: 90,  cardLeft: -110, cardTop: -320, name: "Ryan",    years: 7, role: "React Engineer",   mostLikelyTo: "Refactor your entire codebase in a weekend!", quote: "Clean code or no code",                    previousLogos: ["microsoft"] },
+  { left: 570, top: 35,  cardLeft: -110, cardTop: -320, name: "Maya",    years: 6, role: "AI Engineer",      mostLikelyTo: "Build the API before you finish explaining it", quote: "If it's slow, it's wrong",               previousLogos: ["apple"] },
 ];
 
 const HeroSection = forwardRef<HTMLElement>((_, ref) => {
@@ -27,7 +27,7 @@ const HeroSection = forwardRef<HTMLElement>((_, ref) => {
             Stellar engineers on bench for you.
           </div>
           <div className="mt-6 flex items-center gap-6">
-            <Link href="#" className="flex items-center gap-2 px-4 py-2 bg-mnd-navy text-white rounded-full">
+            <Link href="mailto:hello@mynextdeveloper.com" className="flex items-center gap-2 px-4 py-2 bg-mnd-navy text-white rounded-full">
               <div className="font-sans text-xs font-semibold">Ready when you are</div>
               <ArrowRight color="white" size={32} strokeWidth={1} />
             </Link>
@@ -52,7 +52,7 @@ const HeroSection = forwardRef<HTMLElement>((_, ref) => {
                   className="absolute z-50"
                   style={{ left: dot.cardLeft, top: dot.cardTop }}
                 >
-                  <ProfileCard name={dot.name} years={dot.years} role={dot.role} mostLikelyTo={dot.mostLikelyTo} quote={dot.quote} />
+                  <ProfileCard name={dot.name} years={dot.years} role={dot.role} mostLikelyTo={dot.mostLikelyTo} quote={dot.quote} previousLogos={dot.previousLogos} />
                 </div>
               )}
             </div>
