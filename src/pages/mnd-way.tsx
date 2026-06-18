@@ -49,12 +49,12 @@ export default function MndWay() {
         </div>
       )}
 
-      <HeroSection ref={(el) => { sectionRefs.current[0] = el; }} />
+      <HeroSection ref={(el) => { sectionRefs.current[0] = el; }} onScrollNext={() => scrollTo(1)} />
 
       <div className="relative bg-mnd-linen">
-        <NoteSection ref={(el) => { sectionRefs.current[1] = el; }} />
-        <NoteSection2 ref={(el) => { sectionRefs.current[2] = el; }} />
-        <NoteSection3 ref={(el) => { sectionRefs.current[3] = el; }} />
+        <NoteSection ref={(el) => { sectionRefs.current[1] = el; }} onSkipToValues={() => scrollTo(4)} />
+        <NoteSection2 ref={(el) => { sectionRefs.current[2] = el; }} onSkipToValues={() => scrollTo(4)} />
+        <NoteSection3 ref={(el) => { sectionRefs.current[3] = el; }} onSkipToValues={() => scrollTo(4)} />
         <ValuesSection ref={(el) => { sectionRefs.current[4] = el; }} />
       </div>
 
