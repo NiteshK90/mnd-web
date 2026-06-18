@@ -58,7 +58,7 @@ export default function MndWay() {
         <ValuesSection ref={(el) => { sectionRefs.current[4] = el; }} />
       </div>
 
-      <FooterSection ref={(el) => { sectionRefs.current[5] = el; }} />
+      <FooterSection containerId="mnd-way-container" ref={(el) => { sectionRefs.current[5] = el; }} />
 
       <div className="hidden md:block">
         <ScrollIndicators

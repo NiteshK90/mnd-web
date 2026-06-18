@@ -1,6 +1,6 @@
 "use client";
 
-import { forwardRef, useState, useEffect, useRef, useCallback } from "react";
+import { Fragment, forwardRef, useState, useEffect, useRef, useCallback } from "react";
 
 const blocks = [
   { label: "FOR EVERY", number: "10", description: "Engineers Invited To Apply" },
@@ -167,13 +167,27 @@ const CareerSection = forwardRef<HTMLElement>((_, ref) => {
 
           {/* Progress bar */}
           <div className="flex-1 h-[44px] md:h-[68px] bg-white rounded-full shadow-progress flex items-center px-4 md:px-8 gap-0">
-            <div className="w-4 h-4 rounded-full border-1 border-mnd-charcoal bg-black shrink-0" />
-            <div className="flex-1 h-1 bg-black" />
-            <div className="w-4 h-4 rounded-full border-1 border-mnd-charcoal bg-white shrink-0" />
-            <div className="flex-1 h-0.5 bg-mnd-silver" />
-            <div className="w-4 h-4 rounded-full border-1 border-mnd-charcoal bg-white shrink-0" />
-            <div className="flex-1 h-0.5 bg-mnd-silver" />
-            <div className="w-4 h-4 rounded-full border-1 border-mnd-charcoal bg-white shrink-0" />
+            {cards.map((_, i) => (
+              <Fragment key={i}>
+                <div
+                  className="w-4 h-4 rounded-full border border-mnd-charcoal shrink-0"
+                  style={{
+                    backgroundColor: i < visibleCount ? "#1a1a1a" : "#ffffff",
+                    transition: "background-color 0.4s ease",
+                  }}
+                />
+                {i < cards.length - 1 && (
+                  <div
+                    className="flex-1 shrink-0"
+                    style={{
+                      height: i + 1 < visibleCount ? "4px" : "2px",
+                      backgroundColor: i + 1 < visibleCount ? "#1a1a1a" : "#d1d5db",
+                      transition: "background-color 0.4s ease, height 0.4s ease",
+                    }}
+                  />
+                )}
+              </Fragment>
+            ))}
           </div>
 
           {/* Block 2 */}
