@@ -99,7 +99,7 @@ const ValuesSection = forwardRef<HTMLElement>((_, ref) => {
 
               <div className="w-[64px] h-[6px] bg-mnd-charcoal" />
 
-              <p className="font-canela text-[20px] md:text-[34px] font-semibold leading-[1.08] tracking-[-0.03em] text-mnd-charcoal">
+              <p className="font-playfair text-[20px] md:text-[34px] font-semibold leading-[1.08] tracking-[-0.03em] text-mnd-charcoal">
                 {v.statement}
               </p>
 

@@ -8,7 +8,7 @@ interface SectionCardProps {
 export default function SectionCard({ title, quote, body, className = "" }: SectionCardProps) {
   return (
     <div className={`bg-white rounded-[28px] shadow-card flex flex-col gap-3 md:gap-6 ${className}`}>
-      <h3 className="font-canela text-[14px] md:text-[20px] font-semibold tracking-[-0.02em] text-mnd-charcoal">
+      <h3 className="font-playfair text-[14px] md:text-[20px] font-semibold tracking-[-0.02em] text-mnd-charcoal">
         {title}
       </h3>
       <div className="w-[50px] h-[4px] bg-mnd-charcoal" />

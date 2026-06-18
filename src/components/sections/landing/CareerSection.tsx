@@ -148,7 +148,7 @@ const CareerSection = forwardRef<HTMLElement>((_, ref) => {
       className="h-screen w-full snap-start flex items-center justify-center px-4 md:px-12 overflow-hidden"
     >
       <div className="w-full">
-        <p className="font-canela text-[22px] md:text-[42px] font-normal leading-[1.1] tracking-[-0.03em] text-mnd-charcoal md:pt-24">
+        <p className="font-playfair text-[22px] md:text-[42px] font-normal leading-[1.1] tracking-[-0.03em] text-mnd-charcoal md:pt-24">
           Oh, & we&apos;re very picky about our talent pool –
         </p>
         <div className="flex items-center justify-between md:justify-normal gap-3 md:gap-6 mt-6 md:mt-12">
@@ -157,7 +157,7 @@ const CareerSection = forwardRef<HTMLElement>((_, ref) => {
             <span className="font-sans text-[10px] font-semibold tracking-[0.2em] uppercase text-mnd-charcoal">
               {blocks[0].label}
             </span>
-            <span className="font-canela text-[40px] md:text-[64px] font-bold leading-none text-mnd-charcoal">
+            <span className="font-playfair text-[40px] md:text-[64px] font-bold leading-none text-mnd-charcoal">
               {blocks[0].number}
             </span>
             <span className="w-[80px] md:w-[150px] text-center font-sans text-[10px] font-semibold tracking-[0.2em] uppercase text-mnd-charcoal">
@@ -195,7 +195,7 @@ const CareerSection = forwardRef<HTMLElement>((_, ref) => {
             <span className="font-sans text-[10px] font-semibold tracking-[0.2em] uppercase text-mnd-charcoal">
               {blocks[1].label}
             </span>
-            <span className="font-canela text-[40px] md:text-[64px] font-bold leading-none text-mnd-charcoal">
+            <span className="font-playfair text-[40px] md:text-[64px] font-bold leading-none text-mnd-charcoal">
               {blocks[1].number}
             </span>
             <span className="w-[80px] md:w-[150px] text-center font-sans text-[10px] font-semibold tracking-[0.2em] uppercase text-mnd-charcoal">
@@ -216,7 +216,7 @@ const CareerSection = forwardRef<HTMLElement>((_, ref) => {
                 pointerEvents: i < visibleCount ? "auto" : "none",
               }}
             >
-              <h3 className="font-canela text-[16px] md:text-[24px] font-semibold leading-[1.1] text-mnd-charcoal">
+              <h3 className="font-playfair text-[16px] md:text-[24px] font-semibold leading-[1.1] text-mnd-charcoal">
                 {card.top}
               </h3>
               <div className="w-10 md:w-16 h-[2px] md:h-[3px] bg-mnd-charcoal" />

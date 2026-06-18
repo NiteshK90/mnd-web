@@ -46,7 +46,7 @@ const MndWayHeroSection = forwardRef<HTMLElement, HeroSectionProps>(({ onScrollN
     >
       <div className="flex-1 flex flex-col md:flex-row items-center justify-center md:justify-start gap-6 relative">
         <div className="flex flex-col justify-center">
-          <div className="font-canela text-[40px] md:text-[64px] font-semibold leading-[1] text-mnd-dark md:w-[400px]">
+          <div className="font-playfair text-[40px] md:text-[64px] font-semibold leading-[1] text-mnd-dark md:w-[400px]">
             The grass is greener at
             <div>MND.</div>
             <div className="italic">Seriously.</div>

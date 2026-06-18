@@ -23,11 +23,11 @@ const HeroSection = forwardRef<HTMLElement>((_, ref) => {
     >
       <div className="flex-1 flex items-center gap-6 relative">
         <div className="flex flex-col justify-center">
-          <div className="font-[Canela] text-[clamp(3rem,6.5vw,4.5rem)] font-semibold tracking-[0.1] w-full md:w-[500px] leading-[1.2] text-mnd-dark">
+          <div className="font-playfair text-[clamp(3rem,6.5vw,4.5rem)] font-semibold tracking-[0.1] w-full md:w-[500px] leading-[1.2] text-mnd-dark">
             Stellar engineers on bench for you.
           </div>
           <div className="mt-6 flex items-center gap-6">
-            <Link href="mailto:hello@mynextdeveloper.com" className="flex items-center gap-2 px-4 py-2 bg-mnd-navy text-white rounded-full">
+            <Link href="mailto:hello@mynextdeveloper.com" className="flex items-center gap-2 px-4 h-10 bg-mnd-navy text-white rounded-full">
               <div className="font-sans text-xs font-semibold">Ready when you are</div>
               <ArrowRight color="white" size={32} strokeWidth={1} />
             </Link>

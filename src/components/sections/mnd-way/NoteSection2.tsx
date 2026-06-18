@@ -12,11 +12,11 @@ const NoteSection2 = forwardRef<HTMLElement, NoteSection2Props>(({ onSkipToValue
 
         {/* Left */}
         <div className="flex flex-col gap-4 md:gap-8">
-          <span className="font-canela text-[48px] md:text-[160px] font-bold leading-1 text-mnd-dark">
+          <span className="font-playfair text-[48px] md:text-[160px] font-bold leading-1 text-mnd-dark">
             &ldquo;
           </span>
 
-          <p className="font-canela text-[15px] md:text-[36px] font-semibold leading-[1.08] tracking-[-0.03em] text-mnd-dark">
+          <p className="font-playfair text-[15px] md:text-[36px] font-semibold leading-[1.08] tracking-[-0.03em] text-mnd-dark">
             So, we built MND as a place where stellar engineers can find world-class opportunities...
           </p>
 

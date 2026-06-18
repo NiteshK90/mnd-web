@@ -12,15 +12,15 @@ const NoteSection = forwardRef<HTMLElement, NoteSectionProps>(({ onSkipToValues 
 
         {/* Left */}
         <div className="flex flex-col gap-4 md:gap-8">
-          <span className="font-canela text-[60px] md:text-[160px] font-bold leading-1 text-mnd-dark">
+          <span className="font-playfair text-[60px] md:text-[160px] font-bold leading-1 text-mnd-dark">
             &ldquo;
           </span>
 
-          <p className="font-canela text-[18px] md:text-[36px] font-semibold leading-[1.08] tracking-[-0.03em] text-mnd-dark">
+          <p className="font-playfair text-[18px] md:text-[36px] font-semibold leading-[1.08] tracking-[-0.03em] text-mnd-dark">
             Over the past 6 years, we have built MND with the belief that software should be built properly.
           </p>
 
-          <p className="font-canela text-[16px] md:text-[34px] font-bold leading-[1.1] text-mnd-dark">
+          <p className="font-playfair text-[16px] md:text-[34px] font-bold leading-[1.1] text-mnd-dark">
             Thoughtfully. Cleanly.
           </p>
 
@@ -29,7 +29,7 @@ const NoteSection = forwardRef<HTMLElement, NoteSectionProps>(({ onSkipToValues 
 
         {/* Right */}
         <div className="flex flex-col gap-6 md:gap-12 mt-8 md:mt-0">
-          <h2 className="font-canela text-[20px] md:text-[42px] font-bold text-mnd-dark">
+          <h2 className="font-playfair text-[20px] md:text-[42px] font-bold text-mnd-dark">
             A note from the founders ~
           </h2>
 

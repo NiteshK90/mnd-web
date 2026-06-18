@@ -12,11 +12,11 @@ const NoteSection3 = forwardRef<HTMLElement, NoteSection3Props>(({ onSkipToValue
 
         {/* Left */}
         <div className="flex flex-col gap-4 md:gap-8">
-          <span className="font-canela text-[48px] md:text-[160px] font-bold leading-1 text-white">
+          <span className="font-playfair text-[48px] md:text-[160px] font-bold leading-1 text-white">
             &ldquo;
           </span>
 
-          <p className="font-canela text-[15px] md:text-[36px] font-semibold leading-[1.08] tracking-[-0.03em] text-white">
+          <p className="font-playfair text-[15px] md:text-[36px] font-semibold leading-[1.08] tracking-[-0.03em] text-white">
             We have been fortunate to have worked with some exceptional people who love good product
           </p>
 

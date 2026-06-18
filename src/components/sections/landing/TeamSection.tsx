@@ -38,11 +38,11 @@ const TeamSection = forwardRef<HTMLElement>((_, ref) => {
 
         {/* Left text block */}
         <div className="flex flex-col items-start gap-4 md:gap-16">
-          <div className="font-canela text-[20px] md:text-[38px] font-normal leading-[1.12] tracking-[-0.03em] text-mnd-charcoal w-full md:w-[420px]">
+          <div className="font-playfair text-[20px] md:text-[38px] font-normal leading-[1.12] tracking-[-0.03em] text-mnd-charcoal w-full md:w-[420px]">
             Basically - we&apos;re just a bunch of friends who really understand how software development works, inside out.
           </div>
           <div className="w-[48px] md:w-[72px] h-[4px] md:h-[6px] bg-mnd-charcoal" />
-          <div className="font-canela text-[18px] md:text-[36px] font-bold leading-[1.05] tracking-[-0.03em] text-mnd-charcoal">
+          <div className="font-playfair text-[18px] md:text-[36px] font-bold leading-[1.05] tracking-[-0.03em] text-mnd-charcoal">
             & we love what we do.
           </div>
         </div>

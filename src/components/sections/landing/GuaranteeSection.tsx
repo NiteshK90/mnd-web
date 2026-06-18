@@ -29,7 +29,7 @@ const GuaranteeSection = forwardRef<HTMLElement>((_, ref) => {
 
   return (
     <section ref={ref} className="h-screen w-full snap-start flex flex-col items-center justify-center gap-8 md:gap-16">
-      <h2 className="font-canela text-[26px] md:text-[42px] font-normal leading-[1.1] text-mnd-charcoal text-center px-6 md:px-0">
+      <h2 className="font-playfair text-[26px] md:text-[42px] font-normal leading-[1.1] text-mnd-charcoal text-center px-6 md:px-0">
         All this, on our guarantee.
       </h2>
 
