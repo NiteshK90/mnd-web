@@ -101,11 +101,11 @@ const TestimonialsSection = forwardRef<HTMLElement>((_, ref) => {
   return (
     <section ref={ref} className="min-h-screen md:h-screen w-full snap-start flex flex-col items-center justify-center gap-8 md:gap-12 bg-mnd-espresso py-16 md:py-0">
       <div className="flex flex-col items-center gap-6 md:gap-12 px-6 md:px-0 text-center">
-        <p className="font-canela text-[22px] md:text-[36px] font-normal leading-[1.1] tracking-[-0.03em] text-mnd-parchment">
+        <p className="font-playfair text-[22px] md:text-[36px] font-bold leading-[1.333] tracking-[-0.03em] text-mnd-parchment">
           Trust us. We have shipped 436 products &amp; counting.
         </p>
         <div className="w-[76px] h-[6px] bg-mnd-parchment" />
-        <p className="font-canela text-[22px] md:text-[34px] font-semibold leading-[1.05] tracking-[-0.03em] text-mnd-parchment">
+        <p className="font-playfair text-[22px] md:text-[36px] font-bold leading-[1.333] tracking-[-0.03em] text-mnd-parchment">
           <span className="italic">fyi</span> - zero unsatisfied clients.
         </p>
       </div>

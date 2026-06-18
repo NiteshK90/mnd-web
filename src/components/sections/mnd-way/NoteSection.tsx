@@ -1,34 +1,35 @@
 import { forwardRef } from "react";
-import ArrowRight from "@/components/icons/ArrowRight";
+import { SkipToValuesButton } from "./SkipToValuesButton";
 
-const NoteSection = forwardRef<HTMLElement>((_, ref) => {
+interface NoteSectionProps {
+  onSkipToValues?: () => void;
+}
+
+const NoteSection = forwardRef<HTMLElement, NoteSectionProps>(({ onSkipToValues }, ref) => {
   return (
     <section ref={ref} className="h-screen w-full snap-start bg-[#F9BC10] overflow-y-auto">
       <div className="grid grid-cols-1 md:grid-cols-[400px_1fr] gap-x-0 md:gap-x-[120px] max-w-[1400px] mx-auto pt-16 px-4 pb-10 md:pt-[180px] md:px-[80px] md:pb-[120px] items-end">
 
         {/* Left */}
         <div className="flex flex-col gap-4 md:gap-8">
-          <span className="font-canela text-[60px] md:text-[160px] font-bold leading-1 text-mnd-dark">
+          <span className="font-playfair text-[60px] md:text-[160px] font-bold leading-1 text-mnd-dark">
             &ldquo;
           </span>
 
-          <p className="font-canela text-[18px] md:text-[36px] font-semibold leading-[1.08] tracking-[-0.03em] text-mnd-dark">
+          <p className="font-playfair text-[18px] md:text-[36px] font-semibold leading-[1.08] tracking-[-0.03em] text-mnd-dark">
             Over the past 6 years, we have built MND with the belief that software should be built properly.
           </p>
 
-          <p className="font-canela text-[16px] md:text-[34px] font-bold leading-[1.1] text-mnd-dark">
+          <p className="font-playfair text-[16px] md:text-[34px] font-bold leading-[1.1] text-mnd-dark">
             Thoughtfully. Cleanly.
           </p>
 
-          <button className="w-fit py-2 px-6 rounded-full bg-mnd-button text-white inline-flex items-center gap-4 cursor-pointer border-0">
-            <div className="text-sm font-semibold">Skip to Our Values</div>
-            <ArrowRight color="white" size={24} />
-          </button>
+          <SkipToValuesButton onClick={onSkipToValues} />
         </div>
 
         {/* Right */}
         <div className="flex flex-col gap-6 md:gap-12 mt-8 md:mt-0">
-          <h2 className="font-canela text-[20px] md:text-[42px] font-bold text-mnd-dark">
+          <h2 className="font-playfair text-[20px] md:text-[42px] font-bold text-mnd-dark">
             A note from the founders ~
           </h2>
 

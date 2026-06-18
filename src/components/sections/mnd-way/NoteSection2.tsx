@@ -1,25 +1,26 @@
 import { forwardRef } from "react";
-import ArrowRight from "@/components/icons/ArrowRight";
+import { SkipToValuesButton } from "./SkipToValuesButton";
 
-const NoteSection2 = forwardRef<HTMLElement>((_, ref) => {
+interface NoteSection2Props {
+  onSkipToValues?: () => void;
+}
+
+const NoteSection2 = forwardRef<HTMLElement, NoteSection2Props>(({ onSkipToValues }, ref) => {
   return (
     <section ref={ref} className="h-screen w-full snap-start bg-transparent overflow-y-auto">
       <div className="grid grid-cols-1 md:grid-cols-[400px_1fr] gap-x-0 md:gap-x-[120px] max-w-[1400px] mx-auto pt-16 px-4 pb-10 md:pt-[180px] md:px-[80px] md:pb-[120px] items-end">
 
         {/* Left */}
         <div className="flex flex-col gap-4 md:gap-8">
-          <span className="font-canela text-[48px] md:text-[160px] font-bold leading-1 text-mnd-dark">
+          <span className="font-playfair text-[48px] md:text-[160px] font-bold leading-1 text-mnd-dark">
             &ldquo;
           </span>
 
-          <p className="font-canela text-[15px] md:text-[36px] font-semibold leading-[1.08] tracking-[-0.03em] text-mnd-dark">
+          <p className="font-playfair text-[15px] md:text-[36px] font-semibold leading-[1.08] tracking-[-0.03em] text-mnd-dark">
             So, we built MND as a place where stellar engineers can find world-class opportunities...
           </p>
 
-          <button className="w-fit py-2 px-6 rounded-full bg-mnd-button text-white inline-flex items-center gap-4 cursor-pointer border-0">
-            <div className="text-sm font-semibold">Skip to Our Values</div>
-            <ArrowRight color="white" size={24} />
-          </button>
+          <SkipToValuesButton onClick={onSkipToValues} />
         </div>
 
         {/* Right */}

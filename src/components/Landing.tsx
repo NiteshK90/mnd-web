@@ -47,7 +47,7 @@ export default function Landing() {
   return (
     <div id="landing-container" ref={containerRef} className="relative h-screen overflow-y-scroll snap-y snap-mandatory">
       {activeIndex !== TOTAL_SECTIONS - 1 && (
-        <div className="fixed top-6 left-0 right-0 flex justify-center z-50">
+        <div className="fixed top-3 md:top-8 left-0 right-0 flex justify-center z-50">
           <Navbar minimal={activeIndex !== 0} showBorder={activeIndex !== 0} />
         </div>
       )}

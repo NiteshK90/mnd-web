@@ -23,7 +23,7 @@ export default function Navbar({ minimal = false, showBorder = false }: NavbarPr
   return (
     <div className="relative flex flex-col items-center">
       <nav
-        className={`flex items-center gap-4 md:gap-6 px-4 md:px-6 rounded-full bg-mnd-cream/80 backdrop-blur-sm transition-all duration-300 ${showBorder ? "border border-black" : "border border-transparent"}`}
+        className={`flex items-center h-14 gap-4 md:gap-6 px-4 md:px-6 rounded-full bg-mnd-cream/80 backdrop-blur-sm transition-all duration-300 ${showBorder ? "border border-black" : "border border-transparent"}`}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
       >
@@ -47,12 +47,13 @@ export default function Navbar({ minimal = false, showBorder = false }: NavbarPr
           />
         </button>
 
-        <img
-          src="/landing/mnd-black-logo.png"
-          alt="MND Logo"
-          className="h-14 w-auto md:cursor-default cursor-pointer"
-          onClick={() => setMenuOpen((o) => !o)}
-        />
+        <Link href="/landing">
+          <img
+            src="/landing/mnd-black-logo.png"
+            alt="MND Logo"
+            className="h-20 w-auto cursor-pointer"
+          />
+        </Link>
 
         {/* Desktop links — hover-expand on non-hero */}
         <div
@@ -76,7 +77,7 @@ export default function Navbar({ minimal = false, showBorder = false }: NavbarPr
           ))}
         </div>
 
-        <Link href="#" className="px-5 md:px-8 py-2 bg-mnd-navy text-white rounded-full text-sm whitespace-nowrap">
+        <Link href="mailto:hello@mynextdeveloper.com" className="px-5 md:px-8 py-2 bg-mnd-navy text-white rounded-full text-sm whitespace-nowrap">
           Let&apos;s talk
         </Link>
       </nav>

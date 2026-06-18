@@ -16,6 +16,8 @@ export default {
       },
       fontFamily: {
         canela: ["Canela", "serif"],
+        playfair: ["var(--font-playfair)", "serif"],
+        inter: ["var(--font-inter)", "sans-serif"],
       },
       boxShadow: {
         progress: "0 1px 2px rgba(0,0,0,.06), 0 4px 10px rgba(0,0,0,.04)",

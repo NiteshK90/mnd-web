@@ -145,22 +145,22 @@ const CareerSection = forwardRef<HTMLElement>((_, ref) => {
   return (
     <section
       ref={setRef}
-      className="h-screen w-full snap-start flex items-center justify-center px-4 md:px-12 overflow-hidden"
+      className="h-screen w-full snap-start flex items-center justify-center px-4 md:px-[80px] overflow-hidden"
     >
       <div className="w-full">
-        <p className="font-canela text-[22px] md:text-[42px] font-normal leading-[1.1] tracking-[-0.03em] text-mnd-charcoal md:pt-24">
+        <p className="font-playfair text-[22px] md:text-[36px] font-normal leading-[1.333] tracking-[-0.03em] text-mnd-charcoal md:pt-24">
           Oh, & we&apos;re very picky about our talent pool –
         </p>
         <div className="flex items-center justify-between md:justify-normal gap-3 md:gap-6 mt-6 md:mt-12">
           {/* Block 1 */}
           <div className="flex flex-col items-center gap-2 justify-center shrink-0">
-            <span className="font-sans text-[10px] font-semibold tracking-[0.2em] uppercase text-mnd-charcoal">
+            <span className="font-sans text-[8px] font-semibold tracking-[0.2em] uppercase text-mnd-charcoal">
               {blocks[0].label}
             </span>
-            <span className="font-canela text-[40px] md:text-[64px] font-bold leading-none text-mnd-charcoal">
+            <span className="font-playfair text-[40px] md:text-[72px] font-bold leading-none text-mnd-charcoal">
               {blocks[0].number}
             </span>
-            <span className="w-[80px] md:w-[150px] text-center font-sans text-[10px] font-semibold tracking-[0.2em] uppercase text-mnd-charcoal">
+            <span className="w-[80px] md:w-[150px] text-center font-sans text-[8px] font-semibold tracking-[0.2em] uppercase text-mnd-charcoal">
               {blocks[0].description}
             </span>
           </div>
@@ -192,23 +192,23 @@ const CareerSection = forwardRef<HTMLElement>((_, ref) => {
 
           {/* Block 2 */}
           <div className="flex flex-col items-center gap-2 justify-center shrink-0">
-            <span className="font-sans text-[10px] font-semibold tracking-[0.2em] uppercase text-mnd-charcoal">
+            <span className="font-sans text-[8px] font-semibold tracking-[0.2em] uppercase text-mnd-charcoal">
               {blocks[1].label}
             </span>
-            <span className="font-canela text-[40px] md:text-[64px] font-bold leading-none text-mnd-charcoal">
+            <span className="font-playfair text-[40px] md:text-[72px] font-bold leading-none text-mnd-charcoal">
               {blocks[1].number}
             </span>
-            <span className="w-[80px] md:w-[150px] text-center font-sans text-[10px] font-semibold tracking-[0.2em] uppercase text-mnd-charcoal">
+            <span className="w-[80px] md:w-[150px] text-center font-sans text-[8px] font-semibold tracking-[0.2em] uppercase text-mnd-charcoal">
               {blocks[1].description}
             </span>
           </div>
         </div>
 
-        <div className="mt-5 md:mt-8 flex gap-4 px-0 md:px-12 overflow-x-auto md:overflow-visible pb-3 md:pb-0">
+        <div className="mt-5 md:mt-8 flex gap-4 overflow-x-auto scrollbar-none [&::-webkit-scrollbar]:hidden md:overflow-visible pb-3 md:pb-0">
           {cards.map((card, i) => (
             <div
               key={i}
-              className="bg-white rounded-[20px] md:rounded-[28px] shadow-card py-5 md:py-12 px-4 md:px-6 flex flex-col gap-3 md:gap-6 flex-shrink-0 w-[54vw] md:w-[300px]"
+              className="bg-white rounded-[20px] md:rounded-[28px] shadow-card py-5 md:py-6 px-4 md:px-6 flex flex-col gap-3 md:gap-4 flex-shrink-0 w-[54vw] md:w-[300px]"
               style={{
                 transform: i < visibleCount ? "translateY(0)" : "translateY(60px)",
                 opacity: i < visibleCount ? 1 : 0,
@@ -216,13 +216,13 @@ const CareerSection = forwardRef<HTMLElement>((_, ref) => {
                 pointerEvents: i < visibleCount ? "auto" : "none",
               }}
             >
-              <h3 className="font-canela text-[16px] md:text-[24px] font-semibold leading-[1.1] text-mnd-charcoal">
+              <h3 className="font-playfair text-[16px] md:text-[20px] font-bold leading-[1.333] text-mnd-charcoal">
                 {card.top}
               </h3>
               <div className="w-10 md:w-16 h-[2px] md:h-[3px] bg-mnd-charcoal" />
-              <div className="flex items-center gap-2 md:gap-4 justify-end">
-                <div className="text-[36px] md:text-[58px] italic">&ldquo;</div>
-                <p className="font-sans text-[10px] md:text-xs italic font-medium leading-[1.3]">
+              <div className="flex items-start gap-4">
+                <span className="font-sans text-[36px] md:text-[60px] font-bold italic text-mnd-charcoal leading-none">&ldquo;</span>
+                <p className="font-sans text-[10px] md:text-xs italic font-normal leading-[1.3] mt-2">
                   {card.quote.split("\n").map((line, j, arr) => (
                     <span key={j}>
                       {line}
@@ -231,7 +231,7 @@ const CareerSection = forwardRef<HTMLElement>((_, ref) => {
                   ))}
                 </p>
               </div>
-              <p className="font-sans w-full md:w-[250px] text-[10px] md:text-sm font-bold leading-[1.35] text-mnd-charcoal">
+              <p className="font-sans w-full text-[10px] md:text-[18px] font-bold leading-[1.333] text-mnd-charcoal">
                 {card.body}
               </p>
             </div>

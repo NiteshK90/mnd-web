@@ -19,7 +19,7 @@ const FooterSection = forwardRef<HTMLElement, { containerId?: string }>(({ conta
             </svg>
           </button>
         </div>
-        <h2 className="font-canela text-[42px] md:text-[68px] font-medium leading-[0.92] mt-6 md:mt-12 tracking-[-0.04em] text-mnd-dark text-center w-full md:w-[400px]">
+        <h2 className="font-playfair text-[42px] md:text-[68px] font-medium leading-[0.92] mt-6 md:mt-12 tracking-[-0.04em] text-mnd-dark text-center w-full md:w-[400px]">
           Ready when you are.
         </h2>
 
@@ -47,7 +47,7 @@ const FooterSection = forwardRef<HTMLElement, { containerId?: string }>(({ conta
           Compliances
         </button>
 
-        <span className="font-canela text-[26px] md:text-[38px] font-semibold text-white">MND</span>
+        <span className="font-playfair text-[26px] md:text-[38px] font-semibold text-white">MND</span>
 
         <button className="flex items-center h-10 md:h-14 px-4 md:px-8 rounded-full border-[1.5px] border-white/35 text-white font-sans text-sm md:text-[18px] font-medium">
           Privacy

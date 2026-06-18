@@ -1,25 +1,26 @@
 import { forwardRef } from "react";
-import ArrowRight from "@/components/icons/ArrowRight";
+import { SkipToValuesButton } from "./SkipToValuesButton";
 
-const NoteSection3 = forwardRef<HTMLElement>((_, ref) => {
+interface NoteSection3Props {
+  onSkipToValues?: () => void;
+}
+
+const NoteSection3 = forwardRef<HTMLElement, NoteSection3Props>(({ onSkipToValues }, ref) => {
   return (
     <section ref={ref} className="h-screen w-full snap-start bg-[#2EA3C3] overflow-y-auto">
       <div className="grid grid-cols-1 md:grid-cols-[400px_1fr] gap-x-0 md:gap-x-[120px] max-w-[1400px] mx-auto pt-16 px-4 pb-10 md:pt-[280px] md:px-[120px] md:pb-[120px] items-center">
 
         {/* Left */}
         <div className="flex flex-col gap-4 md:gap-8">
-          <span className="font-canela text-[48px] md:text-[160px] font-bold leading-1 text-white">
+          <span className="font-playfair text-[48px] md:text-[160px] font-bold leading-1 text-white">
             &ldquo;
           </span>
 
-          <p className="font-canela text-[15px] md:text-[36px] font-semibold leading-[1.08] tracking-[-0.03em] text-white">
+          <p className="font-playfair text-[15px] md:text-[36px] font-semibold leading-[1.08] tracking-[-0.03em] text-white">
             We have been fortunate to have worked with some exceptional people who love good product
           </p>
 
-          <button className="w-fit py-2 px-6 rounded-full bg-mnd-button text-white inline-flex items-center gap-4 cursor-pointer border-0">
-            <div className="text-sm font-semibold">Skip to Our Values</div>
-            <ArrowRight color="white" size={24} />
-          </button>
+          <SkipToValuesButton onClick={onSkipToValues} />
         </div>
 
         {/* Right */}

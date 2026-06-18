@@ -1,10 +1,6 @@
 "use client";
 
-import { forwardRef, useState, useRef, useLayoutEffect } from "react";
-
-const CARD_WIDTH = 450;
-const GAP = 56;
-const DRAG_THRESHOLD = 50;
+import { forwardRef, useEffect, useRef, useState } from "react";
 
 const values = [
   {
@@ -41,29 +37,36 @@ const values = [
 
 const ValuesSection = forwardRef<HTMLElement>((_, ref) => {
   const [activeIndex, setActiveIndex] = useState(0);
-  const trackRef = useRef<HTMLDivElement>(null);
-  const startXRef = useRef<number | null>(null);
-  const isDraggingRef = useRef(false);
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
 
-  useLayoutEffect(() => {
-    if (window.innerWidth < 768) return;
-    if (trackRef.current) {
-      trackRef.current.style.transform = `translateX(calc((100vw - ${CARD_WIDTH}px) / 2 - ${activeIndex * (CARD_WIDTH + GAP)}px))`;
-    }
-  }, [activeIndex]);
+  useEffect(() => {
+    const container = scrollContainerRef.current;
+    if (!container) return;
 
-  const onDragStart = (clientX: number) => {
-    startXRef.current = clientX;
-    isDraggingRef.current = true;
-  };
+    const onScroll = () => {
+      const containerCenter = container.scrollLeft + container.clientWidth / 2;
+      let closest = 0;
+      let closestDist = Infinity;
+      cardRefs.current.forEach((card, i) => {
+        if (!card) return;
+        const cardCenter = card.offsetLeft + card.offsetWidth / 2;
+        const dist = Math.abs(containerCenter - cardCenter);
+        if (dist < closestDist) { closestDist = dist; closest = i; }
+      });
+      setActiveIndex(closest);
+    };
 
-  const onDragEnd = (clientX: number) => {
-    if (!isDraggingRef.current || startXRef.current === null) return;
-    const delta = startXRef.current - clientX;
-    if (delta > DRAG_THRESHOLD) setActiveIndex(i => Math.min(i + 1, values.length - 1));
-    else if (delta < -DRAG_THRESHOLD) setActiveIndex(i => Math.max(i - 1, 0));
-    startXRef.current = null;
-    isDraggingRef.current = false;
+    container.addEventListener("scroll", onScroll, { passive: true });
+    return () => container.removeEventListener("scroll", onScroll);
+  }, []);
+
+  const scrollToCard = (index: number) => {
+    const container = scrollContainerRef.current;
+    const card = cardRefs.current[index];
+    if (!container || !card) return;
+    const target = card.offsetLeft - (container.clientWidth - card.offsetWidth) / 2;
+    container.scrollTo({ left: target, behavior: "smooth" });
   };
 
   return (
@@ -71,21 +74,17 @@ const ValuesSection = forwardRef<HTMLElement>((_, ref) => {
 
       {/* Carousel track */}
       <div
-        className="overflow-x-auto md:overflow-hidden cursor-grab active:cursor-grabbing select-none scrollbar-none [&::-webkit-scrollbar]:hidden"
-        onMouseDown={(e) => onDragStart(e.clientX)}
-        onMouseUp={(e) => onDragEnd(e.clientX)}
-        onMouseLeave={(e) => onDragEnd(e.clientX)}
-        onTouchStart={(e) => onDragStart(e.touches[0].clientX)}
-        onTouchEnd={(e) => onDragEnd(e.changedTouches[0].clientX)}
+        ref={scrollContainerRef}
+        className="overflow-x-auto scrollbar-none [&::-webkit-scrollbar]:hidden snap-x snap-mandatory touch-pan-x overscroll-x-contain scroll-px-[12.5vw] md:scroll-px-[calc((100vw-450px)/2)]"
       >
         <div
-          ref={trackRef}
-          className="flex gap-4 md:gap-[56px] transition-transform duration-500 ease-in-out py-2 px-4 md:px-0"
+          className="flex gap-4 md:gap-[56px] py-2 pl-[12.5vw] md:pl-[calc((100vw-450px)/2)]"
         >
           {values.map((v, i) => (
             <div
               key={i}
-              className="flex-shrink-0 w-[75vw] md:w-[450px] bg-white rounded-[32px] py-6 px-6 md:py-8 md:px-8 flex flex-col gap-5 md:gap-8 shadow-[0_2px_4px_rgba(0,0,0,.04),0_8px_24px_rgba(0,0,0,.06)]"
+              ref={(el) => { cardRefs.current[i] = el; }}
+              className="flex-shrink-0 w-[75vw] md:w-[450px] bg-white rounded-[32px] py-6 px-6 md:py-8 md:px-8 flex flex-col gap-5 md:gap-8 shadow-[0_2px_4px_rgba(0,0,0,.04),0_8px_24px_rgba(0,0,0,.06)] snap-center"
             >
               <div className="flex flex-col gap-2 md:gap-3">
                 <div className="flex items-center gap-3">
@@ -100,7 +99,7 @@ const ValuesSection = forwardRef<HTMLElement>((_, ref) => {
 
               <div className="w-[64px] h-[6px] bg-mnd-charcoal" />
 
-              <p className="font-canela text-[20px] md:text-[34px] font-semibold leading-[1.08] tracking-[-0.03em] text-mnd-charcoal">
+              <p className="font-playfair text-[20px] md:text-[34px] font-semibold leading-[1.08] tracking-[-0.03em] text-mnd-charcoal">
                 {v.statement}
               </p>
 
@@ -111,15 +110,15 @@ const ValuesSection = forwardRef<HTMLElement>((_, ref) => {
               </p>
             </div>
           ))}
+          <div className="flex-shrink-0 w-[12.5vw] md:w-[calc((100vw-450px)/2)]" />
         </div>
       </div>
 
-      {/* Pagination — desktop only */}
-      <div className="hidden md:flex justify-center gap-3">
+      <div className="flex justify-center gap-3">
         {values.map((_, i) => (
           <button
             key={i}
-            onClick={() => setActiveIndex(i)}
+            onClick={() => scrollToCard(i)}
             className={`h-4 w-4 rounded-full transition-all duration-300 cursor-pointer border border-black ${
               i === activeIndex ? "bg-black" : "bg-transparent"
             }`}

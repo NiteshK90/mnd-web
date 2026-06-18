@@ -44,17 +44,17 @@ export default function MndWay() {
   return (
     <div id="mnd-way-container" ref={containerRef} className="relative h-screen overflow-y-scroll snap-y snap-mandatory">
       {activeIndex !== TOTAL_SECTIONS - 1 && (
-        <div className="fixed top-6 left-0 right-0 flex justify-center z-50">
+        <div className="fixed top-3 md:top-8 left-0 right-0 flex justify-center z-50">
           <Navbar minimal={activeIndex !== 0} />
         </div>
       )}
 
-      <HeroSection ref={(el) => { sectionRefs.current[0] = el; }} />
+      <HeroSection ref={(el) => { sectionRefs.current[0] = el; }} onScrollNext={() => scrollTo(1)} />
 
       <div className="relative bg-mnd-linen">
-        <NoteSection ref={(el) => { sectionRefs.current[1] = el; }} />
-        <NoteSection2 ref={(el) => { sectionRefs.current[2] = el; }} />
-        <NoteSection3 ref={(el) => { sectionRefs.current[3] = el; }} />
+        <NoteSection ref={(el) => { sectionRefs.current[1] = el; }} onSkipToValues={() => scrollTo(4)} />
+        <NoteSection2 ref={(el) => { sectionRefs.current[2] = el; }} onSkipToValues={() => scrollTo(4)} />
+        <NoteSection3 ref={(el) => { sectionRefs.current[3] = el; }} onSkipToValues={() => scrollTo(4)} />
         <ValuesSection ref={(el) => { sectionRefs.current[4] = el; }} />
       </div>
 
