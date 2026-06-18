@@ -29,21 +29,28 @@ const members = [
 
 const TeamSection = forwardRef<HTMLElement>((_, ref) => {
   return (
-    <section ref={ref} className="h-screen w-full snap-start flex items-center justify-center">
-      <div className="flex items-end gap-24">
-        <div className="flex flex-col items-start gap-16">
-          <div className="font-canela text-[38px] font-normal leading-[1.12] tracking-[-0.03em] text-mnd-charcoal w-[420px]">Basically - we&apos;re just a bunch of friends who really understand how software development works, inside out.</div>
-          <div className="w-[72px] h-[6px] bg-mnd-charcoal" />
-          <div className="font-canela text-[36px] font-bold leading-[1.05] tracking-[-0.03em] text-mnd-charcoal">& we love what we do.</div>
+    <section ref={ref} className="min-h-screen md:h-screen w-full snap-start flex items-center justify-center py-16 md:py-0">
+      <div className="flex flex-col md:flex-row items-start md:items-end gap-10 md:gap-24 px-6 md:px-0 w-full md:w-auto">
+
+        {/* Left text block */}
+        <div className="flex flex-col items-start gap-4 md:gap-16">
+          <div className="font-canela text-[20px] md:text-[38px] font-normal leading-[1.12] tracking-[-0.03em] text-mnd-charcoal w-full md:w-[420px]">
+            Basically - we&apos;re just a bunch of friends who really understand how software development works, inside out.
+          </div>
+          <div className="w-[48px] md:w-[72px] h-[4px] md:h-[6px] bg-mnd-charcoal" />
+          <div className="font-canela text-[18px] md:text-[36px] font-bold leading-[1.05] tracking-[-0.03em] text-mnd-charcoal">
+            & we love what we do.
+          </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-8">
+        {/* Member cards grid */}
+        <div className="flex flex-row md:grid md:grid-cols-2 gap-4 md:gap-8 overflow-x-auto md:overflow-visible w-full md:w-auto pb-3 md:pb-0">
           {members.map((member, i) => (
-            <div key={i} className="bg-white rounded-[28px] py-6 px-4 shadow-card flex flex-col justify-between gap-2">
-              <div className="flex flex-col gap-4">
-                <div className="flex gap-7 items-start">
-                  <div className="w-[100px] h-[100px] rounded-full bg-[#E8E6E6] shrink-0" />
-                  <div className="flex flex-col gap-2">
+            <div key={i} className="bg-white rounded-[20px] md:rounded-[28px] py-4 md:py-6 px-3 md:px-4 shadow-card flex flex-col justify-between gap-1 md:gap-2 flex-shrink-0 w-[72vw] md:w-auto">
+              <div className="flex flex-col gap-2 md:gap-4">
+                <div className="flex gap-3 md:gap-7 items-start">
+                  <div className="w-[60px] h-[60px] md:w-[100px] md:h-[100px] rounded-full bg-[#E8E6E6] shrink-0" />
+                  <div className="flex flex-col gap-1 md:gap-2">
                     <p className="font-sans text-xs font-extrabold tracking-[0.12em] uppercase text-mnd-charcoal">{member.name}</p>
                     <div className="font-sans text-xs font-medium leading-[1.5] text-mnd-charcoal">
                       <div>{member.role}</div>
@@ -54,13 +61,14 @@ const TeamSection = forwardRef<HTMLElement>((_, ref) => {
                   </div>
                 </div>
               </div>
-              <div className="w-[52px] h-[4px] bg-mnd-charcoal my-2" />
-              <p className="font-sans text-[10px] font-medium leading-widest text-mnd-charcoal max-w-[280px]">
+              <div className="w-[36px] md:w-[52px] h-[3px] md:h-[4px] bg-mnd-charcoal my-1 md:my-2" />
+              <p className="font-sans text-[10px] font-medium leading-widest text-mnd-charcoal max-w-full md:max-w-[280px]">
                 {member.body}
               </p>
             </div>
           ))}
         </div>
+
       </div>
     </section>
   );

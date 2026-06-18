@@ -52,9 +52,15 @@ const CareerSection = forwardRef<HTMLElement>((_, ref) => {
     [ref]
   );
 
+  // On mobile, reveal all cards immediately — scroll-reveal is desktop-only
+  useEffect(() => {
+    if (window.innerWidth < 768) updateVisible(cards.length);
+  }, [updateVisible]);
+
   useEffect(() => {
     const section = sectionRef.current;
     if (!section) return;
+    if (window.innerWidth < 768) return;
 
     // Schedule unlock: 200ms after last wheel event, but never before 600ms from lock start.
     // This prevents momentum scroll (which fires events for ~800ms after lift) from
@@ -139,28 +145,28 @@ const CareerSection = forwardRef<HTMLElement>((_, ref) => {
   return (
     <section
       ref={setRef}
-      className="h-screen w-full snap-start flex items-center justify-center px-12 overflow-hidden"
+      className="h-screen w-full snap-start flex items-center justify-center px-4 md:px-12 overflow-hidden"
     >
       <div className="w-full">
-        <p className="font-canela text-[42px] font-normal leading-[1.1] tracking-[-0.03em] text-mnd-charcoal">
+        <p className="font-canela text-[22px] md:text-[42px] font-normal leading-[1.1] tracking-[-0.03em] text-mnd-charcoal">
           Oh, & we&apos;re very picky about our talent pool –
         </p>
-        <div className="flex items-center gap-6 mt-12">
+        <div className="flex items-center gap-3 md:gap-6 mt-6 md:mt-12">
           {/* Block 1 */}
           <div className="flex flex-col items-center gap-2 justify-center shrink-0">
             <span className="font-sans text-[10px] font-semibold tracking-[0.2em] uppercase text-mnd-charcoal">
               {blocks[0].label}
             </span>
-            <span className="font-canela text-[64px] font-bold leading-none text-mnd-charcoal">
+            <span className="font-canela text-[40px] md:text-[64px] font-bold leading-none text-mnd-charcoal">
               {blocks[0].number}
             </span>
-            <span className="w-[150px] text-center font-sans text-[10px] font-semibold tracking-[0.2em] uppercase text-mnd-charcoal">
+            <span className="w-[80px] md:w-[150px] text-center font-sans text-[10px] font-semibold tracking-[0.2em] uppercase text-mnd-charcoal">
               {blocks[0].description}
             </span>
           </div>
 
           {/* Progress bar */}
-          <div className="flex-1 w-[650px] h-[68px] bg-white rounded-full shadow-progress flex items-center px-8 gap-0">
+          <div className="flex-1 h-[44px] md:h-[68px] bg-white rounded-full shadow-progress flex items-center px-4 md:px-8 gap-0">
             <div className="w-4 h-4 rounded-full border-1 border-mnd-charcoal bg-black shrink-0" />
             <div className="flex-1 h-1 bg-black" />
             <div className="w-4 h-4 rounded-full border-1 border-mnd-charcoal bg-white shrink-0" />
@@ -175,20 +181,20 @@ const CareerSection = forwardRef<HTMLElement>((_, ref) => {
             <span className="font-sans text-[10px] font-semibold tracking-[0.2em] uppercase text-mnd-charcoal">
               {blocks[1].label}
             </span>
-            <span className="font-canela text-[64px] font-bold leading-none text-mnd-charcoal">
+            <span className="font-canela text-[40px] md:text-[64px] font-bold leading-none text-mnd-charcoal">
               {blocks[1].number}
             </span>
-            <span className="w-[150px] text-center font-sans text-[10px] font-semibold tracking-[0.2em] uppercase text-mnd-charcoal">
+            <span className="w-[80px] md:w-[150px] text-center font-sans text-[10px] font-semibold tracking-[0.2em] uppercase text-mnd-charcoal">
               {blocks[1].description}
             </span>
           </div>
         </div>
 
-        <div className="mt-8 flex gap-4 px-12">
+        <div className="mt-5 md:mt-8 flex gap-4 px-0 md:px-12 overflow-x-auto md:overflow-visible pb-3 md:pb-0">
           {cards.map((card, i) => (
             <div
               key={i}
-              className="bg-white rounded-[28px] shadow-card py-12 px-6 flex flex-col gap-6"
+              className="bg-white rounded-[20px] md:rounded-[28px] shadow-card py-5 md:py-12 px-4 md:px-6 flex flex-col gap-3 md:gap-6 flex-shrink-0 w-[54vw] md:w-[300px]"
               style={{
                 transform: i < visibleCount ? "translateY(0)" : "translateY(60px)",
                 opacity: i < visibleCount ? 1 : 0,
@@ -196,13 +202,13 @@ const CareerSection = forwardRef<HTMLElement>((_, ref) => {
                 pointerEvents: i < visibleCount ? "auto" : "none",
               }}
             >
-              <h3 className="font-canela text-[24px] font-semibold leading-[1.1] text-mnd-charcoal">
+              <h3 className="font-canela text-[16px] md:text-[24px] font-semibold leading-[1.1] text-mnd-charcoal">
                 {card.top}
               </h3>
-              <div className="w-16 h-[3px] bg-mnd-charcoal" />
-              <div className="flex items-center gap-4 justify-end">
-                <div className="text-[58px] italic">&ldquo;</div>
-                <p className="font-sans text-xs italic font-medium leading-[1.3]">
+              <div className="w-10 md:w-16 h-[2px] md:h-[3px] bg-mnd-charcoal" />
+              <div className="flex items-center gap-2 md:gap-4 justify-end">
+                <div className="text-[36px] md:text-[58px] italic">&ldquo;</div>
+                <p className="font-sans text-[10px] md:text-xs italic font-medium leading-[1.3]">
                   {card.quote.split("\n").map((line, j, arr) => (
                     <span key={j}>
                       {line}
@@ -211,7 +217,7 @@ const CareerSection = forwardRef<HTMLElement>((_, ref) => {
                   ))}
                 </p>
               </div>
-              <p className="font-sans w-[250px] text-sm font-bold leading-[1.35] text-mnd-charcoal">
+              <p className="font-sans w-full md:w-[250px] text-[10px] md:text-sm font-bold leading-[1.35] text-mnd-charcoal">
                 {card.body}
               </p>
             </div>

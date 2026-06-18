@@ -65,12 +65,14 @@ export default function Landing() {
 
       <FooterSection ref={(el) => { sectionRefs.current[8] = el; }} />
 
-      <ScrollIndicators
-        total={TOTAL_SECTIONS}
-        activeIndex={activeIndex}
-        white={activeIndex === 0 || activeIndex === 6 || activeIndex === TOTAL_SECTIONS - 1}
-        onScrollTo={scrollTo}
-      />
+      <div className="hidden md:block">
+        <ScrollIndicators
+          total={TOTAL_SECTIONS}
+          activeIndex={activeIndex}
+          white={activeIndex === 0 || activeIndex === 6 || activeIndex === TOTAL_SECTIONS - 1}
+          onScrollTo={scrollTo}
+        />
+      </div>
     </div>
   );
 }

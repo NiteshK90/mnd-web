@@ -8,7 +8,7 @@ const FooterSection = forwardRef<HTMLElement>((_, ref) => {
       ref={ref}
       className="bg-mnd-linen bg-[url('/landing/footer.png')] bg-cover bg-center h-screen w-full snap-start flex flex-col justify-between"
     >
-      <div className="flex flex-col items-center justify-center gap-4">
+      <div className="flex flex-col items-center justify-center gap-4 px-6 md:px-0">
         <div className="flex justify-center pt-8">
           <button
             onClick={() => document.getElementById("landing-container")?.scrollTo({ top: 0, behavior: "smooth" })}
@@ -19,17 +19,17 @@ const FooterSection = forwardRef<HTMLElement>((_, ref) => {
             </svg>
           </button>
         </div>
-        <h2 className="font-canela text-[68px] font-medium leading-[0.92] mt-12 tracking-[-0.04em] text-mnd-dark text-center w-[400px]">
+        <h2 className="font-canela text-[42px] md:text-[68px] font-medium leading-[0.92] mt-6 md:mt-12 tracking-[-0.04em] text-mnd-dark text-center w-full md:w-[400px]">
           Ready when you are.
         </h2>
 
         <div className="w-[48px] h-[2px] bg-mnd-dark" />
 
-        <p className="font-sans text-lg font-medium leading-[1.4] text-mnd-dark">
+        <p className="font-sans text-base md:text-lg font-medium leading-[1.4] text-mnd-dark text-center">
           Let&apos;s build something great together.
         </p>
 
-        <button className="flex items-center gap-4 py-2 px-6 rounded-full bg-[#0D0D0F] text-white font-sans text-lg font-normal">
+        <button className="flex items-center gap-3 md:gap-4 py-2 px-5 md:px-6 rounded-full bg-[#0D0D0F] text-white font-sans text-base md:text-lg font-normal">
           <span className="flex items-center justify-center w-7 h-7">
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect x="2" y="4" width="16" height="14" rx="2" stroke="white" strokeWidth="1.5" />
@@ -42,14 +42,14 @@ const FooterSection = forwardRef<HTMLElement>((_, ref) => {
         </button>
       </div>
 
-      <div className="pt-6 bg-[#090909] flex items-center justify-between px-[72px]">
-        <button className="flex items-center h-14 px-8 rounded-full border-[1.5px] border-white/35 text-white font-sans text-[18px] font-medium">
+      <div className="pt-4 md:pt-6 pb-8 md:pb-10 bg-[#090909] flex items-center justify-between px-6 md:px-[72px]">
+        <button className="flex items-center h-10 md:h-14 px-4 md:px-8 rounded-full border-[1.5px] border-white/35 text-white font-sans text-sm md:text-[18px] font-medium">
           Compliances
         </button>
 
-        <span className="font-canela text-[38px] font-semibold text-white">MND</span>
+        <span className="font-canela text-[26px] md:text-[38px] font-semibold text-white">MND</span>
 
-        <button className="flex items-center h-14 px-8 rounded-full border-[1.5px] border-white/35 text-white font-sans text-[18px] font-medium">
+        <button className="flex items-center h-10 md:h-14 px-4 md:px-8 rounded-full border-[1.5px] border-white/35 text-white font-sans text-sm md:text-[18px] font-medium">
           Privacy
         </button>
       </div>
