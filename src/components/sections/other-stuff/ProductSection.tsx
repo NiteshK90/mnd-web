@@ -2,8 +2,8 @@ import { forwardRef } from "react";
 
 const ProductSection = forwardRef<HTMLElement>((_, ref) => {
   return (
-    <section ref={ref} className="h-screen w-full snap-start flex">
-      <div className="flex-1 flex items-center justify-start px-16">
+    <section ref={ref} className="h-screen w-full snap-start flex py-24 px-24">
+      <div className="flex items-center justify-start">
         <div className="flex flex-col gap-16">
           <p className="font-playfair font-normal text-[40px] leading-[1.33] tracking-normal text-mnd-charcoal">
             All the peripheral<br />

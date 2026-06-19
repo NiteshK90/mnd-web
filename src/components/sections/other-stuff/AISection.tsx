@@ -4,8 +4,8 @@ import ArrowRight from "@/components/icons/ArrowRight";
 
 const AISection = forwardRef<HTMLElement>((_, ref) => {
   return (
-    <section ref={ref} className="h-screen w-full snap-start flex">
-      <div className="flex-1 flex items-center justify-start px-16">
+    <section ref={ref} className="h-screen w-full snap-start flex px-32 pt-24">
+      <div className="flex items-center justify-start">
         <div className="flex flex-col gap-16">
           <div className="flex flex-col gap-4">
             <p className="font-inter font-semibold text-[11px] tracking-[1.7px] uppercase text-mnd-charcoal">
@@ -27,7 +27,43 @@ const AISection = forwardRef<HTMLElement>((_, ref) => {
           </Link>
         </div>
       </div>
-      <div className="flex-1" />
+      <div className="flex-1 flex items-center justify-center px-8">
+        <div className="w-full max-w-xl px-24 py-18 border-[1px] border-mnd-charcoal rounded-[56px] flex flex-col gap-6">
+          <div className="flex flex-col gap-1">
+            <p className="font-inter font-semibold text-[10px] tracking-[1.5px] uppercase text-mnd-charcoal">
+              Case Study
+            </p>
+            <p className="font-playfair font-bold text-[32px] leading-[1.2] text-mnd-charcoal">
+              Secret Compass AI
+            </p>
+            <p className="font-inter font-semibold text-[13px] text-mnd-charcoal mt-2">
+              AI-powered risk assessment platform
+            </p>
+          </div>
+          <div className="w-[48px] h-[2px] bg-mnd-charcoal" />
+          <div className="flex flex-col gap-4 max-w-[330px]">
+            <p className="font-inter font-normal text-[13px] leading-[1.5] text-mnd-charcoal">
+              Secret Compass needed a way to turn years of specialist TV and film safety expertise into a scalable AI product for productions operating in high-risk environments.
+            </p>
+            <p className="font-inter font-normal text-[13px] leading-[1.5] text-mnd-charcoal">
+              We built a multi-assistant AI platform that generates structured, expert-ready risk assessments across locations, activities, medical risks, logistics, and compliance, while keeping human review fully embedded in the workflow.
+            </p>
+          </div>
+          <div className="flex flex-col gap-8">
+            <div className="flex flex-col border-l border-mnd-charcoal pl-6">
+              <p className="font-playfair font-bold text-[28px] leading-[1] text-mnd-charcoal">5/5</p>
+              <p className="font-inter font-semibold text-[13px] leading-[1.4] text-mnd-charcoal mt-2">Client<br />Satisfaction</p>
+            </div>
+            <div className="w-full h-[1px] bg-mnd-charcoal" />
+            <div className="flex items-end gap-3">
+              <span className="font-playfair text-[133px] leading-[0] text-mnd-charcoal shrink-0">&ldquo;</span>
+              <p className="font-inter italic text-[11px] leading-[1.5] text-mnd-charcoal">
+                We are really pleased with the progress. Personalisation and ability to fit our needs has been most impressive.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   );
 });
