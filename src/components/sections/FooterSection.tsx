@@ -29,7 +29,10 @@ const FooterSection = forwardRef<HTMLElement, { containerId?: string }>(({ conta
           Let&apos;s build something great together.
         </p>
 
-        <button className="flex items-center gap-3 md:gap-4 py-2 px-5 md:px-6 rounded-full bg-[#0D0D0F] text-white font-sans text-base md:text-lg font-normal">
+        <a
+          href="mailto:hello@mynextdeveloper.com?subject=Schedule a Call"
+          className="flex items-center gap-3 md:gap-4 py-2 px-5 md:px-6 rounded-full bg-[#0D0D0F] text-white font-sans text-base md:text-lg font-normal"
+        >
           <span className="flex items-center justify-center w-7 h-7">
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect x="2" y="4" width="16" height="14" rx="2" stroke="white" strokeWidth="1.5" />
@@ -39,7 +42,7 @@ const FooterSection = forwardRef<HTMLElement, { containerId?: string }>(({ conta
           </span>
           Schedule a call
           <span className="text-[22px]">→</span>
-        </button>
+        </a>
       </div>
 
       <div className="pt-4 md:pt-6 pb-8 md:pb-10 bg-[#090909] flex items-center justify-between px-6 md:px-[72px]">
