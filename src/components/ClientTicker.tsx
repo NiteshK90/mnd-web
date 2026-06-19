@@ -31,13 +31,13 @@ export default function ClientTicker() {
     <div className="overflow-hidden w-full">
       <div className="flex w-max animate-marquee gap-12">
         {[...logos, ...logos].map((logo, i) => (
-          <div key={i} className="flex items-center justify-center h-16 shrink-0">
+          <div key={i} className="flex items-center justify-center w-36 h-16 shrink-0">
             <Image
               src={`/landing/clients/${logo}.png`}
               alt={logo}
               width={180}
               height={64}
-              className="h-14 w-auto object-contain"
+              className="w-full h-full object-contain"
             />
           </div>
         ))}

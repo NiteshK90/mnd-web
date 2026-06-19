@@ -25,7 +25,7 @@ export default {
         testimonial: "0 2px 4px rgba(0,0,0,.08), 0 10px 30px rgba(0,0,0,.12)",
       },
       animation: {
-        marquee: "marquee 35s linear infinite",
+        marquee: "marquee 60s linear infinite",
       },
       keyframes: {
         marquee: {
