@@ -60,7 +60,7 @@ const HeroSection = forwardRef<HTMLElement>((_, ref) => {
         </div>
       </div>
 
-      <div className="absolute bottom-8 left-0 right-0">
+      <div className="absolute bottom-0 left-0 right-0">
         <ClientTicker />
       </div>
     </section>
