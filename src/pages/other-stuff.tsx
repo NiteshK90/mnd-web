@@ -4,10 +4,10 @@ import { useRef, useState, useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import ScrollIndicators from "@/components/ScrollIndicators";
 import HeroSection from "@/components/sections/other-stuff/HeroSection";
-import NoteSection from "@/components/sections/other-stuff/NoteSection";
-import ContentSection from "@/components/sections/other-stuff/ContentSection";
-import CommunitySection from "@/components/sections/other-stuff/CommunitySection";
-import CardsSection from "@/components/sections/other-stuff/CardsSection";
+import ProductSection from "@/components/sections/other-stuff/ProductSection";
+import AISection from "@/components/sections/other-stuff/AISection";
+import MvpSection from "@/components/sections/other-stuff/MvpSection";
+import ServicesSection from "@/components/sections/other-stuff/ServicesSection";
 import FooterSection from "@/components/sections/FooterSection";
 
 const TOTAL_SECTIONS = 6;
@@ -52,10 +52,10 @@ export default function OtherStuff() {
       <HeroSection ref={(el) => { sectionRefs.current[0] = el; }} onScrollNext={() => scrollTo(1)} />
 
       <div className="relative bg-mnd-linen">
-        <NoteSection ref={(el) => { sectionRefs.current[1] = el; }} />
-        <ContentSection ref={(el) => { sectionRefs.current[2] = el; }} />
-        <CommunitySection ref={(el) => { sectionRefs.current[3] = el; }} />
-        <CardsSection ref={(el) => { sectionRefs.current[4] = el; }} />
+        <ProductSection ref={(el) => { sectionRefs.current[1] = el; }} />
+        <AISection ref={(el) => { sectionRefs.current[2] = el; }} />
+        <MvpSection ref={(el) => { sectionRefs.current[3] = el; }} />
+        <ServicesSection ref={(el) => { sectionRefs.current[4] = el; }} />
       </div>
 
       <FooterSection containerId="other-stuff-container" ref={(el) => { sectionRefs.current[5] = el; }} />
