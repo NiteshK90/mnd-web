@@ -88,24 +88,24 @@ const ValuesSection = forwardRef<HTMLElement>((_, ref) => {
             >
               <div className="flex flex-col gap-2 md:gap-3">
                 <div className="flex items-center gap-3">
-                  <div className="w-4 h-4 rounded-full bg-black shrink-0" />
+                  <div className="w-2.5 h-2.5 rounded-full bg-black shrink-0" />
                   <span className="font-sans text-[8px] tracking-[0.18em] uppercase">{v.label}</span>
                 </div>
 
-                <p className="font-sans text-[16px] md:text-[22px] font-extrabold tracking-[-0.02em] uppercase text-mnd-charcoal">
+                <p className="font-sans text-[16px] md:text-[22px] font-bold uppercase text-mnd-charcoal">
                   {v.name}
                 </p>
               </div>
 
-              <div className="w-[64px] h-[6px] bg-mnd-charcoal" />
+              <div className="w-[36px] h-[4px] md:w-[64px] md:h-[6px] bg-mnd-charcoal" />
 
-              <p className="font-playfair text-[20px] md:text-[34px] font-semibold leading-[1.08] tracking-[-0.03em] text-mnd-charcoal">
+              <p className="font-playfair text-[20px] md:text-[34px] font-bold leading-[1.2] text-mnd-charcoal">
                 {v.statement}
               </p>
 
-              <div className="w-[64px] h-[6px] bg-mnd-charcoal" />
+              <div className="w-[36px] h-[4px] md:w-[64px] md:h-[6px] bg-mnd-charcoal" />
 
-              <p className="font-sans text-[13px] md:text-[18px] font-medium leading-[1.35] text-mnd-charcoal">
+              <p className="font-sans text-[13px] md:text-[16px] font-medium leading-[1.2] text-mnd-charcoal">
                 {v.description}
               </p>
             </div>

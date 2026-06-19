@@ -70,7 +70,7 @@ export default function Navbar({ minimal = false, showBorder = false }: NavbarPr
             <Link
               key={link.label}
               href={link.href}
-              className="whitespace-nowrap text-sm font-medium text-mnd-charcoal hover:opacity-70 transition-opacity"
+              className="whitespace-nowrap font-inter text-[12px] font-semibold text-mnd-charcoal hover:opacity-70 transition-opacity"
             >
               {link.label}
             </Link>
@@ -91,7 +91,7 @@ export default function Navbar({ minimal = false, showBorder = false }: NavbarPr
             <Link
               key={link.label}
               href={link.href}
-              className="text-sm font-medium text-mnd-charcoal hover:opacity-70 transition-opacity"
+              className="font-inter text-[12px] font-semibold text-mnd-charcoal hover:opacity-70 transition-opacity"
               onClick={() => setMenuOpen(false)}
             >
               {link.label}
