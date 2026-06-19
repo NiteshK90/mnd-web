@@ -3,7 +3,7 @@ export default {
     extend: {
       colors: {
         "mnd-cream": "#EAE7E3",
-        "mnd-navy": "#083B5C",
+        "mnd-navy": "#023047",
         "mnd-dark": "#17141A",
         "mnd-linen": "#FAF6F1",
         "mnd-ivory": "#FDFBF9",
