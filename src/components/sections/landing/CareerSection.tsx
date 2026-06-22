@@ -7,21 +7,21 @@ const blocks = [
 
 const CareerSection = forwardRef<HTMLElement>((_, ref) => {
   return (
-    <section ref={ref} className="h-screen w-full snap-start flex items-center justify-center px-12">
-      <div>
-        <p className="font-canela text-[42px] font-normal leading-[1.1] tracking-[-0.03em] text-mnd-charcoal">
+    <section ref={ref} className="min-h-screen md:h-screen w-full snap-start flex items-center justify-center px-4 md:px-12">
+      <div className="w-full">
+        <p className="font-canela text-[22px] md:text-[42px] font-normal leading-[1.1] tracking-[-0.03em] text-mnd-charcoal">
           Oh, & we&apos;re very picky about our talent pool –
         </p>
-        <div className="flex items-center gap-6 mt-12">
+        <div className="flex items-center gap-3 md:gap-6 mt-8 md:mt-12">
           {/* Block 1 */}
           <div className="flex flex-col items-center gap-2 justify-center shrink-0">
             <span className="font-sans text-[10px] font-semibold tracking-[0.2em] uppercase text-mnd-charcoal">
               {blocks[0].label}
             </span>
-            <span className="font-canela text-[64px] font-bold leading-none text-mnd-charcoal">
+            <span className="font-canela text-[40px] md:text-[64px] font-bold leading-none text-mnd-charcoal">
               {blocks[0].number}
             </span>
-            <span className="w-[150px] text-center font-sans text-[10px] font-semibold tracking-[0.2em] uppercase text-mnd-charcoal">
+            <span className="w-[100px] md:w-[150px] text-center font-sans text-[10px] font-semibold tracking-[0.2em] uppercase text-mnd-charcoal">
               {blocks[0].description}
             </span>
           </div>
@@ -42,17 +42,17 @@ const CareerSection = forwardRef<HTMLElement>((_, ref) => {
             <span className="font-sans text-[10px] font-semibold tracking-[0.2em] uppercase text-mnd-charcoal">
               {blocks[1].label}
             </span>
-            <span className="font-canela text-[64px] font-bold leading-none text-mnd-charcoal">
+            <span className="font-canela text-[40px] md:text-[64px] font-bold leading-none text-mnd-charcoal">
               {blocks[1].number}
             </span>
-            <span className="w-[150px] text-center font-sans text-[10px] font-semibold tracking-[0.2em] uppercase text-mnd-charcoal">
+            <span className="w-[100px] md:w-[150px] text-center font-sans text-[10px] font-semibold tracking-[0.2em] uppercase text-mnd-charcoal">
               {blocks[1].description}
             </span>
           </div>
         </div>
 
-        <div className="mt-8 flex px-12">
-          <div className="bg-white rounded-[28px] shadow-card py-12 px-6 flex flex-col gap-6">
+        <div className="mt-6 md:mt-8 flex gap-4 px-2 md:px-12 overflow-x-auto md:overflow-visible pb-4 md:pb-0">
+          <div className="bg-white rounded-[28px] shadow-card py-12 px-6 flex flex-col gap-6 flex-shrink-0">
             <h3 className="font-canela text-[24px] font-semibold leading-[1.1] text-mnd-charcoal">
               Sourcing
             </h3>

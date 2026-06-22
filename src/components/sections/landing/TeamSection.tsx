@@ -29,15 +29,15 @@ const members = [
 
 const TeamSection = forwardRef<HTMLElement>((_, ref) => {
   return (
-    <section ref={ref} className="h-screen w-full snap-start flex items-center justify-center">
-      <div className="flex items-end gap-24">
+    <section ref={ref} className="min-h-screen md:h-screen w-full snap-start flex items-center justify-center">
+      <div className="flex flex-col md:flex-row items-start md:items-end gap-10 md:gap-24 px-6 md:px-12 py-16 md:py-0">
         <div className="flex flex-col items-start gap-16">
-          <div className="font-canela text-[38px] font-normal leading-[1.12] tracking-[-0.03em] text-mnd-charcoal w-[420px]">Basically - we&apos;re just a bunch of friends who really understand how software development works, inside out.</div>
+          <div className="font-canela text-[24px] md:text-[38px] font-normal leading-[1.12] tracking-[-0.03em] text-mnd-charcoal w-full md:w-[420px]">Basically - we&apos;re just a bunch of friends who really understand how software development works, inside out.</div>
           <div className="w-[72px] h-[6px] bg-mnd-charcoal" />
-          <div className="font-canela text-[36px] font-bold leading-[1.05] tracking-[-0.03em] text-mnd-charcoal">& we love what we do.</div>
+          <div className="font-canela text-[22px] md:text-[36px] font-bold leading-[1.05] tracking-[-0.03em] text-mnd-charcoal">& we love what we do.</div>
         </div>
 
-        <div className="grid grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
           {members.map((member, i) => (
             <div key={i} className="bg-white rounded-[28px] py-6 px-4 shadow-card flex flex-col justify-between gap-2">
               <div className="flex flex-col gap-4">
@@ -55,7 +55,7 @@ const TeamSection = forwardRef<HTMLElement>((_, ref) => {
                 </div>
               </div>
               <div className="w-[52px] h-[4px] bg-mnd-charcoal my-2" />
-              <p className="font-sans text-[10px] font-medium leading-widest text-mnd-charcoal max-w-[280px]">
+              <p className="font-sans text-[10px] font-medium leading-widest text-mnd-charcoal max-w-full md:max-w-[280px]">
                 {member.body}
               </p>
             </div>

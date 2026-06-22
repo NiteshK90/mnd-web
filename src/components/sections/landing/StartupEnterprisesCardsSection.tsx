@@ -116,12 +116,12 @@ function CardDeck({ cards, category }: { cards: typeof startupCards; category: s
 
 const StartupEnterprisesCardsSection = forwardRef<HTMLElement>((_, ref) => {
   return (
-    <section ref={ref} className="h-screen w-full snap-start flex flex-col items-center justify-center gap-16">
-      <h2 className="max-w-[720px] font-canela text-[42px] font-normal leading-[1.1] tracking-[-0.03em] text-mnd-charcoal text-center mt-16">
+    <section ref={ref} className="min-h-screen md:h-screen w-full snap-start flex flex-col items-center justify-center gap-16">
+      <h2 className="max-w-[720px] px-6 md:px-0 font-canela text-[26px] md:text-[42px] font-normal leading-[1.1] tracking-[-0.03em] text-mnd-charcoal text-center mt-16">
         So, we built MND to plug into how you <span className="font-semibold italic">actually</span> work.
       </h2>
 
-      <div className="flex justify-center gap-[180px]">
+      <div className="flex flex-col md:flex-row items-center justify-center gap-16 md:gap-[180px]">
         <CardDeck cards={startupCards} category="For Startups" />
         <CardDeck cards={enterpriseCards} category="For Enterprises" />
       </div>

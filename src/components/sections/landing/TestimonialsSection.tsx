@@ -46,7 +46,7 @@ function TestimonialCard({ testimonial }: { testimonial: (typeof testimonials)[0
 
   return (
     <div
-      className="w-[280px] h-[340px] [perspective:1200px] cursor-pointer"
+      className="w-[260px] md:w-[280px] h-[320px] md:h-[340px] flex-shrink-0 [perspective:1200px] cursor-pointer"
       onClick={() => setFlipped((f) => !f)}
     >
       <div
@@ -99,18 +99,18 @@ function TestimonialCard({ testimonial }: { testimonial: (typeof testimonials)[0
 
 const TestimonialsSection = forwardRef<HTMLElement>((_, ref) => {
   return (
-    <section ref={ref} className="h-screen w-full snap-start flex flex-col items-center justify-center gap-12 bg-mnd-espresso">
+    <section ref={ref} className="min-h-screen md:h-screen overflow-hidden w-full snap-start flex flex-col items-center justify-center gap-12 bg-mnd-espresso">
       <div className="flex flex-col items-center gap-12 mt-12">
-        <p className="font-canela text-[36px] font-normal leading-[1.1] tracking-[-0.03em] text-mnd-parchment text-center">
+        <p className="font-canela text-[24px] md:text-[36px] font-normal leading-[1.1] tracking-[-0.03em] text-mnd-parchment text-center px-6 md:px-0">
           Trust us. We have shipped 436 products &amp; counting.
         </p>
         <div className="w-[76px] h-[6px] bg-mnd-parchment" />
-        <p className="font-canela text-[34px] font-semibold leading-[1.05] tracking-[-0.03em] text-mnd-parchment">
+        <p className="font-canela text-[22px] md:text-[34px] font-semibold leading-[1.05] tracking-[-0.03em] text-mnd-parchment px-6 md:px-0 text-center">
           <span className="italic">fyi</span> - zero unsatisfied clients.
         </p>
       </div>
 
-      <div className="flex gap-10 mt-12">
+      <div className="flex gap-6 md:gap-10 mt-8 md:mt-12 overflow-x-auto pb-6 px-6 md:px-0 md:overflow-visible w-full md:justify-center">
         {testimonials.map((t) => (
           <TestimonialCard key={t.name} testimonial={t} />
         ))}

@@ -28,19 +28,19 @@ const GuaranteeSection = forwardRef<HTMLElement>((_, ref) => {
   const [activeCard, setActiveCard] = useState(1);
 
   return (
-    <section ref={ref} className="h-screen w-full snap-start flex flex-col items-center justify-center gap-16">
-      <h2 className="font-canela text-[42px] font-normal leading-[1.1] text-mnd-charcoal text-center">
+    <section ref={ref} className="min-h-screen md:h-screen w-full snap-start flex flex-col items-center justify-center gap-16">
+      <h2 className="font-canela text-[26px] md:text-[42px] font-normal leading-[1.1] text-mnd-charcoal text-center px-6 md:px-0">
         All this, on our guarantee.
       </h2>
 
-      <div className="flex gap-20">
+      <div className="flex flex-col md:flex-row gap-6 md:gap-20 px-6 md:px-0">
         {cards.map((card) => {
           const isOpen = card.id === activeCard;
           return (
             <div
               key={card.id}
               className={`bg-white rounded-[28px] shadow-card overflow-hidden transition-cards ${
-                isOpen ? "w-[420px]" : "w-[150px]"
+                isOpen ? "w-full md:w-[420px]" : "w-full md:w-[150px]"
               }`}
             >
               {isOpen ? (
@@ -48,10 +48,10 @@ const GuaranteeSection = forwardRef<HTMLElement>((_, ref) => {
                   title={card.title}
                   quote={card.quote}
                   body={card.body}
-                  className="w-[420px] px-10 py-8"
+                  className="w-full md:w-[420px] px-10 py-8"
                 />
               ) : (
-                <div className="w-[150px] h-full flex flex-col items-center justify-end gap-4 py-[44px]">
+                <div className="w-full md:w-[150px] h-full flex flex-col items-center justify-end gap-4 py-[44px]">
                   <div className="w-[50px] h-[2px] bg-mnd-stone" />
                   <button
                     onClick={() => setActiveCard(card.id)}

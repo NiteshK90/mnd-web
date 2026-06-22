@@ -29,7 +29,7 @@ const NoteSection = forwardRef<HTMLElement>((_, ref) => {
         {/* Right */}
         <div className="flex flex-col gap-12">
           <h2 className="font-canela text-[42px] font-bold text-mnd-dark">
-            A note from the founders ~
+            A Note from the founders ~
           </h2>
 
           <div className="flex flex-col gap-6">

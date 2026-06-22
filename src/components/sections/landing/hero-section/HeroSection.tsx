@@ -19,11 +19,11 @@ const HeroSection = forwardRef<HTMLElement>((_, ref) => {
   return (
     <section
       ref={ref}
-      className="relative bg-[url('/landing/hero.png')] bg-cover bg-center h-screen w-full snap-start py-6 px-36 flex flex-col"
+      className="relative bg-[url('/landing/hero.png')] bg-cover bg-center h-screen w-full snap-start py-6 px-6 sm:px-12 md:px-36 flex flex-col"
     >
-      <div className="flex-1 flex items-center gap-6 relative">
+      <div className="flex-1 flex flex-col md:flex-row items-start gap-6 relative">
         <div className="flex flex-col justify-center">
-          <div className="font-[Canela] text-6xl font-semibold tracking-[0.1] w-[400px] leading-[1.2] text-mnd-dark">
+          <div className="font-[Canela] text-[clamp(2rem,6vw,3.75rem)] font-semibold tracking-[0.1] w-full max-w-sm md:max-w-[400px] leading-[1.2] text-mnd-dark">
             Stellar engineers on bench for you.
           </div>
           <div className="mt-6 flex items-center gap-6">
@@ -34,7 +34,7 @@ const HeroSection = forwardRef<HTMLElement>((_, ref) => {
           </div>
         </div>
 
-        <div className="relative">
+        <div className="hidden md:block relative">
           {dots.map((dot, i) => (
             <div
               key={i}

@@ -45,7 +45,7 @@ export default function Landing() {
   };
 
   return (
-    <div id="landing-container" ref={containerRef} className="relative h-screen overflow-y-scroll snap-y snap-mandatory">
+    <div id="landing-container" ref={containerRef} className="relative h-screen overflow-y-auto md:overflow-y-scroll md:snap-y md:snap-mandatory overflow-x-hidden">
       {activeIndex !== TOTAL_SECTIONS - 1 && (
         <div className="fixed top-6 left-0 right-0 flex justify-center z-50">
           <Navbar minimal={activeIndex !== 0} showBorder={activeIndex !== 0} />
@@ -53,7 +53,7 @@ export default function Landing() {
       )}
       <HeroSection ref={(el) => { sectionRefs.current[0] = el; }} />
 
-      <div className="relative py-6 bg-mnd-linen">
+      <div className="relative py-6 bg-mnd-linen overflow-x-hidden">
         <ProblemStatementSection       ref={(el) => { sectionRefs.current[1] = el; }} />
         <StartupEnterprisesCardsSection    ref={(el) => { sectionRefs.current[2] = el; }} />
         <WorkSection        ref={(el) => { sectionRefs.current[3] = el; }} />
@@ -65,12 +65,14 @@ export default function Landing() {
 
       <FooterSection ref={(el) => { sectionRefs.current[8] = el; }} />
 
-      <ScrollIndicators
-        total={TOTAL_SECTIONS}
-        activeIndex={activeIndex}
-        white={activeIndex === 0 || activeIndex === 6 || activeIndex === TOTAL_SECTIONS - 1}
-        onScrollTo={scrollTo}
-      />
+      <div className="hidden md:block">
+        <ScrollIndicators
+          total={TOTAL_SECTIONS}
+          activeIndex={activeIndex}
+          white={activeIndex === 0 || activeIndex === 6 || activeIndex === TOTAL_SECTIONS - 1}
+          onScrollTo={scrollTo}
+        />
+      </div>
     </div>
   );
 }
