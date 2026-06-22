@@ -30,8 +30,8 @@ const ProductSection = forwardRef<HTMLElement>((_, ref) => {
           { title: "Quick MVP Development", desc: "The fastest way from idea to product" },
         ].map(({ title, desc }) => (
           <div key={title} className="rounded-[20px] border border-[#707070] bg-mnd-linen px-4 py-4">
-            <p className="font-semibold text-[12px] leading-snug text-mnd-charcoal">{title}</p>
-            <p className="mt-1 text-[10px] leading-snug font-normal text-mnd-charcoal">{desc}</p>
+            <p className="font-inter font-medium text-[11px] leading-[1.35] text-mnd-charcoal">{title}</p>
+            <p className="mt-1 font-inter font-normal text-[9px] leading-[1.45] text-mnd-charcoal">{desc}</p>
           </div>
         ))}
       </div>
@@ -60,45 +60,45 @@ const ProductSection = forwardRef<HTMLElement>((_, ref) => {
               <CubeIcon size={32} weight="light" />
             </div>
 
-            <p className="text-[10px] font-semibold tracking-[0.2em] uppercase">
+            <p className="font-inter font-normal text-[8px] leading-none tracking-[0.25em] uppercase">
               Your Product
             </p>
           </div>
 
           {/* Top */}
           <div className="absolute left-1/2 top-[13px] w-[195px] -translate-x-1/2 rounded-[26px] border border-[#707070] bg-mnd-linen px-5 py-3">
-            <p className="font-semibold text-[12px] leading-snug">AI Services & Integration</p>
-            <p className="mt-1 text-[10px] leading-snug font-normal">The intelligent layer that works for you</p>
+            <p className="font-inter font-medium text-[11px] leading-[1.35]">AI Services & Integration</p>
+            <p className="mt-1 font-inter font-normal text-[9px] leading-[1.45]">The intelligent layer that works for you</p>
           </div>
 
           {/* Right Top */}
           <div className="absolute right-0 top-[179px] w-[195px] rounded-[26px] border border-[#707070] bg-mnd-linen px-5 py-3">
-            <p className="font-semibold text-[12px] leading-snug">Business Process Outsourcing</p>
-            <p className="mt-1 text-[10px] leading-snug font-normal">People that keep your business moving</p>
+            <p className="font-inter font-medium text-[11px] leading-[1.35]">Business Process Outsourcing</p>
+            <p className="mt-1 font-inter font-normal text-[9px] leading-[1.45]">People that keep your business moving</p>
           </div>
 
           {/* Right Bottom */}
           <div className="absolute bottom-[166px] right-0 w-[195px] rounded-[26px] border border-[#707070] bg-mnd-linen px-5 py-3">
-            <p className="font-semibold text-[12px] leading-snug">Employee on Record</p>
-            <p className="mt-1 text-[10px] leading-snug font-normal">Keeping people you need for when you need them</p>
+            <p className="font-inter font-medium text-[11px] leading-[1.35]">Employee on Record</p>
+            <p className="mt-1 font-inter font-normal text-[9px] leading-[1.45]">Keeping people you need for when you need them</p>
           </div>
 
           {/* Bottom */}
           <div className="absolute bottom-[13px] left-1/2 w-[195px] -translate-x-1/2 rounded-[26px] border border-[#707070] bg-mnd-linen px-5 py-3">
-            <p className="font-semibold text-[12px] leading-snug">Offshore Accounting</p>
-            <p className="mt-1 text-[10px] leading-snug font-normal">Keeping the number clean, compliant and affordable</p>
+            <p className="font-inter font-medium text-[11px] leading-[1.35]">Offshore Accounting</p>
+            <p className="mt-1 font-inter font-normal text-[9px] leading-[1.45]">Keeping the number clean, compliant and affordable</p>
           </div>
 
           {/* Left Bottom */}
           <div className="absolute bottom-[166px] left-0 w-[195px] rounded-[26px] border border-[#707070] bg-mnd-linen px-5 py-3">
-            <p className="font-semibold text-[12px] leading-snug">Digital Marketing</p>
-            <p className="mt-1 text-[10px] leading-snug font-normal">Creative strategies that get you seen and chosen</p>
+            <p className="font-inter font-medium text-[11px] leading-[1.35]">Digital Marketing</p>
+            <p className="mt-1 font-inter font-normal text-[9px] leading-[1.45]">Creative strategies that get you seen and chosen</p>
           </div>
 
           {/* Left Top */}
           <div className="absolute left-0 top-[179px] w-[195px] rounded-[26px] border border-[#707070] bg-mnd-linen px-5 py-3">
-            <p className="font-semibold text-[12px] leading-snug">Quick MVP Development</p>
-            <p className="mt-1 text-[10px] leading-snug font-normal">The fastest way from idea to product</p>
+            <p className="font-inter font-medium text-[11px] leading-[1.35]">Quick MVP Development</p>
+            <p className="mt-1 font-inter font-normal text-[9px] leading-[1.45]">The fastest way from idea to product</p>
           </div>
         </div>
       </div>
