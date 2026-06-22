@@ -51,10 +51,10 @@ export default function PreLanding() {
             className={`flex items-center justify-center gap-4 md:gap-6 ${fadeBase} ${visible ? fadeVisible : fadeHidden}`}
             style={{ transitionDelay: "1200ms" }}
           >
-            <span className="font-[Inter,sans-serif] text-white text-xs md:text-sm font-semibold capitalize">The boring one</span>
+            <span className="flex-1 text-right font-[Inter,sans-serif] text-white text-xs md:text-sm font-semibold capitalize">The boring one</span>
             <button
               onClick={handleToggle}
-              className="relative w-14 h-5 rounded-full bg-transparent border border-white cursor-pointer"
+              className="relative w-14 h-5 rounded-full bg-transparent border border-white cursor-pointer shrink-0"
             >
               <span
                 className={`absolute left-1 top-1 w-3 h-3 rounded-full border border-white bg-transparent transition-transform duration-300 ease-in-out ${
@@ -62,7 +62,7 @@ export default function PreLanding() {
                 }`}
               />
             </button>
-            <span className="font-[Cormorant-Garamond] text-white text-xs md:text-sm italic font-bold capitalize">The fun one!</span>
+            <span className="flex-1 text-left font-[Cormorant-Garamond] text-white text-xs md:text-sm italic font-bold capitalize">The fun one!</span>
           </div>
         </div>
       </div>
