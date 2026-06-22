@@ -99,7 +99,7 @@ function TestimonialCard({ testimonial }: { testimonial: (typeof testimonials)[0
 
 const TestimonialsSection = forwardRef<HTMLElement>((_, ref) => {
   return (
-    <section ref={ref} className="min-h-screen md:h-screen w-full snap-start flex flex-col items-center justify-center gap-8 md:gap-12 bg-mnd-espresso py-16 md:py-0">
+    <section ref={ref} className="min-h-screen md:h-screen w-full snap-start flex flex-col items-center justify-center gap-8 md:gap-12 bg-mnd-espresso pt-20 pb-16 md:pt-24 md:pb-0">
       <div className="flex flex-col items-center gap-6 md:gap-12 px-6 md:px-0 text-center">
         <p className="font-playfair text-[22px] md:text-[36px] font-bold leading-[1.333] tracking-[-0.03em] text-mnd-parchment">
           Trust us. We have shipped 436 products &amp; counting.

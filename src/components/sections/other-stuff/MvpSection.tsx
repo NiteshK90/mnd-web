@@ -4,7 +4,7 @@ import ArrowRight from "@/components/icons/ArrowRight";
 
 const MvpSection = forwardRef<HTMLElement>((_, ref) => {
   return (
-    <section ref={ref} className="min-h-screen w-full snap-start flex flex-col md:flex-row px-6 md:px-32 pt-16 md:pt-24 pb-12 md:pb-0">
+    <section ref={ref} className="min-h-screen w-full snap-start flex flex-col md:flex-row px-6 md:px-32 pt-20 md:pt-24 pb-12 md:pb-0">
       <div className="flex items-center justify-start">
         <div className="flex flex-col gap-10 md:gap-16">
           <div className="flex flex-col gap-4">

@@ -70,7 +70,7 @@ const ValuesSection = forwardRef<HTMLElement>((_, ref) => {
   };
 
   return (
-    <section ref={ref} className="h-screen w-full snap-start overflow-hidden flex flex-col justify-center gap-10 pt-18">
+    <section ref={ref} className="h-screen w-full snap-start overflow-hidden flex flex-col justify-center gap-10 pt-20 md:pt-24">
 
       {/* Carousel track */}
       <div

@@ -145,10 +145,10 @@ const CareerSection = forwardRef<HTMLElement>((_, ref) => {
   return (
     <section
       ref={setRef}
-      className="h-screen w-full snap-start flex items-center justify-center px-4 md:px-[80px] overflow-hidden"
+      className="h-screen w-full snap-start flex items-center justify-center px-4 md:px-[80px] overflow-hidden pt-20 md:pt-24"
     >
       <div className="w-full">
-        <p className="font-playfair text-[22px] md:text-[36px] font-normal leading-[1.333] tracking-[-0.03em] text-mnd-charcoal md:pt-24">
+        <p className="font-playfair text-[22px] md:text-[36px] font-normal leading-[1.333] tracking-[-0.03em] text-mnd-charcoal">
           Oh, & we&apos;re very picky about our talent pool –
         </p>
         <div className="flex items-center justify-between md:justify-normal gap-3 md:gap-6 mt-6 md:mt-12">

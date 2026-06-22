@@ -28,7 +28,7 @@ const GuaranteeSection = forwardRef<HTMLElement>((_, ref) => {
   const [activeCard, setActiveCard] = useState(1);
 
   return (
-    <section ref={ref} className="h-screen w-full snap-start flex flex-col items-center justify-center gap-8 md:gap-16">
+    <section ref={ref} className="h-screen w-full snap-start flex flex-col items-center justify-center gap-8 md:gap-16 pt-20 md:pt-24">
       <h2 className="font-playfair text-[26px] md:text-[36px] font-bold leading-[1.333] text-mnd-charcoal text-center px-6 md:px-0">
         All this, on our guarantee.
       </h2>

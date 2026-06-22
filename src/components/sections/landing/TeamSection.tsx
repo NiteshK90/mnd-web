@@ -33,7 +33,7 @@ const members = [
 
 const TeamSection = forwardRef<HTMLElement>((_, ref) => {
   return (
-    <section ref={ref} className="min-h-screen md:h-screen w-full snap-start flex items-center justify-center py-16 md:py-0">
+    <section ref={ref} className="min-h-screen md:h-screen w-full snap-start flex items-center justify-center pt-20 pb-16 md:pt-24 md:pb-0">
       <div className="flex flex-col md:flex-row items-start md:items-end gap-10 md:gap-24 px-6 md:px-0 w-full md:w-auto">
 
         {/* Left text block */}

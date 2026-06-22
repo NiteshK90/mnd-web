@@ -3,7 +3,7 @@ import { CubeIcon } from "@phosphor-icons/react";
 
 const ProductSection = forwardRef<HTMLElement>((_, ref) => {
   return (
-    <section ref={ref} className="min-h-screen w-full snap-start flex flex-col md:flex-row py-16 px-6 md:py-24 md:px-24">
+    <section ref={ref} className="min-h-screen w-full snap-start flex flex-col md:flex-row pt-20 pb-16 px-6 md:pt-24 md:pb-24 md:px-24">
       <div className="flex items-center justify-start">
         <div className="flex flex-col gap-8 md:gap-16">
           <p className="font-playfair font-normal text-[28px] md:text-[40px] leading-[1.33] tracking-normal text-mnd-charcoal">
