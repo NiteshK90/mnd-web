@@ -84,7 +84,7 @@ const ValuesSection = forwardRef<HTMLElement>((_, ref) => {
             <div
               key={i}
               ref={(el) => { cardRefs.current[i] = el; }}
-              className="flex-shrink-0 w-[75vw] md:w-[450px] bg-white rounded-[32px] py-6 px-6 md:py-8 md:px-8 flex flex-col gap-5 md:gap-8 shadow-[0_2px_4px_rgba(0,0,0,.04),0_8px_24px_rgba(0,0,0,.06)] snap-center"
+              className="flex-shrink-0 w-[70vw] md:w-[380px] bg-white rounded-[32px] py-6 px-6 md:py-8 md:px-8 flex flex-col gap-5 md:gap-8 shadow-[0_2px_4px_rgba(0,0,0,.04),0_8px_24px_rgba(0,0,0,.06)] snap-center"
             >
               <div className="flex flex-col gap-2 md:gap-3">
                 <div className="flex items-center gap-3">
@@ -92,20 +92,20 @@ const ValuesSection = forwardRef<HTMLElement>((_, ref) => {
                   <span className="font-inter text-[8px] tracking-[0.18em] uppercase">{v.label}</span>
                 </div>
 
-                <p className="font-playfair text-[16px] md:text-[22px] font-bold uppercase text-mnd-charcoal">
+                <p className="font-playfair text-[18px] font-bold uppercase text-mnd-charcoal">
                   {v.name}
                 </p>
               </div>
 
               <div className="w-[36px] h-[4px] md:w-[64px] md:h-[6px] bg-mnd-charcoal" />
 
-              <p className="font-playfair text-[20px] md:text-[34px] font-bold leading-[1.2] text-mnd-charcoal">
+              <p className="font-playfair text-[28px] font-bold leading-[1.2] text-mnd-charcoal">
                 {v.statement}
               </p>
 
               <div className="w-[36px] h-[4px] md:w-[64px] md:h-[6px] bg-mnd-charcoal" />
 
-              <p className="font-inter text-[13px] md:text-[16px] font-medium leading-[1.2] text-mnd-charcoal">
+              <p className="font-inter text-[16px] font-medium leading-[1.2] text-mnd-charcoal">
                 {v.description}
               </p>
             </div>
