@@ -38,15 +38,18 @@ const WorkSection = forwardRef<HTMLElement>((_, ref) => {
       <p className={`font-playfair text-[26px] md:text-[36px] font-bold leading-[1.333] tracking-[-0.03em] text-mnd-charcoal w-full max-w-[720px] italic ${animate("[transition-delay:900ms]")}`}>
         On your terms.
       </p>
-      <div className={`flex flex-wrap items-center justify-center gap-3 md:gap-12 pt-4 md:pt-10 ${animate("[transition-delay:1300ms]")}`}>
-        {["BY THE HOUR", "QUICK PLACEMENT & REPLACEMENT", "NO QUESTIONS ASKED"].map((text) => (
-          <span
-            key={text}
-            className="py-3 px-6 md:px-8 border-1 border-mnd-stone rounded-full bg-transparent font-sans text-xs font-semibold text-mnd-charcoal flex items-center justify-center"
-          >
-            {text}
-          </span>
-        ))}
+      <div className="flex flex-wrap items-center justify-center gap-3 md:gap-12 pt-4 md:pt-10">
+        {(["BY THE HOUR", "QUICK PLACEMENT & REPLACEMENT", "NO QUESTIONS ASKED"] as const).map((text, i) => {
+          const delays = ["[transition-delay:1300ms]", "[transition-delay:1600ms]", "[transition-delay:1900ms]"];
+          return (
+            <span
+              key={text}
+              className={`py-3 px-6 md:px-8 border-1 border-mnd-stone rounded-full bg-transparent font-sans text-xs font-semibold text-mnd-charcoal flex items-center justify-center ${animate(delays[i])}`}
+            >
+              {text}
+            </span>
+          );
+        })}
       </div>
     </section>
   );
