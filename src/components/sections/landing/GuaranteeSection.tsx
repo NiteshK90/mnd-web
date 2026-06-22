@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, forwardRef } from "react";
+import { useState, forwardRef, useRef, useEffect } from "react";
 import SectionCard from "@/components/SectionCard";
 
 const cards = [
@@ -26,21 +26,45 @@ const cards = [
 
 const GuaranteeSection = forwardRef<HTMLElement>((_, ref) => {
   const [activeCard, setActiveCard] = useState(1);
+  const [inView, setInView] = useState(false);
+  const sectionRef = useRef<HTMLElement | null>(null);
+
+  const setRef = (el: HTMLElement | null) => {
+    sectionRef.current = el;
+    if (typeof ref === "function") ref(el);
+    else if (ref) (ref as { current: HTMLElement | null }).current = el;
+  };
+
+  useEffect(() => {
+    const el = sectionRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) setInView(true); },
+      { threshold: 0.3 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  const base = "transition-all duration-[1100ms] ease-out";
+  const hidden = "opacity-0 translate-y-5";
+  const visible = "opacity-100 translate-y-0";
+  const animate = (delay: string) => `${base} ${inView ? visible : hidden} ${delay}`;
 
   return (
-    <section ref={ref} className="h-screen w-full snap-start flex flex-col items-center justify-center gap-8 md:gap-16 pt-20 md:pt-24">
-      <h2 className="font-playfair text-[26px] md:text-[36px] font-bold leading-[1.333] text-mnd-charcoal text-center px-6 md:px-0">
+    <section ref={setRef} className="h-screen w-full snap-start flex flex-col items-center justify-center gap-12 md:gap-24 pt-20 md:pt-24">
+      <h2 className={`font-playfair text-[26px] md:text-[36px] font-bold leading-[1.333] text-mnd-charcoal text-center px-6 md:px-0 ${animate("[transition-delay:0ms]")}`}>
         All this, on our guarantee.
       </h2>
 
-      <div className="flex gap-4 md:gap-20 overflow-x-auto md:overflow-visible w-full md:w-auto px-6 md:px-0 pb-4 md:pb-0">
+      <div className={`flex gap-3 md:gap-6 overflow-x-auto md:overflow-visible w-full md:w-auto px-6 md:px-0 pb-4 md:pb-0 ${animate("[transition-delay:500ms]")}`}>
         {cards.map((card) => {
           const isOpen = card.id === activeCard;
           return (
             <div
               key={card.id}
-              className={`overflow-hidden rounded-[28px] transition-cards flex-shrink-0 w-[78vw] ${
-                isOpen ? "md:w-[340px]" : "md:w-[120px]"
+              className={`overflow-hidden rounded-[28px] transition-cards flex-shrink-0 w-[78vw] h-[320px] md:h-[400px] ${
+                isOpen ? "md:w-[340px]" : "md:w-[90px]"
               }`}
             >
               {/* Mobile: horizontal scroll — always expanded, SectionCard owns the card styling */}
@@ -60,14 +84,14 @@ const GuaranteeSection = forwardRef<HTMLElement>((_, ref) => {
                     title={card.title}
                     quote={card.quote}
                     body={card.body}
-                    className="w-[340px] px-8 py-8"
+                    className="h-full w-[340px] px-8 py-8"
                   />
                 ) : (
-                  <div className="w-[120px] h-full bg-white rounded-[28px] shadow-card flex flex-col items-center justify-end gap-4 py-[44px]">
-                    <div className="w-[50px] h-[2px] bg-mnd-stone" />
+                  <div className="w-[90px] h-full bg-white rounded-[28px] shadow-card flex flex-col items-center justify-end gap-4 py-[44px]">
+                    <div className="w-[30px] h-[2px] bg-mnd-stone" />
                     <button
                       onClick={() => setActiveCard(card.id)}
-                      className="w-[52px] h-[52px] border-2 border-mnd-stone rounded-full bg-transparent flex items-center justify-center text-[30px] font-light text-mnd-stone cursor-pointer"
+                      className="w-[31px] h-[31px] border-2 border-mnd-stone rounded-full bg-transparent flex items-center justify-center text-[17px] font-light text-mnd-stone cursor-pointer"
                     >
                       +
                     </button>
