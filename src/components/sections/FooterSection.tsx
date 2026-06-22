@@ -55,9 +55,10 @@ const FooterSection = forwardRef<HTMLElement, { containerId?: string }>(({ conta
           Let&apos;s build something great together.
         </p>
 
+        <div className={animate("[transition-delay:1200ms]")}>
         <a
           href="mailto:hello@mynextdeveloper.com?subject=Schedule a Call"
-          className={`flex items-center gap-2 md:gap-3 py-1.5 px-4 md:px-5 rounded-full bg-[#0D0D0F] text-white font-sans text-sm font-normal hover:scale-[1.05] hover:shadow-[0_6px_20px_rgba(0,0,0,0.4)] active:scale-[0.96] active:shadow-none ${animate("[transition-delay:1200ms]")}`}
+          className="flex items-center gap-2 md:gap-3 py-1.5 px-4 md:px-5 rounded-full bg-[#0D0D0F] text-white font-sans text-sm font-normal transition-all duration-200 hover:scale-[1.05] hover:shadow-[0_6px_20px_rgba(0,0,0,0.4)] active:scale-[0.96] active:shadow-none"
         >
           <span className="flex items-center justify-center w-5 h-5">
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -69,6 +70,7 @@ const FooterSection = forwardRef<HTMLElement, { containerId?: string }>(({ conta
           Schedule a call
           <span className="text-[16px]">→</span>
         </a>
+        </div>
       </div>
 
       <div className="pt-2 md:pt-3 pb-4 md:pb-5 bg-[#090909] flex items-center justify-between px-6 md:px-[72px]">
