@@ -123,7 +123,7 @@ function CardDeck({ cards, category }: { cards: typeof startupCards; category: s
                   {card.mainText}
                 </p>
                 {isFront && (
-                  <p className="mt-auto pt-3 font-sans text-[10px] text-mnd-silver tracking-wide text-center">drag or click to shuffle</p>
+                  <p className="mt-auto pt-3 font-sans text-[10px] text-mnd-silver tracking-wide text-center">Drag to shuffle</p>
                 )}
               </div>
             </div>
