@@ -92,7 +92,7 @@ const ValuesSection = forwardRef<HTMLElement>((_, ref) => {
                   <span className="font-sans text-[8px] tracking-[0.18em] uppercase">{v.label}</span>
                 </div>
 
-                <p className="font-sans text-[16px] md:text-[22px] font-bold uppercase text-mnd-charcoal">
+                <p className="font-playfair text-[16px] md:text-[22px] font-bold uppercase text-mnd-charcoal">
                   {v.name}
                 </p>
               </div>

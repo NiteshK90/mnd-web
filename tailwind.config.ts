@@ -15,8 +15,7 @@ export default {
         "mnd-button": "#063A5A",
       },
       fontFamily: {
-        canela: ["Canela", "serif"],
-        playfair: ["var(--font-playfair)", "serif"],
+playfair: ["var(--font-playfair)", "serif"],
         inter: ["var(--font-inter)", "sans-serif"],
       },
       boxShadow: {

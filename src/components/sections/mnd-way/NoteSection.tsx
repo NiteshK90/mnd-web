@@ -8,7 +8,7 @@ interface NoteSectionProps {
 const NoteSection = forwardRef<HTMLElement, NoteSectionProps>(({ onSkipToValues }, ref) => {
   return (
     <section ref={ref} className="h-screen w-full snap-start bg-[#F9BC10] overflow-y-auto">
-      <div className="grid grid-cols-1 md:grid-cols-[400px_1fr] gap-x-0 md:gap-x-[120px] max-w-[1400px] mx-auto pt-16 px-4 pb-10 md:pt-[180px] md:px-[80px] md:pb-[120px] items-center">
+      <div className="grid grid-cols-1 md:grid-cols-[400px_1fr] gap-x-0 md:gap-x-[120px] max-w-[1400px] mx-auto pt-16 px-8 pb-10 md:pt-[180px] md:px-[120px] md:pb-[120px] items-center">
 
         {/* Left */}
         <div className="flex flex-col gap-4 md:gap-8 pt-12 md:pt-32">
