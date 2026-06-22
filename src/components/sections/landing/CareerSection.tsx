@@ -10,13 +10,13 @@ const blocks = [
 const cards = [
   {
     top: "Sourcing",
-    quote: "We find them. They don’t find us.\nEngineers apply on invitation.",
+    quote: "We find them. They don't find us.\nEngineers apply on invitation.",
     body: "Hand-picked and filtered, we actually chat with each engineer before they begin the process with MND.",
   },
   {
     top: "Filtering the Real Coders",
     quote: "The bar is high and the rubric is non-negotiable.",
-    body: "We’re looking for strong fundamentals, clean code, and the ability to reason through an unfamiliar problem. Most candidates drop out here.",
+    body: "We're looking for strong fundamentals, clean code, and the ability to reason through an unfamiliar problem. Most candidates drop out here.",
   },
   {
     top: "Filtering for Empathy",
@@ -25,14 +25,15 @@ const cards = [
   },
   {
     top: "Welcome to the 3% Club",
-    quote: "Rejection is the default. Selections mean we’d happily put them on our own product.",
-    body: "The select ones are paired with senior mentors, plugged into peer review, and matched only with projects where they’ll do their best work.",
+    quote: "Rejection is the default. Selections mean we'd happily put them on our own product.",
+    body: "The select ones are paired with senior mentors, plugged into peer review, and matched only with projects where they'll do their best work.",
   },
 ];
 
 const CareerSection = forwardRef<HTMLElement>((_, ref) => {
-  const [visibleCount, setVisibleCount] = useState(1);
-  const visibleCountRef = useRef(1);
+  const [inView, setInView] = useState(false);
+  const [visibleCount, setVisibleCount] = useState(0);
+  const visibleCountRef = useRef(0);
   const lockedRef = useRef(false);
   const lockTimeRef = useRef(0);
   const idleTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -52,19 +53,45 @@ const CareerSection = forwardRef<HTMLElement>((_, ref) => {
     [ref]
   );
 
-  // On mobile, reveal all cards immediately — scroll-reveal is desktop-only
+  // Detect section entering viewport
+  useEffect(() => {
+    const el = sectionRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) setInView(true); },
+      { threshold: 0.3 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  // Auto-reveal first card after entry animations complete (desktop only)
+  useEffect(() => {
+    if (!inView || window.innerWidth < 768) return;
+    const timer = setTimeout(() => {
+      if (visibleCountRef.current === 0) updateVisible(1);
+    }, 1500);
+    return () => clearTimeout(timer);
+  }, [inView, updateVisible]);
+
+  // On mobile, reveal all cards immediately
   useEffect(() => {
     if (window.innerWidth < 768) updateVisible(cards.length);
   }, [updateVisible]);
+
+  const base = "transition-all duration-[1100ms] ease-out";
+  const hidden = "opacity-0 translate-y-5";
+  const shown = "opacity-100 translate-y-0";
+  const animate = (delay: string) => `${base} ${inView ? shown : hidden} ${delay}`;
+
+  const allCardsShown = visibleCount === cards.length;
+  const animateLast = (delay: string) => `${base} ${allCardsShown ? shown : hidden} ${delay}`;
 
   useEffect(() => {
     const section = sectionRef.current;
     if (!section) return;
     if (window.innerWidth < 768) return;
 
-    // Schedule unlock: 200ms after last wheel event, but never before 600ms from lock start.
-    // This prevents momentum scroll (which fires events for ~800ms after lift) from
-    // triggering a second card reveal before the first one has even finished.
     const scheduleUnlock = () => {
       if (idleTimerRef.current) clearTimeout(idleTimerRef.current);
       idleTimerRef.current = setTimeout(() => {
@@ -85,7 +112,6 @@ const CareerSection = forwardRef<HTMLElement>((_, ref) => {
 
       if (e.deltaY > 0) {
         if (current < cards.length) {
-          // Cards still to reveal
           e.preventDefault();
           scheduleUnlock();
           if (lockedRef.current) return;
@@ -93,25 +119,11 @@ const CareerSection = forwardRef<HTMLElement>((_, ref) => {
           lockTimeRef.current = Date.now();
           updateVisible(current + 1);
         } else if (lockedRef.current) {
-          // All cards shown, but same gesture is still going — keep blocking
-          // so momentum scroll doesn't immediately snap to next section
           e.preventDefault();
           scheduleUnlock();
         }
-        // lockedRef false + all cards shown → no preventDefault → snap fires
       } else if (e.deltaY < 0) {
-        if (current > 1) {
-          e.preventDefault();
-          scheduleUnlock();
-          if (lockedRef.current) return;
-          lockedRef.current = true;
-          lockTimeRef.current = Date.now();
-          updateVisible(current - 1);
-        } else if (lockedRef.current) {
-          // First card, same gesture still going
-          e.preventDefault();
-          scheduleUnlock();
-        }
+        e.preventDefault();
       }
     };
 
@@ -126,8 +138,6 @@ const CareerSection = forwardRef<HTMLElement>((_, ref) => {
       const current = visibleCountRef.current;
       if (delta > 50 && current < cards.length) {
         updateVisible(current + 1);
-      } else if (delta < -50 && current > 1) {
-        updateVisible(current - 1);
       }
     };
 
@@ -145,28 +155,30 @@ const CareerSection = forwardRef<HTMLElement>((_, ref) => {
   return (
     <section
       ref={setRef}
-      className="h-screen w-full snap-start flex items-center justify-center px-4 md:px-[80px] overflow-hidden pt-20 md:pt-24"
+      className="h-screen w-full snap-start flex items-center justify-center px-4 md:px-10 overflow-hidden pt-20 md:pt-24"
     >
       <div className="w-full">
-        <p className="font-playfair text-[22px] md:text-[36px] font-normal leading-[1.333] tracking-[-0.03em] text-mnd-charcoal">
+        {/* Title */}
+        <p className={`font-playfair text-[22px] md:text-[36px] font-normal leading-[1.333] tracking-[-0.03em] text-mnd-charcoal ${animate("[transition-delay:0ms]")}`}>
           Oh, & we&apos;re very picky about our talent pool –
         </p>
+
         <div className="flex items-center justify-between md:justify-normal gap-3 md:gap-6 mt-6 md:mt-12">
-          {/* Block 1 */}
-          <div className="flex flex-col items-center gap-2 justify-center shrink-0">
-            <span className="font-sans text-[8px] font-semibold tracking-[0.2em] uppercase text-mnd-charcoal">
+          {/* Block 1: FOR EVERY 10 — lines animate in one by one */}
+          <div className="flex flex-col items-center gap-2 justify-center shrink-0 w-[70px] md:w-[100px]">
+            <span className={`font-sans text-[8px] font-semibold tracking-[0.2em] uppercase text-mnd-charcoal ${animate("[transition-delay:400ms]")}`}>
               {blocks[0].label}
             </span>
-            <span className="font-playfair text-[40px] md:text-[72px] font-bold leading-none text-mnd-charcoal">
+            <span className={`font-playfair text-[40px] md:text-[72px] font-bold leading-none text-mnd-charcoal ${animate("[transition-delay:600ms]")}`}>
               {blocks[0].number}
             </span>
-            <span className="w-[80px] md:w-[150px] text-center font-sans text-[8px] font-semibold tracking-[0.2em] uppercase text-mnd-charcoal">
+            <span className={`mt-2 w-full text-center font-sans text-[8px] font-semibold tracking-[0.2em] uppercase text-mnd-charcoal ${animate("[transition-delay:800ms]")}`}>
               {blocks[0].description}
             </span>
           </div>
 
           {/* Progress bar */}
-          <div className="hidden md:flex flex-1 h-[68px] bg-white rounded-full shadow-progress items-center px-8 gap-0">
+          <div className={`hidden md:flex flex-1 h-[68px] bg-white rounded-full shadow-progress items-center px-8 gap-0 ${animate("[transition-delay:1100ms]")}`}>
             {cards.map((_, i) => (
               <Fragment key={i}>
                 <div
@@ -190,25 +202,26 @@ const CareerSection = forwardRef<HTMLElement>((_, ref) => {
             ))}
           </div>
 
-          {/* Block 2 */}
-          <div className="flex flex-col items-center gap-2 justify-center shrink-0">
-            <span className="font-sans text-[8px] font-semibold tracking-[0.2em] uppercase text-mnd-charcoal">
+          {/* Block 2: ONLY 3 — lines animate in when all cards are shown */}
+          <div className="flex flex-col items-center gap-2 justify-center shrink-0 w-[70px] md:w-[100px]">
+            <span className={`font-sans text-[8px] font-semibold tracking-[0.2em] uppercase text-mnd-charcoal ${animateLast("[transition-delay:0ms]")}`}>
               {blocks[1].label}
             </span>
-            <span className="font-playfair text-[40px] md:text-[72px] font-bold leading-none text-mnd-charcoal">
+            <span className={`font-playfair text-[40px] md:text-[72px] font-bold leading-none text-mnd-charcoal ${animateLast("[transition-delay:300ms]")}`}>
               {blocks[1].number}
             </span>
-            <span className="w-[80px] md:w-[150px] text-center font-sans text-[8px] font-semibold tracking-[0.2em] uppercase text-mnd-charcoal">
+            <span className={`mt-2 w-full text-center font-sans text-[8px] font-semibold tracking-[0.2em] uppercase text-mnd-charcoal ${animateLast("[transition-delay:600ms]")}`}>
               {blocks[1].description}
             </span>
           </div>
         </div>
 
-        <div className="mt-5 md:mt-8 flex gap-4 overflow-x-auto scrollbar-none [&::-webkit-scrollbar]:hidden md:overflow-visible pb-3 md:pb-0">
+        {/* Cards — revealed via visibleCount (first card auto, rest on scroll) */}
+        <div className="mt-5 md:mt-8 flex justify-center gap-6 md:gap-8 overflow-x-auto scrollbar-none [&::-webkit-scrollbar]:hidden md:overflow-visible pb-3 md:pb-0">
           {cards.map((card, i) => (
             <div
               key={i}
-              className="bg-white rounded-[20px] md:rounded-[28px] shadow-card py-5 md:py-6 px-4 md:px-6 flex flex-col gap-3 md:gap-4 flex-shrink-0 w-[54vw] md:w-[300px]"
+              className="bg-white rounded-[16px] md:rounded-[20px] shadow-card py-5 md:py-7 px-3 md:px-4 flex flex-col gap-3 md:gap-4 flex-shrink-0 w-[44vw] md:w-[250px] min-h-[280px] md:min-h-[320px]"
               style={{
                 transform: i < visibleCount ? "translateY(0)" : "translateY(60px)",
                 opacity: i < visibleCount ? 1 : 0,
@@ -216,22 +229,17 @@ const CareerSection = forwardRef<HTMLElement>((_, ref) => {
                 pointerEvents: i < visibleCount ? "auto" : "none",
               }}
             >
-              <h3 className="font-playfair text-[16px] md:text-[20px] font-bold leading-[1.333] text-mnd-charcoal">
+              <h3 className="font-playfair text-[18px] font-bold leading-[1.333] text-mnd-charcoal">
                 {card.top}
               </h3>
               <div className="w-10 md:w-16 h-[2px] md:h-[3px] bg-mnd-charcoal" />
-              <div className="flex items-start gap-4">
-                <span className="font-sans text-[36px] md:text-[60px] font-bold italic text-mnd-charcoal leading-none">&ldquo;</span>
+              <div className="flex items-start gap-2">
+                <span className="font-sans text-[46px] font-bold italic text-mnd-charcoal leading-none">&ldquo;</span>
                 <p className="font-sans text-[10px] md:text-xs italic font-normal leading-[1.3] mt-2">
-                  {card.quote.split("\n").map((line, j, arr) => (
-                    <span key={j}>
-                      {line}
-                      {j < arr.length - 1 && <br />}
-                    </span>
-                  ))}
+                  {card.quote.replace(/\n/g, " ")}
                 </p>
               </div>
-              <p className="font-sans w-full text-[10px] md:text-[18px] font-bold leading-[1.333] text-mnd-charcoal">
+              <p className="font-sans w-full text-[16px] font-bold leading-[1.333] text-mnd-charcoal">
                 {card.body}
               </p>
             </div>

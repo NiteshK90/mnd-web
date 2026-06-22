@@ -119,7 +119,7 @@ function CardDeck({ cards, category }: { cards: typeof startupCards; category: s
                   </div>
                   <div className="w-[42px] h-[5px] bg-mnd-charcoal" />
                 </div>
-                <p className="mt-5 md:mt-9 font-sans text-[14px] md:text-[16px] font-bold leading-[1.2] text-mnd-charcoal">
+                <p className="mt-5 md:mt-9 font-sans text-[16px] font-bold leading-[1.2] text-mnd-charcoal">
                   {card.mainText}
                 </p>
                 {isFront && (

@@ -22,7 +22,7 @@ export default function SectionCard({ title, quote, body, className = "" }: Sect
       )}
       <div className="flex gap-4">
         <div className="w-px bg-black self-stretch shrink-0" />
-        <p className="w-full max-w-[250px] font-sans text-[12px] md:text-[18px] font-bold leading-[1.333] text-mnd-charcoal">
+        <p className="w-full max-w-[250px] font-sans text-[16px] font-bold leading-[1.333] text-mnd-charcoal">
           {body}
         </p>
       </div>
