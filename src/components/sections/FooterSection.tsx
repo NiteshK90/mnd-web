@@ -33,19 +33,19 @@ const FooterSection = forwardRef<HTMLElement, { containerId?: string }>(({ conta
       ref={setRef}
       className="bg-mnd-linen bg-[url('/landing/footer.png')] bg-cover bg-center h-screen w-full snap-start flex flex-col justify-between"
     >
-      <div className="flex flex-col items-center justify-center gap-4 px-6 md:px-0">
+      <div className="flex flex-col items-center justify-center gap-6 md:gap-8 px-6 md:px-0">
         <div className={`flex justify-center pt-5 ${animate("[transition-delay:0ms]")}`}>
           <button
             onClick={() => document.getElementById(containerId)?.scrollTo({ top: 0, behavior: "smooth" })}
-            className="w-12 h-12 rounded-full border-[1.5px] border-white/70 bg-transparent flex items-center justify-center cursor-pointer"
+            className="w-12 h-12 rounded-full border-[1.5px] border-[#0D0D0F] bg-transparent flex items-center justify-center cursor-pointer"
           >
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M4 13l6-6 6 6" stroke="white" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" />
+              <path d="M4 13l6-6 6 6" stroke="#0D0D0F" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           </button>
         </div>
 
-        <h2 className={`font-playfair text-[42px] md:text-[68px] font-light leading-[0.92] mt-6 md:mt-12 tracking-[-0.04em] text-mnd-dark text-center w-full md:w-[400px] ${animate("[transition-delay:300ms]")}`}>
+        <h2 className={`font-playfair text-[42px] md:text-[68px] font-light leading-[0.92] mt-10 md:mt-16 tracking-[-0.04em] text-mnd-dark text-center w-full md:w-[400px] ${animate("[transition-delay:300ms]")}`}>
           Ready when you are.
         </h2>
 
@@ -76,7 +76,7 @@ const FooterSection = forwardRef<HTMLElement, { containerId?: string }>(({ conta
           Compliances
         </button>
 
-        <span className="font-playfair text-[26px] md:text-[38px] font-normal text-white/70">MND</span>
+        <img src="/mnd-white-logo.png" alt="MND" className="h-6 md:h-8 opacity-70" />
 
         <button className="flex items-center h-8 md:h-10 px-4 md:px-8 rounded-full border-[1.5px] border-white/20 text-white/50 font-sans text-sm md:text-[18px] font-normal">
           Privacy
