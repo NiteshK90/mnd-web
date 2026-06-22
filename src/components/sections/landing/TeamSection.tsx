@@ -34,7 +34,7 @@ const members = [
 const TeamSection = forwardRef<HTMLElement>((_, ref) => {
   return (
     <section ref={ref} className="min-h-screen md:h-screen w-full snap-start flex items-center justify-center pt-20 pb-16 md:pt-24 md:pb-0">
-      <div className="flex flex-col md:flex-row items-start md:items-end gap-10 md:gap-24 px-6 md:px-0 w-full md:w-auto">
+      <div className="flex flex-col md:flex-row items-start md:items-end gap-10 md:gap-28 px-4 md:px-8 w-full md:w-auto">
 
         {/* Left text block */}
         <div className="flex flex-col items-start gap-4 md:gap-16">
@@ -48,12 +48,12 @@ const TeamSection = forwardRef<HTMLElement>((_, ref) => {
         </div>
 
         {/* Member cards grid */}
-        <div className="flex flex-row md:grid md:grid-cols-2 gap-4 md:gap-8 overflow-x-auto md:overflow-visible w-full md:w-auto pb-3 md:pb-0">
+        <div className="flex flex-row md:grid md:grid-cols-2 gap-4 md:gap-6 overflow-x-auto md:overflow-visible w-full md:w-auto pb-3 md:pb-0">
           {members.map((member, i) => (
-            <div key={i} className="bg-white rounded-[20px] md:rounded-[28px] py-4 md:py-6 px-3 md:px-4 shadow-card flex flex-col justify-between gap-1 md:gap-2 flex-shrink-0 w-[72vw] md:w-auto">
-              <div className="flex flex-col gap-2 md:gap-4">
-                <div className="flex gap-3 md:gap-7 items-start">
-                  <div className="w-[60px] h-[60px] md:w-[100px] md:h-[100px] rounded-full overflow-hidden shrink-0">
+            <div key={i} className="bg-white rounded-[20px] md:rounded-[24px] py-4 md:py-4 px-3 md:px-4 shadow-card flex flex-col justify-between gap-1 md:gap-2 flex-shrink-0 w-[72vw] md:w-auto">
+              <div className="flex flex-col gap-2 md:gap-3">
+                <div className="flex gap-3 md:gap-5 items-start">
+                  <div className="w-[60px] h-[60px] md:w-[72px] md:h-[72px] rounded-full overflow-hidden shrink-0">
                     <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
                   </div>
                   <div className="flex flex-col gap-1 md:gap-2">
@@ -67,7 +67,7 @@ const TeamSection = forwardRef<HTMLElement>((_, ref) => {
                   </div>
                 </div>
               </div>
-              <div className="w-[36px] md:w-[52px] h-[3px] md:h-[4px] bg-mnd-charcoal my-1 md:my-2" />
+              <div className="w-[36px] md:w-[40px] h-[3px] bg-mnd-charcoal my-1 md:my-1" />
               <p className="font-sans text-[10px] font-normal leading-widest text-mnd-charcoal max-w-full md:max-w-[280px]">
                 {member.body}
               </p>
