@@ -35,8 +35,8 @@ export default {
           to: { transform: "translateX(-50%)" },
         },
         fadeInCard: {
-          from: { opacity: "0", transform: "translateY(14px) scale(0.96)" },
-          to:   { opacity: "1", transform: "translateY(0)   scale(1)" },
+          from: { transform: "translateY(14px) scale(0.96)" },
+          to:   { transform: "translateY(0) scale(1)" },
         },
         heroFlyIn: {
           from: { opacity: "0", transform: "translateX(-48px)" },

@@ -29,7 +29,10 @@ interface ProfileCardProps {
 
 export const ProfileCard = ({ name, years, role, mostLikelyTo, quote, previousLogos = [] }: ProfileCardProps) => {
   return (
-    <div className="min-w-[230px] bg-white/15 backdrop-blur-xl border border-white/40 rounded-[36px] py-8 px-6 overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,.08),0_2px_8px_rgba(0,0,0,.04)] flex flex-col gap-4">
+    <div
+      className="min-w-[230px] border border-white/40 rounded-[36px] py-8 px-6 shadow-[0_10px_30px_rgba(0,0,0,.08),0_2px_8px_rgba(0,0,0,.04)] flex flex-col gap-4"
+      style={{ background: "rgba(255,255,255,0.18)", backdropFilter: "blur(20px)", WebkitBackdropFilter: "blur(20px)" }}
+    >
       <h3 className="font-sans text-[16px] font-bold leading-[1.2] text-mnd-charcoal">
         Meet {name},
       </h3>
