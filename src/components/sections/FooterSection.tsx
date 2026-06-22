@@ -34,10 +34,10 @@ const FooterSection = forwardRef<HTMLElement, { containerId?: string }>(({ conta
       className="bg-mnd-linen bg-[url('/landing/footer.png')] bg-cover bg-center h-screen w-full snap-start flex flex-col justify-between"
     >
       <div className="flex flex-col items-center justify-center gap-4 px-6 md:px-0">
-        <div className={`flex justify-center pt-8 ${animate("[transition-delay:0ms]")}`}>
+        <div className={`flex justify-center pt-5 ${animate("[transition-delay:0ms]")}`}>
           <button
             onClick={() => document.getElementById(containerId)?.scrollTo({ top: 0, behavior: "smooth" })}
-            className="w-16 h-16 rounded-full border-[1.5px] border-white/70 bg-transparent flex items-center justify-center cursor-pointer"
+            className="w-12 h-12 rounded-full border-[1.5px] border-white/70 bg-transparent flex items-center justify-center cursor-pointer"
           >
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M4 13l6-6 6 6" stroke="white" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" />
