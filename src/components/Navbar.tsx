@@ -23,7 +23,7 @@ export default function Navbar({ minimal = false, showBorder = false }: NavbarPr
   return (
     <div className="relative flex flex-col items-center">
       <nav
-        className={`flex items-center h-14 gap-4 md:gap-6 px-4 md:px-6 rounded-full bg-mnd-cream/80 backdrop-blur-sm transition-all duration-300 ${showBorder ? "border border-black" : "border border-transparent"}`}
+        className={`flex items-center h-14 gap-4 md:gap-6 px-4 md:px-6 rounded-full bg-white/30 backdrop-blur-sm border border-white/40 shadow-sm transition-all duration-300 ${showBorder ? "ring-1 ring-black/10" : ""}`}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
       >
@@ -70,7 +70,7 @@ export default function Navbar({ minimal = false, showBorder = false }: NavbarPr
             <Link
               key={link.label}
               href={link.href}
-              className="whitespace-nowrap font-inter text-[12px] font-semibold text-mnd-charcoal hover:opacity-70 transition-opacity"
+              className="whitespace-nowrap font-inter text-[12px] font-semibold text-mnd-charcoal hover:font-bold transition-all"
             >
               {link.label}
             </Link>
@@ -91,7 +91,7 @@ export default function Navbar({ minimal = false, showBorder = false }: NavbarPr
             <Link
               key={link.label}
               href={link.href}
-              className="font-inter text-[12px] font-semibold text-mnd-charcoal hover:opacity-70 transition-opacity"
+              className="font-inter text-[12px] font-semibold text-mnd-charcoal hover:font-bold transition-all"
               onClick={() => setMenuOpen(false)}
             >
               {link.label}
