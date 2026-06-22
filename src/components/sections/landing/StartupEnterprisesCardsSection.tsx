@@ -79,52 +79,57 @@ function CardDeck({ cards, category }: { cards: typeof startupCards; category: s
   };
 
   return (
-    <div className="relative flex-shrink-0 w-[260px] md:w-[310px] h-[320px] md:h-[390px]">
-      {cards.map((card, i) => {
-        const slot = (i - topIndex + n) % n;
-        const pos = slotStyles[slot];
-        const isFront = slot === 0;
+    <div className="relative flex-shrink-0 w-[260px] md:w-[310px]">
+      <div className="relative h-[320px] md:h-[390px]">
+        {cards.map((card, i) => {
+          const slot = (i - topIndex + n) % n;
+          const pos = slotStyles[slot];
+          const isFront = slot === 0;
 
-        return (
-          <div
-            key={i}
-            className={`absolute w-[220px] md:w-[270px] h-[270px] md:h-[340px] rounded-[28px] bg-white shadow-card ${isFront ? "cursor-grab active:cursor-grabbing" : ""}`}
-            style={{
-              left: pos.left,
-              top: pos.top,
-              zIndex: pos.zIndex,
-              transform: isFront && dragging
-                ? `translateX(${dragX}px) rotate(${dragX * 0.03}deg)`
-                : `rotate(${pos.rotate}deg)`,
-              transition: dragging && isFront ? "none" : "all 0.35s cubic-bezier(0.22,1,0.36,1)",
-              userSelect: "none",
-            }}
-            onMouseDown={isFront ? onMouseDown : undefined}
-            onMouseMove={isFront ? onMouseMove : undefined}
-            onMouseUp={isFront ? onRelease : undefined}
-            onMouseLeave={isFront && dragging ? onRelease : undefined}
-            onTouchStart={isFront ? onTouchStart : undefined}
-            onTouchMove={isFront ? onTouchMove : undefined}
-            onTouchEnd={isFront ? onRelease : undefined}
-          >
-            <div className="p-5 md:p-9 flex flex-col h-full">
-              <p className="font-sans text-[12px] md:text-[10px] font-semibold text-mnd-charcoal">● {category}</p>
-              <div className="mt-4 md:mt-8 flex flex-col gap-2 md:gap-3">
-                <div className="flex items-start gap-2">
-                  <span className="font-sans text-[36px] md:text-[60px] font-bold text-mnd-charcoal leading-none">&ldquo;</span>
-                  <p className="font-sans text-[13px] md:text-[12px] italic font-medium leading-[1.2] text-mnd-charcoal w-[150px] md:w-[190px] mt-2">
-                    {card.quote}
-                  </p>
+          return (
+            <div
+              key={i}
+              className={`absolute w-[220px] md:w-[270px] h-[270px] md:h-[340px] rounded-[28px] bg-white shadow-card ${isFront ? "cursor-grab active:cursor-grabbing" : ""}`}
+              style={{
+                left: pos.left,
+                top: pos.top,
+                zIndex: pos.zIndex,
+                transform: isFront && dragging
+                  ? `translateX(${dragX}px) rotate(${dragX * 0.03}deg)`
+                  : `rotate(${pos.rotate}deg)`,
+                transition: dragging && isFront ? "none" : "all 0.35s cubic-bezier(0.22,1,0.36,1)",
+                userSelect: "none",
+              }}
+              onMouseDown={isFront ? onMouseDown : undefined}
+              onMouseMove={isFront ? onMouseMove : undefined}
+              onMouseUp={isFront ? onRelease : undefined}
+              onMouseLeave={isFront && dragging ? onRelease : undefined}
+              onTouchStart={isFront ? onTouchStart : undefined}
+              onTouchMove={isFront ? onTouchMove : undefined}
+              onTouchEnd={isFront ? onRelease : undefined}
+            >
+              <div className="p-5 md:p-9 flex flex-col h-full">
+                <p className="font-sans text-[12px] md:text-[10px] font-semibold text-mnd-charcoal">● {category}</p>
+                <div className="mt-4 md:mt-8 flex flex-col gap-2 md:gap-3">
+                  <div className="flex items-start gap-2">
+                    <span className="font-sans text-[36px] md:text-[60px] font-bold text-mnd-charcoal leading-none">&ldquo;</span>
+                    <p className="font-sans text-[13px] md:text-[12px] italic font-medium leading-[1.2] text-mnd-charcoal w-[150px] md:w-[190px] mt-2">
+                      {card.quote}
+                    </p>
+                  </div>
+                  <div className="w-[42px] h-[5px] bg-mnd-charcoal" />
                 </div>
-                <div className="w-[42px] h-[5px] bg-mnd-charcoal" />
+                <p className="mt-5 md:mt-9 font-sans text-[14px] md:text-[16px] font-bold leading-[1.2] text-mnd-charcoal">
+                  {card.mainText}
+                </p>
+                {isFront && (
+                  <p className="mt-auto pt-3 font-sans text-[10px] text-mnd-silver tracking-wide text-center">drag or click to shuffle</p>
+                )}
               </div>
-              <p className="mt-5 md:mt-9 font-sans text-[16px] md:text-[20px] font-bold leading-[1.2] text-mnd-charcoal">
-                {card.mainText}
-              </p>
             </div>
-          </div>
-        );
-      })}
+          );
+        })}
+      </div>
     </div>
   );
 }
