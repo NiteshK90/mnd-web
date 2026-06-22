@@ -32,7 +32,10 @@ const OtherStuffHeroSection = forwardRef<HTMLElement, HeroSectionProps>(({ onScr
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
           >
-            <div className="border border-white rounded-full p-1.5">
+            {!hovered && (
+              <span className="absolute inset-0 rounded-full border border-white animate-ping opacity-75" />
+            )}
+            <div className="border-2 border-white rounded-full p-1">
               <div className="w-3 h-3 rounded-full bg-white" />
             </div>
 
