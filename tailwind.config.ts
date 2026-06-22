@@ -26,11 +26,16 @@ export default {
       },
       animation: {
         marquee: "marquee 60s linear infinite",
+        "fade-in-card": "fadeInCard 800ms cubic-bezier(0.16, 1, 0.3, 1) forwards",
       },
       keyframes: {
         marquee: {
           from: { transform: "translateX(0)" },
           to: { transform: "translateX(-50%)" },
+        },
+        fadeInCard: {
+          from: { opacity: "0", transform: "translateY(14px) scale(0.96)" },
+          to:   { opacity: "1", transform: "translateY(0)   scale(1)" },
         },
       },
     },

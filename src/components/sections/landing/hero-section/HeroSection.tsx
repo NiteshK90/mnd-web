@@ -52,7 +52,7 @@ const HeroSection = forwardRef<HTMLElement>((_, ref) => {
 
               {hoveredDot === i && (
                 <div
-                  className="absolute z-50"
+                  className="absolute z-50 animate-fade-in-card"
                   style={{ left: dot.cardLeft, top: dot.cardTop }}
                 >
                   <ProfileCard name={dot.name} years={dot.years} role={dot.role} mostLikelyTo={dot.mostLikelyTo} quote={dot.quote} previousLogos={dot.previousLogos} />

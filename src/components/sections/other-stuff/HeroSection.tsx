@@ -40,7 +40,7 @@ const OtherStuffHeroSection = forwardRef<HTMLElement, HeroSectionProps>(({ onScr
             </div>
 
             {hovered && (
-              <div className="absolute z-50 -left-[100px] -top-[200px]">
+              <div className="absolute z-50 animate-fade-in-card -left-[100px] -top-[200px]">
                 <QuoteCard
                   quote="Your product doesn't run on code alone."
                   body="We have a fix for every aspect that keeps your product moving."

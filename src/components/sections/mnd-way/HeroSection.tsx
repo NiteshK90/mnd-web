@@ -77,7 +77,7 @@ const MndWayHeroSection = forwardRef<HTMLElement, HeroSectionProps>(({ onScrollN
 
               {hoveredDot === i && (
                 <div
-                  className="absolute z-50"
+                  className="absolute z-50 animate-fade-in-card"
                   style={{ left: dot.cardLeft, top: dot.cardTop }}
                 >
                   <QuoteCard quote={dot.quote} body={dot.body} />
