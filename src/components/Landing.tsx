@@ -46,14 +46,13 @@ export default function Landing() {
 
   return (
     <div id="landing-container" ref={containerRef} className="relative h-screen overflow-y-scroll snap-y snap-mandatory">
-      {activeIndex !== TOTAL_SECTIONS - 1 && (
-        <div className="fixed top-3 md:top-8 left-0 right-0 flex justify-center z-50">
+      <div className="relative bg-mnd-linen">
+        <div className="sticky top-3 md:top-8 z-50 flex justify-center">
           <Navbar minimal={activeIndex !== 0} showBorder={activeIndex !== 0} />
         </div>
-      )}
-      <HeroSection ref={(el) => { sectionRefs.current[0] = el; }} />
+        <HeroSection ref={(el) => { sectionRefs.current[0] = el; }} />
 
-      <div className="relative py-6 bg-mnd-linen">
+        <div className="py-6">
         <ProblemStatementSection       ref={(el) => { sectionRefs.current[1] = el; }} />
         <StartupEnterprisesCardsSection    ref={(el) => { sectionRefs.current[2] = el; }} />
         <WorkSection        ref={(el) => { sectionRefs.current[3] = el; }} />
@@ -61,6 +60,7 @@ export default function Landing() {
         <GuaranteeSection        ref={(el) => { sectionRefs.current[5] = el; }} />
         <TestimonialsSection ref={(el) => { sectionRefs.current[6] = el; }} />
         <TeamSection     ref={(el) => { sectionRefs.current[7] = el; }} />
+        </div>
       </div>
 
       <FooterSection ref={(el) => { sectionRefs.current[8] = el; }} />
