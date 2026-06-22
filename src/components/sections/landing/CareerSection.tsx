@@ -217,11 +217,11 @@ const CareerSection = forwardRef<HTMLElement>((_, ref) => {
         </div>
 
         {/* Cards — revealed via visibleCount (first card auto, rest on scroll) */}
-        <div className="mt-5 md:mt-8 flex justify-center gap-6 md:gap-8 overflow-x-auto scrollbar-none [&::-webkit-scrollbar]:hidden md:overflow-visible pb-3 md:pb-0">
+        <div className="mt-5 md:mt-8 flex md:justify-center gap-6 md:gap-8 overflow-x-auto scrollbar-none [&::-webkit-scrollbar]:hidden md:overflow-visible pb-3 md:pb-0 px-4 md:px-0">
           {cards.map((card, i) => (
             <div
               key={i}
-              className="bg-white rounded-[16px] md:rounded-[20px] shadow-card py-5 md:py-7 px-3 md:px-4 flex flex-col gap-3 md:gap-4 flex-shrink-0 w-[44vw] md:w-[250px] min-h-[280px] md:min-h-[320px]"
+              className="bg-white rounded-[16px] md:rounded-[20px] shadow-card py-5 md:py-7 px-3 md:px-4 flex flex-col gap-3 md:gap-4 flex-shrink-0 w-[78vw] md:w-[250px] min-h-[280px] md:min-h-[320px]"
               style={{
                 transform: i < visibleCount ? "translateY(0)" : "translateY(60px)",
                 opacity: i < visibleCount ? 1 : 0,
