@@ -13,7 +13,7 @@ export default function StickyNavbar({ dark = false }: StickyNavbarProps) {
         ) : (
           <img src="/landing/mnd-black-logo.png" alt="MND Logo" className="h-14 w-auto" />
         )}
-        <Link href="#" className="px-8 py-2 bg-mnd-navy text-white rounded-full">Let&apos;s talk</Link>
+        <Link href="#" className="px-8 py-2 bg-mnd-navy text-white rounded-full transition-all duration-200 hover:scale-[1.05] hover:shadow-[0_6px_20px_rgba(2,48,71,0.4)] active:scale-[0.96] active:shadow-none">Let&apos;s talk</Link>
       </nav>
     </div>
   );

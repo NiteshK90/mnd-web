@@ -20,7 +20,7 @@ const ServicesSection = forwardRef<HTMLElement>((_, ref) => {
           <p className="font-playfair font-normal text-[28px] md:text-[40px] leading-[1.33] tracking-normal text-mnd-charcoal">
             From operations to<br />compliance, scale with<br />ease.
           </p>
-          <Link href="mailto:hello@mynextdeveloper.com?subject=Schedule a Call" className="flex items-center gap-2 px-4 h-10 bg-mnd-navy text-white rounded-full w-fit">
+          <Link href="mailto:hello@mynextdeveloper.com?subject=Schedule a Call" className="flex items-center gap-2 px-4 h-10 bg-mnd-navy text-white rounded-full w-fit transition-all duration-200 hover:scale-[1.05] hover:shadow-[0_6px_20px_rgba(2,48,71,0.4)] active:scale-[0.96] active:shadow-none">
             <span className="font-sans text-xs font-semibold">Schedule a Call</span>
             <ArrowRight color="white" size={32} strokeWidth={1} />
           </Link>

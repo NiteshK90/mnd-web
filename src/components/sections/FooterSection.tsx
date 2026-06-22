@@ -31,7 +31,7 @@ const FooterSection = forwardRef<HTMLElement, { containerId?: string }>(({ conta
 
         <a
           href="mailto:hello@mynextdeveloper.com?subject=Schedule a Call"
-          className="flex items-center gap-3 md:gap-4 py-2 px-5 md:px-6 rounded-full bg-[#0D0D0F] text-white font-sans text-base md:text-lg font-normal"
+          className="flex items-center gap-3 md:gap-4 py-2 px-5 md:px-6 rounded-full bg-[#0D0D0F] text-white font-sans text-base md:text-lg font-normal transition-all duration-200 hover:scale-[1.05] hover:shadow-[0_6px_20px_rgba(0,0,0,0.4)] active:scale-[0.96] active:shadow-none"
         >
           <span className="flex items-center justify-center w-7 h-7">
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">

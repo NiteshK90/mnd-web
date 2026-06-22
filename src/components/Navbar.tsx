@@ -77,7 +77,7 @@ export default function Navbar({ minimal = false, showBorder = false }: NavbarPr
           ))}
         </div>
 
-        <Link href="mailto:hello@mynextdeveloper.com" className="px-5 md:px-8 py-2 bg-mnd-navy text-white rounded-full text-[12px] whitespace-nowrap font-semibold">
+        <Link href="mailto:hello@mynextdeveloper.com" className="px-5 md:px-8 py-2 bg-mnd-navy text-white rounded-full text-[12px] whitespace-nowrap font-semibold transition-all duration-200 hover:scale-[1.05] hover:shadow-[0_6px_20px_rgba(2,48,71,0.4)] active:scale-[0.96] active:shadow-none">
           Let&apos;s talk
         </Link>
       </nav>
