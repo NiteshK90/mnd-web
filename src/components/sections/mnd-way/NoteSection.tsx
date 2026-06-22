@@ -34,23 +34,23 @@ const NoteSection = forwardRef<HTMLElement, NoteSectionProps>(({ onSkipToValues 
           </h2>
 
           <div className="flex flex-col gap-4 md:gap-6">
-            <p className="font-sans text-[13px] md:text-[18px] font-normal leading-[1.3] text-mnd-dark max-w-[900px]">
+            <p className="font-inter text-[13px] md:text-[18px] font-normal leading-[1.3] text-mnd-dark max-w-[900px]">
               We, the four founders at MND, are a bunch of great friends who happened to become very, very good at software development. <span className="font-bold">We love taking something complex and making it feel simple.</span>
             </p>
-            <p className="font-sans text-[13px] md:text-[18px] font-normal leading-[1.3] text-mnd-dark max-w-[900px]">
+            <p className="font-inter text-[13px] md:text-[18px] font-normal leading-[1.3] text-mnd-dark max-w-[900px]">
               And to be <span className="italic font-bold">completely</span> honest, we know we are great at it. We know what happens when companies cut corners, hire the wrong people who might build their product with little or no <span className="italic font-bold">real</span> ownership.
             </p>
-            <p className="font-sans text-[13px] md:text-[18px] font-normal leading-[1.3] text-mnd-dark max-w-[900px]">
+            <p className="font-inter text-[13px] md:text-[18px] font-normal leading-[1.3] text-mnd-dark max-w-[900px]">
               <span className="font-bold">We never wanted to be that kind of company.</span>
             </p>
-            <p className="font-sans text-[13px] md:text-[18px] font-normal leading-[1.3] text-mnd-dark max-w-[900px]">
+            <p className="font-inter text-[13px] md:text-[18px] font-normal leading-[1.3] text-mnd-dark max-w-[900px]">
               Over the past 6 years, we have built MND with the belief that software should be built properly. Every line of code that comes out of MND should feel <span className="font-bold">we give a damn.</span> Because it is not just about functionality. It is about elegance. It is about clarity. <span className="font-bold">It is about the craft.</span>
             </p>
           </div>
 
           <div className="w-[72px] h-1.5 bg-mnd-dark" />
 
-          <p className="font-sans text-[13px] md:text-[18px] font-normal leading-[1.3] text-mnd-dark">
+          <p className="font-inter text-[13px] md:text-[18px] font-normal leading-[1.3] text-mnd-dark">
             And yet - <span className="font-bold">MND was never only about code.</span>
           </p>
         </div>

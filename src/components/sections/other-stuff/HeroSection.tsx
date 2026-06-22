@@ -20,7 +20,7 @@ const OtherStuffHeroSection = forwardRef<HTMLElement, HeroSectionProps>(({ onScr
           </div>
           <div className="mt-6 flex items-center gap-6">
             <button onClick={onScrollNext} className="flex items-center gap-2 px-4 h-10 bg-mnd-navy text-white rounded-full cursor-pointer transition-all duration-200 hover:scale-[1.05] hover:shadow-[0_6px_20px_rgba(2,48,71,0.4)] active:scale-[0.96] active:shadow-none">
-              <div className="font-sans text-xs font-semibold">Scroll to support yours</div>
+              <div className="font-inter text-xs font-semibold">Scroll to support yours</div>
               <ArrowRight color="white" size={32} strokeWidth={1} />
             </button>
           </div>

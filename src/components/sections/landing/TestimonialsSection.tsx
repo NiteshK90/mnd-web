@@ -54,17 +54,17 @@ function TestimonialCard({ testimonial }: { testimonial: (typeof testimonials)[0
           <div className="flex items-start gap-4">
             <span className="text-[46px] font-bold text-mnd-charcoal leading-none italic">"</span>
             <div className="flex flex-col gap-6">
-              <p className="font-sans text-[16px] font-bold leading-[1.35] text-mnd-charcoal mt-2">
+              <p className="font-inter text-[16px] font-bold leading-[1.35] text-mnd-charcoal mt-2">
                 {testimonial.text}
               </p>
-              <div className="font-sans text-xs italic font-medium leading-[1.3] text-mnd-charcoal">
+              <div className="font-inter text-xs italic font-medium leading-[1.3] text-mnd-charcoal">
                 <div>{testimonial.name}</div>
                 <div>{testimonial.company}</div>
                 <div>{testimonial.designation}</div>
               </div>
             </div>
           </div>
-          <p className="font-sans text-[8px] uppercase text-mnd-charcoal text-center tracking-widest">
+          <p className="font-inter text-[8px] uppercase text-mnd-charcoal text-center tracking-widest">
             Flip to hear from the engineer
           </p>
         </div>
@@ -74,10 +74,10 @@ function TestimonialCard({ testimonial }: { testimonial: (typeof testimonials)[0
           <div className="flex items-start gap-4">
             <span className="text-[46px] font-bold text-mnd-charcoal leading-none italic">"</span>
             <div className="flex flex-col gap-6">
-              <p className="font-sans text-[16px] font-bold leading-[1.35] text-mnd-charcoal mt-2">
+              <p className="font-inter text-[16px] font-bold leading-[1.35] text-mnd-charcoal mt-2">
                 {testimonial.engineerText}
               </p>
-              <div className="font-sans text-xs italic font-medium leading-[1.3] text-mnd-charcoal">
+              <div className="font-inter text-xs italic font-medium leading-[1.3] text-mnd-charcoal">
                 <div>{testimonial.engineerName}</div>
                 <div>{testimonial.engineerType}</div>
               </div>

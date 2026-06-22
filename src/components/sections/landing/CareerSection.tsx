@@ -166,13 +166,13 @@ const CareerSection = forwardRef<HTMLElement>((_, ref) => {
         <div className="flex items-center justify-between md:justify-normal gap-3 md:gap-6 mt-6 md:mt-12">
           {/* Block 1: FOR EVERY 10 — lines animate in one by one */}
           <div className="flex flex-col items-center gap-2 justify-center shrink-0 w-[70px] md:w-[100px]">
-            <span className={`font-sans text-[8px] font-semibold tracking-[0.2em] uppercase text-mnd-charcoal ${animate("[transition-delay:400ms]")}`}>
+            <span className={`font-inter text-[8px] font-semibold tracking-[0.2em] uppercase text-mnd-charcoal ${animate("[transition-delay:400ms]")}`}>
               {blocks[0].label}
             </span>
             <span className={`font-playfair text-[40px] md:text-[72px] font-bold leading-none text-mnd-charcoal ${animate("[transition-delay:600ms]")}`}>
               {blocks[0].number}
             </span>
-            <span className={`mt-2 w-full text-center font-sans text-[8px] font-semibold tracking-[0.2em] uppercase text-mnd-charcoal ${animate("[transition-delay:800ms]")}`}>
+            <span className={`mt-2 w-full text-center font-inter text-[8px] font-semibold tracking-[0.2em] uppercase text-mnd-charcoal ${animate("[transition-delay:800ms]")}`}>
               {blocks[0].description}
             </span>
           </div>
@@ -204,13 +204,13 @@ const CareerSection = forwardRef<HTMLElement>((_, ref) => {
 
           {/* Block 2: ONLY 3 — lines animate in when all cards are shown */}
           <div className="flex flex-col items-center gap-2 justify-center shrink-0 w-[70px] md:w-[100px]">
-            <span className={`font-sans text-[8px] font-semibold tracking-[0.2em] uppercase text-mnd-charcoal ${animateLast("[transition-delay:0ms]")}`}>
+            <span className={`font-inter text-[8px] font-semibold tracking-[0.2em] uppercase text-mnd-charcoal ${animateLast("[transition-delay:0ms]")}`}>
               {blocks[1].label}
             </span>
             <span className={`font-playfair text-[40px] md:text-[72px] font-bold leading-none text-mnd-charcoal ${animateLast("[transition-delay:300ms]")}`}>
               {blocks[1].number}
             </span>
-            <span className={`mt-2 w-full text-center font-sans text-[8px] font-semibold tracking-[0.2em] uppercase text-mnd-charcoal ${animateLast("[transition-delay:600ms]")}`}>
+            <span className={`mt-2 w-full text-center font-inter text-[8px] font-semibold tracking-[0.2em] uppercase text-mnd-charcoal ${animateLast("[transition-delay:600ms]")}`}>
               {blocks[1].description}
             </span>
           </div>
@@ -234,12 +234,12 @@ const CareerSection = forwardRef<HTMLElement>((_, ref) => {
               </h3>
               <div className="w-10 md:w-16 h-[2px] md:h-[3px] bg-mnd-charcoal" />
               <div className="flex items-start gap-2">
-                <span className="font-sans text-[46px] font-bold italic text-mnd-charcoal leading-none">&ldquo;</span>
-                <p className="font-sans text-[10px] md:text-xs italic font-normal leading-[1.3] mt-2">
+                <span className="font-inter text-[46px] font-bold italic text-mnd-charcoal leading-none">&ldquo;</span>
+                <p className="font-inter text-[10px] md:text-xs italic font-normal leading-[1.3] mt-2">
                   {card.quote.replace(/\n/g, " ")}
                 </p>
               </div>
-              <p className="font-sans w-full text-[16px] font-bold leading-[1.333] text-mnd-charcoal">
+              <p className="font-inter w-full text-[16px] font-bold leading-[1.333] text-mnd-charcoal">
                 {card.body}
               </p>
             </div>

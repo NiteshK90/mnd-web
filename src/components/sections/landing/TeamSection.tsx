@@ -83,8 +83,8 @@ const TeamSection = forwardRef<HTMLElement>((_, ref) => {
                     <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
                   </div>
                   <div className="flex flex-col gap-1 md:gap-2">
-                    <p className="font-sans text-[10px] font-normal tracking-[0.12em] uppercase text-mnd-charcoal">{member.name}</p>
-                    <div className="font-sans text-[10px] font-normal leading-[1.5] text-mnd-charcoal">
+                    <p className="font-inter text-[10px] font-normal tracking-[0.12em] uppercase text-mnd-charcoal">{member.name}</p>
+                    <div className="font-inter text-[10px] font-normal leading-[1.5] text-mnd-charcoal">
                       <div>{member.role}</div>
                       {member.experience.map((line, j) => (
                         <div key={j}>{line}</div>
@@ -94,7 +94,7 @@ const TeamSection = forwardRef<HTMLElement>((_, ref) => {
                 </div>
               </div>
               <div className="w-[36px] md:w-[40px] h-[3px] bg-mnd-charcoal my-1 md:my-1" />
-              <p className="font-sans text-[10px] font-normal leading-widest text-mnd-charcoal max-w-full md:max-w-[280px]">
+              <p className="font-inter text-[10px] font-normal leading-widest text-mnd-charcoal max-w-full md:max-w-[280px]">
                 {member.body}
               </p>
             </div>

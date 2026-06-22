@@ -45,11 +45,11 @@ const WorkSection = forwardRef<HTMLElement>((_, ref) => {
             <div key={text} className={`[perspective:600px] cursor-pointer ${animate(delays[i])}`}>
               <div className="relative [transform-style:preserve-3d] transition-transform duration-500 hover:[transform:rotateX(180deg)]">
                 {/* Front */}
-                <span className="block py-3 px-6 md:px-8 border border-mnd-stone rounded-full font-sans text-xs font-semibold text-mnd-charcoal [backface-visibility:hidden]">
+                <span className="block py-3 px-6 md:px-8 border border-mnd-stone rounded-full font-inter text-xs font-semibold text-mnd-charcoal [backface-visibility:hidden]">
                   {text}
                 </span>
                 {/* Back */}
-                <span className="absolute inset-0 flex items-center justify-center py-3 px-6 md:px-8 rounded-full bg-mnd-charcoal font-sans text-xs font-semibold text-white [backface-visibility:hidden] [transform:rotateX(180deg)]">
+                <span className="absolute inset-0 flex items-center justify-center py-3 px-6 md:px-8 rounded-full bg-mnd-charcoal font-inter text-xs font-semibold text-white [backface-visibility:hidden] [transform:rotateX(180deg)]">
                   {text}
                 </span>
               </div>

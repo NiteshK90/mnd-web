@@ -28,7 +28,7 @@ const HeroSection = forwardRef<HTMLElement>((_, ref) => {
           </div>
           <div className="mt-6 flex items-center gap-6">
             <Link href="mailto:hello@mynextdeveloper.com" className="flex items-center gap-2 px-4 h-10 bg-mnd-navy text-white rounded-full transition-all duration-200 hover:scale-[1.05] hover:shadow-[0_6px_20px_rgba(2,48,71,0.4)] active:scale-[0.96] active:shadow-none">
-              <div className="font-sans text-xs font-semibold">Ready when you are</div>
+              <div className="font-inter text-xs font-semibold">Ready when you are</div>
               <ArrowRight color="white" size={32} strokeWidth={1} />
             </Link>
           </div>

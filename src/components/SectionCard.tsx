@@ -14,15 +14,15 @@ export default function SectionCard({ title, quote, body, className = "" }: Sect
       <div className="w-10 md:w-16 h-[2px] md:h-[3px] bg-mnd-charcoal" />
       {quote && (
         <div className="flex items-start gap-4">
-          <span className="font-sans text-[46px] font-bold italic text-mnd-charcoal leading-none">&ldquo;</span>
-          <p className="w-full max-w-[230px] font-sans text-[12px] italic font-normal leading-[1.3] text-mnd-charcoal mt-2">
+          <span className="font-inter text-[46px] font-bold italic text-mnd-charcoal leading-none">&ldquo;</span>
+          <p className="w-full max-w-[230px] font-inter text-[12px] italic font-normal leading-[1.3] text-mnd-charcoal mt-2">
             {quote}
           </p>
         </div>
       )}
       <div className="flex gap-4">
         <div className="w-px bg-black self-stretch shrink-0" />
-        <p className="w-full max-w-[250px] font-sans text-[16px] font-bold leading-[1.333] text-mnd-charcoal">
+        <p className="w-full max-w-[250px] font-inter text-[16px] font-bold leading-[1.333] text-mnd-charcoal">
           {body}
         </p>
       </div>

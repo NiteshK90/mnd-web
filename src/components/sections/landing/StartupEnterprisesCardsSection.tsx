@@ -109,21 +109,21 @@ function CardDeck({ cards, category }: { cards: typeof startupCards; category: s
               onTouchEnd={isFront ? onRelease : undefined}
             >
               <div className="p-5 md:p-9 flex flex-col h-full">
-                <p className="font-sans text-[12px] md:text-[10px] font-semibold text-mnd-charcoal">● {category}</p>
+                <p className="font-inter text-[12px] md:text-[10px] font-semibold text-mnd-charcoal">● {category}</p>
                 <div className="mt-4 md:mt-8 flex flex-col gap-2 md:gap-3">
                   <div className="flex items-start gap-2">
-                    <span className="font-sans text-[36px] md:text-[60px] font-bold text-mnd-charcoal leading-none">&ldquo;</span>
-                    <p className="font-sans text-[13px] md:text-[12px] italic font-medium leading-[1.2] text-mnd-charcoal w-[150px] md:w-[190px] mt-2">
+                    <span className="font-inter text-[36px] md:text-[60px] font-bold text-mnd-charcoal leading-none">&ldquo;</span>
+                    <p className="font-inter text-[13px] md:text-[12px] italic font-medium leading-[1.2] text-mnd-charcoal w-[150px] md:w-[190px] mt-2">
                       {card.quote}
                     </p>
                   </div>
                   <div className="w-[42px] h-[5px] bg-mnd-charcoal" />
                 </div>
-                <p className="mt-5 md:mt-9 font-sans text-[16px] font-bold leading-[1.2] text-mnd-charcoal">
+                <p className="mt-5 md:mt-9 font-inter text-[16px] font-bold leading-[1.2] text-mnd-charcoal">
                   {card.mainText}
                 </p>
                 {isFront && (
-                  <p className="mt-auto pt-3 font-sans text-[10px] text-mnd-silver tracking-wide text-center">Drag to shuffle</p>
+                  <p className="mt-auto pt-3 font-inter text-[10px] text-mnd-silver tracking-wide text-center">Drag to shuffle</p>
                 )}
               </div>
             </div>
