@@ -53,20 +53,21 @@ const TeamSection = forwardRef<HTMLElement>((_, ref) => {
   }, []);
 
   const base = "transition-all duration-[1100ms] ease-out";
-  const fromLeft = `${base} ${inView ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"}`;
-  const fromRight = `${base} ${inView ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8"}`;
+  const hidden = "opacity-0 translate-y-5";
+  const visible = "opacity-100 translate-y-0";
+  const animate = (delay: string) => `${base} ${inView ? visible : hidden} ${delay}`;
 
   return (
     <section ref={setRef} className="min-h-screen md:h-screen w-full snap-start flex items-center justify-center pt-20 pb-16 md:pt-24 md:pb-0">
       <div className="flex flex-col md:flex-row items-start md:items-end gap-10 md:gap-28 px-4 md:px-8 w-full md:w-auto">
 
         {/* Left text block */}
-        <div className={`flex flex-col items-start gap-4 md:gap-16 ${fromLeft}`}>
-          <div className="font-playfair text-[20px] md:text-[36px] font-medium leading-[1.333] tracking-[-0.03em] text-mnd-charcoal w-full md:w-[420px]">
+        <div className="flex flex-col items-start gap-4 md:gap-16">
+          <div className={`font-playfair text-[20px] md:text-[36px] font-medium leading-[1.333] tracking-[-0.03em] text-mnd-charcoal w-full md:w-[420px] ${animate("[transition-delay:0ms]")}`}>
             Basically - we&apos;re just a bunch of friends who really understand how software development works, inside out.
           </div>
-          <div className="w-[48px] md:w-[72px] h-[4px] md:h-[6px] bg-mnd-charcoal" />
-          <div className="font-playfair text-[18px] md:text-[36px] font-bold leading-[1.05] tracking-[-0.03em] text-mnd-charcoal">
+          <div className={`w-[48px] md:w-[72px] h-[4px] md:h-[6px] bg-mnd-charcoal ${animate("[transition-delay:200ms]")}`} />
+          <div className={`font-playfair text-[18px] md:text-[36px] font-bold leading-[1.05] tracking-[-0.03em] text-mnd-charcoal ${animate("[transition-delay:400ms]")}`}>
             & we love what we do.
           </div>
         </div>
@@ -74,9 +75,8 @@ const TeamSection = forwardRef<HTMLElement>((_, ref) => {
         {/* Member cards grid */}
         <div className="flex flex-row md:grid md:grid-cols-2 gap-4 md:gap-6 overflow-x-auto md:overflow-visible w-full md:w-auto pb-3 md:pb-0">
           {members.map((member, i) => {
-            const cardDelays = ["[transition-delay:300ms]", "[transition-delay:550ms]", "[transition-delay:800ms]", "[transition-delay:1050ms]"];
             return (
-            <div key={i} className={`bg-white rounded-[20px] md:rounded-[24px] py-4 md:py-4 px-3 md:px-4 shadow-card flex flex-col justify-between gap-1 md:gap-2 flex-shrink-0 w-[72vw] md:w-auto ${fromRight} ${cardDelays[i]}`}>
+            <div key={i} className={`bg-white rounded-[20px] md:rounded-[24px] py-4 md:py-4 px-3 md:px-4 shadow-card flex flex-col justify-between gap-1 md:gap-2 flex-shrink-0 w-[72vw] md:w-auto ${base} ${inView ? visible : hidden}`} style={{ transitionDelay: inView ? `${200 + i * 200}ms` : "0ms" }}>
               <div className="flex flex-col gap-2 md:gap-3">
                 <div className="flex gap-3 md:gap-5 items-start">
                   <div className="w-[60px] h-[60px] md:w-[72px] md:h-[72px] rounded-full overflow-hidden shrink-0">
