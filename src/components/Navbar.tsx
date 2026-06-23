@@ -11,7 +11,7 @@ interface NavbarProps {
 const navLinks = [
   { label: "The MND way", href: "/mnd-way" },
   { label: "We do more stuff", href: "/other-stuff" },
-  { label: "The MND Corner", href: "#" },
+  { label: "The MND Corner", href: "/mnd-corner" },
   { label: "Be our people", href: "#" },
 ];
 
