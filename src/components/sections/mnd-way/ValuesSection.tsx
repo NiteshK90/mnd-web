@@ -37,8 +37,16 @@ const values = [
 
 const ValuesSection = forwardRef<HTMLElement>((_, ref) => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [inView, setInView] = useState(false);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const sectionRef = useRef<HTMLElement>(null);
+
+  const setRef = (el: HTMLElement | null) => {
+    sectionRef.current = el;
+    if (typeof ref === "function") ref(el);
+    else if (ref) (ref as { current: HTMLElement | null }).current = el;
+  };
 
   useEffect(() => {
     const container = scrollContainerRef.current;
@@ -61,6 +69,21 @@ const ValuesSection = forwardRef<HTMLElement>((_, ref) => {
     return () => container.removeEventListener("scroll", onScroll);
   }, []);
 
+  useEffect(() => {
+    const el = sectionRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) setInView(true); },
+      { threshold: 0.3 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  const base = "transition-all duration-[1100ms] ease-out";
+  const hidden = "opacity-0 translate-y-5";
+  const visible = "opacity-100 translate-y-0";
+
   const scrollToCard = (index: number) => {
     const container = scrollContainerRef.current;
     const card = cardRefs.current[index];
@@ -70,7 +93,7 @@ const ValuesSection = forwardRef<HTMLElement>((_, ref) => {
   };
 
   return (
-    <section ref={ref} className="h-screen w-full snap-start overflow-hidden flex flex-col justify-center gap-10 pt-18">
+    <section ref={setRef} className="h-screen w-full snap-start overflow-hidden flex flex-col justify-center gap-10 pt-20 md:pt-24">
 
       {/* Carousel track */}
       <div
@@ -84,28 +107,29 @@ const ValuesSection = forwardRef<HTMLElement>((_, ref) => {
             <div
               key={i}
               ref={(el) => { cardRefs.current[i] = el; }}
-              className="flex-shrink-0 w-[75vw] md:w-[450px] bg-white rounded-[32px] py-6 px-6 md:py-8 md:px-8 flex flex-col gap-5 md:gap-8 shadow-[0_2px_4px_rgba(0,0,0,.04),0_8px_24px_rgba(0,0,0,.06)] snap-center"
+              className={`flex-shrink-0 w-[70vw] md:w-[380px] bg-white rounded-[32px] py-6 px-6 md:py-8 md:px-8 flex flex-col gap-5 md:gap-8 shadow-[0_2px_4px_rgba(0,0,0,.04),0_8px_24px_rgba(0,0,0,.06)] snap-center ${base} ${inView ? visible : hidden}`}
+              style={{ transitionDelay: inView ? `${i * 200}ms` : "0ms" }}
             >
               <div className="flex flex-col gap-2 md:gap-3">
                 <div className="flex items-center gap-3">
                   <div className="w-2.5 h-2.5 rounded-full bg-black shrink-0" />
-                  <span className="font-sans text-[8px] tracking-[0.18em] uppercase">{v.label}</span>
+                  <span className="font-inter text-[8px] tracking-[0.18em] uppercase">{v.label}</span>
                 </div>
 
-                <p className="font-sans text-[16px] md:text-[22px] font-bold uppercase text-mnd-charcoal">
+                <p className="font-playfair text-[18px] font-bold uppercase text-mnd-charcoal">
                   {v.name}
                 </p>
               </div>
 
               <div className="w-[36px] h-[4px] md:w-[64px] md:h-[6px] bg-mnd-charcoal" />
 
-              <p className="font-playfair text-[20px] md:text-[34px] font-bold leading-[1.2] text-mnd-charcoal">
+              <p className="font-playfair text-[28px] font-bold leading-[1.2] text-mnd-charcoal">
                 {v.statement}
               </p>
 
               <div className="w-[36px] h-[4px] md:w-[64px] md:h-[6px] bg-mnd-charcoal" />
 
-              <p className="font-sans text-[13px] md:text-[16px] font-medium leading-[1.2] text-mnd-charcoal">
+              <p className="font-inter text-[16px] font-medium leading-[1.2] text-mnd-charcoal">
                 {v.description}
               </p>
             </div>
@@ -114,7 +138,10 @@ const ValuesSection = forwardRef<HTMLElement>((_, ref) => {
         </div>
       </div>
 
-      <div className="flex justify-center gap-3">
+      <div
+        className={`flex justify-center gap-3 ${base} ${inView ? visible : hidden}`}
+        style={{ transitionDelay: inView ? `${values.length * 200}ms` : "0ms" }}
+      >
         {values.map((_, i) => (
           <button
             key={i}

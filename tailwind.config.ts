@@ -15,8 +15,7 @@ export default {
         "mnd-button": "#063A5A",
       },
       fontFamily: {
-        canela: ["Canela", "serif"],
-        playfair: ["var(--font-playfair)", "serif"],
+playfair: ["var(--font-playfair)", "serif"],
         inter: ["var(--font-inter)", "sans-serif"],
       },
       boxShadow: {
@@ -26,11 +25,21 @@ export default {
       },
       animation: {
         marquee: "marquee 60s linear infinite",
+        "fade-in-card": "fadeInCard 800ms cubic-bezier(0.16, 1, 0.3, 1) forwards",
+        "hero-fly-in": "heroFlyIn 1800ms cubic-bezier(0.16, 1, 0.3, 1) forwards",
       },
       keyframes: {
         marquee: {
           from: { transform: "translateX(0)" },
           to: { transform: "translateX(-50%)" },
+        },
+        fadeInCard: {
+          from: { transform: "translateY(14px) scale(0.96)" },
+          to:   { transform: "translateY(0) scale(1)" },
+        },
+        heroFlyIn: {
+          from: { opacity: "0", transform: "translateX(-48px)" },
+          to:   { opacity: "1", transform: "translateX(0)" },
         },
       },
     },

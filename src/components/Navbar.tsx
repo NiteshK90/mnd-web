@@ -23,7 +23,7 @@ export default function Navbar({ minimal = false, showBorder = false }: NavbarPr
   return (
     <div className="relative flex flex-col items-center">
       <nav
-        className={`flex items-center h-14 gap-4 md:gap-6 px-4 md:px-6 rounded-full bg-mnd-cream/80 backdrop-blur-sm transition-all duration-300 ${showBorder ? "border border-black" : "border border-transparent"}`}
+        className={`flex items-center h-14 gap-4 md:gap-6 px-4 md:px-6 rounded-full bg-white/30 backdrop-blur-sm border border-white/40 shadow-sm [transition:all_0.6s_cubic-bezier(0.16,1,0.3,1)] ${showBorder ? "ring-1 ring-black/10" : ""}`}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
       >
@@ -33,18 +33,9 @@ export default function Navbar({ minimal = false, showBorder = false }: NavbarPr
           onClick={() => setMenuOpen((o) => !o)}
           aria-label="Toggle menu"
         >
-          <span
-            className="block w-5 h-[2px] bg-mnd-charcoal rounded-full transition-all duration-300 origin-center"
-            style={menuOpen ? { transform: "translateY(7px) rotate(45deg)" } : {}}
-          />
-          <span
-            className="block w-5 h-[2px] bg-mnd-charcoal rounded-full transition-all duration-300"
-            style={menuOpen ? { opacity: 0 } : {}}
-          />
-          <span
-            className="block w-5 h-[2px] bg-mnd-charcoal rounded-full transition-all duration-300 origin-center"
-            style={menuOpen ? { transform: "translateY(-7px) rotate(-45deg)" } : {}}
-          />
+          <span className={`block w-5 h-[2px] bg-mnd-charcoal rounded-full transition-all duration-300 origin-center ${menuOpen ? "[transform:translateY(7px)_rotate(45deg)]" : ""}`} />
+          <span className={`block w-5 h-[2px] bg-mnd-charcoal rounded-full transition-all duration-300 ${menuOpen ? "opacity-0" : ""}`} />
+          <span className={`block w-5 h-[2px] bg-mnd-charcoal rounded-full transition-all duration-300 origin-center ${menuOpen ? "[transform:translateY(-7px)_rotate(-45deg)]" : ""}`} />
         </button>
 
         <Link href="/landing">
@@ -57,27 +48,24 @@ export default function Navbar({ minimal = false, showBorder = false }: NavbarPr
 
         {/* Desktop links — hover-expand on non-hero */}
         <div
-          className="hidden md:flex items-center gap-8 overflow-hidden"
-          style={{
-            maxWidth: expanded ? "600px" : "0px",
-            opacity: expanded ? 1 : 0,
-            transition: "max-width 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease",
-            paddingLeft: expanded ? "12px" : "0px",
-            paddingRight: expanded ? "12px" : "0px",
-          }}
+          className={`hidden md:flex items-center gap-8 overflow-hidden ${
+            expanded
+              ? "max-w-[600px] opacity-100 px-3 [transition:max-width_0.6s_cubic-bezier(0.16,1,0.3,1),opacity_0.4s_ease-out_0.15s,padding_0.6s_cubic-bezier(0.16,1,0.3,1)]"
+              : "max-w-0 opacity-0 px-0 [transition:opacity_0.15s_ease-in,max-width_0.5s_cubic-bezier(0.4,0,0.2,1)_0.1s,padding_0.5s_cubic-bezier(0.4,0,0.2,1)_0.1s]"
+          }`}
         >
           {navLinks.map((link) => (
             <Link
               key={link.label}
               href={link.href}
-              className="whitespace-nowrap font-inter text-[12px] font-semibold text-mnd-charcoal hover:opacity-70 transition-opacity"
+              className="whitespace-nowrap font-inter text-[12px] font-semibold text-mnd-charcoal hover:font-bold transition-all"
             >
               {link.label}
             </Link>
           ))}
         </div>
 
-        <Link href="mailto:hello@mynextdeveloper.com" className="px-5 md:px-8 py-2 bg-mnd-navy text-white rounded-full text-[12px] whitespace-nowrap font-semibold">
+        <Link href="mailto:hello@mynextdeveloper.com" className="px-5 md:px-8 py-2 bg-mnd-navy text-white rounded-full text-[12px] whitespace-nowrap font-semibold transition-all duration-200 hover:scale-[1.05] hover:shadow-[0_6px_20px_rgba(2,48,71,0.4)] active:scale-[0.96] active:shadow-none">
           Let&apos;s talk
         </Link>
       </nav>
@@ -91,7 +79,7 @@ export default function Navbar({ minimal = false, showBorder = false }: NavbarPr
             <Link
               key={link.label}
               href={link.href}
-              className="font-inter text-[12px] font-semibold text-mnd-charcoal hover:opacity-70 transition-opacity"
+              className="font-inter text-[12px] font-semibold text-mnd-charcoal hover:font-bold transition-all"
               onClick={() => setMenuOpen(false)}
             >
               {link.label}
