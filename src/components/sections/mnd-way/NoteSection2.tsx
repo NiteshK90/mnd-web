@@ -43,7 +43,7 @@ const NoteSection2 = forwardRef<HTMLElement, NoteSection2Props>(({ onSkipToValue
             &ldquo;
           </span>
 
-          <p className={`font-playfair text-[15px] md:text-[28px] font-semibold leading-[1.4] text-mnd-dark ${animate("[transition-delay:200ms]")}`}>
+          <p className={`font-playfair text-[15px] md:text-[28px] font-semibold leading-[1.333] tracking-[-0.03em] text-mnd-dark ${animate("[transition-delay:200ms]")}`}>
             So, we built MND as a place where stellar engineers can find world-class opportunities...
           </p>
 

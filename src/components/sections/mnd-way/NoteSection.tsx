@@ -43,11 +43,11 @@ const NoteSection = forwardRef<HTMLElement, NoteSectionProps>(({ onSkipToValues 
             &ldquo;
           </span>
 
-          <p className={`font-playfair text-[18px] md:text-[28px] font-semibold leading-[1.4] tracking-[-0.03em] text-mnd-dark ${animate("[transition-delay:200ms]")}`}>
+          <p className={`font-playfair text-[18px] md:text-[28px] font-semibold leading-[1.333] tracking-[-0.03em] text-mnd-dark ${animate("[transition-delay:200ms]")}`}>
             Over the past 6 years, we have built MND with the belief that software should be built <span className="italic">properly</span>.
           </p>
 
-          <p className={`font-playfair text-[16px] md:text-[28px] font-semibold leading-[1.4] text-mnd-dark ${animate("[transition-delay:400ms]")}`}>
+          <p className={`font-playfair text-[16px] md:text-[28px] font-semibold leading-[1.333] tracking-[-0.03em] text-mnd-dark ${animate("[transition-delay:400ms]")}`}>
             Thoughtfully. Cleanly.
           </p>
 
@@ -58,7 +58,7 @@ const NoteSection = forwardRef<HTMLElement, NoteSectionProps>(({ onSkipToValues 
 
         {/* Right */}
         <div className="flex flex-col gap-6 md:gap-12 mt-8 md:mt-0">
-          <h2 className={`font-playfair text-[20px] md:text-[36px] font-semibold text-mnd-dark  ${animate("[transition-delay:100ms]")}`}>
+          <h2 className={`font-playfair text-[20px] md:text-[28px] font-semibold leading-[1.333] tracking-[-0.03em] text-mnd-dark ${animate("[transition-delay:100ms]")}`}>
             A note from the founders ~
           </h2>
 

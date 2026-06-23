@@ -38,12 +38,12 @@ const MvpSection = forwardRef<HTMLElement>((_, ref) => {
             <p className={`font-inter font-semibold text-[11px] tracking-[1.7px] uppercase text-mnd-charcoal ${animate("[transition-delay:0ms]")}`}>
               MVP Development
             </p>
-            <p className={`font-playfair font-bold text-[28px] md:text-[40px] leading-[1.33] tracking-normal text-mnd-charcoal ${animate("[transition-delay:200ms]")}`}>
+            <p className={`font-playfair font-bold text-[28px] md:text-[28px] leading-[1.333] tracking-[-0.03em] text-mnd-charcoal ${animate("[transition-delay:200ms]")}`}>
               From Idea to<br />execution
             </p>
           </div>
           <div className={`w-[62px] h-[5px] bg-mnd-charcoal ${animate("[transition-delay:400ms]")}`} />
-          <p className={`font-playfair font-normal text-[28px] md:text-[40px] leading-[1.33] tracking-normal text-mnd-charcoal ${animate("[transition-delay:600ms]")}`}>
+          <p className={`font-playfair font-normal text-[28px] md:text-[28px] leading-[1.333] tracking-[-0.03em] text-mnd-charcoal ${animate("[transition-delay:600ms]")}`}>
             The right people to create<br />
             your MVP in days,<br />
             not weeks

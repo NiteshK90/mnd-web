@@ -31,11 +31,11 @@ const WorkSection = forwardRef<HTMLElement>((_, ref) => {
       ref={setRef}
       className="h-screen w-full snap-start flex flex-col items-center justify-center gap-10 md:gap-20 text-center px-6 md:px-20 pt-20 md:pt-24"
     >
-      <p className={`font-playfair text-[26px] md:text-[36px] font-normal leading-[1.333] tracking-[-0.03em] text-mnd-charcoal w-full max-w-[650px] ${animate("[transition-delay:0ms]")}`}>
+      <p className={`font-playfair text-[26px] md:text-[28px] font-normal leading-[1.333] tracking-[-0.03em] text-mnd-charcoal w-full max-w-[650px] ${animate("[transition-delay:0ms]")}`}>
         Imagine, the best engineering talent <span className="italic">(yes, real people!)</span> - waiting to work with you.
       </p>
       <div className={`w-[62px] h-[5px] bg-mnd-charcoal ${animate("[transition-delay:500ms]")}`} />
-      <p className={`font-playfair text-[26px] md:text-[36px] font-bold leading-[1.333] tracking-[-0.03em] text-mnd-charcoal w-full max-w-[720px] italic ${animate("[transition-delay:900ms]")}`}>
+      <p className={`font-playfair text-[26px] md:text-[28px] font-bold leading-[1.333] tracking-[-0.03em] text-mnd-charcoal w-full max-w-[720px] italic ${animate("[transition-delay:900ms]")}`}>
         On your terms.
       </p>
       <div className="flex flex-wrap items-center justify-center gap-3 md:gap-12 pt-4 md:pt-10">

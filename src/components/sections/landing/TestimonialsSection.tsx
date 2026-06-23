@@ -118,11 +118,11 @@ const TestimonialsSection = forwardRef<HTMLElement>((_, ref) => {
   return (
     <section ref={setRef} className="min-h-screen md:h-screen w-full snap-start flex flex-col items-center justify-center gap-8 md:gap-12 bg-mnd-espresso px-6 md:px-20 pt-20 pb-16 md:pt-24 md:pb-0">
       <div className="flex flex-col items-center gap-6 md:gap-12 text-center">
-        <p className={`font-playfair text-[22px] md:text-[36px] font-normal leading-[1.333] tracking-[-0.03em] text-mnd-parchment ${animate("[transition-delay:0ms]")}`}>
+        <p className={`font-playfair text-[22px] md:text-[28px] font-normal leading-[1.333] tracking-[-0.03em] text-mnd-parchment ${animate("[transition-delay:0ms]")}`}>
           Trust us. We have shipped 436 products &amp; counting.
         </p>
         <div className={`w-[76px] h-[6px] bg-mnd-parchment ${animate("[transition-delay:400ms]")}`} />
-        <p className={`font-playfair text-[22px] md:text-[36px] font-bold leading-[1.333] tracking-[-0.03em] text-mnd-parchment ${animate("[transition-delay:800ms]")}`}>
+        <p className={`font-playfair text-[22px] md:text-[28px] font-bold leading-[1.333] tracking-[-0.03em] text-mnd-parchment ${animate("[transition-delay:800ms]")}`}>
           <span className="italic">fyi</span> - zero unsatisfied clients.
         </p>
       </div>

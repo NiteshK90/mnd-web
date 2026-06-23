@@ -59,7 +59,7 @@ export default function PreLanding() {
               />
             </button>
             <span
-              className={`animate-slide-up flex-1 text-left font-[Cormorant-Garamond] ${text} text-xs md:text-sm italic font-bold capitalize transition-colors duration-500`}
+              className={`animate-slide-up flex-1 text-left font-playfair ${text} text-xs md:text-sm italic font-bold capitalize transition-colors duration-500`}
               style={su("1800ms")}
             >
               The fun one!

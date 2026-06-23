@@ -31,12 +31,12 @@ const ProblemStatementSection = forwardRef<HTMLElement>((_, ref) => {
       ref={setRef}
       className="h-screen w-full snap-start flex flex-col items-center justify-center gap-10 md:gap-20 text-center px-6 md:px-20 pt-20 md:pt-24"
     >
-      <p className={`font-playfair text-[26px] md:text-[36px] font-normal leading-[1.333] tracking-[-0.035em] text-mnd-charcoal w-full max-w-[650px] ${animate("[transition-delay:0ms]")}`}>
+      <p className={`font-playfair text-[26px] md:text-[28px] font-normal leading-[1.333] tracking-[-0.03em] text-mnd-charcoal w-full max-w-[650px] ${animate("[transition-delay:0ms]")}`}>
         <span>Building a great software development team is tough. </span>
         <span className="italic">Especially now.</span>
       </p>
       <div className={`w-[62px] h-[5px] bg-mnd-charcoal ${animate("[transition-delay:500ms]")}`} />
-      <p className="font-playfair text-[26px] md:text-[36px] font-bold leading-[1.333] tracking-[-0.03em] text-mnd-charcoal w-full max-w-[720px]">
+      <p className="font-playfair text-[26px] md:text-[28px] font-bold leading-[1.333] tracking-[-0.03em] text-mnd-charcoal w-full max-w-[720px]">
         <span className={`block ${animate("[transition-delay:900ms]")}`}>We&apos;re engineers ourselves.</span>
         <span className={`block italic ${animate("[transition-delay:1300ms]")}`}>We get it.</span>
       </p>

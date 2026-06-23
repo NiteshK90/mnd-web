@@ -43,7 +43,7 @@ const NoteSection3 = forwardRef<HTMLElement, NoteSection3Props>(({ onSkipToValue
             &ldquo;
           </span>
 
-          <p className={`font-playfair text-[15px] md:text-[30px] font-semibold leading-[1.4] text-white ${animate("[transition-delay:200ms]")}`}>
+          <p className={`font-playfair text-[15px] md:text-[28px] font-semibold leading-[1.333] tracking-[-0.03em] text-white ${animate("[transition-delay:200ms]")}`}>
             We have been fortunate to have worked with some exceptional people who love good product
           </p>
 

@@ -159,9 +159,10 @@ const CareerSection = forwardRef<HTMLElement>((_, ref) => {
     >
       <div className="w-full">
         {/* Title */}
-        <p className={`font-playfair text-[22px] md:text-[36px] font-normal leading-[1.333] tracking-[-0.03em] text-mnd-charcoal ${animate("[transition-delay:0ms]")}`}>
+        <p className={`font-playfair text-[22px] md:text-[28px] font-normal leading-[1.333] tracking-[-0.03em] text-mnd-charcoal ${animate("[transition-delay:0ms]")}`}>
           Oh, & we&apos;re very picky about our talent pool –
         </p>
+
 
         <div className="flex items-center justify-between md:justify-normal gap-3 md:gap-6 mt-6 md:mt-12">
           {/* Block 1: FOR EVERY 10 — lines animate in one by one */}

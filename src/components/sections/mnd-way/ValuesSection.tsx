@@ -123,7 +123,7 @@ const ValuesSection = forwardRef<HTMLElement>((_, ref) => {
 
               <div className="w-[36px] h-[4px] md:w-[64px] md:h-[6px] bg-mnd-charcoal" />
 
-              <p className="font-playfair text-[28px] font-bold leading-[1.2] text-mnd-charcoal">
+              <p className="font-playfair text-[28px] font-bold leading-[1.333] tracking-[-0.03em] text-mnd-charcoal">
                 {v.statement}
               </p>
 
