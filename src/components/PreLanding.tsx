@@ -15,7 +15,7 @@ export default function PreLanding() {
 
   return (
     <div
-      className={`flex flex-col min-h-screen p-6 transition-colors duration-500 ${isFun ? "bg-yellow-400" : "bg-black"}`}
+      className={`flex flex-col min-h-screen p-6 transition-colors duration-500 ${isFun ? "bg-mnd-yellow" : "bg-black"}`}
       onTransitionEnd={(e) => {
         if (e.propertyName === "background-color" && isFun) {
           document.cookie = "mnd_visited=true; path=/; max-age=31536000";
