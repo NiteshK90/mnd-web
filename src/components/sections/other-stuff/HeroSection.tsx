@@ -28,7 +28,7 @@ const OtherStuffHeroSection = forwardRef<HTMLElement, HeroSectionProps>(({ onScr
 
         <div className="hidden md:block relative w-full">
           <div
-            className="absolute right-[260px] top-[20px] border border-white rounded-full p-0.5 cursor-pointer"
+            className="absolute right-[325px] top-[20px] border border-white rounded-full p-0.5 cursor-pointer"
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
           >

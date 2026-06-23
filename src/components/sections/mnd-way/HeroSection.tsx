@@ -59,7 +59,7 @@ const MndWayHeroSection = forwardRef<HTMLElement, HeroSectionProps>(({ onScrollN
           </div>
         </div>
 
-        <div className="hidden md:block relative">
+        <div className="hidden md:block relative w-full">
           {dots.map((dot, i) => (
             <div
               key={i}
