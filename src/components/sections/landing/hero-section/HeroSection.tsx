@@ -19,7 +19,7 @@ const HeroSection = forwardRef<HTMLElement>((_, ref) => {
   return (
     <section
       ref={ref}
-      className="relative bg-[url('/landing/hero.png')] bg-cover bg-center h-screen w-full snap-start py-6 px-6 md:px-36 flex flex-col"
+      className="relative bg-[url('/landing/hero.png')] bg-cover bg-center h-screen w-full snap-start py-6 px-6 md:px-20 flex flex-col"
     >
       <div className="flex-1 flex items-center gap-6 relative">
         <div className="flex flex-col justify-center">

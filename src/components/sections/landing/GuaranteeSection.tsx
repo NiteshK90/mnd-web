@@ -52,12 +52,12 @@ const GuaranteeSection = forwardRef<HTMLElement>((_, ref) => {
   const animate = (delay: string) => `${base} ${inView ? visible : hidden} ${delay}`;
 
   return (
-    <section ref={setRef} className="h-screen w-full snap-start flex flex-col items-center justify-center gap-12 md:gap-24 pt-20 md:pt-24">
-      <h2 className={`font-playfair text-[26px] md:text-[36px] font-bold leading-[1.333] text-mnd-charcoal text-center px-6 md:px-0 ${animate("[transition-delay:0ms]")}`}>
+    <section ref={setRef} className="h-screen w-full snap-start flex flex-col items-center justify-center gap-12 md:gap-24 px-6 md:px-20 pt-20 md:pt-24">
+      <h2 className={`font-playfair text-[26px] md:text-[36px] font-bold leading-[1.333] text-mnd-charcoal text-center ${animate("[transition-delay:0ms]")}`}>
         All this, on our guarantee.
       </h2>
 
-      <div className={`flex gap-3 md:gap-6 overflow-x-auto md:overflow-visible w-full md:w-auto px-6 md:px-0 pb-4 md:pb-0 ${animate("[transition-delay:500ms]")}`}>
+      <div className={`flex gap-3 md:gap-6 overflow-x-auto md:overflow-visible w-full md:w-auto pb-4 md:pb-0 ${animate("[transition-delay:500ms]")}`}>
         {cards.map((card) => {
           const isOpen = card.id === activeCard;
           return (

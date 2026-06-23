@@ -155,7 +155,7 @@ const CareerSection = forwardRef<HTMLElement>((_, ref) => {
   return (
     <section
       ref={setRef}
-      className="h-screen w-full snap-start flex items-center justify-center px-4 md:px-10 overflow-hidden pt-20 md:pt-24"
+      className="h-screen w-full snap-start flex items-center justify-center px-6 md:px-20 overflow-hidden pt-20 md:pt-24"
     >
       <div className="w-full">
         {/* Title */}
@@ -217,7 +217,7 @@ const CareerSection = forwardRef<HTMLElement>((_, ref) => {
         </div>
 
         {/* Cards — revealed via visibleCount (first card auto, rest on scroll) */}
-        <div className="mt-5 md:mt-8 flex md:justify-center gap-6 md:gap-8 overflow-x-auto scrollbar-none [&::-webkit-scrollbar]:hidden md:overflow-visible pb-3 md:pb-0 px-4 md:px-0">
+        <div className="mt-5 md:mt-8 flex md:justify-center gap-6 md:gap-8 overflow-x-auto scrollbar-none [&::-webkit-scrollbar]:hidden md:overflow-visible pb-3 md:pb-0 md:px-0">
           {cards.map((card, i) => (
             <div
               key={i}

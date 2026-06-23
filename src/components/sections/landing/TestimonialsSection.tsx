@@ -116,8 +116,8 @@ const TestimonialsSection = forwardRef<HTMLElement>((_, ref) => {
   const animate = (delay: string) => `${base} ${inView ? visible : hidden} ${delay}`;
 
   return (
-    <section ref={setRef} className="min-h-screen md:h-screen w-full snap-start flex flex-col items-center justify-center gap-8 md:gap-12 bg-mnd-espresso pt-20 pb-16 md:pt-24 md:pb-0">
-      <div className="flex flex-col items-center gap-6 md:gap-12 px-6 md:px-0 text-center">
+    <section ref={setRef} className="min-h-screen md:h-screen w-full snap-start flex flex-col items-center justify-center gap-8 md:gap-12 bg-mnd-espresso px-6 md:px-20 pt-20 pb-16 md:pt-24 md:pb-0">
+      <div className="flex flex-col items-center gap-6 md:gap-12 text-center">
         <p className={`font-playfair text-[22px] md:text-[36px] font-normal leading-[1.333] tracking-[-0.03em] text-mnd-parchment ${animate("[transition-delay:0ms]")}`}>
           Trust us. We have shipped 436 products &amp; counting.
         </p>
@@ -127,7 +127,7 @@ const TestimonialsSection = forwardRef<HTMLElement>((_, ref) => {
         </p>
       </div>
 
-      <div className="flex gap-6 md:gap-10 overflow-x-auto md:overflow-visible w-full md:w-auto px-6 md:px-0 pb-4 md:pb-0">
+      <div className="flex gap-6 md:gap-10 overflow-x-auto md:overflow-visible w-full md:w-auto pb-4 md:pb-0">
         {testimonials.map((t, i) => {
           const cardDelays = ["[transition-delay:1200ms]", "[transition-delay:1700ms]", "[transition-delay:2200ms]", "[transition-delay:2700ms]"];
           return (

@@ -59,7 +59,7 @@ const TeamSection = forwardRef<HTMLElement>((_, ref) => {
 
   return (
     <section ref={setRef} className="min-h-screen md:h-screen w-full snap-start flex items-center justify-center pt-20 pb-16 md:pt-24 md:pb-0">
-      <div className="flex flex-col md:flex-row items-start md:items-end gap-10 md:gap-28 px-4 md:px-8 w-full md:w-auto">
+      <div className="flex flex-col md:flex-row items-start md:items-end gap-10 md:gap-28 px-6 md:px-20 w-full md:w-auto">
 
         {/* Left text block */}
         <div className="flex flex-col items-start gap-4 md:gap-16">

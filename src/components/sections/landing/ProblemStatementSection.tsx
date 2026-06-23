@@ -29,7 +29,7 @@ const ProblemStatementSection = forwardRef<HTMLElement>((_, ref) => {
   return (
     <section
       ref={setRef}
-      className="h-screen w-full snap-start flex flex-col items-center justify-center gap-10 md:gap-20 text-center px-6 md:px-0 pt-20 md:pt-24"
+      className="h-screen w-full snap-start flex flex-col items-center justify-center gap-10 md:gap-20 text-center px-6 md:px-20 pt-20 md:pt-24"
     >
       <p className={`font-playfair text-[26px] md:text-[36px] font-normal leading-[1.333] tracking-[-0.035em] text-mnd-charcoal w-full max-w-[650px] ${animate("[transition-delay:0ms]")}`}>
         <span>Building a great software development team is tough. </span>
