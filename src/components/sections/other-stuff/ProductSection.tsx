@@ -58,7 +58,7 @@ const ProductSection = forwardRef<HTMLElement>((_, ref) => {
           { title: "Quick MVP Development", desc: "The fastest way from idea to product" },
         ].map(({ title, desc }) => (
           <div key={title} className="rounded-[20px] border border-[#707070] bg-mnd-linen px-4 py-4">
-            <p className="font-inter font-medium text-[11px] leading-[1.35] text-mnd-charcoal">{title}</p>
+            <p className="font-playfair font-bold text-[11px] leading-[1.35] text-mnd-charcoal">{title}</p>
             <p className="mt-1 font-inter font-normal text-[9px] leading-[1.45] text-mnd-charcoal">{desc}</p>
           </div>
         ))}
@@ -66,7 +66,7 @@ const ProductSection = forwardRef<HTMLElement>((_, ref) => {
 
       {/* Desktop: ring diagram — entire diagram fades in as one unit */}
       <div className={`flex-1 hidden md:flex items-center justify-center ${animate("[transition-delay:300ms]")}`}>
-        <div className="relative mx-auto h-[650px] w-[650px]">
+        <div className="relative mx-auto h-[650px] w-[650px] scale-[0.9] origin-center">
 
           {/* Outer Ring */}
           <div className="absolute left-1/2 top-1/2 h-[580px] w-[580px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#707070]" />
@@ -94,37 +94,37 @@ const ProductSection = forwardRef<HTMLElement>((_, ref) => {
 
           {/* Top */}
           <div className="absolute left-1/2 top-[13px] w-[195px] -translate-x-1/2 rounded-[26px] border border-[#707070] bg-mnd-linen px-5 py-3">
-            <p className="font-inter font-medium text-[11px] leading-[1.35]">AI Services & Integration</p>
+            <p className="font-playfair font-bold text-[11px] leading-[1.35]">AI Services & Integration</p>
             <p className="mt-1 font-inter font-normal text-[9px] leading-[1.45]">The intelligent layer that works for you</p>
           </div>
 
           {/* Right Top */}
           <div className="absolute right-0 top-[179px] w-[195px] rounded-[26px] border border-[#707070] bg-mnd-linen px-5 py-3">
-            <p className="font-inter font-medium text-[11px] leading-[1.35]">Business Process Outsourcing</p>
+            <p className="font-playfair font-bold text-[11px] leading-[1.35]">Business Process Outsourcing</p>
             <p className="mt-1 font-inter font-normal text-[9px] leading-[1.45]">People that keep your business moving</p>
           </div>
 
           {/* Right Bottom */}
           <div className="absolute bottom-[166px] right-0 w-[195px] rounded-[26px] border border-[#707070] bg-mnd-linen px-5 py-3">
-            <p className="font-inter font-medium text-[11px] leading-[1.35]">Employee on Record</p>
+            <p className="font-playfair font-bold text-[11px] leading-[1.35]">Employee on Record</p>
             <p className="mt-1 font-inter font-normal text-[9px] leading-[1.45]">Keeping people you need for when you need them</p>
           </div>
 
           {/* Bottom */}
           <div className="absolute bottom-[13px] left-1/2 w-[195px] -translate-x-1/2 rounded-[26px] border border-[#707070] bg-mnd-linen px-5 py-3">
-            <p className="font-inter font-medium text-[11px] leading-[1.35]">Offshore Accounting</p>
+            <p className="font-playfair font-bold text-[11px] leading-[1.35]">Offshore Accounting</p>
             <p className="mt-1 font-inter font-normal text-[9px] leading-[1.45]">Keeping the number clean, compliant and affordable</p>
           </div>
 
           {/* Left Bottom */}
           <div className="absolute bottom-[166px] left-0 w-[195px] rounded-[26px] border border-[#707070] bg-mnd-linen px-5 py-3">
-            <p className="font-inter font-medium text-[11px] leading-[1.35]">Digital Marketing</p>
+            <p className="font-playfair font-bold text-[11px] leading-[1.35]">Digital Marketing</p>
             <p className="mt-1 font-inter font-normal text-[9px] leading-[1.45]">Creative strategies that get you seen and chosen</p>
           </div>
 
           {/* Left Top */}
           <div className="absolute left-0 top-[179px] w-[195px] rounded-[26px] border border-[#707070] bg-mnd-linen px-5 py-3">
-            <p className="font-inter font-medium text-[11px] leading-[1.35]">Quick MVP Development</p>
+            <p className="font-playfair font-bold text-[11px] leading-[1.35]">Quick MVP Development</p>
             <p className="mt-1 font-inter font-normal text-[9px] leading-[1.45]">The fastest way from idea to product</p>
           </div>
         </div>
