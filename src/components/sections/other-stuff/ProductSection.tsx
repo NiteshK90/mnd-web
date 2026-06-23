@@ -57,7 +57,7 @@ const ProductSection = forwardRef<HTMLElement>((_, ref) => {
           { title: "Digital Marketing", desc: "Creative strategies that get you seen and chosen" },
           { title: "Quick MVP Development", desc: "The fastest way from idea to product" },
         ].map(({ title, desc }) => (
-          <div key={title} className="rounded-[20px] border border-[#707070] bg-mnd-linen px-4 py-4">
+          <div key={title} className="rounded-[20px] border border-mnd-charcoal bg-mnd-linen px-4 py-4">
             <p className="font-playfair font-bold text-[11px] leading-[1.35] text-mnd-charcoal">{title}</p>
             <p className="mt-1 font-inter font-normal text-[9px] leading-[1.45] text-mnd-charcoal">{desc}</p>
           </div>
@@ -69,7 +69,9 @@ const ProductSection = forwardRef<HTMLElement>((_, ref) => {
         <div className="relative mx-auto h-[650px] w-[650px] scale-[0.9] origin-center">
 
           {/* Outer Ring */}
-          <div className="absolute left-1/2 top-1/2 h-[580px] w-[580px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#707070]" />
+          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-[580px] w-[580px]">
+            <div className="w-full h-full rounded-full border border-[#707070] animate-[spin_30s_linear_infinite]" />
+          </div>
 
           {/* Outer Ring Dots (between cards, clockwise from top-right) */}
           <div className="absolute left-[465px] top-[69px] h-[10px] w-[10px] rounded-full border border-[#707070] bg-mnd-linen" />
