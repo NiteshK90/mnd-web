@@ -1,26 +1,54 @@
-import { forwardRef } from "react";
+"use client";
+
+import { forwardRef, useRef, useEffect, useState } from "react";
 import { CubeIcon } from "@phosphor-icons/react";
 
 const ProductSection = forwardRef<HTMLElement>((_, ref) => {
+  const [inView, setInView] = useState(false);
+  const sectionRef = useRef<HTMLElement>(null);
+
+  const setRef = (el: HTMLElement | null) => {
+    sectionRef.current = el;
+    if (typeof ref === "function") ref(el);
+    else if (ref) (ref as { current: HTMLElement | null }).current = el;
+  };
+
+  useEffect(() => {
+    const el = sectionRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) setInView(true); },
+      { threshold: 0.3 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  const base = "transition-all duration-[1100ms] ease-out";
+  const hidden = "opacity-0 translate-y-5";
+  const visible = "opacity-100 translate-y-0";
+  const animate = (delay: string) => `${base} ${inView ? visible : hidden} ${delay}`;
+
   return (
-    <section ref={ref} className="min-h-screen w-full snap-start flex flex-col md:flex-row pt-20 pb-16 px-6 md:pt-24 md:pb-24 md:px-24">
+    <section ref={setRef} className="min-h-screen w-full snap-start flex flex-col md:flex-row pt-20 pb-16 px-6 md:pt-24 md:pb-24 md:px-32">
       <div className="flex items-center justify-start">
         <div className="flex flex-col gap-8 md:gap-16">
-          <p className="font-playfair font-normal text-[28px] md:text-[40px] leading-[1.33] tracking-normal text-mnd-charcoal">
+          <p className={`font-playfair font-normal text-[28px] md:text-[40px] leading-[1.33] tracking-normal text-mnd-charcoal ${animate("[transition-delay:0ms]")}`}>
             All the peripheral<br />
             services your product<br />
             needs to keep it<br />
             moving.
           </p>
-          <div className="w-[62px] h-[5px] bg-mnd-charcoal" />
-          <p className="font-playfair font-bold italic text-[28px] md:text-[40px] leading-[1.33] tracking-normal text-mnd-charcoal">
+          <div className={`w-[62px] h-[5px] bg-mnd-charcoal ${animate("[transition-delay:200ms]")}`} />
+          <p className={`font-playfair font-bold italic text-[28px] md:text-[40px] leading-[1.33] tracking-normal text-mnd-charcoal ${animate("[transition-delay:400ms]")}`}>
             With the same MND<br />
             guarantee.
           </p>
         </div>
       </div>
+
       {/* Mobile: card grid */}
-      <div className="mt-10 grid grid-cols-2 gap-3 md:hidden">
+      <div className={`mt-10 grid grid-cols-2 gap-3 md:hidden ${animate("[transition-delay:300ms]")}`}>
         {[
           { title: "AI Services & Integration", desc: "The intelligent layer that works for you" },
           { title: "Business Process Outsourcing", desc: "People that keep your business moving" },
@@ -36,8 +64,8 @@ const ProductSection = forwardRef<HTMLElement>((_, ref) => {
         ))}
       </div>
 
-      {/* Desktop: ring diagram */}
-      <div className="flex-1 hidden md:flex items-center justify-center">
+      {/* Desktop: ring diagram — entire diagram fades in as one unit */}
+      <div className={`flex-1 hidden md:flex items-center justify-center ${animate("[transition-delay:300ms]")}`}>
         <div className="relative mx-auto h-[650px] w-[650px]">
 
           {/* Outer Ring */}
@@ -59,7 +87,6 @@ const ProductSection = forwardRef<HTMLElement>((_, ref) => {
             <div className="mb-2">
               <CubeIcon size={32} weight="light" />
             </div>
-
             <p className="font-inter font-normal text-[8px] leading-none tracking-[0.25em] uppercase">
               Your Product
             </p>
