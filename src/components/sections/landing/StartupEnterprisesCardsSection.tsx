@@ -162,7 +162,7 @@ const StartupEnterprisesCardsSection = forwardRef<HTMLElement>((_, ref) => {
 
   return (
     <section ref={setRef} className="h-screen w-full snap-start flex flex-col items-center justify-center gap-12 md:gap-16 px-6 md:px-20 pt-20 md:pt-24">
-      <h2 className={`w-full max-w-[720px] font-playfair text-[26px] md:text-[28px] font-normal leading-[1.333] tracking-[-0.03em] text-mnd-charcoal text-center ${animate("[transition-delay:0ms]")}`}>
+      <h2 className={`w-full max-w-[720px] font-playfair text-[26px] md:text-[36px] font-normal leading-[1.333] tracking-[-0.03em] text-mnd-charcoal text-center ${animate("[transition-delay:0ms]")}`}>
         So, we built MND to plug into how you <br className="hidden md:block" />
         <span className="font-bold italic">actually</span> work.
       </h2>

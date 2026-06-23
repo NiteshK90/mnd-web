@@ -63,11 +63,11 @@ const TeamSection = forwardRef<HTMLElement>((_, ref) => {
 
         {/* Left text block */}
         <div className="flex flex-col items-start gap-4 md:gap-16">
-          <div className={`font-playfair text-[20px] md:text-[28px] font-medium leading-[1.333] tracking-[-0.03em] text-mnd-charcoal w-full md:w-[420px] ${animate("[transition-delay:0ms]")}`}>
+          <div className={`font-playfair text-[20px] md:text-[36px] font-medium leading-[1.333] tracking-[-0.03em] text-mnd-charcoal w-full md:w-[420px] ${animate("[transition-delay:0ms]")}`}>
             Basically - we&apos;re just a bunch of friends who really understand how software development works, inside out.
           </div>
           <div className={`w-[48px] md:w-[72px] h-[4px] md:h-[6px] bg-mnd-charcoal ${animate("[transition-delay:200ms]")}`} />
-          <div className={`font-playfair text-[18px] md:text-[28px] font-bold leading-[1.333] tracking-[-0.03em] text-mnd-charcoal ${animate("[transition-delay:400ms]")}`}>
+          <div className={`font-playfair text-[18px] md:text-[36px] font-bold leading-[1.333] tracking-[-0.03em] text-mnd-charcoal ${animate("[transition-delay:400ms]")}`}>
             & we love what we do.
           </div>
         </div>
