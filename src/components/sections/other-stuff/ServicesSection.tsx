@@ -39,12 +39,12 @@ const ServicesSection = forwardRef<HTMLElement>((_, ref) => {
             <p className={`font-inter font-semibold text-[11px] tracking-[1.7px] uppercase text-mnd-charcoal ${animate("[transition-delay:0ms]")}`}>
               Other Services
             </p>
-            <p className={`font-playfair font-bold text-[28px] md:text-[28px] leading-[1.333] tracking-[-0.03em] text-mnd-charcoal ${animate("[transition-delay:200ms]")}`}>
+            <p className={`font-playfair font-bold text-[26px] md:text-[36px] leading-[1.333] tracking-[-0.03em] text-mnd-charcoal ${animate("[transition-delay:200ms]")}`}>
               The right people for<br />everything to keep<br />your product<br />moving.
             </p>
           </div>
           <div className={`w-[62px] h-[5px] bg-mnd-charcoal ${animate("[transition-delay:400ms]")}`} />
-          <p className={`font-playfair font-normal text-[28px] md:text-[28px] leading-[1.333] tracking-[-0.03em] text-mnd-charcoal ${animate("[transition-delay:600ms]")}`}>
+          <p className={`font-playfair font-normal text-[26px] md:text-[36px] leading-[1.333] tracking-[-0.03em] text-mnd-charcoal ${animate("[transition-delay:600ms]")}`}>
             From operations to<br />compliance, scale with<br />ease.
           </p>
           <Link href="mailto:hello@mynextdeveloper.com?subject=Schedule a Call" className={`flex items-center gap-2 px-4 h-10 bg-mnd-navy text-white rounded-full w-fit transition-all duration-200 hover:scale-[1.05] hover:shadow-[0_6px_20px_rgba(2,48,71,0.4)] active:scale-[0.96] active:shadow-none ${animate("[transition-delay:800ms]")}`}>
@@ -73,7 +73,11 @@ const ServicesSection = forwardRef<HTMLElement>((_, ref) => {
               body: "Keeping the numbers clean, compliant and affordable.",
             },
           ].map((service, i) => (
-            <div key={i} className={`rounded-[20px] md:rounded-[28px] py-8 px-6 md:py-14 md:px-16 border border-mnd-charcoal flex flex-col gap-4 md:gap-6 w-[150px] md:w-[300px] ${animate(`[transition-delay:${300 + i * 150}ms]`)}`}>
+            <div
+              key={i}
+              className={`rounded-[20px] md:rounded-[28px] py-8 px-6 md:py-14 md:px-16 border border-mnd-charcoal flex flex-col gap-4 md:gap-6 w-[150px] md:w-[300px] ${base} ${inView ? visible : hidden}`}
+              style={{ transitionDelay: inView ? `${600 + i * 500}ms` : "0ms" }}
+            >
               <p className="font-playfair font-bold text-[14px] md:text-[20px] leading-[1.2] text-mnd-charcoal">
                 {service.title}
               </p>
