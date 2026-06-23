@@ -35,7 +35,7 @@ const NoteSection2 = forwardRef<HTMLElement, NoteSection2Props>(({ onSkipToValue
 
   return (
     <section ref={setRef} className="h-screen w-full snap-start bg-transparent overflow-y-auto flex items-center">
-      <div className="grid grid-cols-1 md:grid-cols-[400px_1fr] gap-x-0 md:gap-x-[120px] max-w-[1400px] mx-auto px-4 md:px-20 pt-28 md:pt-32 items-end">
+      <div className="grid grid-cols-1 md:grid-cols-[400px_1fr] gap-x-0 md:gap-x-[120px] max-w-[1400px] mx-auto px-6 md:px-20 pt-28 md:pt-32 items-end">
 
         {/* Left */}
         <div className="flex flex-col gap-4 md:gap-8 pb-8 md:pb-16">

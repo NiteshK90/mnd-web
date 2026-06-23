@@ -32,7 +32,7 @@ const ServicesSection = forwardRef<HTMLElement>((_, ref) => {
   const animate = (delay: string) => `${base} ${inView ? visible : hidden} ${delay}`;
 
   return (
-    <section ref={setRef} className="min-h-screen w-full snap-start flex flex-col md:flex-row px-6 md:px-32 pt-20 md:pt-24 pb-12 md:pb-0">
+    <section ref={setRef} className="min-h-screen w-full snap-start flex flex-col md:flex-row px-6 md:px-20 pt-20 md:pt-24 pb-12 md:pb-0">
       <div className="flex items-center justify-start">
         <div className="flex flex-col gap-10 md:gap-16">
           <div className="flex flex-col gap-4">

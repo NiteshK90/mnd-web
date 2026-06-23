@@ -30,7 +30,7 @@ const ProductSection = forwardRef<HTMLElement>((_, ref) => {
   const animate = (delay: string) => `${base} ${inView ? visible : hidden} ${delay}`;
 
   return (
-    <section ref={setRef} className="min-h-screen w-full snap-start flex flex-col md:flex-row pt-20 pb-16 px-6 md:pt-24 md:pb-24 md:px-32">
+    <section ref={setRef} className="min-h-screen w-full snap-start flex flex-col md:flex-row pt-20 pb-16 px-6 md:pt-24 md:pb-24 md:px-20">
       <div className="flex items-center justify-start">
         <div className="flex flex-col gap-8 md:gap-16">
           <p className={`font-playfair font-normal text-[28px] md:text-[40px] leading-[1.33] tracking-normal text-mnd-charcoal ${animate("[transition-delay:0ms]")}`}>

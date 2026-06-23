@@ -42,7 +42,7 @@ const MndWayHeroSection = forwardRef<HTMLElement, HeroSectionProps>(({ onScrollN
   return (
     <section
       ref={ref}
-      className="relative bg-[url('/mnd-way/hero.png')] bg-cover bg-center min-h-screen w-full snap-start py-6 px-4 md:px-20 flex flex-col"
+      className="relative bg-[url('/mnd-way/hero.png')] bg-cover bg-center min-h-screen w-full snap-start py-6 px-6 md:px-20 flex flex-col"
     >
       <div className="flex-1 flex flex-col md:flex-row items-center justify-center md:justify-start gap-6 relative">
         <div className="flex flex-col justify-center">
