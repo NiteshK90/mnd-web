@@ -27,7 +27,7 @@ playfair: ["var(--font-playfair)", "serif"],
       animation: {
         marquee: "marquee 60s linear infinite",
         "fade-in-card": "fadeInCard 800ms cubic-bezier(0.16, 1, 0.3, 1) forwards",
-        "hero-fly-in": "heroFlyIn 1800ms cubic-bezier(0.16, 1, 0.3, 1) forwards",
+        "hero-fly-in": "heroFlyIn 1800ms cubic-bezier(0.16, 1, 0.3, 1) both",
         "slide-up": "slideUp 1100ms ease-out both",
       },
       keyframes: {

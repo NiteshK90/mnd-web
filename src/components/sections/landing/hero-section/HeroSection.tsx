@@ -23,10 +23,10 @@ const HeroSection = forwardRef<HTMLElement>((_, ref) => {
     >
       <div className="flex-1 flex items-center gap-6 relative">
         <div className="flex flex-col justify-center">
-          <div className="animate-hero-fly-in font-playfair text-[clamp(3rem,6.5vw,4.5rem)] font-semibold tracking-[0.1] w-full md:w-[500px] leading-[1.2] text-mnd-dark">
+          <div className="animate-hero-fly-in font-playfair text-[clamp(3rem,6.5vw,4.5rem)] font-semibold tracking-[0.1] w-full md:w-[500px] leading-[1.2] text-mnd-dark" style={{ animationDelay: "500ms" }}>
             Stellar engineers on bench for you.
           </div>
-          <div className="mt-6 flex items-center gap-6">
+          <div className="mt-6 flex items-center gap-6 animate-slide-up" style={{ animationDelay: "900ms" }}>
             <Link href="mailto:hello@mynextdeveloper.com" className="flex items-center gap-2 px-4 h-10 bg-mnd-navy text-white rounded-full transition-all duration-200 hover:scale-[1.05] hover:shadow-[0_6px_20px_rgba(2,48,71,0.4)] active:scale-[0.96] active:shadow-none">
               <div className="font-inter text-xs font-semibold">Ready when you are</div>
               <ArrowRight color="white" size={32} strokeWidth={1} />

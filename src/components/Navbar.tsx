@@ -23,7 +23,7 @@ export default function Navbar({ minimal = false, showBorder = false }: NavbarPr
   return (
     <div className="relative flex flex-col items-center">
       <nav
-        className={`flex items-center h-14 gap-4 md:gap-6 px-4 md:px-6 rounded-full bg-white/30 backdrop-blur-sm border border-white/40 shadow-sm [transition:all_0.6s_cubic-bezier(0.16,1,0.3,1)] ${showBorder ? "ring-1 ring-black/10" : ""}`}
+        className={`animate-slide-up flex items-center h-14 gap-4 md:gap-6 px-4 md:px-6 rounded-full bg-white/30 backdrop-blur-sm border border-white/40 shadow-sm [transition:all_0.6s_cubic-bezier(0.16,1,0.3,1)] ${showBorder ? "ring-1 ring-black/10" : ""}`}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
       >
