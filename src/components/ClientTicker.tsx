@@ -29,7 +29,7 @@ const logos = [
 export default function ClientTicker() {
   return (
     <div className="overflow-hidden w-full">
-      <div className="flex w-max animate-marquee gap-1">
+      <div className="flex items-center w-max animate-marquee gap-1">
         {[...logos, ...logos].map((logo, i) => (
           <div key={i} className="flex items-center justify-center shrink-0">
             <Image
