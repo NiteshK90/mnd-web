@@ -59,22 +59,21 @@ const BudgetPlanSection = forwardRef<HTMLElement>((_, ref) => {
   const animate = (delay: string) => `${base} ${inView ? visible : hidden} ${delay}`;
 
   return (
-    <section ref={setRef} className="min-h-screen w-full snap-start flex flex-col md:flex-row px-6 md:px-20 pt-20 md:pt-24 pb-12 md:pb-0">
-      <div className="flex items-center justify-start">
-        <div className="flex flex-col gap-10 md:gap-16">
+    <section ref={setRef} className="min-h-screen w-full snap-start flex flex-col md:flex-row px-6 md:px-20 pt-20 md:pt-24 pb-12">
+      {/* Left */}
+      <div className="flex items-start md:items-center justify-start w-full md:w-auto">
+        <div className="flex flex-col gap-8 md:gap-16">
           <div className="flex flex-col gap-4">
             <p className={`font-inter font-semibold text-[11px] tracking-[1.7px] uppercase text-mnd-charcoal ${animate("[transition-delay:0ms]")}`}>
               Cost Calculator
             </p>
-            <p className={`font-playfair font-bold text-[26px] md:text-[36px] leading-[1.333] tracking-[-0.03em] text-mnd-charcoal ${animate("[transition-delay:200ms]")}`}>
-              A smarter way to<br />plan your budget
+            <p className={`font-playfair font-bold text-[22px] md:text-[36px] leading-[1.333] tracking-[-0.03em] text-mnd-charcoal ${animate("[transition-delay:200ms]")}`}>
+              A smarter way to plan your budget
             </p>
           </div>
           <div className={`w-[62px] h-[5px] bg-mnd-charcoal ${animate("[transition-delay:400ms]")}`} />
-          <p className={`font-playfair font-normal text-[26px] md:text-[36px] leading-[1.333] tracking-[-0.03em] text-mnd-charcoal ${animate("[transition-delay:600ms]")}`}>
-            Use our cost calculator tool<br />
-            to get tailored estimate<br />
-            based on your needs
+          <p className={`font-playfair font-normal text-[18px] md:text-[36px] leading-[1.333] tracking-[-0.03em] text-mnd-charcoal ${animate("[transition-delay:600ms]")}`}>
+            Use our cost calculator tool to get tailored estimate based on your needs
           </p>
           <div className={`flex ${animate("[transition-delay:800ms]")}`}>
             {[
@@ -82,9 +81,9 @@ const BudgetPlanSection = forwardRef<HTMLElement>((_, ref) => {
               { header: "100%", sub: "Confidential" },
               { header: "Tailored", sub: "to you" },
             ].map((stat, i) => (
-              <div key={i} className="pr-8 mr-8 border-r border-mnd-charcoal last:border-r-0 last:mr-0 last:pr-0 text-center">
-                <p className="font-playfair font-bold text-[26px] leading-tight text-mnd-charcoal">{stat.header}</p>
-                <p className="font-inter font-medium text-[16px] text-mnd-charcoal">{stat.sub}</p>
+              <div key={i} className="pr-6 mr-6 md:pr-8 md:mr-8 border-r border-mnd-charcoal last:border-r-0 last:mr-0 last:pr-0 text-center">
+                <p className="font-playfair font-bold text-[22px] md:text-[26px] leading-tight text-mnd-charcoal">{stat.header}</p>
+                <p className="font-inter font-medium text-[13px] md:text-[16px] text-mnd-charcoal">{stat.sub}</p>
               </div>
             ))}
           </div>
@@ -95,21 +94,22 @@ const BudgetPlanSection = forwardRef<HTMLElement>((_, ref) => {
         </div>
       </div>
 
-      <div className="flex-1 flex items-center justify-center px-4 md:px-12 mt-10 md:mt-0">
+      {/* Right */}
+      <div className="flex-1 flex items-center justify-center px-0 md:px-12 mt-10 md:mt-0">
         <div className="w-full flex flex-col gap-6">
           {faqs.map((faq, i) => (
-            <div key={i} className={`w-full rounded-[20px] bg-[#FDF8F4] px-6 py-4 shadow-[0_4px_12px_rgba(0,0,0,0.06)] ${animate(`[transition-delay:${i * 300}ms]`)}`}>
+            <div key={i} className={`w-full rounded-[20px] bg-[#FDF8F4] px-5 py-4 md:px-6 shadow-[0_4px_12px_rgba(0,0,0,0.06)] ${animate(`[transition-delay:${i * 300}ms]`)}`}>
               <button
                 className="w-full flex justify-between items-center gap-4 cursor-pointer"
                 onClick={() => setOpenIndex(openIndex === i ? null : i)}
               >
-                <span className="font-playfair font-medium text-[16px] leading-[1.2] text-mnd-charcoal text-left">
+                <span className="font-playfair font-medium text-[14px] md:text-[16px] leading-[1.2] text-mnd-charcoal text-left">
                   {faq.q}
                 </span>
                 <span className="shrink-0">
                   {openIndex === i
-                    ? <MinusIcon size={32} weight="thin" className="text-mnd-charcoal" />
-                    : <PlusIcon size={32} weight="thin" className="text-mnd-charcoal" />
+                    ? <MinusIcon size={24} weight="thin" className="text-mnd-charcoal" />
+                    : <PlusIcon size={24} weight="thin" className="text-mnd-charcoal" />
                   }
                 </span>
               </button>
