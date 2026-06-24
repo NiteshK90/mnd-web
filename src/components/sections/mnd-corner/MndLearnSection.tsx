@@ -56,7 +56,7 @@ const MndLearnSection = forwardRef<HTMLElement>((_, ref) => {
 
       {/* Right */}
       <div className={`flex-1 flex items-center justify-center px-0 md:px-8 mt-10 md:mt-0 ${animate("[transition-delay:400ms]")}`}>
-        <div className="w-full max-w-xl px-6 py-10 md:px-24 md:py-24 border-[1px] border-mnd-charcoal rounded-[56px] flex flex-col gap-8">
+        <div className="w-full max-w-xl px-6 py-8 md:px-24 md:py-24 border-[1px] border-mnd-charcoal rounded-[32px] md:rounded-[56px] flex flex-col gap-6 md:gap-8">
           <div className="flex flex-col gap-1">
             <p className="font-inter font-semibold text-[10px] tracking-[1.5px] uppercase text-mnd-charcoal">
               Upcoming Events

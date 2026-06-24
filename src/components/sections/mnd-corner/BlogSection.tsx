@@ -30,7 +30,7 @@ const BlogSection = forwardRef<HTMLElement>((_, ref) => {
   const animate = (delay: string) => `${base} ${inView ? visible : hidden} ${delay}`;
 
   return (
-    <section ref={setRef} className="min-h-screen w-full snap-start flex flex-col md:flex-row gap-16 px-6 md:px-20 pt-20 md:pt-24 pb-12">
+    <section ref={setRef} className="min-h-screen w-full snap-start flex flex-col md:flex-row gap-8 md:gap-16 px-6 md:px-20 pt-20 md:pt-24 pb-12">
       {/* Left */}
       <div className="flex items-start md:items-center justify-start w-full md:w-auto">
         <div className="flex flex-col gap-8 md:gap-16">
@@ -60,11 +60,11 @@ const BlogSection = forwardRef<HTMLElement>((_, ref) => {
           placeholder="Search articles, topics, keywords"
           className={`w-full max-w-[1180px] h-[48px] bg-transparent border border-[#6f6f6f] rounded-full px-6 font-inter text-[15px] font-normal leading-[1.4] text-[#8a8a8a] placeholder-[#8a8a8a] outline-none ${animate("[transition-delay:200ms]")}`}
         />
-        <div className={`grid grid-cols-6 gap-x-3 gap-y-10 w-full ${animate("[transition-delay:400ms]")}`}>
+        <div className={`grid grid-cols-3 md:grid-cols-6 gap-x-2 md:gap-x-3 gap-y-3 md:gap-y-10 w-full ${animate("[transition-delay:400ms]")}`}>
           {["AI", "App Development", "Cost Calculator", "Data Security", "Ethics", "Hiring", "Personal Brand", "Software Development", "Startup", "Technology", "Latest blogs"].map((label) => (
             <button
               key={label}
-              className="flex items-center justify-center min-w-[120px] h-[28px] px-4 bg-[#f3ede4] rounded-full font-inter text-[7px] font-medium leading-none tracking-[0.18em] text-[#2f2f2f] uppercase whitespace-nowrap cursor-pointer"
+              className="flex items-center justify-center min-w-0 md:min-w-[120px] h-[28px] px-3 md:px-4 bg-[#f3ede4] rounded-full font-inter text-[7px] font-medium leading-none tracking-[0.18em] text-[#2f2f2f] uppercase whitespace-nowrap cursor-pointer overflow-hidden"
             >
               {label}
             </button>
@@ -90,7 +90,7 @@ const BlogSection = forwardRef<HTMLElement>((_, ref) => {
               { date: "MAR 28", year: "2026", title: "Blog 4" },
               { date: "MAR 14", year: "2026", title: "Blog 5" },
             ].map((post, i) => (
-              <div key={i} className={`group grid grid-cols-[60px_1fr_30px] items-center min-h-[40px] py-2 border-b border-[#9b9b9b] cursor-pointer ${animate(`[transition-delay:${700 + i * 100}ms]`)}`}>
+              <div key={i} className={`group grid grid-cols-[50px_1fr_28px] md:grid-cols-[60px_1fr_30px] items-center min-h-[40px] py-2 border-b border-[#9b9b9b] cursor-pointer ${animate(`[transition-delay:${700 + i * 100}ms]`)}`}>
                 <div className="font-inter text-[10px] font-medium leading-[1.15] tracking-[0.08em] text-[#252525] uppercase">
                   {post.date}<br />{post.year}
                 </div>

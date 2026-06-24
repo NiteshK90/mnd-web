@@ -81,7 +81,7 @@ const BudgetPlanSection = forwardRef<HTMLElement>((_, ref) => {
               { header: "100%", sub: "Confidential" },
               { header: "Tailored", sub: "to you" },
             ].map((stat, i) => (
-              <div key={i} className="pr-6 mr-6 md:pr-8 md:mr-8 border-r border-mnd-charcoal last:border-r-0 last:mr-0 last:pr-0 text-center">
+              <div key={i} className="pr-4 mr-4 md:pr-8 md:mr-8 border-r border-mnd-charcoal last:border-r-0 last:mr-0 last:pr-0 text-center">
                 <p className="font-playfair font-bold text-[22px] md:text-[26px] leading-tight text-mnd-charcoal">{stat.header}</p>
                 <p className="font-inter font-medium text-[13px] md:text-[16px] text-mnd-charcoal">{stat.sub}</p>
               </div>
