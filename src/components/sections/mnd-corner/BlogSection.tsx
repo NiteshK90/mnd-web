@@ -61,7 +61,7 @@ const BlogSection = forwardRef<HTMLElement>((_, ref) => {
           className={`w-full max-w-[1180px] h-[48px] bg-transparent border border-[#6f6f6f] rounded-full px-6 font-inter text-[15px] font-normal leading-[1.4] text-[#8a8a8a] placeholder-[#8a8a8a] outline-none ${animate("[transition-delay:200ms]")}`}
         />
         <div className={`grid grid-cols-3 md:grid-cols-6 gap-x-2 md:gap-x-3 gap-y-3 md:gap-y-10 w-full ${animate("[transition-delay:400ms]")}`}>
-          {["AI", "App Development", "Cost Calculator", "Data Security", "Ethics", "Hiring", "Personal Brand", "Software Development", "Startup", "Technology", "Latest blogs"].map((label) => (
+          {["AI", "App Development", "Cost Calculator", "Data Security", "Ethics", "Hiring", "Personal Brand", "Software Dev", "Startup", "Technology", "Latest blogs"].map((label) => (
             <button
               key={label}
               className="flex items-center justify-center min-w-0 md:min-w-[120px] h-[28px] px-3 md:px-4 bg-[#f3ede4] rounded-full font-inter text-[7px] font-medium leading-none tracking-[0.18em] text-[#2f2f2f] uppercase whitespace-nowrap cursor-pointer overflow-hidden transition-all duration-200 hover:scale-[1.05] hover:shadow-[0_6px_20px_rgba(2,48,71,0.4)] active:scale-[0.96] active:shadow-none"
@@ -82,7 +82,7 @@ const BlogSection = forwardRef<HTMLElement>((_, ref) => {
           </div>
 
           {/* Rows */}
-          <div className="flex flex-col">
+          <div className="flex flex-col gap-2">
             {[
               { date: "MAY 1", year: "2026", title: "Blog 1" },
               { date: "APR 25", year: "2026", title: "Blog 2" },
@@ -90,15 +90,15 @@ const BlogSection = forwardRef<HTMLElement>((_, ref) => {
               { date: "MAR 28", year: "2026", title: "Blog 4" },
               { date: "MAR 14", year: "2026", title: "Blog 5" },
             ].map((post, i) => (
-              <div key={i} className={`group grid grid-cols-[50px_1fr_28px] md:grid-cols-[60px_1fr_30px] items-center min-h-[40px] py-2 border-b border-[#9b9b9b] cursor-pointer ${animate(`[transition-delay:${700 + i * 100}ms]`)}`}>
-                <div className="font-inter text-[10px] font-medium leading-[1.15] tracking-[0.08em] text-[#252525] uppercase">
+              <div key={i} className={`group grid grid-cols-[50px_1fr_28px] md:grid-cols-[60px_1fr_30px] items-center gap-x-8 min-h-[40px] py-4 border-b border-[#9b9b9b] cursor-pointer ${animate(`[transition-delay:${700 + i * 100}ms]`)}`}>
+                <div className="font-inter text-[10px] font-medium leading-[1.6] tracking-[0.08em] text-[#252525] uppercase">
                   {post.date}<br />{post.year}
                 </div>
                 <h3 className="font-playfair text-[16px] font-semibold leading-none text-[#1f1b1c]">
                   {post.title}
                 </h3>
-                <div className="flex justify-center items-center text-[32px] font-light text-black transition-transform duration-[250ms] ease-in-out group-hover:translate-x-2">
-                  →
+                <div className="flex justify-center items-center transition-transform duration-[250ms] ease-in-out group-hover:translate-x-2">
+                  <ArrowRight color="#1f1b1c" size={24} strokeWidth={1} />
                 </div>
               </div>
             ))}
