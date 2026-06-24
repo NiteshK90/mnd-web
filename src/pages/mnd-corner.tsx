@@ -4,11 +4,12 @@ import { useRef, useState, useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import ScrollIndicators from "@/components/ScrollIndicators";
 import HeroSection from "@/components/sections/mnd-corner/HeroSection";
+import BlogSection from "@/components/sections/mnd-corner/BlogSection";
 import BudgetPlanSection from "@/components/sections/mnd-corner/BudgetPlanSection";
 import MndLearnSection from "@/components/sections/mnd-corner/MndLearnSection";
 import FooterSection from "@/components/sections/FooterSection";
 
-const TOTAL_SECTIONS = 4;
+const TOTAL_SECTIONS = 5;
 
 export default function MndCorner() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -46,11 +47,12 @@ export default function MndCorner() {
           <Navbar minimal={activeIndex !== 0} showBorder={activeIndex !== 0} />
         </div>
         <HeroSection ref={(el) => { sectionRefs.current[0] = el; }} onScrollNext={() => scrollTo(1)} />
-        <BudgetPlanSection ref={(el) => { sectionRefs.current[1] = el; }} />
-        <MndLearnSection ref={(el) => { sectionRefs.current[2] = el; }} />
+        <BlogSection ref={(el) => { sectionRefs.current[1] = el; }} />
+        <BudgetPlanSection ref={(el) => { sectionRefs.current[2] = el; }} />
+        <MndLearnSection ref={(el) => { sectionRefs.current[3] = el; }} />
       </div>
 
-      <FooterSection containerId="mnd-corner-container" ref={(el) => { sectionRefs.current[3] = el; }} />
+      <FooterSection containerId="mnd-corner-container" ref={(el) => { sectionRefs.current[4] = el; }} />
 
       <div className="hidden md:block">
         <ScrollIndicators
