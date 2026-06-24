@@ -1,12 +1,14 @@
 import Landing from "@/components/Landing";
-import PreLanding from "@/components/PreLanding";
 import { GetServerSideProps } from "next";
 
 export const getServerSideProps: GetServerSideProps = async ({ req }) => {
   const visited = req.cookies["mnd_visited"];
-  return { props: { showLanding: !!visited } };
+  if (!visited) {
+    return { redirect: { destination: "/pre-landing", permanent: false } };
+  }
+  return { props: {} };
 };
 
-export default function Home({ showLanding }: { showLanding: boolean }) {
-  return showLanding ? <Landing /> : <PreLanding />;
+export default function Home() {
+  return <Landing />;
 }
