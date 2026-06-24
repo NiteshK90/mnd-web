@@ -5,14 +5,14 @@ const members = [
     name: "JIGAR MEHTA",
     role: "Co-founder",
     image: "/founders/jigar.png",
-    experience: ["12+ years of Experience", "Previously Book My Show", "B.E. (Computers)"],
-    body: "Jigar - As a core engineer at BookMyShow, Jigar scaled systems to 100k+ requests per minute and delivered a PWA featured at Google Dev Fest that drove 80% conversion growth within months of launch. He founded MyNextDeveloper to bring that same standard to AI-native products, and has since co-founded Tabb and Transcrisp — proving he can go from idea to product.",
+    experience: ["B.E. (Computers)", "12+ years of Experience", "Previously Book My Show"],
+    body: "Jigar - As a core engineer at BookMyShow, scaled systems to 100k+ requests per minute and delivered a PWA featured at Google Dev Fest that drove 80% conversion growth within months of launch. He founded MyNextDeveloper to bring that same standard to AI-native products, and has since co-founded Tabb and Transcrisp — proving he can go from idea to product.",
   },
   {
     name: "PALOMI JAIN",
     role: "Co-founder",
     image: "/founders/palomi.png",
-    experience: ["Business Management", "& Entrepreneurship", "7+ years of Experience", "Previously Studysid"],
+    experience: ["Business Mgt & Entrepreneurship", "7+ years of Experience", "Previously Studysid"],
     body: "Palomi has spent her career at the sharp end of building startups — driving a 3x increase in student enrolments for an edtech platform, then co-founding a Seed-backed global developer marketplace. She owns growth, operations and client experience end to end, and she knows how to make early-stage businesses scale.",
   },
   {
@@ -20,7 +20,7 @@ const members = [
     role: "Co-founder",
     image: "/founders/parth.png",
     experience: ["B.E. (Computers)", "12+ years of Experience", "Previously Housing, Mindtickle"],
-    body: "Parth - As CTO and co-founder of Studysid, Parth raised $500K and took a consumer product from idea to launch - then went on to found MyNextDeveloper, bringing the same execution to AI-native products. His engineering foundation was built at Mindtickle, a VC-backed enterprise platform trusted by global sales teams and Housing.com. He's a repeat founder who knows how to build, raise, and ship.",
+    body: "Parth - As CTO and co-founder of Studysid, raised $500K and took a consumer product from idea to launch - then went on to found MyNextDeveloper, bringing the same execution to AI-native products. His engineering foundation was built at Mindtickle, a VC-backed enterprise platform trusted by global sales teams and Housing.com. He's a repeat founder who knows how to build, raise, and ship.",
   },
   {
     name: "PURAB SHAH",

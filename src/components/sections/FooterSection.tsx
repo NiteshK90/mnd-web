@@ -1,6 +1,7 @@
 "use client";
 
 import { forwardRef, useState, useRef, useEffect } from "react";
+import Link from "next/link";
 
 const FooterSection = forwardRef<HTMLElement, { containerId?: string }>(({ containerId = "landing-container" }, ref) => {
   const [inView, setInView] = useState(false);
@@ -56,8 +57,10 @@ const FooterSection = forwardRef<HTMLElement, { containerId?: string }>(({ conta
         </p>
 
         <div className={animate("[transition-delay:1200ms]")}>
-        <a
-          href="mailto:hello@mynextdeveloper.com?subject=Schedule a Call"
+        <Link
+          href="https://cal.com/jigarmehta/immediate-meeting"
+          target="_blank"
+          rel="noopener noreferrer"
           className="flex items-center gap-2 md:gap-3 py-1.5 px-4 md:px-5 rounded-full bg-[#0D0D0F] text-white font-inter text-sm font-normal transition-all duration-200 hover:scale-[1.05] hover:shadow-[0_6px_20px_rgba(0,0,0,0.4)] active:scale-[0.96] active:shadow-none"
         >
           <span className="flex items-center justify-center w-5 h-5">
@@ -69,7 +72,7 @@ const FooterSection = forwardRef<HTMLElement, { containerId?: string }>(({ conta
           </span>
           Schedule a call
           <span className="text-[16px]">→</span>
-        </a>
+        </Link>
         </div>
       </div>
 
