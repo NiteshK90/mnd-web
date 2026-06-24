@@ -68,12 +68,12 @@ const BudgetPlanSection = forwardRef<HTMLElement>((_, ref) => {
               Cost Calculator
             </p>
             <p className={`font-playfair font-bold text-[22px] md:text-[36px] leading-[1.333] tracking-[-0.03em] text-mnd-charcoal ${animate("[transition-delay:200ms]")}`}>
-              A smarter way to plan your budget
+              A smarter way to<br />plan your budget
             </p>
           </div>
           <div className={`w-[62px] h-[5px] bg-mnd-charcoal ${animate("[transition-delay:400ms]")}`} />
           <p className={`font-playfair font-normal text-[18px] md:text-[36px] leading-[1.333] tracking-[-0.03em] text-mnd-charcoal ${animate("[transition-delay:600ms]")}`}>
-            Use our cost calculator tool to get tailored estimate based on your needs
+            Use our cost calculator tool<br />to get tailored estimate<br />based on your needs
           </p>
           <div className={`flex ${animate("[transition-delay:800ms]")}`}>
             {[

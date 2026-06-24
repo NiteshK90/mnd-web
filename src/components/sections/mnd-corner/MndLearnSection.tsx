@@ -40,12 +40,12 @@ const MndLearnSection = forwardRef<HTMLElement>((_, ref) => {
               MND Learn
             </p>
             <p className={`font-playfair font-bold text-[22px] md:text-[36px] leading-[1.333] tracking-[-0.03em] text-mnd-charcoal ${animate("[transition-delay:200ms]")}`}>
-              Learn, grow, lead with clarity
+              Learn, grow, lead<br />with clarity.
             </p>
           </div>
           <div className={`w-[62px] h-[5px] bg-mnd-charcoal ${animate("[transition-delay:400ms]")}`} />
           <p className={`font-playfair font-normal text-[18px] md:text-[36px] leading-[1.333] tracking-[-0.03em] text-mnd-charcoal ${animate("[transition-delay:600ms]")}`}>
-            For operators, founders and teams to sharpen their skills
+            For operators, founders<br />and teams to sharpen their<br />skills.
           </p>
           <button className={`flex items-center gap-2 px-4 h-10 bg-mnd-navy text-white rounded-full w-fit cursor-pointer transition-all duration-200 hover:scale-[1.05] hover:shadow-[0_6px_20px_rgba(2,48,71,0.4)] active:scale-[0.96] active:shadow-none ${animate("[transition-delay:800ms]")}`}>
             <span className="font-inter text-xs font-semibold">Register your interest</span>
