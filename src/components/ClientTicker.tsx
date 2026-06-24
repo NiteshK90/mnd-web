@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const logos = [
+const logos: { name: string; width: number; height: number; logoClassName?: string }[] = [
   { name: "atomic", width: 60, height: 60 },
   { name: "aionios-alpha", width: 80, height: 96 },
   { name: "scaura", width: 60, height: 60 },
@@ -11,8 +11,8 @@ const logos = [
   { name: "squisshy", width: 80, height: 80 },
   { name: "silicon-society", width: 100, height: 80 },
   { name: "scrybe", width: 80, height: 80 },
-  { name: "schbang", width: 100, height: 100 },
-  { name: "quantiphi", width: 80, height: 60 },
+  { name: "schbang", width: 100, height: 100, logoClassName: "pb-[5px]" },
+  { name: "quantiphi", width: 80, height: 60, logoClassName: "pt-[15px]" },
   { name: "medinfini", width: 65, height: 65 },
   { name: "matrickz", width: 80, height: 80 },
   { name: "astronome-ai", width: 80, height: 80 },
@@ -29,15 +29,15 @@ const logos = [
 export default function ClientTicker() {
   return (
     <div className="overflow-hidden w-full">
-      <div className="flex items-center w-max animate-marquee gap-1">
-        {[...logos, ...logos].map((logo, i) => (
+      <div className="flex items-center w-max animate-marquee [animation-play-state:paused] gap-1">
+        {[...logos, ...logos].map(({ name, width, height, logoClassName }, i) => (
           <div key={i} className="flex items-center justify-center shrink-0">
             <Image
-              src={`/landing/clients/${logo.name}.png`}
-              alt={logo.name}
-              width={logo.width}
-              height={logo.height}
-              className="object-contain"
+              src={`/landing/clients/${name}.png`}
+              alt={name}
+              width={width}
+              height={height}
+              className={`object-contain ${logoClassName ?? ""}`}
             />
           </div>
         ))}
