@@ -1,0 +1,97 @@
+"use client";
+
+import { forwardRef, useRef, useEffect, useState } from "react";
+import ArrowRight from "@/components/icons/ArrowRight";
+import { ClockIcon, CalendarDotsIcon } from "@phosphor-icons/react";
+
+const MndLearnSection = forwardRef<HTMLElement>((_, ref) => {
+  const [inView, setInView] = useState(false);
+  const sectionRef = useRef<HTMLElement>(null);
+
+  const setRef = (el: HTMLElement | null) => {
+    sectionRef.current = el;
+    if (typeof ref === "function") ref(el);
+    else if (ref) (ref as { current: HTMLElement | null }).current = el;
+  };
+
+  useEffect(() => {
+    const el = sectionRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) setInView(true); },
+      { threshold: 0.3 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  const base = "transition-all duration-[1100ms] ease-out";
+  const hidden = "opacity-0 translate-y-5";
+  const visible = "opacity-100 translate-y-0";
+  const animate = (delay: string) => `${base} ${inView ? visible : hidden} ${delay}`;
+
+  return (
+    <section ref={setRef} className="min-h-screen w-full snap-start flex flex-col md:flex-row px-6 md:px-20 pt-20 md:pt-24 pb-12 md:pb-0">
+      {/* Left */}
+      <div className="flex items-center justify-start">
+        <div className="flex flex-col gap-10 md:gap-16">
+          <div className="flex flex-col gap-4">
+            <p className={`font-inter font-semibold text-[11px] tracking-[1.7px] uppercase text-mnd-charcoal ${animate("[transition-delay:0ms]")}`}>
+              MND Learn
+            </p>
+            <p className={`font-playfair font-bold text-[26px] md:text-[36px] leading-[1.333] tracking-[-0.03em] text-mnd-charcoal ${animate("[transition-delay:200ms]")}`}>
+              Learn, grow, lead<br />with clarity
+            </p>
+          </div>
+          <div className={`w-[62px] h-[5px] bg-mnd-charcoal ${animate("[transition-delay:400ms]")}`} />
+          <p className={`font-playfair font-normal text-[26px] md:text-[36px] leading-[1.333] tracking-[-0.03em] text-mnd-charcoal ${animate("[transition-delay:600ms]")}`}>
+            For operators, founders<br />and teams to sharpen<br />their skills
+          </p>
+          <button className={`flex items-center gap-2 px-4 h-10 bg-mnd-navy text-white rounded-full w-fit cursor-pointer transition-all duration-200 hover:scale-[1.05] hover:shadow-[0_6px_20px_rgba(2,48,71,0.4)] active:scale-[0.96] active:shadow-none ${animate("[transition-delay:800ms]")}`}>
+            <span className="font-inter text-xs font-semibold">Register your interest</span>
+            <ArrowRight color="white" size={32} strokeWidth={1} />
+          </button>
+        </div>
+      </div>
+
+      {/* Right */}
+      <div className={`flex-1 flex items-center justify-center px-4 md:px-8 mt-10 md:mt-0 ${animate("[transition-delay:400ms]")}`}>
+        <div className="w-full max-w-xl px-8 py-16 md:px-24 md:py-24 border-[1px] border-mnd-charcoal rounded-[56px] flex flex-col gap-8">
+          <div className="flex flex-col gap-1">
+            <p className="font-inter font-semibold text-[10px] tracking-[1.5px] uppercase text-mnd-charcoal">
+              Upcoming Events
+            </p>
+            <p className="font-playfair font-bold text-[24px] md:text-[32px] leading-[1.2] text-mnd-charcoal">
+              The AI Webinar
+            </p>
+            <p className="font-inter font-semibold text-[13px] text-mnd-charcoal mt-2">
+              Take a Quiz &amp; Register
+            </p>
+          </div>
+          <div className="w-[48px] h-[2px] bg-mnd-charcoal" />
+          <p className="font-inter font-normal text-[13px] leading-[1.5] text-mnd-charcoal max-w-[330px]">
+            When was the last time you tried an AI tool, felt genuinely good about it for more than a week, and are still using it now? For most of the founders and operators we talk to, that answer is uncomfortable.
+          </p>
+          <button className="flex items-center gap-2 px-4 h-10 bg-mnd-navy text-white rounded-full w-fit cursor-pointer transition-all duration-200 hover:scale-[1.05] hover:shadow-[0_6px_20px_rgba(2,48,71,0.4)] active:scale-[0.96] active:shadow-none">
+            <span className="font-inter text-xs font-semibold">Take the AI Quiz</span>
+            <ArrowRight color="white" size={32} strokeWidth={1} />
+          </button>
+          <div className="w-[48px] h-[2px] bg-mnd-charcoal" />
+          <div className="flex flex-col gap-2">
+            <div className="flex items-center gap-2 font-inter font-bold text-[12px] text-mnd-charcoal">
+              <ClockIcon size={28} />
+              4:00PM
+            </div>
+            <div className="flex items-center gap-2 font-inter font-bold text-[12px] text-mnd-charcoal">
+              <CalendarDotsIcon size={28} />
+              2ND JUNE, SATURDAY
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+});
+
+MndLearnSection.displayName = "MndLearnSection";
+export default MndLearnSection;

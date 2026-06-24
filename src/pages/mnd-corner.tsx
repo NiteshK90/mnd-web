@@ -5,9 +5,10 @@ import Navbar from "@/components/Navbar";
 import ScrollIndicators from "@/components/ScrollIndicators";
 import HeroSection from "@/components/sections/mnd-corner/HeroSection";
 import BudgetPlanSection from "@/components/sections/mnd-corner/BudgetPlanSection";
+import MndLearnSection from "@/components/sections/mnd-corner/MndLearnSection";
 import FooterSection from "@/components/sections/FooterSection";
 
-const TOTAL_SECTIONS = 3;
+const TOTAL_SECTIONS = 4;
 
 export default function MndCorner() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -46,9 +47,10 @@ export default function MndCorner() {
         </div>
         <HeroSection ref={(el) => { sectionRefs.current[0] = el; }} onScrollNext={() => scrollTo(1)} />
         <BudgetPlanSection ref={(el) => { sectionRefs.current[1] = el; }} />
+        <MndLearnSection ref={(el) => { sectionRefs.current[2] = el; }} />
       </div>
 
-      <FooterSection containerId="mnd-corner-container" ref={(el) => { sectionRefs.current[2] = el; }} />
+      <FooterSection containerId="mnd-corner-container" ref={(el) => { sectionRefs.current[3] = el; }} />
 
       <div className="hidden md:block">
         <ScrollIndicators
