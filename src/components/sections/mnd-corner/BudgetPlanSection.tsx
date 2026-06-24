@@ -95,10 +95,10 @@ const BudgetPlanSection = forwardRef<HTMLElement>((_, ref) => {
         </div>
       </div>
 
-      <div className={`flex-1 flex items-center justify-center px-4 md:px-12 mt-10 md:mt-0 ${animate("[transition-delay:400ms]")}`}>
+      <div className="flex-1 flex items-center justify-center px-4 md:px-12 mt-10 md:mt-0">
         <div className="w-full flex flex-col gap-6">
           {faqs.map((faq, i) => (
-            <div key={i} className="w-full rounded-[20px] bg-[#FDF8F4] px-6 py-4 shadow-[0_4px_12px_rgba(0,0,0,0.06)]">
+            <div key={i} className={`w-full rounded-[20px] bg-[#FDF8F4] px-6 py-4 shadow-[0_4px_12px_rgba(0,0,0,0.06)] ${animate(`[transition-delay:${i * 300}ms]`)}`}>
               <button
                 className="w-full flex justify-between items-center gap-4 cursor-pointer"
                 onClick={() => setOpenIndex(openIndex === i ? null : i)}
