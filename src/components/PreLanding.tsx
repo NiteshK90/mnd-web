@@ -19,7 +19,7 @@ export default function PreLanding() {
       onTransitionEnd={(e) => {
         if (e.propertyName === "background-color" && isFun) {
           document.cookie = "mnd_visited=true; path=/; max-age=31536000";
-          router.replace("/landing");
+          router.replace("/");
         }
       }}
     >

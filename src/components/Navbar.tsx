@@ -38,7 +38,7 @@ export default function Navbar({ minimal = false, showBorder = false }: NavbarPr
           <span className={`block w-5 h-[2px] bg-mnd-charcoal rounded-full transition-all duration-300 origin-center ${menuOpen ? "[transform:translateY(-7px)_rotate(-45deg)]" : ""}`} />
         </button>
 
-        <Link href="/landing">
+        <Link href="/">
           <img
             src="/landing/mnd-black-logo.png"
             alt="MND Logo"
