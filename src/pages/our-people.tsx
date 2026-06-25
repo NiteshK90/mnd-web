@@ -4,7 +4,7 @@ import { useRef, useState, useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import ScrollIndicators from "@/components/ScrollIndicators";
 import HeroSection from "@/components/sections/our-people/HeroSection";
-import WhoWeAreSection from "@/components/sections/our-people/WhoWeAreSection";
+import AudiencesSection from "@/components/sections/our-people/AudiencesSection";
 import OurValuesSection from "@/components/sections/our-people/OurValuesSection";
 import JoinUsSection from "@/components/sections/our-people/JoinUsSection";
 import FooterSection from "@/components/sections/FooterSection";
@@ -47,7 +47,7 @@ export default function OurPeople() {
           <Navbar minimal={activeIndex !== 0} showBorder={activeIndex !== 0} />
         </div>
         <HeroSection ref={(el) => { sectionRefs.current[0] = el; }} onScrollNext={() => scrollTo(1)} />
-        <WhoWeAreSection ref={(el) => { sectionRefs.current[1] = el; }} />
+        <AudiencesSection ref={(el) => { sectionRefs.current[1] = el; }} />
         <OurValuesSection ref={(el) => { sectionRefs.current[2] = el; }} />
         <JoinUsSection ref={(el) => { sectionRefs.current[3] = el; }} />
       </div>

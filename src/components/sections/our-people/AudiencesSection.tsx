@@ -1,8 +1,10 @@
 "use client";
 
 import { forwardRef, useRef, useEffect, useState } from "react";
+import Link from "next/link";
+import ArrowRight from "@/components/icons/ArrowRight";
 
-const WhoWeAreSection = forwardRef<HTMLElement>((_, ref) => {
+const AudiencesSection = forwardRef<HTMLElement>((_, ref) => {
   const [inView, setInView] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
 
@@ -34,17 +36,23 @@ const WhoWeAreSection = forwardRef<HTMLElement>((_, ref) => {
       <div className="flex items-start md:items-center justify-start w-full md:w-auto">
         <div className="flex flex-col gap-8 md:gap-16">
           <div className="flex flex-col gap-4">
-            <p className={`font-inter font-semibold text-[11px] tracking-[1.7px] uppercase text-mnd-charcoal ${animate("[transition-delay:0ms]")}`}>
-              Who We Are
-            </p>
-            <p className={`font-playfair font-bold text-[22px] md:text-[36px] leading-[1.333] tracking-[-0.03em] text-mnd-charcoal ${animate("[transition-delay:200ms]")}`}>
-              Builders, thinkers,<br />and problem solvers.
+            <p className={`font-playfair font-normal text-[22px] md:text-[36px] leading-[1.333] tracking-[-0.03em] text-mnd-charcoal ${animate("[transition-delay:200ms]")}`}>
+              Do any of these<br />resonate with you?<br />Reach out anyway.
             </p>
           </div>
           <div className={`w-[62px] h-[5px] bg-mnd-charcoal ${animate("[transition-delay:400ms]")}`} />
-          <p className={`font-playfair font-normal text-[18px] md:text-[36px] leading-[1.333] tracking-[-0.03em] text-mnd-charcoal ${animate("[transition-delay:600ms]")}`}>
-            A team that cares<br />about craft as much<br />as outcome.
+          <p className={`font-playfair font-bold italic text-[18px] md:text-[36px] leading-[1.333] tracking-[-0.03em] text-mnd-charcoal ${animate("[transition-delay:600ms]")}`}>
+            We love a new idea.
           </p>
+          <Link
+            href="https://www.linkedin.com/company/mynextdeveloper/posts"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`flex items-center gap-2 px-4 h-10 bg-mnd-navy text-white rounded-full w-fit transition-all duration-200 hover:scale-[1.05] hover:shadow-[0_6px_20px_rgba(2,48,71,0.4)] active:scale-[0.96] active:shadow-none ${animate("[transition-delay:800ms]")}`}
+          >
+            <span className="font-inter text-xs font-semibold">Let&apos;s connect</span>
+            <ArrowRight color="white" size={32} strokeWidth={1} />
+          </Link>
         </div>
       </div>
 
@@ -53,5 +61,5 @@ const WhoWeAreSection = forwardRef<HTMLElement>((_, ref) => {
   );
 });
 
-WhoWeAreSection.displayName = "WhoWeAreSection";
-export default WhoWeAreSection;
+AudiencesSection.displayName = "AudiencesSection";
+export default AudiencesSection;
