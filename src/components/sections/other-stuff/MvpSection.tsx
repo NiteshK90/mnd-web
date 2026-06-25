@@ -33,7 +33,7 @@ const MvpSection = forwardRef<HTMLElement>((_, ref) => {
   return (
     <section ref={setRef} className="min-h-screen w-full snap-start flex flex-col md:flex-row px-6 md:px-20 pt-20 md:pt-24 pb-12 md:pb-0">
       <div className="flex items-center justify-start">
-        <div className="flex flex-col gap-10 md:gap-16">
+        <div className="flex flex-col gap-6 md:gap-10">
           <div className="flex flex-col gap-4">
             <p className={`font-inter font-semibold text-[11px] tracking-[1.7px] uppercase text-mnd-charcoal ${animate("[transition-delay:0ms]")}`}>
               MVP Development
@@ -55,7 +55,7 @@ const MvpSection = forwardRef<HTMLElement>((_, ref) => {
         </div>
       </div>
       <div className={`flex-1 flex items-center justify-center px-4 md:px-8 mt-10 md:mt-0 ${animate("[transition-delay:400ms]")}`}>
-        <div className="w-full max-w-xl px-8 py-10 md:px-24 md:py-[72px] border-[1px] border-mnd-charcoal rounded-[56px] flex flex-col gap-6">
+        <div className="w-full max-w-xl px-6 py-8 md:px-16 md:py-12 border-[1px] border-mnd-charcoal rounded-[56px] flex flex-col gap-6">
           <div className="flex flex-col gap-1">
             <p className="font-inter font-semibold text-[10px] tracking-[1.5px] uppercase text-mnd-charcoal">
               Case Study
