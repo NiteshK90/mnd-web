@@ -2,10 +2,17 @@
 
 import { forwardRef, useRef, useEffect, useState } from "react";
 import ArrowRight from "@/components/icons/ArrowRight";
+import { X } from "@phosphor-icons/react";
 
 const BlogSection = forwardRef<HTMLElement>((_, ref) => {
   const [inView, setInView] = useState(false);
+  const [search, setSearch] = useState("");
   const sectionRef = useRef<HTMLElement>(null);
+
+  const allPills = ["AI", "App Development", "Cost Calculator", "Data Security", "Ethics", "Hiring", "Personal Brand", "Software Dev", "Startup", "Technology", "Latest blogs"];
+  const filteredPills = search.trim()
+    ? allPills.filter((label) => label.toLowerCase().includes(search.toLowerCase()))
+    : allPills;
 
   const setRef = (el: HTMLElement | null) => {
     sectionRef.current = el;
@@ -55,13 +62,25 @@ const BlogSection = forwardRef<HTMLElement>((_, ref) => {
 
       {/* Right */}
       <div className="flex-1 flex flex-col justify-center gap-10 px-0 md:px-12 mt-10 md:mt-0">
-        <input
-          type="text"
-          placeholder="Search articles, topics, keywords"
-          className={`w-full max-w-[1180px] h-[48px] bg-transparent border border-[#6f6f6f] rounded-full px-6 font-inter text-[15px] font-normal leading-[1.4] text-[#8a8a8a] placeholder-[#8a8a8a] outline-none ${animate("[transition-delay:200ms]")}`}
-        />
+        <div className={`relative w-full max-w-[1180px] ${animate("[transition-delay:200ms]")}`}>
+          <input
+            type="text"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            placeholder="Search articles, topics, keywords"
+            className="w-full h-[48px] bg-transparent border border-[#6f6f6f] rounded-full px-6 pr-12 font-inter text-[15px] font-normal leading-[1.4] text-[#8a8a8a] placeholder-[#8a8a8a] outline-none"
+          />
+          {search && (
+            <button
+              onClick={() => setSearch("")}
+              className="absolute right-4 top-1/2 -translate-y-1/2 text-[#8a8a8a] hover:text-[#2f2f2f] transition-colors duration-150"
+            >
+              <X size={18} weight="bold" />
+            </button>
+          )}
+        </div>
         <div className={`grid grid-cols-3 md:grid-cols-6 gap-x-2 md:gap-x-3 gap-y-3 md:gap-y-10 w-full ${animate("[transition-delay:400ms]")}`}>
-          {["AI", "App Development", "Cost Calculator", "Data Security", "Ethics", "Hiring", "Personal Brand", "Software Dev", "Startup", "Technology", "Latest blogs"].map((label) => (
+          {filteredPills.map((label) => (
             <button
               key={label}
               className="flex items-center justify-center min-w-0 md:min-w-[120px] h-[28px] px-3 md:px-4 bg-[#f3ede4] rounded-full font-inter text-[7px] font-medium leading-none tracking-[0.18em] text-[#2f2f2f] uppercase whitespace-nowrap cursor-pointer overflow-hidden transition-all duration-200 hover:scale-[1.05] hover:shadow-[0_6px_20px_rgba(2,48,71,0.4)] active:scale-[0.96] active:shadow-none"
