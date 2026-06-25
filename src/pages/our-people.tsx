@@ -6,7 +6,7 @@ import ScrollIndicators from "@/components/ScrollIndicators";
 import HeroSection from "@/components/sections/our-people/HeroSection";
 import AudiencesSection from "@/components/sections/our-people/AudiencesSection";
 import HiringSection from "@/components/sections/our-people/HiringSection";
-import JoinUsSection from "@/components/sections/our-people/JoinUsSection";
+import TeamSection from "@/components/sections/our-people/TeamSection";
 import FooterSection from "@/components/sections/FooterSection";
 
 const TOTAL_SECTIONS = 5;
@@ -49,7 +49,7 @@ export default function OurPeople() {
         <HeroSection ref={(el) => { sectionRefs.current[0] = el; }} onScrollNext={() => scrollTo(1)} />
         <AudiencesSection ref={(el) => { sectionRefs.current[1] = el; }} />
         <HiringSection ref={(el) => { sectionRefs.current[2] = el; }} />
-        <JoinUsSection ref={(el) => { sectionRefs.current[3] = el; }} />
+        <TeamSection ref={(el) => { sectionRefs.current[3] = el; }} />
       </div>
 
       <FooterSection containerId="our-people-container" ref={(el) => { sectionRefs.current[4] = el; }} />
