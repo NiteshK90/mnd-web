@@ -68,7 +68,7 @@ const BlogSection = forwardRef<HTMLElement>((_, ref) => {
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             placeholder="Search articles, topics, keywords"
-            className="w-full h-[48px] bg-transparent border border-[#6f6f6f] rounded-full px-6 pr-12 font-inter text-[15px] font-normal leading-[1.4] text-[#8a8a8a] placeholder-[#8a8a8a] outline-none"
+            className="w-full h-[48px] bg-transparent border border-[#6f6f6f] rounded-full px-6 pr-12 font-inter text-[15px] font-normal leading-[1.4] text-mnd-charcoal placeholder-[#8a8a8a] outline-none"
           />
           {search && (
             <button
