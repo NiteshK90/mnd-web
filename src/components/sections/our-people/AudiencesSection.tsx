@@ -3,6 +3,115 @@
 import { forwardRef, useRef, useEffect, useState } from "react";
 import Link from "next/link";
 import ArrowRight from "@/components/icons/ArrowRight";
+import { ArrowRight as PhArrowRight, MinusIcon, PlusIcon } from "@phosphor-icons/react";
+
+const ArrowIcon = () => (
+  <PhArrowRight size={20} weight="regular" className="shrink-0 transition-transform group-hover/cta:translate-x-1" />
+);
+
+interface AccordionCardProps {
+  header: string;
+  question: string;
+  ctas: string[];
+  body: string[];
+}
+
+const cards: AccordionCardProps[] = [
+  {
+    header: "Engineer",
+    question: "Do you like building things that\nactually work?",
+    ctas: ["Check out our gigs", "Apply to our\nEngineering pool"],
+    body: [
+      "Are you someone who genuinely cares about how products are made? Not just shipping, but the craft.",
+      "And looking for gigs where you can flex that stellar on your terms, at your time?",
+    ],
+  },
+  {
+    header: "Founders",
+    question: "Building something awesome and need the right team?",
+    ctas: ["Partner with Us"],
+    body: [
+      "Are you building something ambitious and need a team that can actually keep up? Not just execute tickets, but think alongside you.",
+      "And looking for people who care about the product as much as you do, even after launch day?",
+    ],
+  },
+  {
+    header: "Investors",
+    question: "Backing ideas that need to get built fast?",
+    ctas: ["Support your portfolio"],
+    body: [
+      "Backing founders with momentum but need trusted builders around them? The kind that move fast without creating future messes.",
+      "And want technical partners who understand that speed only matters if the foundation survives scale?",
+    ],
+  },
+  {
+    header: "Client Partners",
+    question: "Know great builders or founders?",
+    ctas: ["Become an MND Patron"],
+    body: [
+      "Know someone brilliant who deserves the right people around them? Someone building thoughtfully and aiming high.",
+      "And want to connect them with a team that genuinely cares about doing the work properly?",
+    ],
+  },
+];
+
+const AccordionCard = ({ header, question, ctas, body }: AccordionCardProps) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <div
+      className="w-full bg-[#f5f2ed] border border-[#e2ddd6] rounded-2xl px-8 py-4 cursor-pointer flex items-start justify-between gap-8 transition-all duration-[400ms] ease-in-out hover:shadow-card hover:scale-[1.01]"
+      onClick={() => setIsOpen(!isOpen)}
+    >
+      {/* Details section */}
+      <div className="flex flex-1 items-end justify-between mt-3 gap-8">
+        <div className="flex flex-col gap-2">
+          {/* Badge */}
+          <div>
+            <span className="font-inter text-[10px] tracking-widest font-medium uppercase bg-[#ebe7e0] text-mnd-charcoal px-3 py-1 rounded-full w-fit inline-flex">
+              {header}
+            </span>
+          </div>
+          <h2 className={`font-playfair text-[22px] text-mnd-charcoal font-semibold leading-tight ${question.includes('\n') ? "" : "whitespace-nowrap"}`}>
+            {question.split('\n').map((line, i) => (
+              <span key={i}>{i > 0 && <br />}{line}</span>
+            ))}
+          </h2>
+
+          {/* Expandable content */}
+          <div className={`grid transition-[grid-template-rows,opacity] duration-[400ms] ease-in-out ${isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"}`}>
+            <div className="overflow-hidden">
+              <hr className="border-[#ccc8c2] mt-6 mb-5 w-3/5" />
+              <div className="font-inter text-mnd-charcoal text-[12px] leading-relaxed max-w-sm space-y-4">
+                {body.map((p, i) => <p key={i}>{p}</p>)}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* CTAs */}
+        <div className="flex flex-col gap-4 justify-between">
+          {ctas.map((cta, i) => (
+            <a key={i} href="#" className="flex flex-1 items-center justify-between gap-3 group/cta" onClick={e => e.stopPropagation()}>
+              <span className="font-inter text-[10px] tracking-widest font-medium uppercase text-mnd-charcoal">
+                {cta.split('\n').map((line, j) => (
+                  <span key={j}>{j > 0 && <br />}{line}</span>
+                ))}
+              </span>
+              <ArrowIcon />
+            </a>
+          ))}
+        </div>
+      </div>
+
+      {/* Plus / minus icon — mt aligns with question below the badge */}
+      {isOpen
+        ? <MinusIcon size={36} weight="thin" className="text-mnd-charcoal shrink-0 mt-[20px]" />
+        : <PlusIcon size={36} weight="thin" className="text-mnd-charcoal shrink-0 mt-[20px]" />
+      }
+    </div>
+  );
+};
 
 const AudiencesSection = forwardRef<HTMLElement>((_, ref) => {
   const [inView, setInView] = useState(false);
@@ -56,6 +165,14 @@ const AudiencesSection = forwardRef<HTMLElement>((_, ref) => {
         </div>
       </div>
 
+      {/* Right — Accordion */}
+      <div className={`flex flex-1 items-center justify-center mt-12 md:mt-0 md:pl-16 ${animate("[transition-delay:400ms]")}`}>
+        <div className="w-full flex flex-col gap-3">
+          {cards.map((card, i) => (
+            <AccordionCard key={i} {...card} />
+          ))}
+        </div>
+      </div>
 
     </section>
   );
