@@ -5,7 +5,7 @@ import Navbar from "@/components/Navbar";
 import ScrollIndicators from "@/components/ScrollIndicators";
 import HeroSection from "@/components/sections/mnd-corner/HeroSection";
 import BlogSection from "@/components/sections/mnd-corner/BlogSection";
-import BudgetPlanSection from "@/components/sections/mnd-corner/BudgetPlanSection";
+import CostCalculatorSection from "@/components/sections/mnd-corner/CostCalculatorSection";
 import MndLearnSection from "@/components/sections/mnd-corner/MndLearnSection";
 import FooterSection from "@/components/sections/FooterSection";
 
@@ -48,7 +48,7 @@ export default function MndCorner() {
         </div>
         <HeroSection ref={(el) => { sectionRefs.current[0] = el; }} onScrollNext={() => scrollTo(1)} />
         <BlogSection ref={(el) => { sectionRefs.current[1] = el; }} />
-        <BudgetPlanSection ref={(el) => { sectionRefs.current[2] = el; }} />
+        <CostCalculatorSection ref={(el) => { sectionRefs.current[2] = el; }} />
         <MndLearnSection ref={(el) => { sectionRefs.current[3] = el; }} />
       </div>
 

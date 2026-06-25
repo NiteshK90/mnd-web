@@ -34,7 +34,7 @@ const MndLearnSection = forwardRef<HTMLElement>((_, ref) => {
     <section ref={setRef} className="min-h-screen w-full snap-start flex flex-col md:flex-row px-6 md:px-20 pt-20 md:pt-24 pb-12">
       {/* Left */}
       <div className="flex items-start md:items-center justify-start w-full md:w-auto">
-        <div className="flex flex-col gap-8 md:gap-16">
+        <div className="flex flex-col gap-6 md:gap-10">
           <div className="flex flex-col gap-4">
             <p className={`font-inter font-semibold text-[11px] tracking-[1.7px] uppercase text-mnd-charcoal ${animate("[transition-delay:0ms]")}`}>
               MND Learn
@@ -48,7 +48,7 @@ const MndLearnSection = forwardRef<HTMLElement>((_, ref) => {
             For operators, founders<br />and teams to sharpen their<br />skills.
           </p>
           <button className={`flex items-center gap-2 px-4 h-10 bg-mnd-navy text-white rounded-full w-fit cursor-pointer transition-all duration-200 hover:scale-[1.05] hover:shadow-[0_6px_20px_rgba(2,48,71,0.4)] active:scale-[0.96] active:shadow-none ${animate("[transition-delay:800ms]")}`}>
-            <span className="font-inter text-xs font-semibold">Register your interest</span>
+            <span className="font-inter text-xs font-semibold">Take a Quiz & Register</span>
             <ArrowRight color="white" size={32} strokeWidth={1} />
           </button>
         </div>
@@ -56,7 +56,7 @@ const MndLearnSection = forwardRef<HTMLElement>((_, ref) => {
 
       {/* Right */}
       <div className={`flex-1 flex items-center justify-center px-0 md:px-8 mt-10 md:mt-0 ${animate("[transition-delay:400ms]")}`}>
-        <div className="w-full max-w-xl px-6 py-8 md:px-24 md:py-24 border-[1px] border-mnd-charcoal rounded-[32px] md:rounded-[56px] flex flex-col gap-6 md:gap-8">
+        <div className="w-full max-w-xl px-6 py-8 md:px-16 md:py-12 border-[1px] border-mnd-charcoal rounded-[32px] md:rounded-[56px] flex flex-col gap-6 md:gap-8">
           <div className="flex flex-col gap-1">
             <p className="font-inter font-semibold text-[10px] tracking-[1.5px] uppercase text-mnd-charcoal">
               Upcoming Events

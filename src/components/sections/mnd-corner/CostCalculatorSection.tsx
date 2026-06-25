@@ -31,7 +31,7 @@ const faqs = [
   },
 ];
 
-const BudgetPlanSection = forwardRef<HTMLElement>((_, ref) => {
+const CostCalculatorSection = forwardRef<HTMLElement>((_, ref) => {
   const [inView, setInView] = useState(false);
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const sectionRef = useRef<HTMLElement>(null);
@@ -62,7 +62,7 @@ const BudgetPlanSection = forwardRef<HTMLElement>((_, ref) => {
     <section ref={setRef} className="min-h-screen w-full snap-start flex flex-col md:flex-row px-6 md:px-20 pt-20 md:pt-24 pb-12">
       {/* Left */}
       <div className="flex items-start md:items-center justify-start w-full md:w-auto">
-        <div className="flex flex-col gap-8 md:gap-16">
+        <div className="flex flex-col gap-6 md:gap-10">
           <div className="flex flex-col gap-4">
             <p className={`font-inter font-semibold text-[11px] tracking-[1.7px] uppercase text-mnd-charcoal ${animate("[transition-delay:0ms]")}`}>
               Cost Calculator
@@ -126,5 +126,5 @@ const BudgetPlanSection = forwardRef<HTMLElement>((_, ref) => {
   );
 });
 
-BudgetPlanSection.displayName = "BudgetPlanSection";
-export default BudgetPlanSection;
+CostCalculatorSection.displayName = "CostCalculatorSection";
+export default CostCalculatorSection;

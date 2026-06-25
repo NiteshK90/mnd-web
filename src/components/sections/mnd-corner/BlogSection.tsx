@@ -40,7 +40,7 @@ const BlogSection = forwardRef<HTMLElement>((_, ref) => {
     <section ref={setRef} className="min-h-screen w-full snap-start flex flex-col md:flex-row gap-8 md:gap-16 px-6 md:px-20 pt-20 md:pt-24 pb-12">
       {/* Left */}
       <div className="flex items-start md:items-center justify-start w-full md:w-auto">
-        <div className="flex flex-col gap-8 md:gap-16">
+        <div className="flex flex-col gap-6 md:gap-10">
           <div className="flex flex-col gap-4">
             <p className={`font-inter font-semibold text-[11px] tracking-[1.7px] uppercase text-mnd-charcoal ${animate("[transition-delay:0ms]")}`}>
               Blog
@@ -62,7 +62,7 @@ const BlogSection = forwardRef<HTMLElement>((_, ref) => {
 
       {/* Right */}
       <div className="flex-1 flex flex-col justify-center gap-10 px-0 md:px-12 mt-10 md:mt-0">
-        <div className={`relative w-full max-w-[1180px] ${animate("[transition-delay:200ms]")}`}>
+        <div className={`relative w-full max-w-[1180px] mt-6 md:mt-10 ${animate("[transition-delay:200ms]")}`}>
           <input
             type="text"
             value={search}
