@@ -48,12 +48,7 @@ const WhoWeAreSection = forwardRef<HTMLElement>((_, ref) => {
         </div>
       </div>
 
-      {/* Right */}
-      <div className={`flex-1 flex items-center justify-center px-0 md:px-12 mt-10 md:mt-0 ${animate("[transition-delay:400ms]")}`}>
-        <p className="font-inter font-normal text-[15px] md:text-[18px] leading-[1.8] text-mnd-charcoal max-w-lg">
-          We are a collective of developers, designers, and strategists who believe that great software is built by great people. Every person on this team brings curiosity, ownership, and a genuine commitment to the work we do together.
-        </p>
-      </div>
+
     </section>
   );
 });

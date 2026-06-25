@@ -55,17 +55,7 @@ const OurValuesSection = forwardRef<HTMLElement>((_, ref) => {
         </div>
       </div>
 
-      {/* Right */}
-      <div className={`flex-1 flex items-center justify-center px-0 md:px-12 mt-10 md:mt-0`}>
-        <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-6">
-          {values.map((v, i) => (
-            <div key={i} className={`rounded-[20px] bg-[#FDF8F4] px-6 py-6 shadow-[0_4px_12px_rgba(0,0,0,0.06)] flex flex-col gap-3 ${animate(`[transition-delay:${i * 200}ms]`)}`}>
-              <p className="font-playfair font-bold text-[18px] md:text-[22px] text-mnd-charcoal">{v.title}</p>
-              <p className="font-inter font-normal text-[13px] leading-[1.6] text-mnd-charcoal">{v.body}</p>
-            </div>
-          ))}
-        </div>
-      </div>
+
     </section>
   );
 });

@@ -53,25 +53,7 @@ const JoinUsSection = forwardRef<HTMLElement>((_, ref) => {
         </div>
       </div>
 
-      {/* Right */}
-      <div className={`flex-1 flex items-center justify-center px-0 md:px-12 mt-10 md:mt-0 ${animate("[transition-delay:400ms]")}`}>
-        <div className="w-full max-w-lg px-6 py-10 md:px-12 md:py-14 border border-mnd-charcoal rounded-[32px] md:rounded-[48px] flex flex-col gap-6">
-          <p className="font-inter font-semibold text-[10px] tracking-[1.5px] uppercase text-mnd-charcoal">
-            Open Roles
-          </p>
-          <p className="font-playfair font-bold text-[22px] md:text-[28px] leading-[1.2] text-mnd-charcoal">
-            No open roles right now
-          </p>
-          <div className="w-[48px] h-[2px] bg-mnd-charcoal" />
-          <p className="font-inter font-normal text-[13px] leading-[1.6] text-mnd-charcoal">
-            We don't always have a formal opening, but we are always open to meeting great people. Send us a message and let's start a conversation.
-          </p>
-          <button className="flex items-center gap-2 px-4 h-10 bg-mnd-navy text-white rounded-full w-fit cursor-pointer transition-all duration-200 hover:scale-[1.05] hover:shadow-[0_6px_20px_rgba(2,48,71,0.4)] active:scale-[0.96] active:shadow-none">
-            <span className="font-inter text-xs font-semibold">Say hello</span>
-            <ArrowRight color="white" size={32} strokeWidth={1} />
-          </button>
-        </div>
-      </div>
+
     </section>
   );
 });
