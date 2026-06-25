@@ -9,16 +9,19 @@ const ArrowIcon = () => (
   <PhArrowRight size={20} weight="regular" className="shrink-0 transition-transform group-hover/cta:translate-x-1" />
 );
 
-interface AccordionCardProps {
+interface CardData {
   header: string;
   question: string;
   ctas: string[];
   body: string[];
+}
+
+interface AccordionCardProps extends CardData {
   isOpen: boolean;
   onToggle: () => void;
 }
 
-const cards: AccordionCardProps[] = [
+const cards: CardData[] = [
   {
     header: "Engineer",
     question: "Do you like building things that\nactually work?",
@@ -60,7 +63,7 @@ const cards: AccordionCardProps[] = [
 const AccordionCard = ({ header, question, ctas, body, isOpen, onToggle }: AccordionCardProps) => {
   return (
     <div
-      className="w-full bg-[#f5f2ed] border border-[#e2ddd6] rounded-2xl px-4 md:px-8 py-4 cursor-pointer flex items-start justify-between gap-4 md:gap-8 transition-all duration-[400ms] ease-in-out hover:shadow-card hover:scale-[1.01]"
+      className="w-full bg-transparent border border-[#e2ddd6] rounded-[12px] px-4 md:px-8 py-4 cursor-pointer flex items-start justify-between gap-4 md:gap-8 shadow-[0_1px_8px_rgba(0,0,0,0.04)] transition-all duration-[400ms] ease-in-out hover:scale-[1.01]"
       onClick={onToggle}
     >
       {/* Details section */}

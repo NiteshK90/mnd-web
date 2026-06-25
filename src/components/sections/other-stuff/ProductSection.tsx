@@ -57,7 +57,7 @@ const ProductSection = forwardRef<HTMLElement>((_, ref) => {
           { title: "Digital Marketing", desc: "Creative strategies that get you seen and chosen" },
           { title: "Quick MVP Development", desc: "The fastest way from idea to product" },
         ].map(({ title, desc }) => (
-          <div key={title} className="rounded-[20px] border border-mnd-charcoal bg-mnd-linen px-4 py-4">
+          <div key={title} className="rounded-[20px] border border-mnd-charcoal bg-mnd-beige px-4 py-4">
             <p className="font-playfair font-bold text-[11px] leading-[1.35] text-mnd-charcoal">{title}</p>
             <p className="mt-1 font-inter font-normal text-[9px] leading-[1.45] text-mnd-charcoal">{desc}</p>
           </div>
@@ -74,12 +74,12 @@ const ProductSection = forwardRef<HTMLElement>((_, ref) => {
           </div>
 
           {/* Outer Ring Dots (between cards, clockwise from top-right) */}
-          <div className="absolute left-[465px] top-[69px] h-[10px] w-[10px] rounded-full border border-[#707070] bg-mnd-linen" />
-          <div className="absolute left-[610px] top-[320px] h-[10px] w-[10px] rounded-full border border-[#707070] bg-mnd-linen" />
-          <div className="absolute left-[465px] top-[571px] h-[10px] w-[10px] rounded-full border border-[#707070] bg-mnd-linen" />
-          <div className="absolute left-[175px] top-[571px] h-[10px] w-[10px] rounded-full border border-[#707070] bg-mnd-linen" />
-          <div className="absolute left-[30px] top-[320px] h-[10px] w-[10px] rounded-full border border-[#707070] bg-mnd-linen" />
-          <div className="absolute left-[175px] top-[69px] h-[10px] w-[10px] rounded-full border border-[#707070] bg-mnd-linen" />
+          <div className="absolute left-[465px] top-[69px] h-[10px] w-[10px] rounded-full border border-[#707070] bg-mnd-beige" />
+          <div className="absolute left-[610px] top-[320px] h-[10px] w-[10px] rounded-full border border-[#707070] bg-mnd-beige" />
+          <div className="absolute left-[465px] top-[571px] h-[10px] w-[10px] rounded-full border border-[#707070] bg-mnd-beige" />
+          <div className="absolute left-[175px] top-[571px] h-[10px] w-[10px] rounded-full border border-[#707070] bg-mnd-beige" />
+          <div className="absolute left-[30px] top-[320px] h-[10px] w-[10px] rounded-full border border-[#707070] bg-mnd-beige" />
+          <div className="absolute left-[175px] top-[69px] h-[10px] w-[10px] rounded-full border border-[#707070] bg-mnd-beige" />
 
           {/* Middle Ring */}
           <div className="absolute left-1/2 top-1/2 h-[400px] w-[400px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#707070]" />
@@ -95,37 +95,37 @@ const ProductSection = forwardRef<HTMLElement>((_, ref) => {
           </div>
 
           {/* Top */}
-          <div className="absolute left-1/2 top-[13px] w-[195px] -translate-x-1/2 rounded-[26px] border border-[#707070] bg-mnd-linen px-5 py-3">
+          <div className="absolute left-1/2 top-[13px] w-[195px] -translate-x-1/2 rounded-[26px] border border-[#707070] bg-mnd-beige px-5 py-3">
             <p className="font-playfair font-bold text-[11px] leading-[1.35]">AI Services & Integration</p>
             <p className="mt-1 font-inter font-normal text-[9px] leading-[1.45]">The intelligent layer that works for you</p>
           </div>
 
           {/* Right Top */}
-          <div className="absolute right-0 top-[179px] w-[195px] rounded-[26px] border border-[#707070] bg-mnd-linen px-5 py-3">
+          <div className="absolute right-0 top-[179px] w-[195px] rounded-[26px] border border-[#707070] bg-mnd-beige px-5 py-3">
             <p className="font-playfair font-bold text-[11px] leading-[1.35]">Business Process Outsourcing</p>
             <p className="mt-1 font-inter font-normal text-[9px] leading-[1.45]">People that keep your business moving</p>
           </div>
 
           {/* Right Bottom */}
-          <div className="absolute bottom-[166px] right-0 w-[195px] rounded-[26px] border border-[#707070] bg-mnd-linen px-5 py-3">
+          <div className="absolute bottom-[166px] right-0 w-[195px] rounded-[26px] border border-[#707070] bg-mnd-beige px-5 py-3">
             <p className="font-playfair font-bold text-[11px] leading-[1.35]">Employee on Record</p>
             <p className="mt-1 font-inter font-normal text-[9px] leading-[1.45]">Keeping people you need for when you need them</p>
           </div>
 
           {/* Bottom */}
-          <div className="absolute bottom-[13px] left-1/2 w-[195px] -translate-x-1/2 rounded-[26px] border border-[#707070] bg-mnd-linen px-5 py-3">
+          <div className="absolute bottom-[13px] left-1/2 w-[195px] -translate-x-1/2 rounded-[26px] border border-[#707070] bg-mnd-beige px-5 py-3">
             <p className="font-playfair font-bold text-[11px] leading-[1.35]">Offshore Accounting</p>
             <p className="mt-1 font-inter font-normal text-[9px] leading-[1.45]">Keeping the number clean, compliant and affordable</p>
           </div>
 
           {/* Left Bottom */}
-          <div className="absolute bottom-[166px] left-0 w-[195px] rounded-[26px] border border-[#707070] bg-mnd-linen px-5 py-3">
+          <div className="absolute bottom-[166px] left-0 w-[195px] rounded-[26px] border border-[#707070] bg-mnd-beige px-5 py-3">
             <p className="font-playfair font-bold text-[11px] leading-[1.35]">Digital Marketing</p>
             <p className="mt-1 font-inter font-normal text-[9px] leading-[1.45]">Creative strategies that get you seen and chosen</p>
           </div>
 
           {/* Left Top */}
-          <div className="absolute left-0 top-[179px] w-[195px] rounded-[26px] border border-[#707070] bg-mnd-linen px-5 py-3">
+          <div className="absolute left-0 top-[179px] w-[195px] rounded-[26px] border border-[#707070] bg-mnd-beige px-5 py-3">
             <p className="font-playfair font-bold text-[11px] leading-[1.35]">Quick MVP Development</p>
             <p className="mt-1 font-inter font-normal text-[9px] leading-[1.45]">The fastest way from idea to product</p>
           </div>

@@ -43,7 +43,7 @@ export default function OtherStuff() {
 
   return (
     <div id="other-stuff-container" ref={containerRef} className="relative h-screen overflow-y-scroll snap-y snap-mandatory">
-      <div className="relative bg-mnd-linen">
+      <div className="relative bg-mnd-beige">
         <div className="sticky top-3 md:top-8 z-50 flex justify-center">
           <Navbar minimal={activeIndex !== 0} showBorder={activeIndex !== 0} />
         </div>

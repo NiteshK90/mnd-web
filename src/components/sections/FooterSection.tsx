@@ -32,7 +32,7 @@ const FooterSection = forwardRef<HTMLElement, { containerId?: string }>(({ conta
   return (
     <footer
       ref={setRef}
-      className="bg-mnd-linen bg-[url('/landing/footer.png')] bg-cover bg-center h-screen w-full snap-start flex flex-col justify-between"
+      className="bg-mnd-beige bg-[url('/landing/footer.png')] bg-cover bg-center h-screen w-full snap-start flex flex-col justify-between"
     >
       <div className="flex flex-col items-center justify-center gap-6 md:gap-8 px-6 md:px-20">
         <div className={`flex justify-center pt-5 ${animate("[transition-delay:0ms]")}`}>

@@ -14,6 +14,7 @@ export default {
         "mnd-parchment": "#F7F2ED",
         "mnd-yellow": "#fdb614",
         "mnd-button": "#063A5A",
+        "mnd-beige": "#fcf6f0",
       },
       fontFamily: {
 playfair: ["var(--font-playfair)", "serif"],
