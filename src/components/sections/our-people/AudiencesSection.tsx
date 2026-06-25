@@ -60,11 +60,11 @@ const cards: AccordionCardProps[] = [
 const AccordionCard = ({ header, question, ctas, body, isOpen, onToggle }: AccordionCardProps) => {
   return (
     <div
-      className="w-full bg-[#f5f2ed] border border-[#e2ddd6] rounded-2xl px-8 py-4 cursor-pointer flex items-start justify-between gap-8 transition-all duration-[400ms] ease-in-out hover:shadow-card hover:scale-[1.01]"
+      className="w-full bg-[#f5f2ed] border border-[#e2ddd6] rounded-2xl px-4 md:px-8 py-4 cursor-pointer flex items-start justify-between gap-4 md:gap-8 transition-all duration-[400ms] ease-in-out hover:shadow-card hover:scale-[1.01]"
       onClick={onToggle}
     >
       {/* Details section */}
-      <div className="flex flex-1 items-end justify-between mt-3 gap-8">
+      <div className="flex flex-1 items-end justify-between mt-3 gap-4 md:gap-8">
         <div className="flex flex-col gap-2">
           {/* Badge */}
           <div>
@@ -72,7 +72,7 @@ const AccordionCard = ({ header, question, ctas, body, isOpen, onToggle }: Accor
               {header}
             </span>
           </div>
-          <h2 className={`font-playfair text-[22px] text-mnd-charcoal font-semibold leading-tight ${question.includes('\n') ? "" : "whitespace-nowrap"}`}>
+          <h2 className="font-playfair text-[18px] md:text-[22px] text-mnd-charcoal font-semibold leading-tight">
             {question.split('\n').map((line, i) => (
               <span key={i}>{i > 0 && <br />}{line}</span>
             ))}
@@ -106,8 +106,8 @@ const AccordionCard = ({ header, question, ctas, body, isOpen, onToggle }: Accor
 
       {/* Plus / minus icon — mt aligns with question below the badge */}
       {isOpen
-        ? <MinusIcon size={36} weight="thin" className="text-mnd-charcoal shrink-0 mt-[20px]" />
-        : <PlusIcon size={36} weight="thin" className="text-mnd-charcoal shrink-0 mt-[20px]" />
+        ? <MinusIcon size={24} weight="thin" className="text-mnd-charcoal shrink-0 mt-[20px]" />
+        : <PlusIcon size={24} weight="thin" className="text-mnd-charcoal shrink-0 mt-[20px]" />
       }
     </div>
   );

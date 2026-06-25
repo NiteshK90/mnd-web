@@ -50,8 +50,8 @@ const HiringSection = forwardRef<HTMLElement>((_, ref) => {
         ].map((job, i) => (
           <div key={i} className={`group flex items-center justify-between gap-4 border-b border-mnd-charcoal/20 py-5 px-2 cursor-pointer ${animate(`[transition-delay:${800 + i * 100}ms]`)}`}>
             <div className="flex flex-1 items-center justify-between">
-              <span className="font-playfair text-[22px] font-semibold text-mnd-charcoal">{job.title}</span>
-              <span className="font-inter text-[12px] font-medium text-mnd-charcoal/60">{job.subtext}</span>
+              <span className="font-playfair text-[16px] md:text-[22px] font-semibold text-mnd-charcoal">{job.title}</span>
+              <span className="font-inter text-[10px] md:text-[12px] font-medium text-mnd-charcoal/60 hidden sm:block">{job.subtext}</span>
             </div>
             <div className="transition-transform duration-[250ms] ease-in-out group-hover:translate-x-2">
               <ArrowRight size={24} weight="bold" className="text-mnd-charcoal" />
