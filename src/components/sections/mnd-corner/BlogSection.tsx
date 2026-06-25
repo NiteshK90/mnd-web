@@ -62,7 +62,7 @@ const BlogSection = forwardRef<HTMLElement>((_, ref) => {
 
       {/* Right */}
       <div className="flex-1 flex flex-col justify-center gap-10 px-0 md:px-12 mt-10 md:mt-0">
-        <div className={`relative w-full max-w-[1180px] mt-6 md:mt-10 ${animate("[transition-delay:200ms]")}`}>
+        <div className={`relative w-full max-w-[1180px] mt-4 ${animate("[transition-delay:200ms]")}`}>
           <input
             type="text"
             value={search}
