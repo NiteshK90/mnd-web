@@ -12,7 +12,7 @@ const dot = {
   right: 225,
   top: 40,
   cardLeft: -100,
-  cardTop: -200,
+  cardTop: -150,
   quote: "Hey guess what?",
   body: "This could be you!",
 };

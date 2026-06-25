@@ -19,6 +19,8 @@ const TeamSection = forwardRef<HTMLElement>((_, ref) => {
   // Desktop carousel state
   const [order, setOrder] = useState([0, 1, 2, 3]);
   const [isAnimating, setIsAnimating] = useState(false);
+  const [showInfo, setShowInfo] = useState(true);
+  const infoTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const outerRefs = useRef<Map<number, HTMLDivElement>>(new Map());
 
   // Mobile scroll state
@@ -74,6 +76,8 @@ const TeamSection = forwardRef<HTMLElement>((_, ref) => {
   const advance = () => {
     if (isAnimating) return;
     setIsAnimating(true);
+    setShowInfo(false);
+    if (infoTimerRef.current) clearTimeout(infoTimerRef.current);
     const firstKey = order[0];
     const firstOuter = outerRefs.current.get(firstKey);
     const secondOuter = outerRefs.current.get(order[1]);
@@ -98,6 +102,8 @@ const TeamSection = forwardRef<HTMLElement>((_, ref) => {
       });
       setOrder((prev) => [...prev.slice(1), prev[0]]);
       setIsAnimating(false);
+      // Show info after scale animation completes (380ms after slide ends)
+      infoTimerRef.current = setTimeout(() => setShowInfo(true), 400);
       requestAnimationFrame(() => {
         requestAnimationFrame(() => {
           const prevOuter = outerRefs.current.get(firstKey);
@@ -197,7 +203,24 @@ const TeamSection = forwardRef<HTMLElement>((_, ref) => {
 
               {isActive && (
                 <div className="absolute top-[-195px] left-[calc(100%+24px)] w-[200px] flex flex-col gap-3 z-10">
-                  <InfoBlock member={desktopActiveMember} />
+                  {[
+                    <p key="name" className="font-playfair text-[22px] font-semibold text-mnd-charcoal leading-tight">{desktopActiveMember.name}</p>,
+                    <p key="role" className="font-inter text-[11px] tracking-[0.15em] uppercase text-mnd-charcoal">{desktopActiveMember.role}</p>,
+                    <a key="linkedin" href={desktopActiveMember.linkedin} className="hover:opacity-60 transition-opacity w-fit">
+                      <div className="w-8 h-8 rounded-full overflow-hidden flex items-center justify-center">
+                        <LinkedinLogoIcon size={128} weight="fill" color="black" />
+                      </div>
+                    </a>,
+                    <p key="desc" className="font-inter text-[11px] leading-relaxed text-mnd-charcoal">Short description about this person and what they bring to the team.</p>,
+                  ].map((item, i) => (
+                    <div
+                      key={i}
+                      className={`transition-all duration-300 ${showInfo ? "opacity-100 translate-x-0" : "opacity-0 translate-x-5"}`}
+                      style={{ transitionDelay: showInfo ? `${i * 80}ms` : "0ms" }}
+                    >
+                      {item}
+                    </div>
+                  ))}
                 </div>
               )}
             </div>
