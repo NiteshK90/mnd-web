@@ -1,0 +1,69 @@
+"use client";
+
+import { forwardRef, useState } from "react";
+import ArrowRight from "@/components/icons/ArrowRight";
+import { QuoteCard } from "@/components/sections/mnd-way/QuoteCard";
+
+interface HeroSectionProps {
+  onScrollNext?: () => void;
+}
+
+const MndCornerHeroSection = forwardRef<HTMLElement, HeroSectionProps>(({ onScrollNext }, ref) => {
+  const [hovered, setHovered] = useState(false);
+
+  return (
+    <section
+      ref={ref}
+      className="h-screen w-full snap-start bg-[url('/mnd-corner/hero.png')] bg-cover bg-center py-6 px-6 md:px-20 flex flex-col"
+    >
+      <div className="flex-1 flex items-center gap-6 relative">
+        <div className="flex flex-col justify-center">
+          <div
+            className="animate-hero-fly-in font-playfair text-[clamp(3rem,6.5vw,4.5rem)] font-semibold tracking-[0.1] w-full md:w-[500px] leading-[1.2] text-white"
+            style={{ animationDelay: "500ms" }}
+          >
+            Welcome to
+            <br />our little
+            <br />corner
+          </div>
+          <div className="mt-6 flex items-center gap-6 animate-slide-up" style={{ animationDelay: "900ms" }}>
+            <button
+              onClick={onScrollNext}
+              className="flex items-center gap-2 px-4 h-10 bg-mnd-navy text-white rounded-full cursor-pointer transition-all duration-200 hover:scale-[1.05] hover:shadow-[0_6px_20px_rgba(2,48,71,0.4)] active:scale-[0.96] active:shadow-none"
+            >
+              <div className="font-inter text-xs font-semibold">Check out our resources</div>
+              <ArrowRight color="white" size={32} strokeWidth={1} />
+            </button>
+          </div>
+        </div>
+
+        <div className="hidden md:block relative w-full h-full">
+          <div
+            className="absolute border border-white rounded-full p-0.5 cursor-pointer" style={{ left: 450, top: 425 }}
+            onMouseEnter={() => setHovered(true)}
+            onMouseLeave={() => setHovered(false)}
+          >
+            {!hovered && (
+              <span className="absolute inset-0 rounded-full border border-white animate-ping opacity-75" />
+            )}
+            <div className="border-2 border-white rounded-full p-1">
+              <div className="w-3 h-3 rounded-full bg-white" />
+            </div>
+
+            {hovered && (
+              <div className="absolute z-50 animate-fade-in-card -left-[100px] -top-[200px]">
+                <QuoteCard
+                  quote="Guys, I just learned a cool new AI tool"
+                  body="Lets do a call and I'll walk you guys through it? Huddle at 4:00?"
+                />
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+});
+
+MndCornerHeroSection.displayName = "MndCornerHeroSection";
+export default MndCornerHeroSection;
