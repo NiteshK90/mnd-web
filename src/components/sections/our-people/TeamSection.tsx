@@ -162,7 +162,7 @@ const TeamSection = forwardRef<HTMLElement>((_, ref) => {
               <div
                 key={i}
                 ref={(el) => { mobileCardRefs.current[i] = el; }}
-                className="snap-center flex-shrink-0 w-[60vw] h-[60vw] rounded-[16px] overflow-hidden bg-white border border-black/[0.04] shadow-[0_2px_4px_rgba(0,0,0,.04),0_8px_24px_rgba(0,0,0,.06)]"
+                className="snap-center flex-shrink-0 w-[60vw] h-[60vw] rounded-[16px] overflow-hidden bg-white shadow-[0_2px_16px_rgba(0,0,0,0.06)]"
               >
                 <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
               </div>
@@ -196,7 +196,7 @@ const TeamSection = forwardRef<HTMLElement>((_, ref) => {
                   transformOrigin: "bottom right",
                   transition: "transform 380ms cubic-bezier(0.4,0,0.2,1)",
                 }}
-                className="w-[225px] h-[225px] rounded-[16px] overflow-hidden bg-white border border-black/[0.04] shadow-[0_2px_4px_rgba(0,0,0,.04),0_8px_24px_rgba(0,0,0,.06)]"
+                className="w-[225px] h-[225px] rounded-[16px] overflow-hidden bg-white shadow-[0_2px_16px_rgba(0,0,0,0.06)]"
               >
                 <img src={members[key].image} alt={members[key].name} className="w-full h-full object-cover" />
               </div>
