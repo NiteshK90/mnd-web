@@ -5,7 +5,7 @@ import Navbar from "@/components/Navbar";
 import ScrollIndicators from "@/components/ScrollIndicators";
 import HeroSection from "@/components/sections/our-people/HeroSection";
 import AudiencesSection from "@/components/sections/our-people/AudiencesSection";
-import OurValuesSection from "@/components/sections/our-people/OurValuesSection";
+import HiringSection from "@/components/sections/our-people/HiringSection";
 import JoinUsSection from "@/components/sections/our-people/JoinUsSection";
 import FooterSection from "@/components/sections/FooterSection";
 
@@ -48,7 +48,7 @@ export default function OurPeople() {
         </div>
         <HeroSection ref={(el) => { sectionRefs.current[0] = el; }} onScrollNext={() => scrollTo(1)} />
         <AudiencesSection ref={(el) => { sectionRefs.current[1] = el; }} />
-        <OurValuesSection ref={(el) => { sectionRefs.current[2] = el; }} />
+        <HiringSection ref={(el) => { sectionRefs.current[2] = el; }} />
         <JoinUsSection ref={(el) => { sectionRefs.current[3] = el; }} />
       </div>
 

@@ -14,6 +14,8 @@ interface AccordionCardProps {
   question: string;
   ctas: string[];
   body: string[];
+  isOpen: boolean;
+  onToggle: () => void;
 }
 
 const cards: AccordionCardProps[] = [
@@ -55,13 +57,11 @@ const cards: AccordionCardProps[] = [
   },
 ];
 
-const AccordionCard = ({ header, question, ctas, body }: AccordionCardProps) => {
-  const [isOpen, setIsOpen] = useState(false);
-
+const AccordionCard = ({ header, question, ctas, body, isOpen, onToggle }: AccordionCardProps) => {
   return (
     <div
       className="w-full bg-[#f5f2ed] border border-[#e2ddd6] rounded-2xl px-8 py-4 cursor-pointer flex items-start justify-between gap-8 transition-all duration-[400ms] ease-in-out hover:shadow-card hover:scale-[1.01]"
-      onClick={() => setIsOpen(!isOpen)}
+      onClick={onToggle}
     >
       {/* Details section */}
       <div className="flex flex-1 items-end justify-between mt-3 gap-8">
@@ -115,6 +115,7 @@ const AccordionCard = ({ header, question, ctas, body }: AccordionCardProps) => 
 
 const AudiencesSection = forwardRef<HTMLElement>((_, ref) => {
   const [inView, setInView] = useState(false);
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
   const sectionRef = useRef<HTMLElement>(null);
 
   const setRef = (el: HTMLElement | null) => {
@@ -138,6 +139,9 @@ const AudiencesSection = forwardRef<HTMLElement>((_, ref) => {
   const hidden = "opacity-0 translate-y-5";
   const visible = "opacity-100 translate-y-0";
   const animate = (delay: string) => `${base} ${inView ? visible : hidden} ${delay}`;
+
+  const cardBase = "transition-all duration-[600ms] ease-out";
+  const animateCard = (i: number) => `${cardBase} ${inView ? visible : hidden} [transition-delay:${i * 500}ms]`;
 
   return (
     <section ref={setRef} className="min-h-screen w-full snap-start flex flex-col md:flex-row px-6 md:px-20 pt-20 md:pt-24 pb-12">
@@ -166,10 +170,16 @@ const AudiencesSection = forwardRef<HTMLElement>((_, ref) => {
       </div>
 
       {/* Right — Accordion */}
-      <div className={`flex flex-1 items-center justify-center mt-12 md:mt-0 md:pl-16 ${animate("[transition-delay:400ms]")}`}>
+      <div className="flex flex-1 items-center justify-center mt-12 md:mt-0 md:pl-16">
         <div className="w-full flex flex-col gap-3">
           {cards.map((card, i) => (
-            <AccordionCard key={i} {...card} />
+            <div key={i} className={animateCard(i)}>
+              <AccordionCard
+                {...card}
+                isOpen={openIndex === i}
+                onToggle={() => setOpenIndex(openIndex === i ? null : i)}
+              />
+            </div>
           ))}
         </div>
       </div>
