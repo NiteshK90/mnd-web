@@ -50,12 +50,15 @@ const testimonials = [
 ];
 
 function TestimonialCard({ testimonial }: { testimonial: (typeof testimonials)[0] }) {
+  const [flipped, setFlipped] = useState(false);
+
   return (
     <div
-      className="w-[260px] md:w-[280px] h-[300px] md:h-[380px] flex-shrink-0 [perspective:1200px] cursor-pointer group"
+      className="w-[260px] md:w-[280px] h-[280px] md:h-[360px] flex-shrink-0 [perspective:1200px] cursor-pointer group"
+      onClick={() => setFlipped((f) => !f)}
     >
       <div
-        className="relative w-full h-full transition-transform duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]"
+        className={`relative w-full h-full transition-transform duration-500 [transform-style:preserve-3d] md:group-hover:[transform:rotateY(180deg)] ${flipped ? "[transform:rotateY(180deg)]" : ""}`}
       >
         {/* Front */}
         <div className="absolute inset-0 bg-mnd-parchment rounded-[28px] py-7 px-6 md:py-9 md:px-7 shadow-testimonial flex flex-col justify-between [backface-visibility:hidden]">
