@@ -4,83 +4,108 @@ import { forwardRef, useState, useRef, useEffect } from "react";
 
 const testimonials = [
   {
-    text: "MND gave us an engineer who felt like a co-founder. Shipped fast, asked the right questions, and never needed hand-holding.",
-    name: "Arjun Mehta",
-    company: "Haystack",
-    designation: "CEO & Co-Founder",
-    engineerText: "I joined mid-sprint and pushed to production by day three. The team trusted me immediately — that made all the difference.",
-    engineerName: "Rahul Verma",
-    engineerType: "Full-Stack Engineer",
+    text: "They understood our vision, adapted to our needs, and delivered every milestone on time",
+    name: "Anya Keatley",
+    company: "Secret Compass",
+    designation: "TV Risk Manager & Head of AI",
+    engineerTitle: "Meet the engineer who worked with them",
+    engineerText: "Through MND, I designed and built a full-scale AI SaaS platform from scratch. The best part was working with founders who valued my ideas as much as my code.",
+    engineerName: "Kabir Rao",
+    engineerType: "Senior AI Product Engineer",
+    engineerExperience: "9+ years",
   },
   {
-    text: "We needed someone senior, fast. MND delivered in four days. The engineer knew our stack before the first call was over.",
-    name: "Priya Nair",
-    company: "Holocene",
-    designation: "Head of Product",
-    engineerText: "Most contracts feel transactional. This one felt like I was actually part of something being built. Rarely get that.",
-    engineerName: "Sneha Iyer",
-    engineerType: "Backend Engineer",
+    text: "MyNextDeveloper's leadership is responsive, follows through on time-sensitive requests, and is very easy to work with.",
+    name: "Rachel Cohen",
+    company: "Silicon Society",
+    designation: "COO",
+    engineerTitle: "Meet the engineer who worked with them",
+    engineerText: "MND found me a long-term remote contract with a US-based technology agency that's now been running for over a year. What I appreciate most is that Jigar and the team don't just match you to a job — they make sure the project actually fits your stack and how you like to work.",
+    engineerName: "Rita Mahajan",
+    engineerType: "Full Stack Engineer",
+    engineerExperience: "7+ years",
   },
   {
-    text: "The replacement guarantee isn't just a policy — they actually used it when we needed it. No drama, no delay.",
-    name: "Rohan Sharma",
-    company: "Quantiphi",
-    designation: "CTO",
-    engineerText: "The honesty cuts both ways. They told me straight when something wasn't working. I respect that more than false positivity.",
-    engineerName: "Aditya Kulkarni",
-    engineerType: "Platform Engineer",
+    text: "Fast, accurate, and easy to work with. MND consistently delivers high-quality engineering with excellent communication.",
+    name: "Christian Phyfier",
+    company: "Scrybe Streaming",
+    designation: "CEO",
+    engineerTitle: "Meet the engineer who worked with them",
+    engineerText: "MND connected me with a fast-moving US product team where my ideas mattered. It wasn't just about writing code, it was about owning features, improving performance, and building something better every day.",
+    engineerName: "Arjun Mehta",
+    engineerType: "Senior Mobile Engineer",
+    engineerExperience: "7+ years",
   },
   {
-    text: "Working with MND felt different. Direct access to founders when things got tricky. That's rare, and it matters.",
-    name: "Sana Kapoor",
-    company: "Scrybe",
-    designation: "VP Engineering",
-    engineerText: "No red tape, no approval chains. Just work that mattered and a team that actually wanted my opinion on things.",
-    engineerName: "Meera Pillai",
-    engineerType: "Frontend Engineer",
+    text: "We were impressed with their steady communication, positive culture, and talented developers.",
+    name: "Marcel Isakowitz",
+    company: "IOTIS",
+    designation: "Co-Founder & COO",
+    engineerTitle: "Meet the engineer who worked with them",
+    engineerText: "MND matched me with a team where my skills and working style truly fit. The process was smooth, expectations were clear, and I felt like part of the team from day one.",
+    engineerName: "Sanjh Mathur",
+    engineerType: "Senior Full Stack Engineer",
+    engineerExperience: "8+ years",
   },
 ];
 
 function TestimonialCard({ testimonial }: { testimonial: (typeof testimonials)[0] }) {
+  const [flipped, setFlipped] = useState(false);
+
   return (
     <div
-      className="w-[260px] md:w-[280px] h-[320px] md:h-[340px] flex-shrink-0 [perspective:1200px] cursor-pointer group"
+      className="w-[260px] md:w-[280px] h-[300px] md:h-[380px] flex-shrink-0 [perspective:1200px] cursor-pointer"
+      onClick={() => setFlipped((f) => !f)}
     >
       <div
-        className="relative w-full h-full transition-transform duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]"
+        className={`relative w-full h-full transition-transform duration-500 [transform-style:preserve-3d] ${flipped ? "[transform:rotateY(180deg)]" : ""}`}
       >
         {/* Front */}
-        <div className="absolute inset-0 bg-mnd-parchment rounded-[28px] py-8 px-6 shadow-testimonial flex flex-col justify-between [backface-visibility:hidden]">
-          <div className="flex items-start gap-4">
-            <span className="text-[46px] font-bold text-mnd-charcoal leading-none italic">"</span>
-            <div className="flex flex-col gap-6">
-              <p className="font-inter text-[16px] font-bold leading-[1.35] text-mnd-charcoal mt-2">
+        <div className="absolute inset-0 bg-mnd-parchment rounded-[28px] py-6 px-5 md:py-8 md:px-6 shadow-testimonial flex flex-col justify-between [backface-visibility:hidden]">
+          <div className="flex flex-col gap-4 md:gap-6">
+            {/* Top: circle + person info */}
+            <div className="flex gap-3 items-start">
+              <div className="w-[40px] h-[40px] md:w-[48px] md:h-[48px] rounded-full bg-mnd-charcoal/10 shrink-0" />
+              <div className="font-inter text-[11px] md:text-xs italic font-medium leading-[1.3] text-mnd-charcoal">
+                <div>{testimonial.name}</div>
+                <div>{testimonial.designation}</div>
+                <div>{testimonial.company}</div>
+              </div>
+            </div>
+            {/* Testimonial */}
+            <div className="flex items-start gap-3">
+              <span className="text-[32px] md:text-[46px] font-bold text-mnd-charcoal leading-none italic">"</span>
+              <p className="font-inter text-[13px] md:text-[16px] font-bold leading-[1.35] text-mnd-charcoal">
                 {testimonial.text}
               </p>
-              <div className="font-inter text-xs italic font-medium leading-[1.3] text-mnd-charcoal">
-                <div>{testimonial.name}</div>
-                <div>{testimonial.company}</div>
-                <div>{testimonial.designation}</div>
-              </div>
             </div>
           </div>
           <p className="font-inter text-[8px] uppercase text-mnd-charcoal text-center tracking-widest">
-            Flip to hear from the engineer
+            Tap to hear from the engineer
           </p>
         </div>
 
         {/* Back */}
-        <div className="absolute inset-0 bg-mnd-parchment rounded-[28px] py-8 px-6 shadow-testimonial flex flex-col justify-between [backface-visibility:hidden] [transform:rotateY(180deg)]">
-          <div className="flex items-start gap-4">
-            <span className="text-[46px] font-bold text-mnd-charcoal leading-none italic">"</span>
-            <div className="flex flex-col gap-6">
-              <p className="font-inter text-[16px] font-bold leading-[1.35] text-mnd-charcoal mt-2">
-                {testimonial.engineerText}
-              </p>
-              <div className="font-inter text-xs italic font-medium leading-[1.3] text-mnd-charcoal">
+        <div className="absolute inset-0 bg-mnd-parchment rounded-[28px] py-6 px-5 md:py-8 md:px-6 shadow-testimonial flex flex-col justify-between [backface-visibility:hidden] [transform:rotateY(180deg)]">
+          <div className="flex flex-col gap-4 md:gap-6">
+            <p className="font-inter text-[7px] md:text-[8px] uppercase text-mnd-charcoal text-center tracking-widest">
+              {testimonial.engineerTitle}
+            </p>
+            {/* Top: circle + engineer info */}
+            <div className="flex gap-3 items-start">
+              <div className="w-[40px] h-[40px] md:w-[48px] md:h-[48px] rounded-full bg-mnd-charcoal/10 shrink-0" />
+              <div className="font-inter text-[11px] md:text-xs italic font-medium leading-[1.3] text-mnd-charcoal">
                 <div>{testimonial.engineerName}</div>
                 <div>{testimonial.engineerType}</div>
+                <div>{testimonial.engineerExperience}</div>
               </div>
+            </div>
+            {/* Testimonial */}
+            <div className="flex items-start gap-3">
+              <span className="text-[28px] font-bold text-mnd-charcoal leading-none italic">"</span>
+              <p className="font-inter text-[11px] font-bold leading-[1.35] text-mnd-charcoal">
+                {testimonial.engineerText}
+              </p>
             </div>
           </div>
         </div>
@@ -123,7 +148,7 @@ const TestimonialsSection = forwardRef<HTMLElement>((_, ref) => {
         </p>
         <div className={`w-[76px] h-[6px] bg-mnd-parchment ${animate("[transition-delay:400ms]")}`} />
         <p className={`font-playfair text-[22px] md:text-[36px] font-bold leading-[1.333] tracking-[-0.03em] text-mnd-parchment ${animate("[transition-delay:800ms]")}`}>
-          <span className="italic">fyi</span> - zero unsatisfied clients.
+          fyi - <span className="italic">zero</span> unsatisfied clients.
         </p>
       </div>
 
