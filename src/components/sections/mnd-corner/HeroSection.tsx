@@ -51,7 +51,7 @@ const MndCornerHeroSection = forwardRef<HTMLElement, HeroSectionProps>(({ onScro
             </div>
 
             {hovered && (
-              <div className="absolute z-50 animate-fade-in-card -left-[100px] -top-[200px]">
+              <div className="absolute z-50 animate-fade-in-card -left-[100px] -top-[175px]">
                 <QuoteCard
                   quote="Guys, I just learned a cool new AI tool"
                   body="Lets do a call and I'll walk you guys through it? Huddle at 4:00?"
