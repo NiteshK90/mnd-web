@@ -103,7 +103,7 @@ function TestimonialCard({ testimonial }: { testimonial: (typeof testimonials)[0
             {/* Testimonial */}
             <div className="flex items-start gap-3">
               <span className="text-[28px] font-bold text-mnd-charcoal leading-none italic">"</span>
-              <p className="font-inter text-[11px] font-bold leading-[1.35] text-mnd-charcoal">
+              <p className="font-inter text-[13px] font-bold leading-[1.35] text-mnd-charcoal">
                 {testimonial.engineerText}
               </p>
             </div>
