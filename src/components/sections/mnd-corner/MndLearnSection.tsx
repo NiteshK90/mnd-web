@@ -47,10 +47,10 @@ const MndLearnSection = forwardRef<HTMLElement>((_, ref) => {
           <p className={`font-playfair font-normal text-[18px] md:text-[36px] leading-[1.333] tracking-[-0.03em] text-mnd-charcoal ${animate("[transition-delay:600ms]")}`}>
             For operators, founders<br />and teams to sharpen their<br />skills.
           </p>
-          <button className={`flex items-center gap-2 px-4 h-10 bg-mnd-navy text-white rounded-full w-fit cursor-pointer transition-all duration-200 hover:scale-[1.05] hover:shadow-[0_6px_20px_rgba(2,48,71,0.4)] active:scale-[0.96] active:shadow-none ${animate("[transition-delay:800ms]")}`}>
+          <a href="https://learn.mynextdeveloper.com" target="_blank" rel="noopener noreferrer" className={`flex items-center gap-2 px-4 h-10 bg-mnd-navy text-white rounded-full w-fit cursor-pointer transition-all duration-200 hover:scale-[1.05] hover:shadow-[0_6px_20px_rgba(2,48,71,0.4)] active:scale-[0.96] active:shadow-none ${animate("[transition-delay:800ms]")}`}>
             <span className="font-inter text-xs font-semibold">Take a Quiz & Register</span>
             <ArrowRight color="white" size={32} strokeWidth={1} />
-          </button>
+          </a>
         </div>
       </div>
 
@@ -72,10 +72,10 @@ const MndLearnSection = forwardRef<HTMLElement>((_, ref) => {
           <p className="font-inter font-normal text-[13px] leading-[1.5] text-mnd-charcoal">
             When was the last time you tried an AI tool, felt genuinely good about it for more than a week, and are still using it now? For most of the founders and operators we talk to, that answer is uncomfortable.
           </p>
-          <button className="flex items-center gap-2 px-4 h-10 bg-mnd-navy text-white rounded-full w-fit cursor-pointer transition-all duration-200 hover:scale-[1.05] hover:shadow-[0_6px_20px_rgba(2,48,71,0.4)] active:scale-[0.96] active:shadow-none">
+          <a href="https://learn.mynextdeveloper.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-4 h-10 bg-mnd-navy text-white rounded-full w-fit cursor-pointer transition-all duration-200 hover:scale-[1.05] hover:shadow-[0_6px_20px_rgba(2,48,71,0.4)] active:scale-[0.96] active:shadow-none">
             <span className="font-inter text-xs font-semibold">Take the AI Quiz</span>
             <ArrowRight color="white" size={32} strokeWidth={1} />
-          </button>
+          </a>
           <div className="w-[48px] h-[2px] bg-mnd-charcoal" />
           <div className="flex flex-col gap-3">
             <div className="flex items-center gap-2 font-inter font-bold text-[12px] text-mnd-charcoal">

@@ -87,10 +87,10 @@ const CostCalculatorSection = forwardRef<HTMLElement>((_, ref) => {
               </div>
             ))}
           </div>
-          <button className={`flex items-center gap-2 px-4 h-10 bg-mnd-navy text-white rounded-full w-fit cursor-pointer transition-all duration-200 hover:scale-[1.05] hover:shadow-[0_6px_20px_rgba(2,48,71,0.4)] active:scale-[0.96] active:shadow-none ${animate("[transition-delay:1000ms]")}`}>
+          <a href="https://costcalculator.mynextdeveloper.com" target="_blank" rel="noopener noreferrer" className={`flex items-center gap-2 px-4 h-10 bg-mnd-navy text-white rounded-full w-fit cursor-pointer transition-all duration-200 hover:scale-[1.05] hover:shadow-[0_6px_20px_rgba(2,48,71,0.4)] active:scale-[0.96] active:shadow-none ${animate("[transition-delay:1000ms]")}`}>
             <span className="font-inter text-xs font-semibold">Start the Questionnaire</span>
             <ArrowRight color="white" size={32} strokeWidth={1} />
-          </button>
+          </a>
         </div>
       </div>
 

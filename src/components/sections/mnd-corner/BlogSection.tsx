@@ -53,10 +53,10 @@ const BlogSection = forwardRef<HTMLElement>((_, ref) => {
           <p className={`font-playfair font-normal text-[18px] md:text-[36px] leading-[1.333] tracking-[-0.03em] text-mnd-charcoal ${animate("[transition-delay:600ms]")}`}>
             Practical perspectives<br />on everything software<br />and AI.
           </p>
-          <button className={`flex items-center gap-2 px-4 h-10 bg-mnd-navy text-white rounded-full w-fit cursor-pointer transition-all duration-200 hover:scale-[1.05] hover:shadow-[0_6px_20px_rgba(2,48,71,0.4)] active:scale-[0.96] active:shadow-none ${animate("[transition-delay:800ms]")}`}>
+          <a href="https://mynextdeveloper.com/blogs/" target="_blank" rel="noopener noreferrer" className={`flex items-center gap-2 px-4 h-10 bg-mnd-navy text-white rounded-full w-fit cursor-pointer transition-all duration-200 hover:scale-[1.05] hover:shadow-[0_6px_20px_rgba(2,48,71,0.4)] active:scale-[0.96] active:shadow-none ${animate("[transition-delay:800ms]")}`}>
             <span className="font-inter text-xs font-semibold">View all blogs</span>
             <ArrowRight color="white" size={32} strokeWidth={1} />
-          </button>
+          </a>
         </div>
       </div>
 
@@ -109,7 +109,7 @@ const BlogSection = forwardRef<HTMLElement>((_, ref) => {
               { date: "MAR 28", year: "2026", title: "Blog 4" },
               { date: "MAR 14", year: "2026", title: "Blog 5" },
             ].map((post, i) => (
-              <div key={i} className={`group grid grid-cols-[50px_1fr_28px] md:grid-cols-[60px_1fr_30px] items-center gap-x-8 min-h-[40px] py-4 border-b border-[#9b9b9b] cursor-pointer ${animate(`[transition-delay:${700 + i * 100}ms]`)}`}>
+              <a key={i} href="https://mynextdeveloper.com/blogs/" target="_blank" rel="noopener noreferrer" className={`group grid grid-cols-[50px_1fr_28px] md:grid-cols-[60px_1fr_30px] items-center gap-x-8 min-h-[40px] py-4 border-b border-[#9b9b9b] cursor-pointer ${animate(`[transition-delay:${700 + i * 100}ms]`)}`}>
                 <div className="font-inter text-[10px] font-medium leading-[1.6] tracking-[0.08em] text-[#252525] uppercase">
                   {post.date}<br />{post.year}
                 </div>
@@ -119,7 +119,7 @@ const BlogSection = forwardRef<HTMLElement>((_, ref) => {
                 <div className="flex justify-center items-center transition-transform duration-[250ms] ease-in-out group-hover:translate-x-2">
                   <ArrowRight color="#1f1b1c" size={24} strokeWidth={1} />
                 </div>
-              </div>
+              </a>
             ))}
           </div>
         </div>
