@@ -95,7 +95,7 @@ const SuccessStorySection = forwardRef<HTMLElement>((_, ref) => {
                 <p className="font-inter font-semibold text-[9px] md:text-[10px] tracking-[1.5px] uppercase text-mnd-charcoal">
                   {c.tag}
                 </p>
-                <p className="font-playfair font-bold text-[12px] md:text-[20px] leading-[1.2] text-mnd-charcoal whitespace-pre-line">
+                <p className="font-inter font-bold text-[12px] md:text-[20px] leading-[1.2] text-mnd-charcoal whitespace-pre-line">
                   {c.title}
                 </p>
               </div>
