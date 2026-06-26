@@ -4,10 +4,10 @@ import { forwardRef, useRef, useEffect, useState } from "react";
 import { ArrowRightIcon, LinkedinLogoIcon } from "@phosphor-icons/react";
 
 const members = [
-  { name: "Jigar Mehta", role: "Co-founder", image: "/founders/jigar.png", linkedin: "#" },
-  { name: "Palomi Jain", role: "Co-founder", image: "/founders/palomi.png", linkedin: "#" },
-  { name: "Parth Shah", role: "Co-founder", image: "/founders/parth.png", linkedin: "#" },
-  { name: "Purab Shah", role: "Co-founder", image: "/founders/purab.png", linkedin: "#" },
+  { name: "Jigar Mehta", role: "Co-founder", image: "/founders/jigar.png", linkedin: "https://www.linkedin.com/in/jigar1101/" },
+  { name: "Palomi Jain", role: "Co-founder", image: "/founders/palomi.png", linkedin: "https://www.linkedin.com/in/palomi-jain/" },
+  { name: "Parth Shah", role: "Co-founder", image: "/founders/parth.png", linkedin: "https://www.linkedin.com/in/parthshah9/" },
+  { name: "Purab Shah", role: "Co-founder", image: "/founders/purab.png", linkedin: "https://www.linkedin.com/in/purab93/" },
 ];
 
 const DESKTOP_SCALE = 2;
@@ -130,10 +130,8 @@ const TeamSection = forwardRef<HTMLElement>((_, ref) => {
     <>
       <p className="font-playfair text-[18px] md:text-[22px] font-semibold text-mnd-charcoal leading-tight">{member.name}</p>
       <p className="font-inter text-[10px] md:text-[11px] tracking-[0.15em] uppercase text-mnd-charcoal">{member.role}</p>
-      <a href={member.linkedin} className="hover:opacity-60 transition-opacity w-fit">
-        <div className="w-7 h-7 md:w-8 md:h-8 rounded-full overflow-hidden flex items-center justify-center">
-          <LinkedinLogoIcon size={128} weight="fill" color="black" />
-        </div>
+      <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="hover:opacity-60 transition-opacity w-fit">
+        <LinkedinLogoIcon size={28} weight="fill" color="black" className="rounded-full block" />
       </a>
       <p className="font-inter text-[11px] leading-relaxed text-mnd-charcoal">
         Short description about this person and what they bring to the team.
@@ -206,10 +204,8 @@ const TeamSection = forwardRef<HTMLElement>((_, ref) => {
                   {[
                     <p key="name" className="font-playfair text-[22px] font-semibold text-mnd-charcoal leading-tight">{desktopActiveMember.name}</p>,
                     <p key="role" className="font-inter text-[11px] tracking-[0.15em] uppercase text-mnd-charcoal">{desktopActiveMember.role}</p>,
-                    <a key="linkedin" href={desktopActiveMember.linkedin} className="hover:opacity-60 transition-opacity w-fit">
-                      <div className="w-8 h-8 rounded-full overflow-hidden flex items-center justify-center">
-                        <LinkedinLogoIcon size={128} weight="fill" color="black" />
-                      </div>
+                    <a key="linkedin" href={desktopActiveMember.linkedin} target="_blank" rel="noopener noreferrer" className="hover:opacity-60 transition-opacity w-fit">
+                      <LinkedinLogoIcon size={32} weight="fill" color="black" className="rounded-full block" />
                     </a>,
                     <p key="desc" className="font-inter text-[11px] leading-relaxed text-mnd-charcoal">Short description about this person and what they bring to the team.</p>,
                   ].map((item, i) => (
