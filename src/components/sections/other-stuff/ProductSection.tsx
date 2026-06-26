@@ -68,18 +68,17 @@ const ProductSection = forwardRef<HTMLElement>((_, ref) => {
       <div className={`flex-1 hidden md:flex items-center justify-center ${animate("[transition-delay:300ms]")}`}>
         <div className="relative mx-auto h-[650px] w-[650px] scale-[0.9] origin-center">
 
-          {/* Outer Ring */}
-          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-[580px] w-[580px]">
-            <div className="w-full h-full rounded-full border border-[#707070] animate-[spin_30s_linear_infinite]" />
+          {/* Outer Ring + Dots — rotate together */}
+          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-[580px] w-[580px] animate-[spin_30s_linear_infinite]">
+            <div className="w-full h-full rounded-full border border-[#707070]" />
+            {/* Dots re-positioned in 580×580 space (center 290,290, r=290) */}
+            <div className="absolute left-[430px] top-[34px] h-[10px] w-[10px] rounded-full border border-[#707070] bg-mnd-beige" />
+            <div className="absolute left-[575px] top-[285px] h-[10px] w-[10px] rounded-full border border-[#707070] bg-mnd-beige" />
+            <div className="absolute left-[430px] top-[536px] h-[10px] w-[10px] rounded-full border border-[#707070] bg-mnd-beige" />
+            <div className="absolute left-[140px] top-[536px] h-[10px] w-[10px] rounded-full border border-[#707070] bg-mnd-beige" />
+            <div className="absolute top-[285px] h-[10px] w-[10px] rounded-full border border-[#707070] bg-mnd-beige" style={{ left: "-5px" }} />
+            <div className="absolute left-[140px] top-[34px] h-[10px] w-[10px] rounded-full border border-[#707070] bg-mnd-beige" />
           </div>
-
-          {/* Outer Ring Dots (between cards, clockwise from top-right) */}
-          <div className="absolute left-[465px] top-[69px] h-[10px] w-[10px] rounded-full border border-[#707070] bg-mnd-beige" />
-          <div className="absolute left-[610px] top-[320px] h-[10px] w-[10px] rounded-full border border-[#707070] bg-mnd-beige" />
-          <div className="absolute left-[465px] top-[571px] h-[10px] w-[10px] rounded-full border border-[#707070] bg-mnd-beige" />
-          <div className="absolute left-[175px] top-[571px] h-[10px] w-[10px] rounded-full border border-[#707070] bg-mnd-beige" />
-          <div className="absolute left-[30px] top-[320px] h-[10px] w-[10px] rounded-full border border-[#707070] bg-mnd-beige" />
-          <div className="absolute left-[175px] top-[69px] h-[10px] w-[10px] rounded-full border border-[#707070] bg-mnd-beige" />
 
           {/* Middle Ring */}
           <div className="absolute left-1/2 top-1/2 h-[400px] w-[400px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#707070]" />
