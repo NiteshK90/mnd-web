@@ -120,8 +120,8 @@ const FooterSection = forwardRef<HTMLElement, { containerId?: string }>(({ conta
 
           {/* Brand: logo + copyright */}
           <div className="flex flex-col gap-3 flex-[0_0_260px] max-md:flex-none">
-            {(() => { const a = barAnimate(0); return <img src="/mnd-white-logo.png" alt="MyNextDeveloper" className={`w-44 h-auto block ${a.cls}`} style={a.sty} />; })()}
-            {(() => { const a = barAnimate(120); return <p className={`text-[10px] font-light text-white tracking-wide leading-relaxed ${a.cls}`} style={a.sty}>2026 | All Rights Reserved</p>; })()}
+            {(() => { const a = barAnimate(0); return <img src="/mnd-white-logo.png" alt="MyNextDeveloper" className={`w-36 h-auto block mt-1 ${a.cls}`} style={a.sty} />; })()}
+            {(() => { const a = barAnimate(120); return <p className={`text-[10px] font-light italic text-white tracking-wide leading-relaxed ${a.cls}`} style={a.sty}>2026 | All Rights Reserved</p>; })()}
           </div>
 
           {/* Nav columns */}
