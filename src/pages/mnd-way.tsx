@@ -18,6 +18,13 @@ export default function MndWay() {
   const sectionRefs = useRef<(HTMLElement | null)[]>([]);
 
   useEffect(() => {
+    if (window.location.hash === "#values") {
+      const timer = setTimeout(() => scrollTo(4), 300);
+      return () => clearTimeout(timer);
+    }
+  }, []);
+
+  useEffect(() => {
     const container = containerRef.current;
     if (!container) return;
 
