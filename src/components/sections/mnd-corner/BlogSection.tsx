@@ -91,7 +91,7 @@ const BlogSection = forwardRef<HTMLElement>((_, ref) => {
         </div>
 
         {/* Blog list */}
-        <div className={`w-full bg-[#f7f4f1] ${animate("[transition-delay:600ms]")}`}>
+        <div className={`w-full ${animate("[transition-delay:600ms]")}`}>
           {/* Header */}
           <div className="flex items-center gap-10">
             <h2 className="font-inter text-[11px] font-bold tracking-[0.04em] uppercase text-[#222] whitespace-nowrap">
