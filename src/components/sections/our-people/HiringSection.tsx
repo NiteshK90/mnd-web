@@ -34,12 +34,13 @@ const HiringSection = forwardRef<HTMLElement>((_, ref) => {
       ref={setRef}
       className="h-screen w-full snap-start flex flex-col items-center justify-center gap-6 md:gap-10 text-center px-6 md:px-20"
     >
+      {/* Section headline */}
       <p className={`font-playfair text-[26px] md:text-[36px] font-normal leading-[1.333] tracking-[-0.03em] text-mnd-charcoal w-full max-w-[720px] ${animate("[transition-delay:0ms]")}`}>
         Great work starts with great people.<br />We&apos;re hiring a few. Find anything exciting?
       </p>
       <div className={`w-[62px] h-[5px] bg-mnd-charcoal ${animate("[transition-delay:500ms]")}`} />
 
-      {/* Job list */}
+      {/* Job listings */}
       <div className={`w-full max-w-[720px] flex flex-col border-t border-mnd-charcoal/20 ${animate("[transition-delay:700ms]")}`}>
         {[
           { title: "Placeholder job 1", subtext: "Remote | Location" },

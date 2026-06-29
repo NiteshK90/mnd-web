@@ -230,6 +230,7 @@ const CareerSection = forwardRef<HTMLElement>((_, ref) => {
                 pointerEvents: i < visibleCount ? "auto" : "none",
               }}
             >
+              {/* Step title */}
               <h3 className="font-playfair text-[18px] font-bold leading-[1.333] text-mnd-charcoal">
                 {card.top}
               </h3>

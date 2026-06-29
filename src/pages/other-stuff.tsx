@@ -41,21 +41,27 @@ export default function OtherStuff() {
     sectionRefs.current[index]?.scrollIntoView({ behavior: "smooth" });
   };
 
+  // Scroll container with snap sections
   return (
     <div id="other-stuff-container" ref={containerRef} className="relative h-screen overflow-y-scroll snap-y snap-mandatory">
       <div className="relative bg-mnd-beige">
+        {/* Sticky Navbar */}
         <div className="sticky top-3 md:top-8 z-50 flex justify-center">
           <Navbar minimal={activeIndex !== 0} showBorder={activeIndex !== 0} />
         </div>
+        {/* Hero */}
         <HeroSection ref={(el) => { sectionRefs.current[0] = el; }} onScrollNext={() => scrollTo(1)} />
+        {/* Service sections */}
         <ProductSection ref={(el) => { sectionRefs.current[1] = el; }} />
         <AISection ref={(el) => { sectionRefs.current[2] = el; }} />
         <MvpSection ref={(el) => { sectionRefs.current[3] = el; }} />
         <ServicesSection ref={(el) => { sectionRefs.current[4] = el; }} />
       </div>
 
+      {/* Footer */}
       <FooterSection containerId="other-stuff-container" ref={(el) => { sectionRefs.current[5] = el; }} />
 
+      {/* Scroll Indicators */}
       <div className="hidden md:block">
         <ScrollIndicators
           total={TOTAL_SECTIONS}

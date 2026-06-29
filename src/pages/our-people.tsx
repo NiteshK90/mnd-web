@@ -40,20 +40,26 @@ export default function OurPeople() {
     sectionRefs.current[index]?.scrollIntoView({ behavior: "smooth" });
   };
 
+  // Scroll container with snap sections
   return (
     <div id="our-people-container" ref={containerRef} className="relative h-screen overflow-y-scroll snap-y snap-mandatory">
       <div className="relative bg-mnd-beige">
+        {/* Sticky Navbar */}
         <div className="sticky top-3 md:top-8 z-50 flex justify-center">
           <Navbar minimal={activeIndex !== 0} showBorder={activeIndex !== 0} />
         </div>
+        {/* Hero */}
         <HeroSection ref={(el) => { sectionRefs.current[0] = el; }} onScrollNext={() => scrollTo(1)} />
+        {/* Content sections */}
         <AudiencesSection ref={(el) => { sectionRefs.current[1] = el; }} />
         <HiringSection ref={(el) => { sectionRefs.current[2] = el; }} />
         <TeamSection ref={(el) => { sectionRefs.current[3] = el; }} />
       </div>
 
+      {/* Footer */}
       <FooterSection containerId="our-people-container" ref={(el) => { sectionRefs.current[4] = el; }} />
 
+      {/* Scroll Indicators */}
       <div className="hidden md:block">
         <ScrollIndicators
           total={TOTAL_SECTIONS}

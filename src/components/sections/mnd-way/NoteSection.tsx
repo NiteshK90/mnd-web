@@ -37,7 +37,7 @@ const NoteSection = forwardRef<HTMLElement, NoteSectionProps>(({ onSkipToValues 
     <section ref={setRef} className="h-screen w-full snap-start bg-[#F9BC10] overflow-y-auto flex items-center">
       <div className="grid grid-cols-1 md:grid-cols-[400px_1fr] gap-x-0 md:gap-x-[120px] max-w-[1400px] mx-auto px-6 md:px-20 pt-28 md:pt-32 items-center">
 
-        {/* Left */}
+        {/* Left — pull quote + skip */}
         <div className="flex flex-col gap-4 md:gap-8 pb-8 md:pb-16">
           <span className={`font-playfair text-[60px] md:text-[200px] font-normal leading-1 text-mnd-dark ${animate("[transition-delay:0ms]")}`}>
             &ldquo;
@@ -56,12 +56,13 @@ const NoteSection = forwardRef<HTMLElement, NoteSectionProps>(({ onSkipToValues 
           </div>
         </div>
 
-        {/* Right */}
+        {/* Right — founders note body */}
         <div className="flex flex-col gap-6 md:gap-12 mt-8 md:mt-0">
           <h2 className={`font-playfair text-[20px] md:text-[36px] font-semibold leading-[1.333] tracking-[-0.03em] text-mnd-dark ${animate("[transition-delay:100ms]")}`}>
             A note from the founders ~
           </h2>
 
+          {/* Note paragraphs */}
           <div className="flex flex-col gap-4 md:gap-6">
             <p className={`font-inter text-[16px] font-normal leading-[1.6] text-mnd-dark max-w-[900px] ${animate("[transition-delay:300ms]")}`}>
               We, the four founders at MND, are a bunch of great friends who happened to become very, very good at software development. <span className="font-bold">We love taking something complex and making it feel simple.</span>

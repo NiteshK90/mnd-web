@@ -33,10 +33,12 @@ export const ProfileCard = ({ name, years, role, mostLikelyTo, quote, previousLo
       className="min-w-[230px] border border-white/40 rounded-[36px] py-8 px-6 shadow-[0_10px_30px_rgba(0,0,0,.08),0_2px_8px_rgba(0,0,0,.04)] flex flex-col gap-4"
       style={{ background: "rgba(255,255,255,0.18)", backdropFilter: "blur(20px)", WebkitBackdropFilter: "blur(20px)" }}
     >
+      {/* Engineer name */}
       <h3 className="font-inter text-[16px] font-bold leading-[1.2] text-mnd-charcoal">
         Meet {name},
       </h3>
 
+      {/* Role + experience */}
       <div className="flex items-center gap-4">
         <div className="w-[38px] h-[38px] flex items-center justify-center shrink-0">
           <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -51,6 +53,7 @@ export const ProfileCard = ({ name, years, role, mostLikelyTo, quote, previousLo
         </div>
       </div>
 
+      {/* Fun fact */}
       <div className="flex flex-col gap-1">
         <p className="font-inter text-[16px] font-bold text-mnd-charcoal">Most likely to:</p>
         <p className="font-inter text-sm font-medium leading-[1.35] text-mnd-charcoal">
@@ -58,6 +61,7 @@ export const ProfileCard = ({ name, years, role, mostLikelyTo, quote, previousLo
         </p>
       </div>
 
+      {/* Quote */}
       <div className="flex gap-5 items-start">
         <span className="font-inter text-[52px] font-extrabold text-mnd-charcoal leading-[0.8] italic">"</span>
         <p className="font-inter text-xs font-medium leading-[1.35] text-mnd-charcoal w-[100px]">
@@ -65,6 +69,7 @@ export const ProfileCard = ({ name, years, role, mostLikelyTo, quote, previousLo
         </p>
       </div>
 
+      {/* Previous companies */}
       <div className="flex flex-col gap-2">
         <p className="font-inter text-[10px] font-light text-mnd-charcoal">Previously at:</p>
         {previousLogos.length > 0 && (
