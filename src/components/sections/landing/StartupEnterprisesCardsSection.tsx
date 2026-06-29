@@ -162,15 +162,19 @@ const StartupEnterprisesCardsSection = forwardRef<HTMLElement>((_, ref) => {
 
   return (
     <section ref={setRef} className="h-screen w-full snap-start flex flex-col items-center justify-center gap-12 md:gap-16 px-6 md:px-20 pt-20 md:pt-24">
+      {/* Section headline */}
       <h2 className={`w-full max-w-[720px] font-playfair text-[26px] md:text-[36px] font-normal leading-[1.333] tracking-[-0.03em] text-mnd-charcoal text-center ${animate("[transition-delay:0ms]")}`}>
         So, we built MND to plug into how you <br className="hidden md:block" />
         <span className="font-bold italic">actually</span> work.
       </h2>
 
+      {/* Card decks row */}
       <div className="flex flex-row items-center justify-start md:justify-center gap-10 md:gap-[180px] overflow-x-auto md:overflow-visible w-full md:w-auto pb-4 md:pb-0">
+        {/* Startup deck */}
         <div className={animate("[transition-delay:500ms]")}>
           <CardDeck cards={startupCards} category="For Startups" />
         </div>
+        {/* Enterprise deck */}
         <div className={animate("[transition-delay:900ms]")}>
           <CardDeck cards={enterpriseCards} category="For Enterprises" />
         </div>

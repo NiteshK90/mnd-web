@@ -158,14 +158,14 @@ const CareerSection = forwardRef<HTMLElement>((_, ref) => {
       className="h-screen w-full snap-start flex items-center justify-center px-6 md:px-20 overflow-hidden pt-20 md:pt-24"
     >
       <div className="w-full">
-        {/* Title */}
+        {/* Section headline */}
         <p className={`font-playfair text-[22px] md:text-[36px] font-normal leading-[1.333] tracking-[-0.03em] text-mnd-charcoal ${animate("[transition-delay:0ms]")}`}>
           Oh, & we&apos;re very picky about our talent pool –
         </p>
 
 
         <div className="flex items-center justify-between md:justify-normal gap-3 md:gap-6 mt-6 md:mt-12">
-          {/* Block 1: FOR EVERY 10 — lines animate in one by one */}
+          {/* Stat block: FOR EVERY 10 */}
           <div className="flex flex-col items-center gap-2 justify-center shrink-0 w-[70px] md:w-[100px]">
             <span className={`font-inter text-[8px] font-semibold tracking-[0.2em] uppercase text-mnd-charcoal ${animate("[transition-delay:400ms]")}`}>
               {blocks[0].label}
@@ -178,7 +178,7 @@ const CareerSection = forwardRef<HTMLElement>((_, ref) => {
             </span>
           </div>
 
-          {/* Progress bar */}
+          {/* Journey progress bar */}
           <div className={`hidden md:flex flex-1 h-[68px] bg-white rounded-full shadow-progress items-center px-8 gap-0 ${animate("[transition-delay:1100ms]")}`}>
             {cards.map((_, i) => (
               <Fragment key={i}>
@@ -203,7 +203,7 @@ const CareerSection = forwardRef<HTMLElement>((_, ref) => {
             ))}
           </div>
 
-          {/* Block 2: ONLY 3 — lines animate in when all cards are shown */}
+          {/* Stat block: ONLY 3 */}
           <div className="flex flex-col items-center gap-2 justify-center shrink-0 w-[70px] md:w-[100px]">
             <span className={`font-inter text-[8px] font-semibold tracking-[0.2em] uppercase text-mnd-charcoal ${animateLast("[transition-delay:0ms]")}`}>
               {blocks[1].label}
@@ -217,7 +217,7 @@ const CareerSection = forwardRef<HTMLElement>((_, ref) => {
           </div>
         </div>
 
-        {/* Cards — revealed via visibleCount (first card auto, rest on scroll) */}
+        {/* Step cards */}
         <div className="mt-5 md:mt-8 flex md:justify-center gap-6 md:gap-8 overflow-x-auto scrollbar-none [&::-webkit-scrollbar]:hidden md:overflow-visible pb-3 md:pb-0 md:px-0">
           {cards.map((card, i) => (
             <div
@@ -230,6 +230,7 @@ const CareerSection = forwardRef<HTMLElement>((_, ref) => {
                 pointerEvents: i < visibleCount ? "auto" : "none",
               }}
             >
+              {/* Step title */}
               <h3 className="font-playfair text-[18px] font-bold leading-[1.333] text-mnd-charcoal">
                 {card.top}
               </h3>

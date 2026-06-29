@@ -26,6 +26,7 @@ const OurPeopleHeroSection = forwardRef<HTMLElement, HeroSectionProps>(({ onScro
       className="relative h-screen w-full snap-start bg-[url('/our-people/hero.png')] bg-cover bg-center py-6 px-6 md:px-20 flex flex-col"
     >
       <div className="flex-1 flex items-center gap-6 relative">
+        {/* Hero headline + CTA */}
         <div className="flex flex-col justify-center">
           <div
             className="animate-hero-fly-in font-playfair text-[clamp(3rem,6.5vw,4.5rem)] font-semibold tracking-[0.1] w-full md:w-[600px] leading-[1.2] text-mnd-charcoal"
@@ -47,6 +48,7 @@ const OurPeopleHeroSection = forwardRef<HTMLElement, HeroSectionProps>(({ onScro
           </div>
         </div>
 
+        {/* Interactive quote dot */}
         <div className="hidden md:block relative w-full">
           <div
             className="absolute border border-white rounded-full p-0.5 cursor-pointer"

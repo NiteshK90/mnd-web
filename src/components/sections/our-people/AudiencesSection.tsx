@@ -148,9 +148,10 @@ const AudiencesSection = forwardRef<HTMLElement>((_, ref) => {
 
   return (
     <section ref={setRef} className="min-h-screen w-full snap-start flex flex-col md:flex-row px-6 md:px-20 pt-20 md:pt-24 pb-12">
-      {/* Left */}
+      {/* Left panel */}
       <div className="flex items-start md:items-center justify-start w-full md:w-auto">
         <div className="flex flex-col gap-8 md:gap-16">
+          {/* Section headline */}
           <div className="flex flex-col gap-4">
             <p className={`font-playfair font-normal text-[22px] md:text-[36px] leading-[1.333] tracking-[-0.03em] text-mnd-charcoal ${animate("[transition-delay:200ms]")}`}>
               Do any of these<br />resonate with you?<br />Reach out anyway.
@@ -172,7 +173,7 @@ const AudiencesSection = forwardRef<HTMLElement>((_, ref) => {
         </div>
       </div>
 
-      {/* Right — Accordion */}
+      {/* Right panel — accordion cards */}
       <div className="flex flex-1 items-center justify-center mt-12 md:mt-0 md:pl-16">
         <div className="w-full flex flex-col gap-3">
           {cards.map((card, i) => (

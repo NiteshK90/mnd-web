@@ -22,6 +22,7 @@ const HeroSection = forwardRef<HTMLElement>((_, ref) => {
       className="relative bg-[url('/landing/hero.png')] bg-cover bg-center h-screen w-full snap-start py-6 px-6 md:px-20 flex flex-col"
     >
       <div className="flex-1 flex items-center gap-6 relative">
+        {/* Hero headline + CTA */}
         <div className="flex flex-col justify-center">
           <div className="animate-hero-fly-in font-playfair text-[clamp(3rem,6.5vw,4.5rem)] font-semibold tracking-[0.1] w-full md:w-[500px] leading-[1.2] text-mnd-dark" style={{ animationDelay: "500ms" }}>
             Stellar engineers on bench for you.
@@ -34,6 +35,7 @@ const HeroSection = forwardRef<HTMLElement>((_, ref) => {
           </div>
         </div>
 
+        {/* Interactive engineer dots */}
         <div className="hidden md:block relative w-full">
           {dots.map((dot, i) => (
             <div
@@ -63,6 +65,7 @@ const HeroSection = forwardRef<HTMLElement>((_, ref) => {
         </div>
       </div>
 
+      {/* Client ticker */}
       <div className="absolute bottom-0 left-0 right-0">
         <ClientTicker />
       </div>

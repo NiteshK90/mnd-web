@@ -38,9 +38,10 @@ const BlogSection = forwardRef<HTMLElement>((_, ref) => {
 
   return (
     <section ref={setRef} className="min-h-screen w-full snap-start flex flex-col md:flex-row gap-8 md:gap-16 px-6 md:px-20 pt-20 md:pt-24 pb-12">
-      {/* Left */}
+      {/* Left panel */}
       <div className="flex items-start md:items-center justify-start w-full md:w-auto">
         <div className="flex flex-col gap-6 md:gap-10">
+          {/* Section label + headline */}
           <div className="flex flex-col gap-4">
             <p className={`font-inter font-semibold text-[11px] tracking-[1.7px] uppercase text-mnd-charcoal ${animate("[transition-delay:0ms]")}`}>
               Blog
@@ -60,8 +61,9 @@ const BlogSection = forwardRef<HTMLElement>((_, ref) => {
         </div>
       </div>
 
-      {/* Right */}
+      {/* Right panel */}
       <div className="flex-1 flex flex-col justify-center gap-10 px-0 md:px-12 mt-10 md:mt-0">
+        {/* Search input */}
         <div className={`relative w-full max-w-[1180px] mt-4 ${animate("[transition-delay:200ms]")}`}>
           <input
             type="text"
@@ -79,6 +81,7 @@ const BlogSection = forwardRef<HTMLElement>((_, ref) => {
             </button>
           )}
         </div>
+        {/* Topic pills */}
         <div className={`grid grid-cols-3 md:grid-cols-6 gap-x-2 md:gap-x-3 gap-y-3 md:gap-y-10 w-full ${animate("[transition-delay:400ms]")}`}>
           {filteredPills.map((label) => (
             <button

@@ -84,9 +84,9 @@ const FooterSection = forwardRef<HTMLElement, { containerId?: string }>(({ conta
       ref={setRef}
       className="bg-mnd-beige min-h-screen w-full snap-start flex flex-col"
     >
-      {/* Footer Hero */}
+      {/* Hero area */}
       <div className="flex-1 flex flex-col items-center justify-start gap-6 md:gap-8 px-6 md:px-20 bg-[url('/landing/footer.png')] bg-cover bg-center">
-        {/* Move to top */}
+        {/* Scroll to top */}
         <div className={`flex justify-center pt-5 ${animate("[transition-delay:0ms]")}`}>
           <button
             onClick={() => document.getElementById(containerId)?.scrollTo({ top: 0, behavior: "smooth" })}
@@ -120,7 +120,7 @@ const FooterSection = forwardRef<HTMLElement, { containerId?: string }>(({ conta
 
           {/* Brand: logo + copyright */}
           <div className="flex flex-col gap-3 flex-[0_0_260px] max-md:flex-none">
-            {(() => { const a = barAnimate(0); return <img src="/mnd-white-logo.png" alt="MyNextDeveloper" className={`w-36 h-auto block mt-1 ${a.cls}`} style={a.sty} />; })()}
+            {(() => { const a = barAnimate(0); return <Link href="/"><img src="/mnd-white-logo.png" alt="MyNextDeveloper" className={`w-36 h-auto block mt-1 ${a.cls}`} style={a.sty} /></Link>; })()}
             {(() => { const a = barAnimate(120); return <p className={`text-[10px] font-light italic text-white tracking-wide leading-relaxed ${a.cls}`} style={a.sty}>2026 | All Rights Reserved</p>; })()}
           </div>
 

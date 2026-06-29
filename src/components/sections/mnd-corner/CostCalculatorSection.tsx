@@ -60,9 +60,10 @@ const CostCalculatorSection = forwardRef<HTMLElement>((_, ref) => {
 
   return (
     <section ref={setRef} className="min-h-screen w-full snap-start flex flex-col md:flex-row px-6 md:px-20 pt-20 md:pt-24 pb-12">
-      {/* Left */}
+      {/* Left panel */}
       <div className="flex items-start md:items-center justify-start w-full md:w-auto">
         <div className="flex flex-col gap-6 md:gap-10">
+          {/* Section label + headline */}
           <div className="flex flex-col gap-4">
             <p className={`font-inter font-semibold text-[11px] tracking-[1.7px] uppercase text-mnd-charcoal ${animate("[transition-delay:0ms]")}`}>
               Cost Calculator
@@ -75,6 +76,7 @@ const CostCalculatorSection = forwardRef<HTMLElement>((_, ref) => {
           <p className={`font-playfair font-normal text-[18px] md:text-[36px] leading-[1.333] tracking-[-0.03em] text-mnd-charcoal ${animate("[transition-delay:600ms]")}`}>
             Use our cost calculator tool<br />to get tailored estimate<br />based on your needs
           </p>
+          {/* Stats row */}
           <div className={`flex ${animate("[transition-delay:800ms]")}`}>
             {[
               { header: ">3", sub: "Minutes" },
@@ -94,7 +96,7 @@ const CostCalculatorSection = forwardRef<HTMLElement>((_, ref) => {
         </div>
       </div>
 
-      {/* Right */}
+      {/* Right panel — FAQ accordion */}
       <div className="flex-1 flex items-center justify-center px-0 md:px-12 mt-10 md:mt-0">
         <div className="w-full flex flex-col gap-6">
           {faqs.map((faq, i) => (

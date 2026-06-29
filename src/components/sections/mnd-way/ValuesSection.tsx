@@ -95,7 +95,7 @@ const ValuesSection = forwardRef<HTMLElement>((_, ref) => {
   return (
     <section ref={setRef} className="h-screen w-full snap-start overflow-hidden flex flex-col justify-center gap-10 pt-20 md:pt-24">
 
-      {/* Carousel track */}
+      {/* Value cards carousel */}
       <div
         ref={scrollContainerRef}
         className="overflow-x-auto scrollbar-none [&::-webkit-scrollbar]:hidden snap-x snap-mandatory touch-pan-x overscroll-x-contain scroll-px-[12.5vw] md:scroll-px-[calc((100vw-450px)/2)]"
@@ -110,6 +110,7 @@ const ValuesSection = forwardRef<HTMLElement>((_, ref) => {
               className={`flex-shrink-0 w-[70vw] md:w-[380px] bg-white rounded-[32px] py-6 px-6 md:py-8 md:px-8 flex flex-col gap-5 md:gap-8 shadow-[0_2px_4px_rgba(0,0,0,.04),0_8px_24px_rgba(0,0,0,.06)] snap-center ${base} ${inView ? visible : hidden}`}
               style={{ transitionDelay: inView ? `${i * 200}ms` : "0ms" }}
             >
+              {/* Value label + name */}
               <div className="flex flex-col gap-2 md:gap-3">
                 <div className="flex items-center gap-3">
                   <div className="w-2.5 h-2.5 rounded-full bg-black shrink-0" />
@@ -123,12 +124,14 @@ const ValuesSection = forwardRef<HTMLElement>((_, ref) => {
 
               <div className="w-[36px] h-[4px] md:w-[64px] md:h-[6px] bg-mnd-charcoal" />
 
+              {/* Value statement */}
               <p className="font-playfair text-[28px] font-bold leading-[1.333] tracking-[-0.03em] text-mnd-charcoal">
                 {v.statement}
               </p>
 
               <div className="w-[36px] h-[4px] md:w-[64px] md:h-[6px] bg-mnd-charcoal" />
 
+              {/* Value description */}
               <p className="font-inter text-[16px] font-medium leading-[1.2] text-mnd-charcoal">
                 {v.description}
               </p>
@@ -138,6 +141,7 @@ const ValuesSection = forwardRef<HTMLElement>((_, ref) => {
         </div>
       </div>
 
+      {/* Carousel pagination */}
       <div
         className={`flex justify-center gap-3 ${base} ${inView ? visible : hidden}`}
         style={{ transitionDelay: inView ? `${values.length * 200}ms` : "0ms" }}

@@ -48,21 +48,28 @@ export default function MndWay() {
     sectionRefs.current[index]?.scrollIntoView({ behavior: "smooth" });
   };
 
+  // Scroll container with snap sections
   return (
     <div id="mnd-way-container" ref={containerRef} className="relative h-screen overflow-y-scroll snap-y snap-mandatory">
       <div className="relative bg-mnd-beige">
+        {/* Sticky Navbar */}
         <div className="sticky top-3 md:top-8 z-50 flex justify-center">
           <Navbar minimal={activeIndex !== 0} />
         </div>
+        {/* Hero */}
         <HeroSection ref={(el) => { sectionRefs.current[0] = el; }} onScrollNext={() => scrollTo(1)} />
+        {/* Founders notes */}
         <NoteSection ref={(el) => { sectionRefs.current[1] = el; }} onSkipToValues={() => scrollTo(4)} />
         <NoteSection2 ref={(el) => { sectionRefs.current[2] = el; }} onSkipToValues={() => scrollTo(4)} />
         <NoteSection3 ref={(el) => { sectionRefs.current[3] = el; }} onSkipToValues={() => scrollTo(4)} />
+        {/* Values */}
         <ValuesSection ref={(el) => { sectionRefs.current[4] = el; }} />
       </div>
 
+      {/* Footer */}
       <FooterSection containerId="mnd-way-container" ref={(el) => { sectionRefs.current[5] = el; }} />
 
+      {/* Scroll Indicators */}
       <div className="hidden md:block">
         <ScrollIndicators
           total={TOTAL_SECTIONS}

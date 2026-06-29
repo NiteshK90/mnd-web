@@ -45,6 +45,7 @@ const MndWayHeroSection = forwardRef<HTMLElement, HeroSectionProps>(({ onScrollN
       className="relative bg-[url('/mnd-way/hero.png')] bg-cover bg-center min-h-screen w-full snap-start py-6 px-6 md:px-20 flex flex-col"
     >
       <div className="flex-1 flex flex-col md:flex-row items-center justify-center md:justify-start gap-6 relative">
+        {/* Hero headline + CTA */}
         <div className="flex flex-col justify-center">
           <div className="animate-hero-fly-in font-playfair text-[40px] md:text-[60px] font-semibold leading-[1.15] text-mnd-dark md:w-[400px]" style={{ animationDelay: "500ms" }}>
             The grass is greener at
@@ -59,6 +60,7 @@ const MndWayHeroSection = forwardRef<HTMLElement, HeroSectionProps>(({ onScrollN
           </div>
         </div>
 
+        {/* Interactive culture dots */}
         <div className="hidden md:block relative w-full">
           {dots.map((dot, i) => (
             <div

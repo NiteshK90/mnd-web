@@ -53,10 +53,12 @@ const GuaranteeSection = forwardRef<HTMLElement>((_, ref) => {
 
   return (
     <section ref={setRef} className="h-screen w-full snap-start flex flex-col items-center justify-center gap-12 md:gap-24 px-6 md:px-20 pt-20 md:pt-24">
+      {/* Section headline */}
       <h2 className={`font-playfair text-[26px] md:text-[36px] font-bold leading-[1.333] tracking-[-0.03em] text-mnd-charcoal text-center ${animate("[transition-delay:0ms]")}`}>
         All this, on our guarantee.
       </h2>
 
+      {/* Guarantee cards */}
       <div className={`flex gap-3 md:gap-6 overflow-x-auto md:overflow-visible w-full md:w-auto pb-4 md:pb-0 ${animate("[transition-delay:500ms]")}`}>
         {cards.map((card) => {
           const isOpen = card.id === activeCard;
@@ -67,7 +69,7 @@ const GuaranteeSection = forwardRef<HTMLElement>((_, ref) => {
                 isOpen ? "md:w-[340px]" : "md:w-[90px]"
               }`}
             >
-              {/* Mobile: horizontal scroll — always expanded, SectionCard owns the card styling */}
+              {/* Mobile card */}
               <div className="md:hidden h-full">
                 <SectionCard
                   title={card.title}
@@ -77,7 +79,7 @@ const GuaranteeSection = forwardRef<HTMLElement>((_, ref) => {
                 />
               </div>
 
-              {/* Desktop: open/collapse toggle */}
+              {/* Desktop accordion card */}
               <div className="hidden md:block h-full">
                 {isOpen ? (
                   <SectionCard

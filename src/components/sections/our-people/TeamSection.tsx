@@ -144,12 +144,13 @@ const TeamSection = forwardRef<HTMLElement>((_, ref) => {
       ref={setRef}
       className="min-h-screen w-full snap-start flex flex-col justify-center gap-8 px-6 md:px-20 pt-20 md:pt-24 pb-12 overflow-hidden"
     >
+      {/* Section headline */}
       <p className={`font-playfair text-[22px] md:text-[36px] font-normal leading-[1.333] tracking-[-0.03em] text-mnd-charcoal max-w-[600px] ${animate("[transition-delay:0ms]")}`}>
         And finally, this is us.<br />
         Can&apos;t wait to meet you.
       </p>
 
-      {/* ── Mobile scroll carousel ── */}
+      {/* Mobile scroll carousel */}
       <div className={`md:hidden -mx-6 ${animate("[transition-delay:200ms]")}`}>
         <div
           ref={mobileScrollRef}
@@ -170,12 +171,12 @@ const TeamSection = forwardRef<HTMLElement>((_, ref) => {
         </div>
       </div>
 
-      {/* Mobile info block */}
+      {/* Mobile member info */}
       <div className={`md:hidden flex flex-col gap-3 ${animate("[transition-delay:250ms]")}`}>
         <InfoBlock member={mobileActiveMember} />
       </div>
 
-      {/* ── Desktop click carousel ── */}
+      {/* Desktop click carousel */}
       <div
         className={`hidden md:flex items-center gap-6 ${animate("[transition-delay:200ms]")}`}
         style={{ paddingTop: padding, paddingLeft: padding }}
@@ -228,7 +229,7 @@ const TeamSection = forwardRef<HTMLElement>((_, ref) => {
         </button>
       </div>
 
-      {/* Pagination — mobile tracks scroll index, desktop tracks order */}
+      {/* Carousel pagination */}
       <div className={`md:hidden flex gap-3 justify-center ${animate("[transition-delay:400ms]")}`}>
         {[0, 1, 2, 3].map((key) => (
           <div key={key} className={`w-2.5 h-2.5 rounded-full border border-mnd-charcoal transition-all duration-300 ${mobileActiveIndex === key ? "bg-mnd-charcoal" : "bg-transparent"}`} />

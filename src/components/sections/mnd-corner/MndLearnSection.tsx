@@ -32,9 +32,10 @@ const MndLearnSection = forwardRef<HTMLElement>((_, ref) => {
 
   return (
     <section ref={setRef} className="min-h-screen w-full snap-start flex flex-col md:flex-row px-6 md:px-20 pt-20 md:pt-24 pb-12">
-      {/* Left */}
+      {/* Left panel */}
       <div className="flex items-start md:items-center justify-start w-full md:w-auto">
         <div className="flex flex-col gap-6 md:gap-10">
+          {/* Section label + headline */}
           <div className="flex flex-col gap-4">
             <p className={`font-inter font-semibold text-[11px] tracking-[1.7px] uppercase text-mnd-charcoal ${animate("[transition-delay:0ms]")}`}>
               MND Learn
@@ -54,9 +55,10 @@ const MndLearnSection = forwardRef<HTMLElement>((_, ref) => {
         </div>
       </div>
 
-      {/* Right */}
+      {/* Right panel — event card */}
       <div className={`flex-1 flex items-center justify-center px-0 md:px-8 mt-10 md:mt-0 ${animate("[transition-delay:400ms]")}`}>
         <div className="w-full max-w-xl px-6 py-8 md:px-16 md:py-12 border-[1px] border-mnd-charcoal rounded-[32px] md:rounded-[56px] flex flex-col gap-6 md:gap-8">
+          {/* Event title */}
           <div className="flex flex-col gap-1">
             <p className="font-inter font-semibold text-[10px] tracking-[1.5px] uppercase text-mnd-charcoal">
               Upcoming Events
@@ -69,6 +71,7 @@ const MndLearnSection = forwardRef<HTMLElement>((_, ref) => {
             </p>
           </div>
           <div className="w-[48px] h-[2px] bg-mnd-charcoal" />
+          {/* Event description */}
           <p className="font-inter font-normal text-[13px] leading-[1.5] text-mnd-charcoal">
             When was the last time you tried an AI tool, felt genuinely good about it for more than a week, and are still using it now? For most of the founders and operators we talk to, that answer is uncomfortable.
           </p>
@@ -77,6 +80,7 @@ const MndLearnSection = forwardRef<HTMLElement>((_, ref) => {
             <ArrowRight color="white" size={32} strokeWidth={1} />
           </a>
           <div className="w-[48px] h-[2px] bg-mnd-charcoal" />
+          {/* Event details */}
           <div className="flex flex-col gap-3">
             <div className="flex items-center gap-2 font-inter font-bold text-[12px] text-mnd-charcoal">
               <ClockIcon size={28} />
