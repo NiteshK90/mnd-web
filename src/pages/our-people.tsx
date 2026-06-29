@@ -1,5 +1,4 @@
-"use client";
-
+import type { GetServerSideProps } from "next";
 import { useRef, useState, useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import ScrollIndicators from "@/components/ScrollIndicators";
@@ -10,6 +9,10 @@ import TeamSection from "@/components/sections/our-people/TeamSection";
 import FooterSection from "@/components/sections/FooterSection";
 
 const TOTAL_SECTIONS = 5;
+
+export const getServerSideProps: GetServerSideProps = async () => {
+  return { props: {} };
+};
 
 export default function OurPeople() {
   const [activeIndex, setActiveIndex] = useState(0);

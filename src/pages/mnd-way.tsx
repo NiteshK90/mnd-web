@@ -1,5 +1,4 @@
-"use client";
-
+import type { GetServerSideProps } from "next";
 import { useRef, useState, useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import ScrollIndicators from "@/components/ScrollIndicators";
@@ -11,6 +10,10 @@ import ValuesSection from "@/components/sections/mnd-way/ValuesSection";
 import FooterSection from "@/components/sections/FooterSection";
 
 const TOTAL_SECTIONS = 6;
+
+export const getServerSideProps: GetServerSideProps = async () => {
+  return { props: {} };
+};
 
 export default function MndWay() {
   const [activeIndex, setActiveIndex] = useState(0);
