@@ -17,7 +17,7 @@ const navColumns = [
   {
     title: "Company",
     links: [
-      { label: "Privacy Policy", href: "#" },
+      { label: "Privacy Policy", href: "/privacy-policy" },
       { label: "POSH Compliance", href: "#" },
       { label: "IAF Certification", href: "https://www.iafcertsearch.org/", external: true },
       { label: "Amrita | Startup India", href: "https://www.amrita.edu/", external: true },

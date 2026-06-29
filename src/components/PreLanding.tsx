@@ -88,9 +88,9 @@ export default function PreLanding() {
         className="animate-slide-up flex justify-end items-center gap-3 pb-4 md:pb-6"
         style={su("2100ms")}
       >
-        <span className={`${text} text-xs font-bold tracking-[0.3em] transition-colors duration-500`}>
+        <Link href="/privacy-policy" className={`${text} text-xs font-bold tracking-[0.3em] transition-colors duration-500 hover:underline`}>
           PRIVACY
-        </span>
+        </Link>
         {/* Vertical separator */}
         <div className={`w-px h-6 transition-colors duration-500 ${isFun ? "bg-black" : "bg-white"}`} />
         <Link href="/">
