@@ -84,9 +84,9 @@ const FooterSection = forwardRef<HTMLElement, { containerId?: string }>(({ conta
       ref={setRef}
       className="bg-mnd-beige min-h-screen w-full snap-start flex flex-col"
     >
-      {/* Footer Hero */}
+      {/* Hero area */}
       <div className="flex-1 flex flex-col items-center justify-start gap-6 md:gap-8 px-6 md:px-20 bg-[url('/landing/footer.png')] bg-cover bg-center">
-        {/* Move to top */}
+        {/* Scroll to top */}
         <div className={`flex justify-center pt-5 ${animate("[transition-delay:0ms]")}`}>
           <button
             onClick={() => document.getElementById(containerId)?.scrollTo({ top: 0, behavior: "smooth" })}
