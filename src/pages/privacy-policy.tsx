@@ -214,18 +214,12 @@ export default function PrivacyPolicy() {
       {/* Page wrapper */}
       <div className="bg-mnd-parchment text-mnd-charcoal min-h-screen">
 
-        {/* Top nav bar */}
-        <div className="border-b border-mnd-cream bg-mnd-parchment">
-          <div className="max-w-3xl mx-auto px-6 py-4 flex items-center gap-2">
-            {/* Shield icon */}
-            <div className="w-8 h-8 rounded-full border border-mnd-cream flex items-center justify-center">
-              <ShieldCheckIcon size={16} className="text-neutral-500" />
-            </div>
-          </div>
-        </div>
-
         {/* Hero */}
         <div className="max-w-6xl mx-auto px-6 pt-12 pb-8 border-b border-mnd-cream">
+          {/* Shield icon */}
+          <div className="w-8 h-8 rounded-full border border-mnd-cream bg-mnd-beige flex items-center justify-center mb-4">
+            <ShieldCheckIcon size={16} className="text-neutral-500" />
+          </div>
           <h1 className="font-playfair text-3xl md:text-5xl font-normal tracking-tight text-mnd-charcoal mb-3">Privacy Policy</h1>
           <p className="text-sm text-neutral-500">Last updated: May 15, 2024</p>
           {/* Intro text */}
@@ -249,7 +243,7 @@ export default function PrivacyPolicy() {
                 <div className="flex items-start gap-4">
                   {/* Icon bubble + title */}
                   <div className="flex items-center gap-3 max-md:flex-1 md:w-72 shrink-0">
-                    <div className="w-8 h-8 rounded-full border border-mnd-cream flex items-center justify-center shrink-0">
+                    <div className="w-8 h-8 rounded-full border border-mnd-cream bg-mnd-beige flex items-center justify-center shrink-0">
                       <section.Icon size={16} className="text-neutral-500" />
                     </div>
                     <span className="text-sm font-medium text-mnd-charcoal">{section.title}</span>
