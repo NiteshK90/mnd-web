@@ -9,10 +9,15 @@ const ArrowIcon = () => (
   <PhArrowRight size={20} weight="regular" className="shrink-0 transition-transform group-hover/cta:translate-x-1" />
 );
 
+interface Cta {
+  label: string;
+  href: string;
+}
+
 interface CardData {
   header: string;
   question: string;
-  ctas: string[];
+  ctas: Cta[];
   body: string[];
 }
 
@@ -25,7 +30,12 @@ const cards: CardData[] = [
   {
     header: "Engineer",
     question: "Do you like building things that\nactually work?",
-    ctas: ["Check out our gigs", "Apply to our\nEngineering pool"],
+    ctas: [
+      // TODO(be-our-people-cta): link to active job listings page or filtered gigs board
+      { label: "Check out our gigs", href: "#" },
+      // TODO(be-our-people-cta): link to engineering talent pool application form
+      { label: "Apply to our\nEngineering pool", href: "#" },
+    ],
     body: [
       "Are you someone who genuinely cares about how products are made? Not just shipping, but the craft.",
       "And looking for gigs where you can flex that stellar on your terms, at your time?",
@@ -34,7 +44,10 @@ const cards: CardData[] = [
   {
     header: "Founders",
     question: "Building something awesome and need the right team?",
-    ctas: ["Partner with Us"],
+    ctas: [
+      // TODO(be-our-people-cta): link to founder/partner inquiry form or intake page
+      { label: "Partner with Us", href: "#" },
+    ],
     body: [
       "Are you building something ambitious and need a team that can actually keep up? Not just execute tickets, but think alongside you.",
       "And looking for people who care about the product as much as you do, even after launch day?",
@@ -43,7 +56,10 @@ const cards: CardData[] = [
   {
     header: "Investors",
     question: "Backing ideas that need to get built fast?",
-    ctas: ["Support your portfolio"],
+    ctas: [
+      // TODO(be-our-people-cta): link to investor/portfolio-support inquiry form
+      { label: "Support your portfolio", href: "#" },
+    ],
     body: [
       "Backing founders with momentum but need trusted builders around them? The kind that move fast without creating future messes.",
       "And want technical partners who understand that speed only matters if the foundation survives scale?",
@@ -52,7 +68,10 @@ const cards: CardData[] = [
   {
     header: "Client Partners",
     question: "Know great builders or founders?",
-    ctas: ["Become an MND Patron"],
+    ctas: [
+      // TODO(be-our-people-cta): link to MND Patron referral/sign-up form
+      { label: "Become an MND Patron", href: "#" },
+    ],
     body: [
       "Know someone brilliant who deserves the right people around them? Someone building thoughtfully and aiming high.",
       "And want to connect them with a team that genuinely cares about doing the work properly?",
@@ -95,9 +114,9 @@ const AccordionCard = ({ header, question, ctas, body, isOpen, onToggle }: Accor
         {/* CTAs */}
         <div className="flex flex-col gap-4 justify-between">
           {ctas.map((cta, i) => (
-            <a key={i} href="#" className="flex flex-1 items-center justify-between gap-3 group/cta" onClick={e => e.stopPropagation()}>
+            <a key={i} href={cta.href} className="flex flex-1 items-center justify-between gap-3 group/cta" onClick={e => e.stopPropagation()}>
               <span className="font-inter text-[10px] tracking-widest font-medium uppercase text-mnd-charcoal">
-                {cta.split('\n').map((line, j) => (
+                {cta.label.split('\n').map((line, j) => (
                   <span key={j}>{j > 0 && <br />}{line}</span>
                 ))}
               </span>

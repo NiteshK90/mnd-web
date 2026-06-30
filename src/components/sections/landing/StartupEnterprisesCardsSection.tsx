@@ -89,7 +89,7 @@ function CardDeck({ cards, category }: { cards: typeof startupCards; category: s
           return (
             <div
               key={i}
-              className={`absolute w-[220px] md:w-[270px] h-[270px] md:h-[340px] rounded-[28px] bg-white shadow-card ${isFront ? "cursor-grab active:cursor-grabbing" : ""}`}
+              className={`absolute w-[220px] md:w-[270px] h-[270px] md:h-[340px] rounded-[16px] md:rounded-[20px] bg-white shadow-[0_8px_16px_rgba(0,0,0,0.06)] ${isFront ? "cursor-grab active:cursor-grabbing" : ""}`}
               style={{
                 left: pos.left,
                 top: pos.top,
@@ -112,7 +112,7 @@ function CardDeck({ cards, category }: { cards: typeof startupCards; category: s
                 <p className="font-inter text-[12px] md:text-[10px] font-semibold text-mnd-charcoal">● {category}</p>
                 <div className="mt-4 md:mt-8 flex flex-col gap-2 md:gap-3">
                   <div className="flex items-start gap-2">
-                    <span className="font-inter text-[36px] md:text-[60px] font-bold text-mnd-charcoal leading-none">&ldquo;</span>
+                    <span className="font-inter text-[36px] md:text-[46px] font-bold italic text-mnd-charcoal leading-none">&ldquo;</span>
                     <p className="font-inter text-[13px] md:text-[12px] italic font-medium leading-[1.2] text-mnd-charcoal w-[150px] md:w-[190px] mt-2">
                       {card.quote}
                     </p>

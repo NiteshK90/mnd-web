@@ -74,13 +74,13 @@ function TestimonialCard({ testimonial }: { testimonial: (typeof testimonials)[0
             </div>
             {/* Testimonial */}
             <div className="flex items-start gap-3">
-              <span className="text-[32px] md:text-[46px] font-bold text-mnd-charcoal leading-none italic">"</span>
+              <span className="font-inter text-[36px] md:text-[46px] font-bold italic text-mnd-charcoal leading-none">&ldquo;</span>
               <p className="font-inter text-[13px] md:text-[16px] font-bold leading-[1.35] text-mnd-charcoal">
                 {testimonial.text}
               </p>
             </div>
           </div>
-          <p className="font-inter text-[8px] uppercase text-mnd-charcoal text-center tracking-widest">
+          <p className="font-inter text-[10px] font-semibold uppercase text-mnd-charcoal text-center tracking-[0.15em]">
             Flip to hear from the engineer
           </p>
         </div>
@@ -102,7 +102,7 @@ function TestimonialCard({ testimonial }: { testimonial: (typeof testimonials)[0
             </div>
             {/* Testimonial */}
             <div className="flex items-start gap-3">
-              <span className="text-[28px] font-bold text-mnd-charcoal leading-none italic">"</span>
+              <span className="font-inter text-[36px] md:text-[46px] font-bold italic text-mnd-charcoal leading-none">&ldquo;</span>
               <p className="font-inter text-[13px] font-bold leading-[1.35] text-mnd-charcoal">
                 {testimonial.engineerText}
               </p>

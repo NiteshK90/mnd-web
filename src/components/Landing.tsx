@@ -23,7 +23,7 @@ export default function Landing() {
   const sectionRefs = useRef<(HTMLElement | null)[]>([]);
 
   useEffect(() => {
-    const visited = document.cookie.split(";").some((c) => c.trim().startsWith("mnd_visited="));
+    const visited = localStorage.getItem("mnd_visited") === "true";
     if (!visited) setShowPreLanding(true);
   }, []);
 

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -12,24 +12,65 @@ interface PreLandingProps {
 export default function PreLanding({ onComplete }: PreLandingProps) {
   const [isFun, setIsFun] = useState(false);
   const router = useRouter();
+  const modalRef = useRef<HTMLDivElement>(null);
 
   const text = isFun ? "text-black" : "text-white";
   const border = isFun ? "border-black" : "border-white";
 
   const su = (delay: string) => ({ animationDelay: delay });
 
+  const complete = useCallback(() => {
+    localStorage.setItem("mnd_visited", "true");
+    if (onComplete) {
+      onComplete();
+    } else {
+      router.replace("/");
+    }
+  }, [onComplete, router]);
+
+  // Auto-focus first interactive element; restore focus on unmount
+  useEffect(() => {
+    const previouslyFocused = document.activeElement as HTMLElement | null;
+    const firstFocusable = modalRef.current?.querySelector<HTMLElement>("button, [href]");
+    firstFocusable?.focus();
+    return () => { previouslyFocused?.focus(); };
+  }, []);
+
+  // Escape to dismiss; Tab to trap focus inside modal
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        complete();
+        return;
+      }
+      if (e.key !== "Tab" || !modalRef.current) return;
+      const focusable = modalRef.current.querySelectorAll<HTMLElement>(
+        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+      );
+      if (focusable.length === 0) return;
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (e.shiftKey) {
+        if (document.activeElement === first) { e.preventDefault(); last.focus(); }
+      } else {
+        if (document.activeElement === last) { e.preventDefault(); first.focus(); }
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [complete]);
+
   // Page wrapper — transitions bg from black to mnd-yellow on toggle, then redirects
   return (
     <div
+      ref={modalRef}
+      role="dialog"
+      aria-modal="true"
+      aria-label="Welcome to MND"
       className={`flex flex-col min-h-screen p-4 md:p-6 transition-colors duration-500 ${isFun ? "bg-mnd-yellow" : "bg-black"}`}
       onTransitionEnd={(e) => {
         if (e.propertyName === "background-color" && isFun) {
-          document.cookie = "mnd_visited=true; path=/; max-age=31536000";
-          if (onComplete) {
-            onComplete();
-          } else {
-            router.replace("/");
-          }
+          complete();
         }
       }}
     >
@@ -70,6 +111,7 @@ export default function PreLanding({ onComplete }: PreLandingProps) {
             {/* Toggle switch */}
             <button
               onClick={() => setIsFun(true)}
+              aria-label="Switch to the fun version"
               className={`animate-slide-up relative w-16 h-5 rounded-full bg-transparent border ${border} cursor-pointer shrink-0 transition-colors duration-500`}
               style={su("1550ms")}
             >
