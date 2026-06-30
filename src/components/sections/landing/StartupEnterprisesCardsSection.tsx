@@ -89,7 +89,7 @@ function CardDeck({ cards, category }: { cards: typeof startupCards; category: s
           return (
             <div
               key={i}
-              className={`absolute w-[220px] md:w-[270px] h-[270px] md:h-[340px] rounded-[28px] bg-white shadow-card ${isFront ? "cursor-grab active:cursor-grabbing" : ""}`}
+              className={`absolute w-[220px] md:w-[270px] h-[270px] md:h-[340px] rounded-[16px] md:rounded-[20px] bg-white shadow-[0_8px_16px_rgba(0,0,0,0.06)] ${isFront ? "cursor-grab active:cursor-grabbing" : ""}`}
               style={{
                 left: pos.left,
                 top: pos.top,

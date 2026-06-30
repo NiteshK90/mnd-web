@@ -7,7 +7,7 @@ interface SectionCardProps {
 
 export default function SectionCard({ title, quote, body, className = "" }: SectionCardProps) {
   return (
-    <div className={`bg-white rounded-[28px] shadow-card flex flex-col gap-5 md:gap-6 ${className}`}>
+    <div className={`bg-white rounded-[16px] md:rounded-[20px] shadow-card flex flex-col gap-5 md:gap-6 ${className}`}>
       {/* Card title */}
       <h3 className="font-playfair text-[18px] font-bold leading-[1.333] text-mnd-charcoal max-w-[225px]">
         {title}
