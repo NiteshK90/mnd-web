@@ -145,7 +145,7 @@ const FooterSection = forwardRef<HTMLElement, { containerId?: string }>(({ conta
                         <Link
                           href={link.href}
                           {...("external" in link && link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-                          className="inline-flex items-center gap-1.5 text-[13px] font-normal text-white/70 hover:text-white hover:font-bold transition-colors duration-150"
+                          className="inline-flex items-center gap-1.5 text-[13px] font-normal text-white/70 hover:text-white transition-colors duration-150"
                         >
                           {"icon" in link && link.icon ? <link.icon size={14} /> : null}
                           {link.label}
