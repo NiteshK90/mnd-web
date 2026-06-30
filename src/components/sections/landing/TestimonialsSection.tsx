@@ -80,7 +80,7 @@ function TestimonialCard({ testimonial }: { testimonial: (typeof testimonials)[0
               </p>
             </div>
           </div>
-          <p className="font-inter text-[8px] uppercase text-mnd-charcoal text-center tracking-widest">
+          <p className="font-inter text-[10px] font-semibold uppercase text-mnd-charcoal text-center tracking-[0.15em]">
             Flip to hear from the engineer
           </p>
         </div>
