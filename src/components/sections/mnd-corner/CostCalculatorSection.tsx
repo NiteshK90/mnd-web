@@ -79,7 +79,7 @@ const CostCalculatorSection = forwardRef<HTMLElement>((_, ref) => {
           {/* Stats row */}
           <div className={`flex ${animate("[transition-delay:800ms]")}`}>
             {[
-              { header: ">3", sub: "Minutes" },
+              { header: "<3", sub: "Minutes" },
               { header: "100%", sub: "Confidential" },
               { header: "Tailored", sub: "to you" },
             ].map((stat, i) => (
