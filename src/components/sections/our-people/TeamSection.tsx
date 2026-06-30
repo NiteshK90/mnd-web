@@ -201,7 +201,7 @@ const TeamSection = forwardRef<HTMLElement>((_, ref) => {
               </div>
 
               {isActive && (
-                <div className="absolute top-[-195px] left-[calc(100%+24px)] w-[200px] flex flex-col gap-3 z-10">
+                <div className="absolute top-[-195px] left-[calc(100%+24px)] w-[300px] flex flex-col gap-3 z-10">
                   {[
                     <p key="name" className="font-playfair text-[22px] font-semibold text-mnd-charcoal leading-tight">{desktopActiveMember.name}</p>,
                     <p key="role" className="font-inter text-[11px] tracking-[0.15em] uppercase text-mnd-charcoal">{desktopActiveMember.role}</p>,
