@@ -1,6 +1,7 @@
 "use client";
 
 import { forwardRef, useRef, useEffect, useState } from "react";
+import Link from "next/link";
 import ArrowRight from "@/components/icons/ArrowRight";
 import { X } from "@phosphor-icons/react";
 
@@ -106,13 +107,12 @@ const BlogSection = forwardRef<HTMLElement>((_, ref) => {
           {/* Rows */}
           <div className="flex flex-col gap-2">
             {[
-              { date: "MAY 1", year: "2026", title: "Blog 1" },
-              { date: "APR 25", year: "2026", title: "Blog 2" },
-              { date: "APR 10", year: "2026", title: "Blog 3" },
-              { date: "MAR 28", year: "2026", title: "Blog 4" },
-              { date: "MAR 14", year: "2026", title: "Blog 5" },
+              { date: "JUN 16", year: "2026", title: "What Is Hermes Agent and How Does It Compare to Other AI Tools" },
+              { date: "JUN 19", year: "2026", title: "Why Your AI Agent Keeps Failing (It's Not the Model)" },
+              { date: "MAY 22", year: "2026", title: "Tearing Up the Bond Myth: What Employers Won't Tell You" },
+              { date: "APR 21", year: "2026", title: "Meta's Muse Spark: The End of Open Source for Llama?" },
             ].map((post, i) => (
-              <a key={i} href="https://mynextdeveloper.com/blogs/" target="_blank" rel="noopener noreferrer" className={`group grid grid-cols-[50px_1fr_28px] md:grid-cols-[60px_1fr_30px] items-center gap-x-8 min-h-[40px] py-4 border-b border-[#9b9b9b] cursor-pointer ${animate(`[transition-delay:${700 + i * 100}ms]`)}`}>
+              <Link key={i} href="#" className={`group grid grid-cols-[50px_1fr_28px] md:grid-cols-[60px_1fr_30px] items-center gap-x-8 min-h-[40px] py-4 border-b border-[#9b9b9b] cursor-pointer ${animate(`[transition-delay:${700 + i * 100}ms]`)}`}>
                 <div className="font-inter text-[10px] font-medium leading-[1.6] tracking-[0.08em] text-[#252525] uppercase">
                   {post.date}<br />{post.year}
                 </div>
@@ -122,7 +122,7 @@ const BlogSection = forwardRef<HTMLElement>((_, ref) => {
                 <div className="flex justify-center items-center transition-transform duration-[250ms] ease-in-out group-hover:translate-x-2">
                   <ArrowRight color="#1f1b1c" size={24} strokeWidth={1} />
                 </div>
-              </a>
+              </Link>
             ))}
           </div>
         </div>
