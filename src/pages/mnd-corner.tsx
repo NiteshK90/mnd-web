@@ -1,4 +1,3 @@
-import type { GetServerSideProps } from "next";
 import { useRef, useState, useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import ScrollIndicators from "@/components/ScrollIndicators";
@@ -10,10 +9,6 @@ import MndLearnSection from "@/components/sections/mnd-corner/MndLearnSection";
 import FooterSection from "@/components/sections/FooterSection";
 
 const TOTAL_SECTIONS = 6;
-
-export const getServerSideProps: GetServerSideProps = async () => {
-  return { props: {} };
-};
 
 export default function MndCorner() {
   const [activeIndex, setActiveIndex] = useState(0);
