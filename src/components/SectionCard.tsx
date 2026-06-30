@@ -16,7 +16,7 @@ export default function SectionCard({ title, quote, body, className = "" }: Sect
       {/* Pull quote */}
       {quote && (
         <div className="flex items-start gap-4">
-          <span className="font-inter text-[46px] font-bold italic text-mnd-charcoal leading-none">&ldquo;</span>
+          <span className="font-inter text-[36px] md:text-[46px] font-bold italic text-mnd-charcoal leading-none">&ldquo;</span>
           <p className="w-full max-w-[230px] font-inter text-[12px] italic font-normal leading-[1.3] text-mnd-charcoal mt-2">
             {quote}
           </p>

@@ -236,7 +236,7 @@ const CareerSection = forwardRef<HTMLElement>((_, ref) => {
               </h3>
               <div className="w-10 md:w-16 h-[2px] md:h-[3px] bg-mnd-charcoal" />
               <div className="flex items-start gap-2">
-                <span className="font-inter text-[46px] font-bold italic text-mnd-charcoal leading-none">&ldquo;</span>
+                <span className="font-inter text-[36px] md:text-[46px] font-bold italic text-mnd-charcoal leading-none">&ldquo;</span>
                 <p className="font-inter text-[10px] md:text-xs italic font-normal leading-[1.3] mt-2">
                   {card.quote.replace(/\n/g, " ")}
                 </p>
