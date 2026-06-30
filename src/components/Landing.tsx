@@ -2,6 +2,7 @@
 
 import { useRef, useState, useEffect } from "react";
 import Navbar from "@/components/Navbar";
+import PreLanding from "@/components/PreLanding";
 import ScrollIndicators from "@/components/ScrollIndicators";
 import HeroSection from "@/components/sections/landing/hero-section/HeroSection";
 import ProblemStatementSection from "@/components/sections/landing/ProblemStatementSection";
@@ -17,8 +18,14 @@ const TOTAL_SECTIONS = 9; // Hero, About, Services, Work, Process, Team, Testimo
 
 export default function Landing() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [showPreLanding, setShowPreLanding] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
   const sectionRefs = useRef<(HTMLElement | null)[]>([]);
+
+  useEffect(() => {
+    const visited = document.cookie.split(";").some((c) => c.trim().startsWith("mnd_visited="));
+    if (!visited) setShowPreLanding(true);
+  }, []);
 
   useEffect(() => {
     const container = containerRef.current;
@@ -46,6 +53,12 @@ export default function Landing() {
 
   // Scroll container with snap sections
   return (
+    <>
+    {showPreLanding && (
+      <div className="fixed inset-0 z-[100]">
+        <PreLanding onComplete={() => setShowPreLanding(false)} />
+      </div>
+    )}
     <div id="landing-container" ref={containerRef} className="relative h-screen overflow-y-scroll snap-y snap-mandatory">
       <div className="relative bg-mnd-beige">
         {/* Sticky Navbar */}
@@ -80,5 +93,6 @@ export default function Landing() {
         />
       </div>
     </div>
+    </>
   );
 }

@@ -5,7 +5,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-export default function PreLanding() {
+interface PreLandingProps {
+  onComplete?: () => void;
+}
+
+export default function PreLanding({ onComplete }: PreLandingProps) {
   const [isFun, setIsFun] = useState(false);
   const router = useRouter();
 
@@ -21,7 +25,11 @@ export default function PreLanding() {
       onTransitionEnd={(e) => {
         if (e.propertyName === "background-color" && isFun) {
           document.cookie = "mnd_visited=true; path=/; max-age=31536000";
-          router.replace("/");
+          if (onComplete) {
+            onComplete();
+          } else {
+            router.replace("/");
+          }
         }
       }}
     >
