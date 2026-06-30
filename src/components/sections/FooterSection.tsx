@@ -17,10 +17,13 @@ const navColumns = [
   {
     title: "Company",
     links: [
+      // TODO: create /privacy-policy page before launch — legal requirement
       { label: "Privacy Policy", href: "#" },
+      // TODO: create /posh-compliance page before launch — legal requirement
       { label: "POSH Compliance", href: "#" },
       { label: "IAF Certification", href: "https://www.iafcertsearch.org/", external: true },
       { label: "Amrita | Startup India", href: "https://www.amrita.edu/", external: true },
+      // TODO: create /mnd-for-llms page before launch
       { label: "MND for LLMs", href: "#" },
     ],
   },
