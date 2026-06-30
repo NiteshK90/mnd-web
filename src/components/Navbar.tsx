@@ -12,7 +12,7 @@ const navLinks = [
   { label: "The MND way", href: "/mnd-way" },
   { label: "We do more stuff", href: "/other-stuff" },
   { label: "The MND Corner", href: "/mnd-corner" },
-  { label: "Be our people", href: "/be-our-people" },
+  { label: "Be our people", href: "/our-people" },
 ];
 
 export default function Navbar({ minimal = false, showBorder = false }: NavbarProps) {
@@ -60,7 +60,7 @@ export default function Navbar({ minimal = false, showBorder = false }: NavbarPr
             <Link
               key={link.label}
               href={link.href}
-              className="whitespace-nowrap font-inter text-[12px] font-semibold text-mnd-charcoal hover:font-bold transition-all"
+              className="whitespace-nowrap font-inter text-[12px] font-semibold text-mnd-charcoal hover:font-bold transition-all px-2 py-3"
             >
               {link.label}
             </Link>

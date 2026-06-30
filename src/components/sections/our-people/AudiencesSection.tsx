@@ -31,9 +31,9 @@ const cards: CardData[] = [
     header: "Engineer",
     question: "Do you like building things that\nactually work?",
     ctas: [
-      // TODO(be-our-people-cta): link to active job listings page or filtered gigs board
+      // TODO(our-people-cta): link to active job listings page or filtered gigs board
       { label: "Check out our gigs", href: "#" },
-      // TODO(be-our-people-cta): link to engineering talent pool application form
+      // TODO(our-people-cta): link to engineering talent pool application form
       { label: "Apply to our\nEngineering pool", href: "#" },
     ],
     body: [
@@ -45,7 +45,7 @@ const cards: CardData[] = [
     header: "Founders",
     question: "Building something awesome and need the right team?",
     ctas: [
-      // TODO(be-our-people-cta): link to founder/partner inquiry form or intake page
+      // TODO(our-people-cta): link to founder/partner inquiry form or intake page
       { label: "Partner with Us", href: "#" },
     ],
     body: [
@@ -57,7 +57,7 @@ const cards: CardData[] = [
     header: "Investors",
     question: "Backing ideas that need to get built fast?",
     ctas: [
-      // TODO(be-our-people-cta): link to investor/portfolio-support inquiry form
+      // TODO(our-people-cta): link to investor/portfolio-support inquiry form
       { label: "Support your portfolio", href: "#" },
     ],
     body: [
@@ -69,7 +69,7 @@ const cards: CardData[] = [
     header: "Client Partners",
     question: "Know great builders or founders?",
     ctas: [
-      // TODO(be-our-people-cta): link to MND Patron referral/sign-up form
+      // TODO(our-people-cta): link to MND Patron referral/sign-up form
       { label: "Become an MND Patron", href: "#" },
     ],
     body: [

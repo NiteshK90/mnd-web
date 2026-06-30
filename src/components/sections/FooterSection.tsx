@@ -11,7 +11,7 @@ const navColumns = [
       { label: "Values", href: "/mnd-way#values" },
       { label: "Other Services", href: "/other-stuff" },
       { label: "Resources", href: "/mnd-corner" },
-      { label: "Relationships", href: "/be-our-people" },
+      { label: "Relationships", href: "/our-people" },
     ],
   },
   {
