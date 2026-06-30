@@ -93,9 +93,10 @@ const FooterSection = forwardRef<HTMLElement, { containerId?: string }>(({ conta
         <div className={`flex justify-center pt-5 ${animate("[transition-delay:0ms]")}`}>
           <button
             onClick={() => document.getElementById(containerId)?.scrollTo({ top: 0, behavior: "smooth" })}
-            className="w-12 h-12 rounded-full border-[1.5px] border-[#0D0D0F] bg-transparent flex items-center justify-center cursor-pointer"
+            aria-label="Scroll to top"
+            className="w-12 h-12 rounded-full border-[1.5px] border-[#0D0D0F] bg-transparent flex items-center justify-center cursor-pointer text-[#0D0D0F] transition-colors duration-150 hover:bg-[#0D0D0F] hover:text-white"
           >
-            <CaretUpIcon size={28} weight="bold" color="#0D0D0F" />
+            <CaretUpIcon size={28} weight="bold" />
           </button>
         </div>
 
