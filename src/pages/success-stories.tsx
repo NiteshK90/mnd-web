@@ -104,8 +104,8 @@ export default function SuccessStories() {
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
                 {STATS.map((stat) => (
                   <div key={stat.label} className="bg-white rounded-2xl border border-mnd-cream px-3 sm:px-6 py-4 sm:py-6 flex flex-col items-center text-center">
-                    <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-mnd-oat flex items-center justify-center mb-3 sm:mb-4">
-                      <img src={stat.icon} alt="" width={20} height={20} />
+                    <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-mnd-oat flex items-center justify-center mb-3 sm:mb-4">
+                      <img src={stat.icon} alt="" width={24} height={24} />
                     </div>
                     <div className="text-2xl sm:text-3xl font-semibold mb-1">{stat.value}</div>
                     <div className="text-[10px] sm:text-xs text-mnd-charcoal">{stat.label}</div>
