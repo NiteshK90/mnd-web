@@ -4,10 +4,10 @@ import { forwardRef, useRef, useEffect, useState } from "react";
 import { ArrowRightIcon, LinkedinLogoIcon } from "@phosphor-icons/react";
 
 const members = [
-  { name: "Jigar Mehta", role: "Co-founder", image: "/founders/jigar.png", linkedin: "https://www.linkedin.com/in/jigar1101/" },
-  { name: "Palomi Jain", role: "Co-founder", image: "/founders/palomi.png", linkedin: "https://www.linkedin.com/in/palomi-jain/" },
-  { name: "Parth Shah", role: "Co-founder", image: "/founders/parth.png", linkedin: "https://www.linkedin.com/in/parthshah9/" },
-  { name: "Purab Shah", role: "Co-founder", image: "/founders/purab.png", linkedin: "https://www.linkedin.com/in/purab93/" },
+  { name: "Jigar Mehta", role: "Co-founder", image: "/founders/jigar.png", linkedin: "https://www.linkedin.com/in/jigar1101/", bio: "He founded MyNextDeveloper to bring great standard to AI-native products, and has since co-founded Tabb and Transcrisp — proving he can go from idea to product." },
+  { name: "Palomi Jain", role: "Co-founder", image: "/founders/palomi.png", linkedin: "https://www.linkedin.com/in/palomi-jain/", bio: "She owns growth, operations and client experience end to end, and she knows how to make early-stage businesses scale." },
+  { name: "Parth Shah", role: "Co-founder", image: "/founders/parth.png", linkedin: "https://www.linkedin.com/in/parthshah9/", bio: "He's a repeat founder who knows how to build, raise, and ship." },
+  { name: "Purab Shah", role: "Co-founder", image: "/founders/purab.png", linkedin: "https://www.linkedin.com/in/purab93/", bio: "He is the kind of builder who turns ambition into something investors can point to." },
 ];
 
 const DESKTOP_SCALE = 2;
@@ -134,7 +134,7 @@ const TeamSection = forwardRef<HTMLElement>((_, ref) => {
         <LinkedinLogoIcon size={28} weight="fill" color="black" className="rounded-full block" />
       </a>
       <p className="font-inter text-[11px] leading-relaxed text-mnd-charcoal">
-        Short description about this person and what they bring to the team.
+        {member.bio}
       </p>
     </>
   );
@@ -201,14 +201,14 @@ const TeamSection = forwardRef<HTMLElement>((_, ref) => {
               </div>
 
               {isActive && (
-                <div className="absolute top-[-195px] left-[calc(100%+24px)] w-[200px] flex flex-col gap-3 z-10">
+                <div className="absolute top-[-195px] left-[calc(100%+24px)] w-[300px] flex flex-col gap-3 z-10">
                   {[
                     <p key="name" className="font-playfair text-[22px] font-semibold text-mnd-charcoal leading-tight">{desktopActiveMember.name}</p>,
                     <p key="role" className="font-inter text-[11px] tracking-[0.15em] uppercase text-mnd-charcoal">{desktopActiveMember.role}</p>,
                     <a key="linkedin" href={desktopActiveMember.linkedin} target="_blank" rel="noopener noreferrer" className="hover:opacity-60 transition-opacity w-fit">
                       <LinkedinLogoIcon size={32} weight="fill" color="black" className="rounded-full block" />
                     </a>,
-                    <p key="desc" className="font-inter text-[11px] leading-relaxed text-mnd-charcoal">Short description about this person and what they bring to the team.</p>,
+                    <p key="desc" className="font-inter text-[11px] leading-relaxed text-mnd-charcoal">{desktopActiveMember.bio}</p>,
                   ].map((item, i) => (
                     <div
                       key={i}

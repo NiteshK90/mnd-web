@@ -7,7 +7,7 @@ interface SectionCardProps {
 
 export default function SectionCard({ title, quote, body, className = "" }: SectionCardProps) {
   return (
-    <div className={`bg-white rounded-[28px] shadow-card flex flex-col gap-5 md:gap-6 ${className}`}>
+    <div className={`bg-white rounded-[16px] md:rounded-[20px] shadow-[0_8px_16px_rgba(0,0,0,0.06)] flex flex-col gap-5 md:gap-6 ${className}`}>
       {/* Card title */}
       <h3 className="font-playfair text-[18px] font-bold leading-[1.333] text-mnd-charcoal max-w-[225px]">
         {title}
@@ -16,7 +16,7 @@ export default function SectionCard({ title, quote, body, className = "" }: Sect
       {/* Pull quote */}
       {quote && (
         <div className="flex items-start gap-4">
-          <span className="font-inter text-[46px] font-bold italic text-mnd-charcoal leading-none">&ldquo;</span>
+          <span className="font-inter text-[36px] md:text-[46px] font-bold italic text-mnd-charcoal leading-none">&ldquo;</span>
           <p className="w-full max-w-[230px] font-inter text-[12px] italic font-normal leading-[1.3] text-mnd-charcoal mt-2">
             {quote}
           </p>

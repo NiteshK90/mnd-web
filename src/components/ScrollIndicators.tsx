@@ -12,7 +12,7 @@ export default function ScrollIndicators({ total, activeIndex, white, onScrollTo
         <button
           key={i}
           onClick={() => onScrollTo(i)}
-          className={`h-[10px] w-[10px] rounded-full transition-all duration-300 cursor-pointer border ${
+          className={`h-[10px] w-[10px] rounded-full transition-[background-color,border-color] duration-300 cursor-pointer border ${
             white
               ? `border-white ${i === activeIndex ? "bg-white" : "bg-transparent"}`
               : `border-black ${i === activeIndex ? "bg-black" : "bg-transparent"}`

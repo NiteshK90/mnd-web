@@ -1,5 +1,3 @@
-"use client";
-
 import { useRef, useState, useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import ScrollIndicators from "@/components/ScrollIndicators";

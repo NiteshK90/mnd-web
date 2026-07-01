@@ -88,7 +88,7 @@ const MndLearnSection = forwardRef<HTMLElement>((_, ref) => {
             </div>
             <div className="flex items-center gap-2 font-inter font-bold text-[12px] text-mnd-charcoal">
               <CalendarDotsIcon size={28} />
-              2ND JUNE, SATURDAY
+              12TH JULY, SUNDAY
             </div>
           </div>
         </div>

@@ -222,7 +222,7 @@ const CareerSection = forwardRef<HTMLElement>((_, ref) => {
           {cards.map((card, i) => (
             <div
               key={i}
-              className="bg-white rounded-[16px] md:rounded-[20px] shadow-card py-5 md:py-7 px-3 md:px-4 flex flex-col gap-3 md:gap-4 flex-shrink-0 w-[78vw] md:w-[250px] min-h-[280px] md:min-h-[320px]"
+              className="bg-white rounded-[16px] md:rounded-[20px] shadow-[0_8px_16px_rgba(0,0,0,0.06)] py-5 md:py-7 px-3 md:px-4 flex flex-col gap-3 md:gap-4 flex-shrink-0 w-[78vw] md:w-[250px] min-h-[280px] md:min-h-[320px]"
               style={{
                 transform: i < visibleCount ? "translateY(0)" : "translateY(60px)",
                 opacity: i < visibleCount ? 1 : 0,
@@ -236,7 +236,7 @@ const CareerSection = forwardRef<HTMLElement>((_, ref) => {
               </h3>
               <div className="w-10 md:w-16 h-[2px] md:h-[3px] bg-mnd-charcoal" />
               <div className="flex items-start gap-2">
-                <span className="font-inter text-[46px] font-bold italic text-mnd-charcoal leading-none">&ldquo;</span>
+                <span className="font-inter text-[36px] md:text-[46px] font-bold italic text-mnd-charcoal leading-none">&ldquo;</span>
                 <p className="font-inter text-[10px] md:text-xs italic font-normal leading-[1.3] mt-2">
                   {card.quote.replace(/\n/g, " ")}
                 </p>

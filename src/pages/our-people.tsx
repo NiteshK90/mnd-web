@@ -1,5 +1,3 @@
-"use client";
-
 import { useRef, useState, useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import ScrollIndicators from "@/components/ScrollIndicators";
@@ -42,7 +40,7 @@ export default function OurPeople() {
 
   // Scroll container with snap sections
   return (
-    <div id="our-people-container" ref={containerRef} className="relative h-screen overflow-y-scroll snap-y snap-mandatory">
+    <div id="be-our-people-container" ref={containerRef} className="relative h-screen overflow-y-scroll snap-y snap-mandatory">
       <div className="relative bg-mnd-beige">
         {/* Sticky Navbar */}
         <div className="sticky top-3 md:top-8 z-50 flex justify-center">
@@ -57,7 +55,7 @@ export default function OurPeople() {
       </div>
 
       {/* Footer */}
-      <FooterSection containerId="our-people-container" ref={(el) => { sectionRefs.current[4] = el; }} />
+      <FooterSection containerId="be-our-people-container" ref={(el) => { sectionRefs.current[4] = el; }} />
 
       {/* Scroll Indicators */}
       <div className="hidden md:block">

@@ -43,11 +43,11 @@ const HiringSection = forwardRef<HTMLElement>((_, ref) => {
       {/* Job listings */}
       <div className={`w-full max-w-[720px] flex flex-col border-t border-mnd-charcoal/20 ${animate("[transition-delay:700ms]")}`}>
         {[
-          { title: "Placeholder job 1", subtext: "Remote | Location" },
-          { title: "Placeholder job 2", subtext: "Remote | Location" },
-          { title: "Placeholder job 3", subtext: "Remote | Location" },
-          { title: "Placeholder job 4", subtext: "Remote | Location" },
-          { title: "Placeholder job 5", subtext: "Remote | Location" },
+          { title: "Front End Engineer — React", subtext: "Remote | India" },
+          { title: "Product Designer", subtext: "Remote | Global" },
+          { title: "Digital Marketing — LinkedIn", subtext: "Remote | India" },
+          { title: "Executive Assistant", subtext: "Remote | Global" },
+          { title: "Communications Lead", subtext: "Remote | India" },
         ].map((job, i) => (
           <div key={i} className={`group flex items-center justify-between gap-4 border-b border-mnd-charcoal/20 py-5 px-4 cursor-pointer ${animate(`[transition-delay:${800 + i * 100}ms]`)}`}>
             <div className="flex flex-1 items-center justify-between">

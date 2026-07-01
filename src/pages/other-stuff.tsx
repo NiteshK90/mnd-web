@@ -1,5 +1,3 @@
-"use client";
-
 import { useRef, useState, useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import ScrollIndicators from "@/components/ScrollIndicators";
@@ -66,7 +64,7 @@ export default function OtherStuff() {
         <ScrollIndicators
           total={TOTAL_SECTIONS}
           activeIndex={activeIndex}
-          white={activeIndex === 0 || activeIndex === 3 || activeIndex === TOTAL_SECTIONS - 1}
+          white={activeIndex === 0 || activeIndex === TOTAL_SECTIONS - 1}
           onScrollTo={scrollTo}
         />
       </div>

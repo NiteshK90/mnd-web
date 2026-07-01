@@ -14,19 +14,19 @@ const cases = [
     tag: "Scrybe Streaming",
     title: "Improved product performance with faster, cleaner engineering",
     body: "Can the right engineers make your product faster, smoother, and easier to scale?",
-    href: "https://mynextdeveloper.com/blogs/case/scrybe-streaming/",
+    href: "#",
   },
   {
     tag: "IOTIS",
     title: "Found the right mobile engineers to build IoT solutions for sports technology",
     body: "Can remote developers feel like they were always part of your team?",
-    href: "https://mynextdeveloper.com/blogs/case/iotis-internet-of-things-in-sport/",
+    href: "#",
   },
   {
     tag: "Silicon Society",
     title: "Built a reliable long-term remote engineering partnership",
     body: "How do you find a developer who understands your product as deeply as you do?",
-    href: "https://mynextdeveloper.com/blogs/case/silicon-society/",
+    href: "#",
   },
 ];
 
