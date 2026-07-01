@@ -223,14 +223,14 @@ export default function PrivacyPolicy() {
         {/* Hero */}
         <div className="max-w-6xl mx-auto px-6 pt-8 pb-8 border-b border-mnd-cream">
           {/* Shield icon */}
-          <div className="w-10 h-10 rounded-full border border-mnd-cream bg-mnd-sand flex items-center justify-center mb-4">
+          <div className="w-10 h-10 rounded-full border border-mnd-cream bg-mnd-oat flex items-center justify-center mb-4">
             <ShieldCheckIcon size={18} weight="bold" className="text-neutral-500" />
           </div>
           <h1 className="font-playfair text-3xl md:text-5xl font-normal tracking-tight text-mnd-charcoal mb-3">Privacy Policy</h1>
           <p className="text-sm text-neutral-500">Last updated: May 15, 2024</p>
           {/* Intro text */}
           <div className="mt-6 space-y-3 text-sm text-neutral-500 leading-relaxed">
-            <p>At MND, accessible from <span className="text-mnd-charcoal underline underline-offset-2">https://mnd.ai</span>, one of our main priorities is the privacy of our visitors.</p>
+            <p>At MND, accessible from <span className="text-mnd-charcoal">https://mnd.ai</span>, one of our main priorities is the privacy of our visitors.</p>
             <p>This Privacy Policy document contains types of information that is collected and recorded by MND and how we use it.</p>
             <p>If you have additional questions or require more information about our Privacy Policy, do not hesitate to contact us.</p>
           </div>
@@ -249,7 +249,7 @@ export default function PrivacyPolicy() {
                 <div className="flex items-start gap-4">
                   {/* Icon bubble + title */}
                   <div className="flex items-center gap-3 max-md:flex-1 md:w-96 shrink-0">
-                    <div className="w-10 h-10 rounded-full border border-mnd-cream bg-mnd-sand flex items-center justify-center shrink-0">
+                    <div className="w-10 h-10 rounded-full border border-mnd-cream bg-mnd-oat flex items-center justify-center shrink-0">
                       <section.Icon size={18} weight="bold" className="text-neutral-500" />
                     </div>
                     <span className="text-sm font-medium text-mnd-charcoal">{section.title}</span>
@@ -264,10 +264,12 @@ export default function PrivacyPolicy() {
                   </div>
 
                   {/* Chevron */}
-                  <CaretDownIcon
-                    size={16}
-                    className={`text-neutral-500 mt-1 shrink-0 cursor-pointer transition-transform duration-200 ${open.has(i) ? "rotate-180" : ""}`}
-                  />
+                  <div className="w-7 h-7 rounded-full border border-mnd-cream flex items-center justify-center shrink-0 cursor-pointer">
+                    <CaretDownIcon
+                      size={14}
+                      className={`text-mnd-charcoal/60 transition-transform duration-200 ${open.has(i) ? "rotate-180" : ""}`}
+                    />
+                  </div>
                 </div>
 
                 {/* Summary + detail — mobile only (stacked below) */}
@@ -284,11 +286,11 @@ export default function PrivacyPolicy() {
 
         {/* Footer CTA */}
         <div className="max-w-6xl mx-auto px-6 mt-12 mb-10">
-          <div className="rounded-2xl bg-mnd-oat flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 px-6 py-5">
-            <div className="flex items-center gap-4">
+          <div className="rounded-2xl bg-mnd-silk flex flex-col sm:flex-row items-start sm:items-center justify-between gap-8 px-8 py-7">
+            <div className="flex items-center gap-6">
               {/* Mail icon bubble */}
-              <div className="w-14 h-14 rounded-full bg-mnd-sand flex items-center justify-center shrink-0">
-                <EnvelopeSimpleIcon size={28} className="text-mnd-charcoal" />
+              <div className="w-16 h-16 rounded-full bg-mnd-oat flex items-center justify-center shrink-0">
+                <EnvelopeSimpleIcon size={32} className="text-mnd-charcoal" />
               </div>
               {/* CTA copy */}
               <div>
