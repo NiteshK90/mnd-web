@@ -29,6 +29,11 @@ body {
   font-family: "Inter", serif;
 }
 
+@utility scrollbar-hide {
+  scrollbar-width: none;
+  &::-webkit-scrollbar { display: none; }
+}
+
 @utility transition-cards {
   transition:
     width 400ms cubic-bezier(.22,1,.36,1),
