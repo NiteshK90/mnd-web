@@ -221,7 +221,7 @@ export default function PrivacyPolicy() {
         </div>
 
         {/* Hero */}
-        <div className="max-w-6xl mx-auto px-6 pt-8 pb-8 border-b border-mnd-cream">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 pt-6 sm:pt-8 pb-6 sm:pb-8 border-b border-mnd-cream">
           {/* Shield icon */}
           <div className="w-10 h-10 rounded-full border border-mnd-cream bg-mnd-oat flex items-center justify-center mb-4">
             <ShieldCheckIcon size={18} weight="bold" className="text-neutral-500" />
@@ -237,7 +237,7 @@ export default function PrivacyPolicy() {
         </div>
 
         {/* Accordion list */}
-        <div className="max-w-6xl mx-auto px-6 divide-y divide-mnd-cream">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 divide-y divide-mnd-cream">
           {SECTIONS.map((section, i) => (
             <div key={i} className="py-5">
               {/* Accordion trigger */}
@@ -285,12 +285,13 @@ export default function PrivacyPolicy() {
         </div>
 
         {/* Footer CTA */}
-        <div className="max-w-6xl mx-auto px-6 mt-12 mb-10">
-          <div className="rounded-2xl bg-mnd-silk flex flex-col sm:flex-row items-start sm:items-center justify-between gap-8 px-8 py-7">
-            <div className="flex items-center gap-6">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 mt-10 sm:mt-12 mb-8 sm:mb-10">
+          <div className="rounded-2xl bg-mnd-silk flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 sm:gap-8 px-5 sm:px-8 py-6 sm:py-7">
+            <div className="flex items-center gap-4 sm:gap-6">
               {/* Mail icon bubble */}
-              <div className="w-16 h-16 rounded-full bg-mnd-oat flex items-center justify-center shrink-0">
-                <EnvelopeSimpleIcon size={32} className="text-mnd-charcoal" />
+              <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-mnd-oat flex items-center justify-center shrink-0">
+                <EnvelopeSimpleIcon size={24} className="text-mnd-charcoal sm:hidden" />
+                <EnvelopeSimpleIcon size={32} className="text-mnd-charcoal hidden sm:block" />
               </div>
               {/* CTA copy */}
               <div>
