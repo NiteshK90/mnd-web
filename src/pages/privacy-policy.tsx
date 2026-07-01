@@ -224,12 +224,12 @@ export default function PrivacyPolicy() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 pt-6 sm:pt-8 pb-6 sm:pb-8 border-b border-mnd-cream">
           {/* Shield icon */}
           <div className="w-10 h-10 rounded-full border border-mnd-cream bg-mnd-oat flex items-center justify-center mb-4">
-            <ShieldCheckIcon size={18} weight="bold" className="text-neutral-500" />
+            <ShieldCheckIcon size={18} weight="bold" className="text-mnd-charcoal" />
           </div>
           <h1 className="font-playfair text-3xl md:text-5xl font-normal tracking-tight text-mnd-charcoal mb-3">Privacy Policy</h1>
-          <p className="text-sm text-neutral-500">Last updated: May 15, 2024</p>
+          <p className="text-sm text-mnd-charcoal">Last updated: May 15, 2024</p>
           {/* Intro text */}
-          <div className="mt-6 space-y-3 text-sm text-neutral-500 leading-relaxed">
+          <div className="mt-6 space-y-3 text-sm text-mnd-charcoal leading-relaxed">
             <p>At MND, accessible from <span className="text-mnd-charcoal">https://mnd.ai</span>, one of our main priorities is the privacy of our visitors.</p>
             <p>This Privacy Policy document contains types of information that is collected and recorded by MND and how we use it.</p>
             <p>If you have additional questions or require more information about our Privacy Policy, do not hesitate to contact us.</p>
@@ -250,16 +250,16 @@ export default function PrivacyPolicy() {
                   {/* Icon bubble + title */}
                   <div className="flex items-center gap-3 max-md:flex-1 md:w-96 shrink-0">
                     <div className="w-10 h-10 rounded-full border border-mnd-cream bg-mnd-oat flex items-center justify-center shrink-0">
-                      <section.Icon size={18} weight="bold" className="text-neutral-500" />
+                      <section.Icon size={18} weight="bold" className="text-mnd-charcoal" />
                     </div>
                     <span className="text-sm font-medium text-mnd-charcoal">{section.title}</span>
                   </div>
 
                   {/* Summary + detail — desktop only (side by side) */}
                   <div className="hidden md:block flex-1">
-                    <p className="text-xs text-neutral-500 leading-relaxed">{section.summary}</p>
+                    <p className="text-xs text-mnd-charcoal leading-relaxed">{section.summary}</p>
                     {open.has(i) && (
-                      <p className="text-xs text-neutral-500 leading-relaxed mt-2">{section.detail}</p>
+                      <p className="text-xs text-mnd-charcoal leading-relaxed mt-2">{section.detail}</p>
                     )}
                   </div>
 
@@ -274,9 +274,9 @@ export default function PrivacyPolicy() {
 
                 {/* Summary + detail — mobile only (stacked below) */}
                 <div className="md:hidden pl-[52px] mt-2">
-                  <p className="text-xs text-neutral-500 leading-relaxed">{section.summary}</p>
+                  <p className="text-xs text-mnd-charcoal leading-relaxed">{section.summary}</p>
                   {open.has(i) && (
-                    <p className="text-xs text-neutral-500 leading-relaxed mt-2">{section.detail}</p>
+                    <p className="text-xs text-mnd-charcoal leading-relaxed mt-2">{section.detail}</p>
                   )}
                 </div>
               </button>

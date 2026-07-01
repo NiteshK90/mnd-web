@@ -1,0 +1,1815 @@
+{
+  "caseStudies": [
+    {
+      "id": "silicon-society",
+      "pageMetadata": {
+        "title": "Silicon Society - MyNextDeveloper",
+        "description": "A software agency and society of technologists dedicated to humanizing tech.",
+        "canonical": "https://mynextdeveloper.com/blogs/case/silicon-society/",
+        "publishedDate": "2025-01-03T09:41:32+00:00",
+        "modifiedDate": "2025-01-03T09:41:32+00:00",
+        "views": 1751,
+        "readingTime": "3 minutes"
+      },
+      "caseStudyHeader": {
+        "title": "Silicon Society",
+        "logoUrl": "https://mynextdeveloper.com/wp-content/uploads/2024/12/silicon-society-logo-1.jpg",
+        "companyInfo": [
+          {
+            "label": "Company Name",
+            "value": "Silicon Society"
+          },
+          {
+            "label": "Industry",
+            "value": "Technology"
+          },
+          {
+            "label": "Headquarters",
+            "value": "USA"
+          },
+          {
+            "label": "Founded",
+            "value": "2023"
+          }
+        ]
+      },
+      "aboutClient": {
+        "title": "About the Client",
+        "description": "A software agency and society of technologists dedicated to humanizing tech.",
+        "details": [
+          "They support companies and nonprofits by project managing, building, and developing cutting-edge technological solutions.",
+          "They maintain a society of technologists looking to acquire new skills, shadow senior developers, contribute to agency projects, and diversify their careers."
+        ]
+      },
+      "approach": {
+        "title": "OUR APPROACH",
+        "points": [
+          "Initial consultation with client was needed to understand their needs and provide skilled full-stack development support for their complex client projects.",
+          "Utilized our deep bench of engineering talent to identify and onboard the best-fit developer to ensure seamless integration with the client's technical and cultural expectations.",
+          "Used an agile development methodology, working iteratively to meet technical milestones while being flexible to changes in project scope.",
+          "Adapted to client's project management and communication style for smooth collaboration without disrupting current workflows."
+        ]
+      },
+      "problemProjections": {
+        "title": "PROBLEM PROJECTIONS",
+        "points": [
+          "The client required access to highly skilled full-stack developers to support their complex client projects effectively.",
+          "Timely delivery of development milestones was critical to ensure client satisfaction and project success.",
+          "The client needed a partner who could easily adapt to his project management and communication styles.",
+          "The client valued a responsive and collaborative partner to handle time-sensitive tasks and requests efficiently."
+        ]
+      },
+      "proposedSolutions": {
+        "title": "PROPOSED SOLUTIONS",
+        "points": [
+          "We leveraged the talent pool to give them a highly experienced full-stack developer who met the client's technical requirements.",
+          "We adopted an agile and iterative development approach to ensure technical milestones are met within the stipulated timelines.",
+          "We easily adapted to the client's existing project management and communication methodologies, ensuring a smooth workflow.",
+          "Maintained open lines of communication, provided timely responses to time-sensitive requests throughout the project."
+        ]
+      },
+      "results": {
+        "title": "RESULTS",
+        "metrics": [
+          {
+            "icon": "https://mynextdeveloper.com/wp-content/uploads/2024/07/engineer.png",
+            "title": "Engineers Contracted",
+            "value": "2"
+          },
+          {
+            "icon": "https://mynextdeveloper.com/wp-content/uploads/2024/07/task-300x300.png",
+            "title": "Work Experience",
+            "value": "Full Stack - 7+ years\nDevOps (Azure) - 7+ years"
+          },
+          {
+            "icon": "https://mynextdeveloper.com/wp-content/uploads/2024/10/icons8-code-100.png",
+            "title": "Timely Full-Stack Support",
+            "value": "MND delivered full-stack engineering support for timely project completion."
+          },
+          {
+            "icon": "https://mynextdeveloper.com/wp-content/uploads/2024/07/hire-300x300.png",
+            "title": "Time To Hire",
+            "value": "Full Stack - 2 Days\nDevOps (Azure) - 5 Days"
+          }
+        ]
+      },
+      "whyUs": {
+        "title": "WHY US",
+        "points": [
+          {
+            "number": "01",
+            "title": "Responsive Leadership",
+            "description": "The leadership team's responsiveness and ability to handle time-sensitive requests made MND an ideal partner."
+          },
+          {
+            "number": "02",
+            "title": "Personal Recommendation",
+            "description": "MND was highly recommended by the client's network, thus giving them even more confidence in choosing the company."
+          },
+          {
+            "number": "03",
+            "title": "Cultural Alignment",
+            "description": "The client appreciated the good cultural fit between their team and MND, thus making it easy to work in a collaborative and efficient manner."
+          },
+          {
+            "number": "04",
+            "title": "Access to Top Talent",
+            "description": "The client was impressed by MND's pool of skilled and personable engineers, ensuring the right match for their complex project requirements."
+          }
+        ]
+      },
+      "testimonial": {
+        "title": "TESTIMONIAL",
+        "quote": "Working with MND has been an outstanding experience. The team provided not only top engineering talent but seamlessly integrated into our workflows and culture. The leadership is incredibly responsive, and the engineers are skilled, professional, and a joy to work with. From talent selection to project execution, everything was smooth and efficient. MND has become an invaluable extension of our team, and we look forward to continuing this partnership.",
+        "author": "Rachel Cohen",
+        "company": "Silicon Society",
+        "companyUrl": "https://www.siliconsociety.org/"
+      },
+      "qaRatings": {
+        "title": "Q&A WITH RATINGS",
+        "ratings": [
+          {
+            "label": "QUALITY OF ENGINEERS",
+            "score": 5
+          },
+          {
+            "label": "COMMUNICATION WITH THE CLIENT",
+            "score": 5
+          },
+          {
+            "label": "TIMELINESS OF DELIVERABLES",
+            "score": 5
+          },
+          {
+            "label": "OVERALL SATISFACTION",
+            "score": 5
+          }
+        ]
+      },
+      "conclusion": {
+        "title": "Conclusion",
+        "text": "MyNextDeveloper has supported SiSo Agency, bringing full-stack engineering talent onto their projects without causing disruption, aligning perfectly with the values of the client, and constantly delivering the desired outcome."
+      }
+    },
+    {
+      "id": "scrybe-streaming",
+      "pageMetadata": {
+        "title": "Scrybe Streaming - MyNextDeveloper",
+        "description": "They provide a streaming service that focuses on the creator.",
+        "canonical": "https://mynextdeveloper.com/blogs/case/scrybe-streaming/",
+        "publishedDate": "2024-12-02T07:57:03+00:00",
+        "modifiedDate": "2024-12-02T07:57:03+00:00",
+        "views": 1691,
+        "readingTime": "3 minutes"
+      },
+      "caseStudyHeader": {
+        "title": "Scrybe Streaming",
+        "logoUrl": "https://mynextdeveloper.com/wp-content/uploads/2024/11/scrybe-logo.jpeg",
+        "companyInfo": [
+          {
+            "label": "Company Name",
+            "value": "Scrybe Streaming"
+          },
+          {
+            "label": "Industry",
+            "value": "Online Audio and Video Media"
+          },
+          {
+            "label": "Headquarters",
+            "value": "Chandler, Arizona"
+          },
+          {
+            "label": "Founded",
+            "value": "2021"
+          }
+        ]
+      },
+      "aboutClient": {
+        "title": "About the Client",
+        "description": "They provide a streaming service that focuses on the creator. It is built to keep monthly subscription cost low for the listener, and increase the revenue earned by the artist simultaneously.",
+        "details": [
+          "The users subscribe to their choice of artists who will receive the subscription amount unlike other streaming services, who pay the artists a fraction of a cent."
+        ]
+      },
+      "approach": {
+        "title": "OUR APPROACH",
+        "points": [
+          "Analyzed the client's existing app and backend structure in detail for inefficiencies and areas for improvement.",
+          "Worked very closely with the client to understand their vision and then integrate those ideas into a holistic development roadmap.",
+          "Streamlined the backend by rewriting the codebase for better efficiency, scalability, and maintainability.",
+          "Adopted an iterative approach to ensure timely implementation of features with frequent updates and client feedback loops.",
+          "Maintained transparent communication with the client through virtual meetings and messaging apps regarding all progress toward expectation."
+        ]
+      },
+      "problemProjections": {
+        "title": "PROBLEM PROJECTIONS",
+        "points": [
+          "The client wanted the iOS and Android apps and the distribution website upgraded to improve performance and functionality.",
+          "The backend structure of the platform was messy because of sloppy coding by the previous developers, which created inefficiencies.",
+          "The app needed to be sped up and made more responsive to make it better for the users.",
+          "The client wanted the new designs and features integrated into the existing platform without any issues."
+        ]
+      },
+      "proposedSolutions": {
+        "title": "PROPOSED SOLUTIONS",
+        "points": [
+          "Improved the iOS, and Android apps, and distribution website by implementing modern designs and functionalities to align with client goals.",
+          "Rewrote and optimized the existing backend code, replacing inefficient structures with a lean, high-performance system.",
+          "Improved the app's performance by streamlining processes and optimizing resources, resulting in faster load times and smoother navigation.",
+          "Seamlessly integrated the client's new ideas and designs into the platform, ensuring minimal disruption to existing functionality."
+        ]
+      },
+      "results": {
+        "title": "RESULTS",
+        "metrics": [
+          {
+            "icon": "https://mynextdeveloper.com/wp-content/uploads/2024/07/engineer.png",
+            "title": "Engineers Contracted",
+            "value": "3"
+          },
+          {
+            "icon": "https://mynextdeveloper.com/wp-content/uploads/2024/07/task-300x300.png",
+            "title": "Work Experience",
+            "value": "Android Engineer - 6+ years\nFull Stack Engineer - 6+ years\niOS Engineer - 8+ years"
+          },
+          {
+            "icon": "https://mynextdeveloper.com/wp-content/uploads/2024/10/icons8-code-100.png",
+            "title": "App Enhancement",
+            "value": "Enhanced the app with innovative designs, streamlined backend, and faster performance."
+          },
+          {
+            "icon": "https://mynextdeveloper.com/wp-content/uploads/2024/07/hire-300x300.png",
+            "title": "Time To Hire",
+            "value": "Android Engineer - 3 Days\nFull Stack Engineer - 2 Days\niOS Engineer - 5 Days"
+          }
+        ]
+      },
+      "whyUs": {
+        "title": "WHY US",
+        "points": [
+          {
+            "number": "01",
+            "title": "Exceptional Ratings",
+            "description": "MND's outstanding reputation and consistently good reviews from former clients made the client feel secure in the company."
+          },
+          {
+            "number": "02",
+            "title": "Artist-First Innovation",
+            "description": "The client appreciated MND's alignment with their mission to create a fair and artist-focused platform."
+          },
+          {
+            "number": "03",
+            "title": "Refined Design Thinking",
+            "description": "Our ability to integrate unique designs within the platform makes us different from the competition."
+          },
+          {
+            "number": "04",
+            "title": "Speed and Scalability",
+            "description": "The ability to enhance the app's performance while preparing it for future scalability resonated with the client's vision."
+          }
+        ]
+      },
+      "testimonial": {
+        "title": "TESTIMONIAL",
+        "quote": "MyNextDeveloper upgraded our platform with fresh, innovative enhancements and efficient backend improvements. Their excellent communication and precision in testing phases ensured that everything went seamlessly. They keep delivering quality and are a very reliable partner for our business.",
+        "author": "Christian Phyfier",
+        "company": "Scrybe Streaming",
+        "companyUrl": "https://scrybestreaming.com/"
+      },
+      "qaRatings": {
+        "title": "Q&A WITH RATINGS",
+        "ratings": [
+          {
+            "label": "QUALITY OF ENGINEERS",
+            "score": 5
+          },
+          {
+            "label": "COMMUNICATION WITH THE CLIENT",
+            "score": 5
+          },
+          {
+            "label": "TIMELINESS OF DELIVERABLES",
+            "score": 5
+          },
+          {
+            "label": "OVERALL SATISFACTION",
+            "score": 5
+          }
+        ]
+      },
+      "conclusion": {
+        "title": "Conclusion",
+        "text": "MyNextDeveloper proved to be a valuable partner for Scrybe Streaming, delivering high-quality enhancements to their iOS, Android, and web platforms."
+      }
+    },
+    {
+      "id": "gem-atlas",
+      "pageMetadata": {
+        "title": "GemAtlas - MyNextDeveloper",
+        "description": "They provide a global networking platform for the Gems & Jewellery industry.",
+        "canonical": "https://mynextdeveloper.com/blogs/case/gem-atlas/",
+        "publishedDate": "2024-10-18T13:03:05+00:00",
+        "modifiedDate": "2025-02-17T06:38:54+00:00",
+        "views": 1614,
+        "readingTime": "3 minutes"
+      },
+      "caseStudyHeader": {
+        "title": "GemAtlas",
+        "logoUrl": "https://mynextdeveloper.com/wp-content/uploads/2024/10/gematlas.png",
+        "companyInfo": [
+          {
+            "label": "Company Name",
+            "value": "GemAtlas"
+          },
+          {
+            "label": "Industry",
+            "value": "Ecommerce"
+          },
+          {
+            "label": "Headquarters",
+            "value": "Mumbai"
+          },
+          {
+            "label": "Founded",
+            "value": "2013"
+          }
+        ]
+      },
+      "aboutClient": {
+        "title": "About the Client",
+        "description": "They provide a global networking platform for the Gems & Jewellery industry.",
+        "details": [
+          "They are a virtual meeting place for all Service Seekers and Service Providers of the Gem & Jewellery Industry and functions as global interactive Yellow Pages of the Industry."
+        ]
+      },
+      "approach": {
+        "title": "OUR APPROACH",
+        "points": [
+          "We spent considerable time understanding the client's vision of transforming the chat system from a person-to-person interaction to a more complex, person-to-demand-to-person model.",
+          "Our team closely collaborated with the client to define key requirements and ensure that the chat module was delivered with a focus on providing a seamless, user-friendly experience.",
+          "We focused on flexibility and frequent communication so we could respond really quick to the changing needs of the client and keep the project on track.",
+          "Coordination gaps were addressed by providing dedicated technical support for smoother communication between the development team and the client."
+        ]
+      },
+      "problemProjections": {
+        "title": "PROBLEM PROJECTIONS",
+        "points": [
+          "The current chat with the client only supported person-to-person communication, which did not help their business model.",
+          "The demand to replace the chat module as a dynamic, demand-driven communication system developed specific technical challenges.",
+          "The lack of input from technical experts during the testing exercise resulted in protracted delays.",
+          "Coordination issues between the client and the development team led to a delay where extra effort was needed."
+        ]
+      },
+      "proposedSolutions": {
+        "title": "PROPOSED SOLUTIONS",
+        "points": [
+          "We redesigned the module for instant person-to-demand-to-person chat communication aligning the functionality with the client networking platform goals.",
+          "Developed a flexible chat system, demand-driven, to allow even more dynamic interaction toward business objectives.",
+          "Recommended having a technical project manager assist the client and developers to enhance coordination.",
+          "Involved more technical expertise in the testing stage to identify problems rapidly."
+        ]
+      },
+      "results": {
+        "title": "RESULTS",
+        "metrics": [
+          {
+            "icon": "https://mynextdeveloper.com/wp-content/uploads/2024/07/engineer.png",
+            "title": "Engineers Contracted",
+            "value": "2"
+          },
+          {
+            "icon": "https://mynextdeveloper.com/wp-content/uploads/2024/07/task-300x300.png",
+            "title": "Work Experience",
+            "value": "10+ years"
+          },
+          {
+            "icon": "https://mynextdeveloper.com/wp-content/uploads/2024/10/icons8-chat-100.png",
+            "title": "Chat Development",
+            "value": "Created a dynamic chat module for person-to-demand-to-person communication."
+          },
+          {
+            "icon": "https://mynextdeveloper.com/wp-content/uploads/2024/07/hire-300x300.png",
+            "title": "Time To Hire",
+            "value": "15 Days"
+          }
+        ]
+      },
+      "whyUs": {
+        "title": "WHY US",
+        "points": [
+          {
+            "number": "01",
+            "title": "Shared Values",
+            "description": "The alignment of our company values with the client was a key factor."
+          },
+          {
+            "number": "02",
+            "title": "Expert Communication",
+            "description": "Our communication being formal yet responsive made sure the client was kept informed."
+          },
+          {
+            "number": "03",
+            "title": "Trust and Accountability",
+            "description": "The client respected our keen commitment to promises."
+          },
+          {
+            "number": "04",
+            "title": "Effortless Integration",
+            "description": "The ease with which MND collaborated with the client's team was a major factor."
+          }
+        ]
+      },
+      "testimonial": {
+        "title": "TESTIMONIAL",
+        "quote": "MyNextDeveloper exactly brought to life what we had in mind with the effort they put into our vision. Despite some delays, they were always available and responsive.",
+        "author": "Prithvi Manilal",
+        "company": "GemAtlas",
+        "companyUrl": "https://www.gematlas.com/"
+      },
+      "qaRatings": {
+        "title": "Q&A WITH RATINGS",
+        "ratings": [
+          {
+            "label": "QUALITY OF ENGINEERS",
+            "score": 3.5
+          },
+          {
+            "label": "COMMUNICATION WITH THE CLIENT",
+            "score": 4.5
+          },
+          {
+            "label": "TIMELINESS OF DELIVERABLES",
+            "score": 3.5
+          },
+          {
+            "label": "OVERALL SATISFACTION",
+            "score": 5
+          }
+        ]
+      },
+      "conclusion": {
+        "title": "Conclusion",
+        "text": "MyNextDeveloper was committed very strongly to project needs, flexible, and results-oriented."
+      }
+    },
+    {
+      "id": "studio-rap",
+      "pageMetadata": {
+        "title": "Studio RAP - MyNextDeveloper",
+        "description": "They make easy to use, high performance software solutions for the manufacturing industry.",
+        "canonical": "https://mynextdeveloper.com/blogs/case/studio-rap/",
+        "publishedDate": "2024-10-10T13:19:39+00:00",
+        "modifiedDate": "2024-10-10T13:19:39+00:00",
+        "views": 1305,
+        "readingTime": "3 minutes"
+      },
+      "caseStudyHeader": {
+        "title": "Studio RAP",
+        "logoUrl": "https://mynextdeveloper.com/wp-content/uploads/2024/10/image-1.png",
+        "companyInfo": [
+          {
+            "label": "Company Name",
+            "value": "Studio Rap"
+          },
+          {
+            "label": "Industry",
+            "value": "Architecture and Planning"
+          },
+          {
+            "label": "Headquarters",
+            "value": "Rotterdam"
+          },
+          {
+            "label": "Founded",
+            "value": "2015"
+          }
+        ]
+      },
+      "aboutClient": {
+        "title": "About the Client",
+        "description": "They make easy to use, high performance software solutions for the manufacturing industry.",
+        "details": [
+          "Their software is fast and flexible, allowing their clients to go from file to factory in minutes instead of days.",
+          "They provide industrial 3D printing software to a diverse range of clients."
+        ]
+      },
+      "approach": {
+        "title": "OUR APPROACH",
+        "points": [
+          "We started with an in-depth analysis of the existing software architecture to identify the challenges.",
+          "We offered tailored consultancy in delivering solutions based on client-specific needs.",
+          "We worked with the client to develop a modular architecture.",
+          "Our team ensured the restructuring was well done, with minimum interruption to ongoing operations."
+        ]
+      },
+      "problemProjections": {
+        "title": "PROBLEM PROJECTIONS",
+        "points": [
+          "The existing software was not optimized for use by multiple clients.",
+          "Software architecture needs to be scalable and adaptable for different clients.",
+          "The existing software does not provide any clear cut division hence a lack of segmentation."
+        ]
+      },
+      "proposedSolutions": {
+        "title": "PROPOSED SOLUTIONS",
+        "points": [
+          "We reviewed the existing software to see where restructuring needs to be applied.",
+          "We provided inputs on how to divide the architecture of the software.",
+          "We made the architecture applicable to specific solutions for each client."
+        ]
+      },
+      "results": {
+        "title": "RESULTS",
+        "metrics": [
+          {
+            "icon": "https://mynextdeveloper.com/wp-content/uploads/2024/07/engineer.png",
+            "title": "Engineers Contracted",
+            "value": "1"
+          },
+          {
+            "icon": "https://mynextdeveloper.com/wp-content/uploads/2024/07/task-300x300.png",
+            "title": "Work Experience",
+            "value": "7+ years"
+          },
+          {
+            "icon": "https://mynextdeveloper.com/wp-content/uploads/2024/10/icons8-consultation-100.png",
+            "title": "Expert Consultation",
+            "value": "MND delivered tailored technical guidance."
+          },
+          {
+            "icon": "https://mynextdeveloper.com/wp-content/uploads/2024/07/hire-300x300.png",
+            "title": "Time To Hire",
+            "value": "1 week"
+          }
+        ]
+      },
+      "whyUs": {
+        "title": "WHY US",
+        "points": [
+          {
+            "number": "01",
+            "title": "Hands-On Collaboration",
+            "description": "MyNextDeveloper was chosen for its collaborative style."
+          },
+          {
+            "number": "02",
+            "title": "Clear and Actionable Solutions",
+            "description": "We offered simple and actionable steps."
+          },
+          {
+            "number": "03",
+            "title": "Referral from a Trusted Source",
+            "description": "The client selected MyNextDeveloper based on a strong recommendation."
+          },
+          {
+            "number": "04",
+            "title": "Expertise in Software Architecture",
+            "description": "Our knowledge of complex software architecture."
+          }
+        ]
+      },
+      "testimonial": {
+        "title": "TESTIMONIAL",
+        "quote": "MyNextDeveloper has really met all our expectations and provided deep technical expertise. Great flexibility, hands-on collaboration, and results delivery faster than we hoped for made the process smooth.",
+        "author": "Lucas ter Hall",
+        "company": "Studio Rap",
+        "companyUrl": "https://studiorap.nl/"
+      },
+      "qaRatings": {
+        "title": "Q&A WITH RATINGS",
+        "ratings": [
+          {
+            "label": "QUALITY OF ENGINEERS",
+            "score": 4.5
+          },
+          {
+            "label": "COMMUNICATION WITH THE CLIENT",
+            "score": 4.5
+          },
+          {
+            "label": "TIMELINESS OF DELIVERABLES",
+            "score": 4.5
+          },
+          {
+            "label": "OVERALL SATISFACTION",
+            "score": 4.5
+          }
+        ]
+      },
+      "conclusion": {
+        "title": "Conclusion",
+        "text": "MyNextDeveloper provided crucial support for the client to overcome the intricate challenges of software architecture."
+      }
+    },
+    {
+      "id": "agent-selly",
+      "pageMetadata": {
+        "title": "Agent Selly - MyNextDeveloper",
+        "description": "They are experts in the field of real estate sales.",
+        "canonical": "https://mynextdeveloper.com/blogs/case/agent-selly/",
+        "publishedDate": "2024-09-23T13:36:17+00:00",
+        "modifiedDate": "2024-09-23T13:36:17+00:00",
+        "views": 1270,
+        "readingTime": "3 minutes"
+      },
+      "caseStudyHeader": {
+        "title": "Agent Selly",
+        "logoUrl": "https://mynextdeveloper.com/wp-content/uploads/2024/09/logo.png",
+        "companyInfo": [
+          {
+            "label": "Company Name",
+            "value": "Agent Selly"
+          },
+          {
+            "label": "Industry",
+            "value": "Real Estate"
+          },
+          {
+            "label": "Headquarters",
+            "value": "Zug"
+          },
+          {
+            "label": "Founded",
+            "value": "2016"
+          }
+        ]
+      },
+      "aboutClient": {
+        "title": "About the Client",
+        "description": "They are experts in the field of real estate sales and support you with a mix of digitalization and personal contact.",
+        "details": [
+          "They offer a simple, contemporary and transparent service when selling real estate."
+        ]
+      },
+      "approach": {
+        "title": "OUR APPROACH",
+        "points": [
+          "We broke down the QA process into phases.",
+          "A team was assigned during the migration process to do complete testing.",
+          "We provided the list of issues to the client after every phase of testing.",
+          "We assisted the client in rectifying the critical GTM issues."
+        ]
+      },
+      "problemProjections": {
+        "title": "PROBLEM PROJECTIONS",
+        "points": [
+          "A lack of a well-defined scope and timeline for bigger projects may lead to delay.",
+          "Browser and device variation in website migration could result in a broken user experience.",
+          "Issues with Google Tag Manager (GTM) could result in inaccurate analytics."
+        ]
+      },
+      "proposedSolutions": {
+        "title": "PROPOSED SOLUTIONS",
+        "points": [
+          "We recognized that longer projects require a more structured approach.",
+          "We assigned a QA engineer to test different pages of the website.",
+          "Our team went beyond basic QA testing by helping the client debug and resolve GTM-related issues."
+        ]
+      },
+      "results": {
+        "title": "RESULTS",
+        "metrics": [
+          {
+            "icon": "https://mynextdeveloper.com/wp-content/uploads/2024/07/engineer.png",
+            "title": "Engineers Contracted",
+            "value": "1"
+          },
+          {
+            "icon": "https://mynextdeveloper.com/wp-content/uploads/2024/07/task-300x300.png",
+            "title": "Work Experience",
+            "value": "7 years"
+          },
+          {
+            "icon": "https://mynextdeveloper.com/wp-content/uploads/2024/09/icons8-approval-100.png",
+            "title": "Perfect QA",
+            "value": "Our QA testing ensured a flawless launch."
+          },
+          {
+            "icon": "https://mynextdeveloper.com/wp-content/uploads/2024/07/hire-300x300.png",
+            "title": "Time To Hire",
+            "value": "2 Days"
+          }
+        ]
+      },
+      "whyUs": {
+        "title": "WHY US",
+        "points": [
+          {
+            "number": "01",
+            "title": "QA Expertise",
+            "description": "Our specialization in quality assurance and experience with website migrations."
+          },
+          {
+            "number": "02",
+            "title": "Phased Management",
+            "description": "Our structured, phased approach to QA testing."
+          },
+          {
+            "number": "03",
+            "title": "Fast Issue Resolution",
+            "description": "The ability of MND to figure out and report issues."
+          },
+          {
+            "number": "04",
+            "title": "Proactive Communication",
+            "description": "We were open and proactive with communication."
+          }
+        ]
+      },
+      "testimonial": {
+        "title": "TESTIMONIAL",
+        "quote": "MND provided outstanding support during our website migration. Their communication was incredibly speedy and they continued to keep us informed on things.",
+        "author": "Romina Buchle",
+        "company": "Agent Selly",
+        "companyUrl": "https://www.agentselly.ch/"
+      },
+      "qaRatings": {
+        "title": "Q&A WITH RATINGS",
+        "ratings": [
+          {
+            "label": "QUALITY OF ENGINEERS",
+            "score": 4.5
+          },
+          {
+            "label": "COMMUNICATION WITH THE CLIENT",
+            "score": 5
+          },
+          {
+            "label": "TIMELINESS OF DELIVERABLES",
+            "score": 5
+          },
+          {
+            "label": "OVERALL SATISFACTION",
+            "score": 5
+          }
+        ]
+      },
+      "conclusion": {
+        "title": "Conclusion",
+        "text": "MyNextDeveloper has assisted in the smooth migration of the client's website, with outstanding performance."
+      }
+    },
+    {
+      "id": "underpay",
+      "pageMetadata": {
+        "title": "Underpay - MyNextDeveloper",
+        "description": "The company leverages AI to build powerful tools that help you save money when shopping online.",
+        "canonical": "https://mynextdeveloper.com/blogs/case/underpay/",
+        "publishedDate": "2024-09-18T10:50:35+00:00",
+        "modifiedDate": "2024-09-18T10:50:35+00:00",
+        "views": 1078,
+        "readingTime": "4 minutes"
+      },
+      "caseStudyHeader": {
+        "title": "Underpay",
+        "logoUrl": "https://mynextdeveloper.com/wp-content/uploads/2024/09/underpay-logo.png",
+        "companyInfo": [
+          {
+            "label": "Company Name",
+            "value": "Underpay"
+          },
+          {
+            "label": "Industry",
+            "value": "Fintech"
+          },
+          {
+            "label": "Headquarters",
+            "value": "London"
+          },
+          {
+            "label": "Founded",
+            "value": "2022"
+          }
+        ]
+      },
+      "aboutClient": {
+        "title": "About the Client",
+        "description": "The company leverages AI to build powerful tools that help you save money when shopping online.",
+        "details": [
+          "Their cutting-edge technology ensures you get the best deals.",
+          "They believe advances in AI will transform our lives and its mission is to leverage this technology."
+        ]
+      },
+      "approach": {
+        "title": "OUR APPROACH",
+        "points": [
+          "We quickly adapted to two significantly different existing codebases.",
+          "We rallied the team to do a weekend sprint.",
+          "Understanding the client's overall UI vision for their product.",
+          "Our strategy was to dynamically scale the team depending on the requirements."
+        ]
+      },
+      "problemProjections": {
+        "title": "PROBLEM PROJECTIONS",
+        "points": [
+          "The client had tight timelines to complete essential UI tasks.",
+          "Integrating into two existing codebases in a short period increased the danger of misalignment.",
+          "Completing many tasks in one weekend created a rather high-pressure scenario.",
+          "The client depended extensively on an external development team."
+        ]
+      },
+      "proposedSolutions": {
+        "title": "PROPOSED SOLUTIONS",
+        "points": [
+          "We structured and aligned all priorities with the most critical deliverables.",
+          "We managed to decrease the onboard time significantly.",
+          "Our approach was to maintain a very high standard.",
+          "We provided a dedicated team that responded in real time."
+        ]
+      },
+      "results": {
+        "title": "RESULTS",
+        "metrics": [
+          {
+            "icon": "https://mynextdeveloper.com/wp-content/uploads/2024/07/engineer.png",
+            "title": "Engineers Contracted",
+            "value": "2"
+          },
+          {
+            "icon": "https://mynextdeveloper.com/wp-content/uploads/2024/07/task-300x300.png",
+            "title": "Work Experience",
+            "value": "4+ years"
+          },
+          {
+            "icon": "https://mynextdeveloper.com/wp-content/uploads/2024/09/icons8-ui-100.png",
+            "title": "UI Impact",
+            "value": "Our developers delivered really high-quality and user-friendly interface."
+          },
+          {
+            "icon": "https://mynextdeveloper.com/wp-content/uploads/2024/07/hire-300x300.png",
+            "title": "Time To Hire",
+            "value": "3 Days"
+          }
+        ]
+      },
+      "whyUs": {
+        "title": "WHY US",
+        "points": [
+          {
+            "number": "01",
+            "title": "High-Quality UI & UX",
+            "description": "My client was impressed because they could get such high-quality UI."
+          },
+          {
+            "number": "02",
+            "title": "Flexible Team Scaling",
+            "description": "One of the strong points of us is scaling our team."
+          },
+          {
+            "number": "03",
+            "title": "SEO-Friendly & Scalable Solutions",
+            "description": "MND facilitated the support of scalable as well as SEO-friendly development practices."
+          },
+          {
+            "number": "04",
+            "title": "24/7 Availability & Off-Hours Support",
+            "description": "MND provided 24/7 availability."
+          }
+        ]
+      },
+      "testimonial": {
+        "title": "TESTIMONIAL",
+        "quote": "We were on a very tight deadline, and MyNextDeveloper jumped in with zero hesitation. They had the team integrate pretty quickly within our codebases.",
+        "author": "Dima Tarasenko",
+        "company": "Underpay",
+        "companyUrl": "https://underpay.io/"
+      },
+      "qaRatings": {
+        "title": "Q&A WITH RATINGS",
+        "ratings": [
+          {
+            "label": "QUALITY OF ENGINEERS",
+            "score": 5
+          },
+          {
+            "label": "COMMUNICATION WITH THE CLIENT",
+            "score": 5
+          },
+          {
+            "label": "TIMELINESS OF DELIVERABLES",
+            "score": 5
+          },
+          {
+            "label": "OVERALL SATISFACTION",
+            "score": 5
+          }
+        ]
+      },
+      "conclusion": {
+        "title": "Conclusion",
+        "text": "MND demonstrated the ability to seamlessly integrate into complex systems while delivering quality UI solutions."
+      }
+    },
+    {
+      "id": "vision-cure",
+      "pageMetadata": {
+        "title": "Vision Cure - MyNextDeveloper",
+        "description": "The company innovates ophthalmological devices for the improved recovery of patients.",
+        "canonical": "https://mynextdeveloper.com/blogs/case/vision-cure/",
+        "publishedDate": "2024-09-13T07:56:30+00:00",
+        "modifiedDate": "2024-09-13T07:56:30+00:00",
+        "views": 1069,
+        "readingTime": "4 minutes"
+      },
+      "caseStudyHeader": {
+        "title": "Vision Cure",
+        "logoUrl": "https://mynextdeveloper.com/wp-content/uploads/2024/09/vision-cure.png",
+        "companyInfo": [
+          {
+            "label": "Company Name",
+            "value": "Vision Cure"
+          },
+          {
+            "label": "Industry",
+            "value": "Medical Device Manufacturing"
+          },
+          {
+            "label": "Headquarters",
+            "value": "Mumbai"
+          },
+          {
+            "label": "Founded",
+            "value": "2020"
+          }
+        ]
+      },
+      "aboutClient": {
+        "title": "About the Client",
+        "description": "The company innovates ophthalmological devices for the improved recovery of patients.",
+        "details": [
+          "They have developed a customized sensor capable of monitoring patient compliance.",
+          "This sensor presents critical data to help maintain compliance with the surgeon's instructions."
+        ]
+      },
+      "approach": {
+        "title": "OUR APPROACH",
+        "points": [
+          "Assigned a team of 4 team members with specialized skills.",
+          "We provided updates and a strategy on feature prioritization.",
+          "We designed the web interface to be responsive and optimized.",
+          "Anticipated areas of probable difficulties and proactively provided solutions."
+        ]
+      },
+      "problemProjections": {
+        "title": "PROBLEM PROJECTIONS",
+        "points": [
+          "The client required professional support in product development, which included hardware integration.",
+          "The design of the user interface needed to be user-friendly.",
+          "The client needed a solution to accurately find the tear meniscus height.",
+          "The client required the ability for doctors to perform all kinds of eye tests.",
+          "The client required a solution to automatically detect and mark the meibomian gland."
+        ]
+      },
+      "proposedSolutions": {
+        "title": "PROPOSED SOLUTIONS",
+        "points": [
+          "We provided an entire team with the required technical competence.",
+          "We delivered a user-friendly web interface.",
+          "We were able to provide a feature wherein doctors could measure the tear meniscus height.",
+          "We developed a feature-rich platform wherein doctors can conduct eye tests.",
+          "Developed an AI model that can offer detection and labelling."
+        ]
+      },
+      "results": {
+        "title": "RESULTS",
+        "metrics": [
+          {
+            "icon": "https://mynextdeveloper.com/wp-content/uploads/2024/07/engineer.png",
+            "title": "Engineers Contracted",
+            "value": "4"
+          },
+          {
+            "icon": "https://mynextdeveloper.com/wp-content/uploads/2024/07/task-300x300.png",
+            "title": "Work Experience",
+            "value": "2-4 years"
+          },
+          {
+            "icon": "https://mynextdeveloper.com/wp-content/uploads/2024/09/icons8-ai-100.png",
+            "title": "AI Model Integration",
+            "value": "Our developers built an AI model."
+          },
+          {
+            "icon": "https://mynextdeveloper.com/wp-content/uploads/2024/07/hire-300x300.png",
+            "title": "Time To Hire",
+            "value": "1 week"
+          }
+        ]
+      },
+      "whyUs": {
+        "title": "WHY US",
+        "points": [
+          {
+            "number": "01",
+            "title": "Focus on Scalability",
+            "description": "MND designed the platform with growth in mind."
+          },
+          {
+            "number": "02",
+            "title": "Rapid Problem Resolution",
+            "description": "The client was impressed with how the team was efficient."
+          },
+          {
+            "number": "03",
+            "title": "Deep Expertise",
+            "description": "MND stood out for its ability to tackle complicated challenges."
+          },
+          {
+            "number": "04",
+            "title": "End-to-End Expertise",
+            "description": "MND provided a full-service platform."
+          }
+        ]
+      },
+      "testimonial": {
+        "title": "TESTIMONIAL",
+        "quote": "Working with MyNextDeveloper was a game-changer for us. Deep expertise, proactive communication, and well-delivered results ahead of time simply made them perfect.",
+        "author": "Harsh Rohira",
+        "company": "Vision Cure",
+        "companyUrl": "https://www.linkedin.com/in/harsh-rohira-223222125"
+      },
+      "qaRatings": {
+        "title": "Q&A WITH RATINGS",
+        "ratings": [
+          {
+            "label": "QUALITY OF ENGINEERS",
+            "score": 5
+          },
+          {
+            "label": "COMMUNICATION WITH THE CLIENT",
+            "score": 5
+          },
+          {
+            "label": "TIMELINESS OF DELIVERABLES",
+            "score": 5
+          },
+          {
+            "label": "OVERALL SATISFACTION",
+            "score": 5
+          }
+        ]
+      },
+      "conclusion": {
+        "title": "Conclusion",
+        "text": "The collaboration of MyNextDeveloper with Vision Cure spoke volumes about its deliveries of innovative, customized solutions."
+      }
+    },
+    {
+      "id": "techtailz",
+      "pageMetadata": {
+        "title": "TechTailz - MyNextDeveloper",
+        "description": "They offer software designed to streamline booking.",
+        "canonical": "https://mynextdeveloper.com/blogs/case/techtailz/",
+        "publishedDate": "2024-09-05T09:10:55+00:00",
+        "modifiedDate": "2024-09-05T09:10:55+00:00",
+        "views": 986,
+        "readingTime": "3 minutes"
+      },
+      "caseStudyHeader": {
+        "title": "TechTailz",
+        "logoUrl": "https://mynextdeveloper.com/wp-content/uploads/2024/08/New-logo.png",
+        "companyInfo": [
+          {
+            "label": "Company Name",
+            "value": "Tech Tailz"
+          },
+          {
+            "label": "Industry",
+            "value": "Pet Care Tech"
+          },
+          {
+            "label": "Headquarters",
+            "value": "Mumbai"
+          },
+          {
+            "label": "Founded",
+            "value": "2023"
+          }
+        ]
+      },
+      "aboutClient": {
+        "title": "About the Client",
+        "description": "They offer software designed to streamline booking, manage client data, and facilitate payments.",
+        "details": [
+          "Their software allows you to follow the status of all appointments.",
+          "View revenue and bookings across periods, and allocate services to different facilities."
+        ]
+      },
+      "approach": {
+        "title": "OUR APPROACH",
+        "points": [
+          "Assigned a team of 3 members to this product.",
+          "Worked closely with the client in understanding their goal.",
+          "Worked iteratively on product development.",
+          "Emphasized a strong culture fit, alignment with company values."
+        ]
+      },
+      "problemProjections": {
+        "title": "PROBLEM PROJECTIONS",
+        "points": [
+          "Setting up the whole frontend for a client's vertical SaaS product was essentially the main challenge.",
+          "Ensuring strong and scalable architecture.",
+          "The need for a strategic partner.",
+          "They wanted the product to be on time, effective."
+        ]
+      },
+      "proposedSolutions": {
+        "title": "PROPOSED SOLUTIONS",
+        "points": [
+          "We provided a full team of 3 members.",
+          "The team focused on building a solid architectural foundation.",
+          "Senior management proactively guided the client.",
+          "We managed the product efficiently with weekly calls."
+        ]
+      },
+      "results": {
+        "title": "RESULTS",
+        "metrics": [
+          {
+            "icon": "https://mynextdeveloper.com/wp-content/uploads/2024/07/engineer.png",
+            "title": "Engineers Contracted",
+            "value": "3"
+          },
+          {
+            "icon": "https://mynextdeveloper.com/wp-content/uploads/2024/07/task-300x300.png",
+            "title": "Work Experience",
+            "value": "3-6 years"
+          },
+          {
+            "icon": "https://mynextdeveloper.com/wp-content/uploads/2024/07/teamwork-300x300.png",
+            "title": "Integration Into The Client's Team",
+            "value": "Our developers integrated into the client's team."
+          },
+          {
+            "icon": "https://mynextdeveloper.com/wp-content/uploads/2024/07/hire-300x300.png",
+            "title": "Time To Hire",
+            "value": "3 Days"
+          }
+        ]
+      },
+      "whyUs": {
+        "title": "WHY US",
+        "points": [
+          {
+            "number": "01",
+            "title": "Great Culture Fit",
+            "description": "MND's team also aligned quite well with the client's company culture."
+          },
+          {
+            "number": "02",
+            "title": "Involvement Beyond Scope",
+            "description": "MND went beyond the original scope."
+          },
+          {
+            "number": "03",
+            "title": "Value for Money",
+            "description": "The client felt that the service provided by us was excellent value."
+          },
+          {
+            "number": "04",
+            "title": "Exceptional Service Recovery",
+            "description": "When operational issues did arise, the excellent capabilities."
+          }
+        ]
+      },
+      "testimonial": {
+        "title": "TESTIMONIAL",
+        "quote": "MyNextDeveloper has been indispensable in building out the frontend of our SaaS product. What impressed us most is how they can go beyond development.",
+        "author": "Kabir Malhotra",
+        "company": "Tech Tailz",
+        "companyUrl": "https://techtailz.com/"
+      },
+      "qaRatings": {
+        "title": "Q&A WITH RATINGS",
+        "ratings": [
+          {
+            "label": "QUALITY OF ENGINEERS",
+            "score": 5
+          },
+          {
+            "label": "COMMUNICATION WITH THE CLIENT",
+            "score": 4
+          },
+          {
+            "label": "TIMELINESS OF DELIVERABLES",
+            "score": 4.5
+          },
+          {
+            "label": "OVERALL SATISFACTION",
+            "score": 5
+          }
+        ]
+      },
+      "conclusion": {
+        "title": "Conclusion",
+        "text": "MyNextDeveloper offered the client a high quality SaaS product by providing dedicated front-end development."
+      }
+    },
+    {
+      "id": "gainn-fintech",
+      "pageMetadata": {
+        "title": "Gainn Fintech - MyNextDeveloper",
+        "description": "They provide transparent and efficient trading solutions.",
+        "canonical": "https://mynextdeveloper.com/blogs/case/gainn-fintech/",
+        "publishedDate": "2024-08-28T07:14:40+00:00",
+        "modifiedDate": "2024-08-28T07:14:40+00:00",
+        "views": 962,
+        "readingTime": "4 minutes"
+      },
+      "caseStudyHeader": {
+        "title": "Gainn Fintech",
+        "logoUrl": "https://mynextdeveloper.com/wp-content/uploads/2024/08/Become-A-Sub-Broker-With-Our-Partner-Program-Gainn-Fintech-1.png",
+        "companyInfo": [
+          {
+            "label": "Company Name",
+            "value": "Gainn Fintech Pvt. Ltd."
+          },
+          {
+            "label": "Industry",
+            "value": "Fintech"
+          },
+          {
+            "label": "Headquarters",
+            "value": "Mumbai"
+          },
+          {
+            "label": "Founded",
+            "value": "2021"
+          }
+        ]
+      },
+      "aboutClient": {
+        "title": "About the Client",
+        "description": "They provide transparent and efficient trading solutions.",
+        "details": [
+          "Their services include Indian and US stock trading.",
+          "Mutual Fund investments, Commodity trading, IPO's, Futures and Options trading."
+        ]
+      },
+      "approach": {
+        "title": "OUR APPROACH",
+        "points": [
+          "Conducted a thorough in-depth review of the existing Gainn site.",
+          "We turned to our network for speedier identification.",
+          "Ensured that the selected designer would have technical skills.",
+          "Kept the project timeline in control."
+        ]
+      },
+      "problemProjections": {
+        "title": "PROBLEM PROJECTIONS",
+        "points": [
+          "The existing web pages were not designed aesthetically.",
+          "The website's navigation was not intuitive.",
+          "The inconsistency and frustration mostly came from the user experience.",
+          "The design of the website was pretty off-brand.",
+          "The actual conversion rate was lower than expected."
+        ]
+      },
+      "proposedSolutions": {
+        "title": "PROPOSED SOLUTIONS",
+        "points": [
+          "We provided a new, modern design.",
+          "We restructured the navigation.",
+          "Optimizing the user experience.",
+          "This redesign ensured everything on the website was truly on-brand.",
+          "Design and usability improvements combined to drive a massive conversion rate rise."
+        ]
+      },
+      "results": {
+        "title": "RESULTS",
+        "metrics": [
+          {
+            "icon": "https://mynextdeveloper.com/wp-content/uploads/2024/07/engineer.png",
+            "title": "Engineers Contracted",
+            "value": "1"
+          },
+          {
+            "icon": "https://mynextdeveloper.com/wp-content/uploads/2024/07/task-300x300.png",
+            "title": "Work Experience",
+            "value": "6+ years"
+          },
+          {
+            "icon": "https://mynextdeveloper.com/wp-content/uploads/2024/07/teamwork-300x300.png",
+            "title": "Integration Into The Client's Team",
+            "value": "The designer spent 20 hours revising."
+          },
+          {
+            "icon": "https://mynextdeveloper.com/wp-content/uploads/2024/07/hire-300x300.png",
+            "title": "Time To Hire",
+            "value": "20 Days"
+          }
+        ]
+      },
+      "whyUs": {
+        "title": "WHY US",
+        "points": [
+          {
+            "number": "01",
+            "title": "Customized Solutions",
+            "description": "The approach was uniquely customized."
+          },
+          {
+            "number": "02",
+            "title": "Client-Centric Approach",
+            "description": "Client satisfaction was the point of differentiation."
+          },
+          {
+            "number": "03",
+            "title": "Personalised Service",
+            "description": "Gainn loved MND's commitment."
+          },
+          {
+            "number": "04",
+            "title": "Proactive Problem-Solving",
+            "description": "MND's proactive approach to identifying potential issues."
+          }
+        ]
+      },
+      "testimonial": {
+        "title": "TESTIMONIAL",
+        "quote": "We were looking for a designer and almost immediately found MND. The hiring process to the off boarding was all very professional.",
+        "author": "Shreyans Maliwal",
+        "company": "Gainn",
+        "companyUrl": "https://mygainn.com/"
+      },
+      "qaRatings": {
+        "title": "Q&A WITH RATINGS",
+        "ratings": [
+          {
+            "label": "QUALITY OF ENGINEERS",
+            "score": 5
+          },
+          {
+            "label": "COMMUNICATION WITH THE CLIENT",
+            "score": 4
+          },
+          {
+            "label": "TIMELINESS OF DELIVERABLES",
+            "score": 4.5
+          },
+          {
+            "label": "OVERALL SATISFACTION",
+            "score": 5
+          }
+        ]
+      },
+      "conclusion": {
+        "title": "Conclusion",
+        "text": "Gainn Fintech Pvt. Ltd. approached MyNextDeveloper to enhance the user interface."
+      }
+    },
+    {
+      "id": "medinfini",
+      "pageMetadata": {
+        "title": "Medinfini - MyNextDeveloper",
+        "description": "Medinfini Pharmaceuticals Pvt Ltd is a one-stop shop for all your medicine needs.",
+        "canonical": "https://mynextdeveloper.com/blogs/case/medinfini/",
+        "publishedDate": "2024-08-12T06:44:57+00:00",
+        "modifiedDate": "2024-08-13T07:07:36+00:00",
+        "views": 1156,
+        "readingTime": "4 minutes"
+      },
+      "caseStudyHeader": {
+        "title": "Medinfini",
+        "logoUrl": "https://mynextdeveloper.com/wp-content/uploads/2024/08/cropped-MedInfini-Logo1.png",
+        "companyInfo": [
+          {
+            "label": "Company Name",
+            "value": "Medinfini Pharmaceuticals Private Limited"
+          },
+          {
+            "label": "Industry",
+            "value": "Wholesale Trader of Nephrology, Critical Care"
+          },
+          {
+            "label": "Headquarters",
+            "value": "Mumbai"
+          },
+          {
+            "label": "Founded",
+            "value": "2021"
+          }
+        ]
+      },
+      "aboutClient": {
+        "title": "About the Client",
+        "description": "Medinfini Pharmaceuticals Pvt Ltd is a one-stop shop for all your medicine needs.",
+        "details": [
+          "They specialise in providing highly discounted rates for premium life-saving & speciality drugs.",
+          "They have a product range of more than 1000+ injectables, tablets and other drugs."
+        ]
+      },
+      "approach": {
+        "title": "OUR APPROACH",
+        "points": [
+          "Utilized our network to find developers.",
+          "Created a list of developers.",
+          "Organized client interviews.",
+          "Provided flexible working options."
+        ]
+      },
+      "problemProjections": {
+        "title": "PROBLEM PROJECTIONS",
+        "points": [
+          "Medinfini required a website that could clearly communicate information.",
+          "They wanted a website that set them apart.",
+          "The existing website was not user-friendly.",
+          "They wanted to integrate various tools.",
+          "They needed a cost-effective solution."
+        ]
+      },
+      "proposedSolutions": {
+        "title": "PROPOSED SOLUTIONS",
+        "points": [
+          "We provided a developer who could deliver designs.",
+          "It was also built using scalable technologies.",
+          "We could deliver the project within budget.",
+          "We integrated the key tools.",
+          "We stayed in regular contact."
+        ]
+      },
+      "results": {
+        "title": "RESULTS",
+        "metrics": [
+          {
+            "icon": "https://mynextdeveloper.com/wp-content/uploads/2024/07/engineer.png",
+            "title": "Engineers Contracted",
+            "value": "1"
+          },
+          {
+            "icon": "https://mynextdeveloper.com/wp-content/uploads/2024/07/task-300x300.png",
+            "title": "Work Experience",
+            "value": "5+ years"
+          },
+          {
+            "icon": "https://mynextdeveloper.com/wp-content/uploads/2024/07/teamwork-300x300.png",
+            "title": "Integration Into The Client's Team",
+            "value": "The developer worked with the client for 40 hours."
+          },
+          {
+            "icon": "https://mynextdeveloper.com/wp-content/uploads/2024/07/hire-300x300.png",
+            "title": "Time To Hire",
+            "value": "3 Days"
+          }
+        ]
+      },
+      "whyUs": {
+        "title": "WHY US",
+        "points": [
+          {
+            "number": "01",
+            "title": "Effective Communication",
+            "description": "Medinfini chose our services because of our commitment."
+          },
+          {
+            "number": "02",
+            "title": "Speed of Developer Delivery",
+            "description": "Medinfini was dealing with a very tight timeline."
+          },
+          {
+            "number": "03",
+            "title": "Proven Track Record",
+            "description": "MND has a strong portfolio."
+          },
+          {
+            "number": "04",
+            "title": "Budget Constraints",
+            "description": "Our team provided a thorough cost breakdown."
+          }
+        ]
+      },
+      "testimonial": {
+        "title": "TESTIMONIAL",
+        "quote": "I have worked with developers in the past, but what they took over a month to do MND could do in less than 10 days.",
+        "author": "Udit Sheth",
+        "company": "Medinfini",
+        "companyUrl": "https://www.medinfini.com/"
+      },
+      "qaRatings": {
+        "title": "Q&A WITH RATINGS",
+        "ratings": [
+          {
+            "label": "QUALITY OF ENGINEERS",
+            "score": 5
+          },
+          {
+            "label": "COMMUNICATION WITH THE CLIENT",
+            "score": 5
+          },
+          {
+            "label": "TIMELINESS OF DELIVERABLES",
+            "score": 5
+          },
+          {
+            "label": "OVERALL SATISFACTION",
+            "score": 5
+          }
+        ]
+      },
+      "conclusion": {
+        "title": "Conclusion",
+        "text": "MyNextDeveloper quickly solved the website development needs of Medinfini Pharmaceuticals."
+      }
+    },
+    {
+      "id": "iotis-tech",
+      "pageMetadata": {
+        "title": "IOTIS - MyNextDeveloper",
+        "description": "iotis Tech pioneers in merging sports with IoT.",
+        "canonical": "https://mynextdeveloper.com/blogs/case/iotis-internet-of-things-in-sport/",
+        "publishedDate": "2024-08-02T10:42:05+00:00",
+        "modifiedDate": "2024-08-13T07:12:42+00:00",
+        "views": 1457,
+        "readingTime": "4 minutes"
+      },
+      "caseStudyHeader": {
+        "title": "IOTIS",
+        "logoUrl": "https://mynextdeveloper.com/wp-content/uploads/2024/08/iotis-logo.jpeg",
+        "companyInfo": [
+          {
+            "label": "Company Name",
+            "value": "iotis Tech"
+          },
+          {
+            "label": "Industry",
+            "value": "IoT in Sports"
+          },
+          {
+            "label": "Headquarters",
+            "value": "Germany"
+          },
+          {
+            "label": "Founded",
+            "value": "2020"
+          }
+        ]
+      },
+      "aboutClient": {
+        "title": "About the Client",
+        "description": "iotis Tech pioneers in merging sports with IoT, empowering athletes.",
+        "details": [
+          "Their technology bridges the gap between sports and the internet.",
+          "Their mission is to leverage technology to make sports more enjoyable."
+        ]
+      },
+      "approach": {
+        "title": "OUR APPROACH",
+        "points": [
+          "Leveraged a broad network to access a diverse pool.",
+          "Provided profiles that best suited the requirements.",
+          "Conducted founder interview rounds.",
+          "Offered flexible working arrangements."
+        ]
+      },
+      "problemProjections": {
+        "title": "PROBLEM PROJECTIONS",
+        "points": [
+          "Local mobile app developers proved cost-prohibitive.",
+          "Integrating new developers without disrupting ongoing projects.",
+          "The process of finding and hiring can be lengthy.",
+          "Ensuring that remote developers align with the company's culture."
+        ]
+      },
+      "proposedSolutions": {
+        "title": "PROPOSED SOLUTIONS",
+        "points": [
+          "We contracted seasoned iOS and Android engineers.",
+          "Conducted thorough evaluations of candidates.",
+          "Engineers started with 20 hours per week.",
+          "Completed the hiring process in approximately two months."
+        ]
+      },
+      "results": {
+        "title": "RESULTS",
+        "metrics": [
+          {
+            "icon": "https://mynextdeveloper.com/wp-content/uploads/2024/07/engineer.png",
+            "title": "Engineers Contracted",
+            "value": "4 (2 for iOS and 2 for Android)"
+          },
+          {
+            "icon": "https://mynextdeveloper.com/wp-content/uploads/2024/07/task-300x300.png",
+            "title": "Work Experience",
+            "value": "7+ years"
+          },
+          {
+            "icon": "https://mynextdeveloper.com/wp-content/uploads/2024/07/teamwork-300x300.png",
+            "title": "Integration Into The Client's Team",
+            "value": "Engineers initially committed 20 hours per week."
+          },
+          {
+            "icon": "https://mynextdeveloper.com/wp-content/uploads/2024/07/hire-300x300.png",
+            "title": "Time To Hire",
+            "value": "The complete process took around 2 months."
+          }
+        ]
+      },
+      "whyUs": {
+        "title": "WHY US",
+        "points": [
+          {
+            "number": "01",
+            "title": "Shared Vision and Partnership",
+            "description": "There was a natural synergy between Iotis and our team."
+          },
+          {
+            "number": "02",
+            "title": "Thorough Candidate Selection",
+            "description": "Our approach to candidate profiling."
+          },
+          {
+            "number": "03",
+            "title": "Dedication to Quality",
+            "description": "Iotis appreciated our unwavering dedication."
+          },
+          {
+            "number": "04",
+            "title": "Client Appreciation and Trust",
+            "description": "Iotis valued our ability to understand and meet their needs."
+          }
+        ]
+      },
+      "testimonial": {
+        "title": "TESTIMONIAL",
+        "quote": "We struggled to find skilled mobile app developers until MyNextDeveloper provided a perfect solution.",
+        "author": "Marcel Isakowitz",
+        "company": "iotis tech",
+        "companyUrl": "https://www.iotis.tech/"
+      },
+      "qaRatings": {
+        "title": "Q&A WITH RATINGS",
+        "ratings": [
+          {
+            "label": "QUALITY OF ENGINEERS",
+            "score": 5
+          },
+          {
+            "label": "COMMUNICATION WITH THE CLIENT",
+            "score": 5
+          },
+          {
+            "label": "TIMELINESS OF DELIVERABLES",
+            "score": 5
+          },
+          {
+            "label": "OVERALL SATISFACTION",
+            "score": 5
+          }
+        ]
+      },
+      "conclusion": {
+        "title": "Conclusion",
+        "text": "MyNextDeveloper successfully addressed iotis Tech's hiring challenges."
+      }
+    },
+    {
+      "id": "kayaa-jewels",
+      "pageMetadata": {
+        "title": "Kayaa Jewels - MyNextDeveloper",
+        "description": "Built on five generations of knowledge and expertise, Kayaa Jewels designs fine jewelry.",
+        "canonical": "https://mynextdeveloper.com/blogs/case/araya-fine-jewelry/",
+        "publishedDate": "2024-07-26T06:22:20+00:00",
+        "modifiedDate": "2024-08-13T07:28:48+00:00",
+        "views": 4728,
+        "readingTime": "3 minutes"
+      },
+      "caseStudyHeader": {
+        "title": "Kayaa Jewels",
+        "logoUrl": "https://mynextdeveloper.com/wp-content/uploads/2024/07/kayaa-jewels-logo.png",
+        "companyInfo": [
+          {
+            "label": "Company Name",
+            "value": "Kayaa Jewels"
+          },
+          {
+            "label": "Industry",
+            "value": "Fine Jewellery"
+          },
+          {
+            "label": "Headquarters",
+            "value": "Dubai"
+          },
+          {
+            "label": "Founded",
+            "value": "2022"
+          }
+        ]
+      },
+      "aboutClient": {
+        "title": "About the Client",
+        "description": "Built on five generations of knowledge and expertise, Kayaa Jewels designs, manufactures and sells exquisite fine jewelry.",
+        "details": [
+          "Kayaa Jewels is designed to cater to budget-conscious clients.",
+          "They use certified Lab Grown Diamonds instead of Natural Diamonds."
+        ]
+      },
+      "approach": {
+        "title": "OUR APPROACH",
+        "points": [
+          "Engaged an established Shopify developer.",
+          "Transitioned to a developer from our affiliate agency.",
+          "Started via a project-wise scope based approach.",
+          "Assembled a team."
+        ]
+      },
+      "problemProjections": {
+        "title": "PROBLEM PROJECTIONS",
+        "points": [
+          "Araya Fine Jewelry is launching a new mini brand called Kayaa Jewels.",
+          "The company currently lacks an in-house tech team.",
+          "They are seeking to develop a high-quality Shopify website.",
+          "Previous developers had overcharged."
+        ]
+      },
+      "proposedSolutions": {
+        "title": "PROPOSED SOLUTIONS",
+        "points": [
+          "Enlisted a reputable Shopify developer.",
+          "Made a considered and strategic decision.",
+          "Team composition included dedicated members."
+        ]
+      },
+      "results": {
+        "title": "RESULTS",
+        "metrics": [
+          {
+            "icon": "https://mynextdeveloper.com/wp-content/uploads/2024/07/clock.png",
+            "title": "Time Period Of Affiliation",
+            "value": "February 2023 - ongoing"
+          },
+          {
+            "icon": "https://mynextdeveloper.com/wp-content/uploads/2024/07/hire-300x300.png",
+            "title": "Time To Hire",
+            "value": "Swift closure of the initial developer."
+          },
+          {
+            "icon": "https://mynextdeveloper.com/wp-content/uploads/2024/07/teamwork-300x300.png",
+            "title": "Integration Into The Client's Team",
+            "value": "Introductory and weekly calls led."
+          },
+          {
+            "icon": "https://mynextdeveloper.com/wp-content/uploads/2024/07/task-300x300.png",
+            "title": "Work Experience",
+            "value": "4 years"
+          }
+        ]
+      },
+      "whyUs": {
+        "title": "WHY US",
+        "points": [
+          {
+            "number": "01",
+            "title": "The Insider Track",
+            "description": "We were introduced to the client by a trusted social media team member."
+          },
+          {
+            "number": "02",
+            "title": "Understanding Their Needs",
+            "description": "We took the time to understand their specific needs."
+          },
+          {
+            "number": "03",
+            "title": "Delivering on Promises",
+            "description": "We have a proven track record."
+          },
+          {
+            "number": "04",
+            "title": "The Right Partner",
+            "description": "With a foundation of trust."
+          }
+        ]
+      },
+      "testimonial": {
+        "title": "TESTIMONIAL",
+        "quote": "I've been working with MND for about 2 years now & I'm extremely pleased with the services provided. Their approachability and ease of collaboration make working with them a seamless experience.",
+        "author": "Aashna Sanghvi, Co-Founder",
+        "company": "Kayaa Jewels",
+        "companyUrl": "https://kayaajewels.com/"
+      },
+      "qaRatings": {
+        "title": "Q&A WITH RATINGS",
+        "ratings": [
+          {
+            "label": "QUALITY OF ENGINEERS",
+            "score": 5
+          },
+          {
+            "label": "COMMUNICATION WITH THE CLIENT",
+            "score": 5
+          },
+          {
+            "label": "TIMELINESS OF DELIVERABLES",
+            "score": 5
+          },
+          {
+            "label": "OVERALL SATISFACTION",
+            "score": 5
+          }
+        ]
+      },
+      "conclusion": {
+        "title": "Conclusion",
+        "text": "Araya had approached MND for a fixed project scope. This led them to extend their contract with us."
+      }
+    }
+  ]
+}

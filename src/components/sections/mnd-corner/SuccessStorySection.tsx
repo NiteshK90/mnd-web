@@ -74,7 +74,7 @@ const SuccessStorySection = forwardRef<HTMLElement>((_, ref) => {
           <p className={`font-playfair font-normal text-[15px] md:text-[36px] leading-[1.333] tracking-[-0.03em] text-mnd-charcoal ${animate("[transition-delay:600ms]")}`}>
             Explore how we help<br />businesses overcome<br />critical challenges.
           </p>
-          <a href="https://mynextdeveloper.com/blogs/case/" target="_blank" rel="noopener noreferrer" className={`flex items-center gap-2 px-4 h-10 bg-mnd-navy text-white rounded-full w-fit cursor-pointer transition-all duration-200 hover:scale-[1.05] hover:shadow-[0_6px_20px_rgba(2,48,71,0.4)] active:scale-[0.96] active:shadow-none ${animate("[transition-delay:800ms]")}`}>
+          <a href="/success-stories" className={`flex items-center gap-2 px-4 h-10 bg-mnd-navy text-white rounded-full w-fit cursor-pointer transition-all duration-200 hover:scale-[1.05] hover:shadow-[0_6px_20px_rgba(2,48,71,0.4)] active:scale-[0.96] active:shadow-none ${animate("[transition-delay:800ms]")}`}>
             <span className="font-inter text-xs font-semibold">View all cases</span>
             <ArrowRight color="white" size={32} strokeWidth={1} />
           </a>
