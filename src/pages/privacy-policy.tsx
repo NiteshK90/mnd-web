@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
+import Navbar from "@/components/Navbar";
 import type { Icon } from "@phosphor-icons/react";
 import {
   InfoIcon,
@@ -17,7 +18,7 @@ import {
   SmileyIcon,
   ArrowsClockwiseIcon,
   WrenchIcon,
-  EnvelopeIcon,
+  EnvelopeSimpleIcon,
   LinkIcon,
   ScalesIcon,
   EyeIcon,
@@ -123,7 +124,7 @@ const SECTIONS: Section[] = [
     title: "15. Contact Us",
     summary: "If you have any questions about this Privacy Policy, please contact us.",
     detail: "You can reach our privacy team at privacy@mnd.ai or by writing to us at our registered address. We aim to respond to all inquiries within 5 business days.",
-    Icon: EnvelopeIcon,
+    Icon: EnvelopeSimpleIcon,
   },
   {
     title: "16. Links to Other Sites",
@@ -189,7 +190,7 @@ const SECTIONS: Section[] = [
     title: "26. Contact Us",
     summary: "For any privacy-related inquiries, please contact us.",
     detail: "Email us at privacy@mnd.ai or write to us at our registered address. We are committed to working with you to obtain a fair resolution.",
-    Icon: EnvelopeIcon,
+    Icon: EnvelopeSimpleIcon,
   },
 ];
 
@@ -212,13 +213,18 @@ export default function PrivacyPolicy() {
       </Head>
 
       {/* Page wrapper */}
-      <div className="bg-mnd-parchment text-mnd-charcoal min-h-screen">
+      <div className="bg-mnd-beige text-mnd-charcoal min-h-screen overflow-hidden">
+
+        {/* Navbar */}
+        <div className="sticky top-3 md:top-8 z-50 flex justify-center">
+          <Navbar minimal showBorder />
+        </div>
 
         {/* Hero */}
-        <div className="max-w-6xl mx-auto px-6 pt-12 pb-8 border-b border-mnd-cream">
+        <div className="max-w-6xl mx-auto px-6 pt-8 pb-8 border-b border-mnd-cream">
           {/* Shield icon */}
-          <div className="w-8 h-8 rounded-full border border-mnd-cream bg-mnd-beige flex items-center justify-center mb-4">
-            <ShieldCheckIcon size={16} className="text-neutral-500" />
+          <div className="w-10 h-10 rounded-full border border-mnd-cream bg-mnd-sand flex items-center justify-center mb-4">
+            <ShieldCheckIcon size={18} weight="bold" className="text-neutral-500" />
           </div>
           <h1 className="font-playfair text-3xl md:text-5xl font-normal tracking-tight text-mnd-charcoal mb-3">Privacy Policy</h1>
           <p className="text-sm text-neutral-500">Last updated: May 15, 2024</p>
@@ -242,9 +248,9 @@ export default function PrivacyPolicy() {
                 {/* Top row: icon + title + (desktop: summary) + chevron */}
                 <div className="flex items-start gap-4">
                   {/* Icon bubble + title */}
-                  <div className="flex items-center gap-3 max-md:flex-1 md:w-72 shrink-0">
-                    <div className="w-8 h-8 rounded-full border border-mnd-cream bg-mnd-beige flex items-center justify-center shrink-0">
-                      <section.Icon size={16} className="text-neutral-500" />
+                  <div className="flex items-center gap-3 max-md:flex-1 md:w-96 shrink-0">
+                    <div className="w-10 h-10 rounded-full border border-mnd-cream bg-mnd-sand flex items-center justify-center shrink-0">
+                      <section.Icon size={18} weight="bold" className="text-neutral-500" />
                     </div>
                     <span className="text-sm font-medium text-mnd-charcoal">{section.title}</span>
                   </div>
@@ -260,12 +266,12 @@ export default function PrivacyPolicy() {
                   {/* Chevron */}
                   <CaretDownIcon
                     size={16}
-                    className={`text-neutral-500 mt-1 shrink-0 transition-transform duration-200 ${open.has(i) ? "rotate-180" : ""}`}
+                    className={`text-neutral-500 mt-1 shrink-0 cursor-pointer transition-transform duration-200 ${open.has(i) ? "rotate-180" : ""}`}
                   />
                 </div>
 
                 {/* Summary + detail — mobile only (stacked below) */}
-                <div className="md:hidden pl-11 mt-2">
+                <div className="md:hidden pl-[52px] mt-2">
                   <p className="text-xs text-neutral-500 leading-relaxed">{section.summary}</p>
                   {open.has(i) && (
                     <p className="text-xs text-neutral-500 leading-relaxed mt-2">{section.detail}</p>
@@ -277,25 +283,27 @@ export default function PrivacyPolicy() {
         </div>
 
         {/* Footer CTA */}
-        <div className="mt-12 mx-6 mb-10 max-w-3xl md:mx-auto rounded-2xl bg-mnd-charcoal flex flex-col sm:flex-row items-center justify-between gap-4 px-6 py-5">
-          <div className="flex items-center gap-4">
-            {/* Mail icon bubble */}
-            <div className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center shrink-0">
-              <EnvelopeIcon size={20} className="text-white/70" />
+        <div className="max-w-6xl mx-auto px-6 mt-12 mb-10">
+          <div className="rounded-2xl bg-mnd-oat flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 px-6 py-5">
+            <div className="flex items-center gap-4">
+              {/* Mail icon bubble */}
+              <div className="w-14 h-14 rounded-full bg-mnd-sand flex items-center justify-center shrink-0">
+                <EnvelopeSimpleIcon size={28} className="text-mnd-charcoal" />
+              </div>
+              {/* CTA copy */}
+              <div>
+                <p className="text-mnd-charcoal text-xs font-bold pb-2">Have questions about our Privacy Policy?</p>
+                <p className="text-mnd-charcoal font-playfair text-xl leading-tight">{"We're here to help."}</p>
+              </div>
             </div>
-            {/* CTA copy */}
-            <div>
-              <p className="text-white/60 text-xs">Have questions about our Privacy Policy?</p>
-              <p className="text-white font-playfair text-xl leading-tight">{"We're here to help."}</p>
-            </div>
+            {/* Contact button */}
+            <Link
+              href="mailto:privacy@mnd.ai"
+              className="w-full sm:w-auto text-center py-2 px-6 rounded-full bg-mnd-button text-white text-xs font-semibold inline-flex items-center justify-center cursor-pointer border-0 transition-all duration-200 hover:scale-[1.05] hover:shadow-[0_6px_20px_rgba(6,58,90,0.4)] active:scale-[0.96] active:shadow-none"
+            >
+              Contact Us
+            </Link>
           </div>
-          {/* Contact button */}
-          <Link
-            href="mailto:privacy@mnd.ai"
-            className="shrink-0 bg-white text-mnd-charcoal text-xs font-semibold tracking-widest uppercase px-5 py-2.5 rounded-full hover:bg-mnd-parchment transition-colors"
-          >
-            Contact Us
-          </Link>
         </div>
 
       </div>
