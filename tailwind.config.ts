@@ -16,8 +16,9 @@ export default {
         "mnd-button": "#063A5A",
         "mnd-beige": "#fcf6f0",
         "mnd-sand": "#E9E1D9",
-        "mnd-oat": "#F3EBE5",
+        "mnd-oat": "#EFE7E1",
         "mnd-mist": "#F7F4F2",
+        "mnd-silk": "#F6F1EE",
       },
       fontFamily: {
 playfair: ["var(--font-playfair)", "serif"],
