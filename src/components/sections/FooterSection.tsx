@@ -17,8 +17,7 @@ const navColumns = [
   {
     title: "Company",
     links: [
-      // TODO: create /privacy-policy page before launch — legal requirement
-      { label: "Privacy Policy", href: "#" },
+      { label: "Privacy Policy", href: "/privacy-policy" },
       // TODO: create /posh-compliance page before launch — legal requirement
       { label: "POSH Compliance", href: "#" },
       { label: "IAF Certification", href: "https://www.iafcertsearch.org/", external: true },

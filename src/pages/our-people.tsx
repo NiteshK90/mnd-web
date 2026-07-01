@@ -1,4 +1,5 @@
 import { useRef, useState, useEffect } from "react";
+import Head from "next/head";
 import Navbar from "@/components/Navbar";
 import ScrollIndicators from "@/components/ScrollIndicators";
 import HeroSection from "@/components/sections/our-people/HeroSection";
@@ -40,6 +41,11 @@ export default function OurPeople() {
 
   // Scroll container with snap sections
   return (
+    <>
+      <Head>
+        <title>Be our people – MyNextDeveloper</title>
+        <meta name="description" content="Meet the team and relationships at MyNextDeveloper." />
+      </Head>
     <div id="be-our-people-container" ref={containerRef} className="relative h-screen overflow-y-scroll snap-y snap-mandatory">
       <div className="relative bg-mnd-beige">
         {/* Sticky Navbar */}
@@ -67,5 +73,6 @@ export default function OurPeople() {
         />
       </div>
     </div>
+    </>
   );
 }

@@ -1,4 +1,5 @@
 import { useRef, useState, useEffect } from "react";
+import Head from "next/head";
 import Navbar from "@/components/Navbar";
 import ScrollIndicators from "@/components/ScrollIndicators";
 import HeroSection from "@/components/sections/mnd-way/HeroSection";
@@ -48,6 +49,11 @@ export default function MndWay() {
 
   // Scroll container with snap sections
   return (
+    <>
+      <Head>
+        <title>The MND Way – MyNextDeveloper</title>
+        <meta name="description" content="Our values, principles, and the way we work at MyNextDeveloper." />
+      </Head>
     <div id="mnd-way-container" ref={containerRef} className="relative h-screen overflow-y-scroll snap-y snap-mandatory">
       <div className="relative bg-mnd-beige">
         {/* Sticky Navbar */}
@@ -77,5 +83,6 @@ export default function MndWay() {
         />
       </div>
     </div>
+    </>
   );
 }
