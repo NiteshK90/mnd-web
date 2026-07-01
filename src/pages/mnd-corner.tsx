@@ -1,4 +1,5 @@
 import { useRef, useState, useEffect } from "react";
+import Head from "next/head";
 import Navbar from "@/components/Navbar";
 import ScrollIndicators from "@/components/ScrollIndicators";
 import HeroSection from "@/components/sections/mnd-corner/HeroSection";
@@ -41,6 +42,11 @@ export default function MndCorner() {
 
   // Scroll container with snap sections
   return (
+    <>
+      <Head>
+        <title>The MND Corner – MyNextDeveloper</title>
+        <meta name="description" content="Resources, insights, and stories from MyNextDeveloper." />
+      </Head>
     <div id="mnd-corner-container" ref={containerRef} className="relative h-screen overflow-y-scroll snap-y snap-mandatory">
       <div className="relative bg-mnd-beige">
         {/* Sticky Navbar */}
@@ -69,5 +75,6 @@ export default function MndCorner() {
         />
       </div>
     </div>
+    </>
   );
 }
