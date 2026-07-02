@@ -19,10 +19,9 @@ const navColumns = [
     title: "Company",
     links: [
       { label: "Privacy Policy", href: "/privacy-policies" },
-      // TODO: create /posh-compliance page before launch — legal requirement
-      { label: "POSH Compliance", href: "#" },
+      { label: "POSH Compliance", href: "/posh-compliance" },
       { label: "IAF Certification", href: "https://www.iafcertsearch.org/", external: true },
-      { label: "Amrita | Startup India", href: "https://www.amrita.edu/", external: true },
+      { label: "Amrita | Startup India", href: "https://www.amritatbi.com/", external: true },
       // TODO: create /mnd-for-llms page before launch
       { label: "MND for LLMs", href: "#" },
     ],
@@ -33,6 +32,7 @@ const navColumns = [
       { label: "Schedule a Call", href: "https://cal.com/jigarmehta/immediate-meeting", icon: PhoneIcon, external: true },
       { label: "Write to Us", href: "mailto:business@mynextdeveloper.com", icon: PencilLineIcon },
       { label: "India Office", href: "https://www.google.com/maps/place/MyNextDeveloper/@18.9521133,72.791126,878m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3be7d1cf0d90cc6d:0xdceb0bf6408576d1!8m2!3d18.9521133!4d72.7937009!16s%2Fg%2F11shhd5qn1?entry=ttu&g_ep=EgoyMDI2MDYyMy4wIKXMDSoASAFQAw%3D%3D", icon: MapPinIcon, external: true },
+      { label: "USA Office", href: "https://www.google.com/maps/place/Lewes,+DE+19958,+USA/@39.0767297,-79.1128403,781719m/data=!3m1!1e3!4m6!3m5!1s0x89b8b835c58ad02d:0xdf1b1dde68972d92!8m2!3d38.7638163!4d-75.1778853!16s%2Fm%2F01zxx52?entry=ttu&g_ep=EgoyMDI2MDYyOS4wIKXMDSoASAFQAw%3D%3D", icon: MapPinIcon, external: true },
     ],
   },
 ];

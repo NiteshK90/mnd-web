@@ -39,7 +39,7 @@ const ProblemStatementSection = forwardRef<HTMLElement>((_, ref) => {
       <div className={`w-[62px] h-[5px] bg-mnd-charcoal ${animate("[transition-delay:500ms]")}`} />
       {/* Response statement */}
       <p className="font-playfair text-[26px] md:text-[36px] font-bold leading-[1.333] tracking-[-0.03em] text-mnd-charcoal w-full max-w-[720px]">
-        <span className={`block ${animate("[transition-delay:900ms]")}`}>We&apos;re engineers ourselves.</span>
+        <span className={`block ${animate("[transition-delay:900ms]")}`}>We&apos;re engineers. We run teams.</span>
         <span className={`block italic ${animate("[transition-delay:1300ms]")}`}>We get it.</span>
       </p>
     </section>
