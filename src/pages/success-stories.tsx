@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Head from "next/head";
 import Navbar from "@/components/Navbar";
+import FooterSection from "@/components/sections/FooterSection";
 import caseStudiesData from "@/constants/all-case-studies.json";
 
 // ─── Stats ───────────────────────────────────────────────────────────────────
@@ -250,6 +251,8 @@ export default function SuccessStories() {
 
         </div>
       </div>
+
+      <FooterSection />
     </>
   );
 }

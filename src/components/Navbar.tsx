@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { useState } from "react";
 
 interface NavbarProps {
@@ -9,13 +10,14 @@ interface NavbarProps {
 }
 
 const navLinks = [
-  { label: "The MND way", href: "/mnd-way" },
-  { label: "We do more stuff", href: "/other-stuff" },
-  { label: "The MND Corner", href: "/mnd-corner" },
-  { label: "Be our people", href: "/our-people" },
+  { label: "The MND way", href: "/the-mnd-way" },
+  { label: "We do more stuff", href: "/we-do-more-stuff" },
+  { label: "The MND Corner", href: "/the-mnd-corner" },
+  { label: "Be our people", href: "/be-our-people" },
 ];
 
 export default function Navbar({ minimal = false, showBorder = false }: NavbarProps) {
+  const router = useRouter();
   const [hovered, setHovered] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const expanded = !minimal || hovered;
@@ -40,11 +42,11 @@ export default function Navbar({ minimal = false, showBorder = false }: NavbarPr
         </button>
 
         {/* Logo */}
-        <Link href="/">
+        <Link href="/" aria-disabled={router.pathname === "/"}>
           <img
             src="/landing/mnd-black-logo.png"
             alt="MND Logo"
-            className="h-20 w-auto cursor-pointer"
+            className={`h-20 w-auto ${router.pathname === "/" ? "cursor-default" : "cursor-pointer"}`}
           />
         </Link>
 
@@ -56,15 +58,21 @@ export default function Navbar({ minimal = false, showBorder = false }: NavbarPr
               : "max-w-0 opacity-0 px-0 [transition:opacity_0.15s_ease-in,max-width_0.5s_cubic-bezier(0.4,0,0.2,1)_0.1s,padding_0.5s_cubic-bezier(0.4,0,0.2,1)_0.1s]"
           }`}
         >
-          {navLinks.map((link) => (
-            <Link
-              key={link.label}
-              href={link.href}
-              className="whitespace-nowrap font-inter text-[12px] font-semibold text-mnd-charcoal hover:font-bold transition-all px-2 py-3"
-            >
-              {link.label}
-            </Link>
-          ))}
+          {navLinks.map((link) => {
+            const isActive = router.pathname === link.href;
+            return (
+              <Link
+                key={link.label}
+                href={link.href}
+                aria-disabled={isActive}
+                className={`whitespace-nowrap font-inter text-[12px] font-semibold text-mnd-charcoal transition-all px-2 py-3 ${
+                  isActive ? "cursor-default" : "hover:font-bold"
+                }`}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
         </div>
 
         {/* CTA button */}
@@ -79,16 +87,22 @@ export default function Navbar({ minimal = false, showBorder = false }: NavbarPr
       >
         {/* Mobile link list */}
         <div className="flex flex-col px-6 py-4 gap-5">
-          {navLinks.map((link) => (
-            <Link
-              key={link.label}
-              href={link.href}
-              className="font-inter text-[12px] font-semibold text-mnd-charcoal hover:font-bold transition-all"
-              onClick={() => setMenuOpen(false)}
-            >
-              {link.label}
-            </Link>
-          ))}
+          {navLinks.map((link) => {
+            const isActive = router.pathname === link.href;
+            return (
+              <Link
+                key={link.label}
+                href={link.href}
+                aria-disabled={isActive}
+                onClick={() => setMenuOpen(false)}
+                className={`font-inter text-[12px] font-semibold text-mnd-charcoal transition-all ${
+                  isActive ? "cursor-default" : "hover:font-bold"
+                }`}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
         </div>
       </div>
     </div>
