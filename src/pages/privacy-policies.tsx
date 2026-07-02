@@ -12,9 +12,7 @@ import {
   DatabaseIcon,
   ClockIcon,
   LockIcon,
-  UsersIcon,
   GlobeIcon,
-  BrowserIcon,
   UserIcon,
   SmileyIcon,
   ArrowsClockwiseIcon,
@@ -27,6 +25,13 @@ import {
   ChatCircleIcon,
   CheckCircleIcon,
   CaretDownIcon,
+  GearSixIcon,
+  ChartLineUpIcon,
+  CopyrightIcon,
+  CreditCardIcon,
+  GavelIcon,
+  HandshakeIcon,
+  MapPinIcon,
 } from "@phosphor-icons/react";
 
 type Section = {
@@ -38,160 +43,160 @@ type Section = {
 
 const SECTIONS: Section[] = [
   {
-    title: "1. Information We Collect",
-    summary: "We collect personal information that you voluntarily provide to us when you register on the Site, express an interest in obtaining information about us or our products and services, when you participate in activities on the Site.",
-    detail: "The personal information we collect includes names, email addresses, phone numbers, company names, IP addresses, and usage data. This information is collected to improve your experience and provide better services.",
+    title: "1. Introduction",
+    summary: "MyNextDeveloper, operated by MND Technologies Private Limited (\"us\", \"we\", or \"our\"), operates https://mynextdeveloper.com. This Privacy Policy explains how we collect, safeguard, and disclose information that results from your use of our Service.",
+    detail: "We use your data to provide and improve the Service. By using the Service, you agree to the collection and use of information in accordance with this policy. Unless otherwise defined here, terms used in this Privacy Policy have the same meanings as in our Terms and Conditions, which together with this Privacy Policy constitute your agreement with us (\"Agreement\").",
     Icon: InfoIcon,
   },
   {
-    title: "2. How We Use Your Information",
-    summary: "We use the information we collect in various ways, including to provide, operate, and maintain our website, improve, personalize, and expand our website, and understand and analyze how you use our website.",
-    detail: "We also use your information to develop new products, services, features, and functionality, communicate with you for customer service, updates, and marketing, send emails, find and prevent fraud, and as required by law.",
-    Icon: ChartBarIcon,
-  },
-  {
-    title: "3. How We Protect Your Information",
-    summary: "We implement a variety of security measures to maintain the safety of your personal information when you enter, submit, or access your personal information.",
-    detail: "All sensitive information is transmitted via Secure Socket Layer (SSL) technology and encrypted in our database. Only authorized personnel with special access rights may access this information and are required to keep it confidential.",
-    Icon: ShieldCheckIcon,
-  },
-  {
-    title: "4. Types of Data Collected",
-    summary: "The types of personal information we may collect include your name, email address, phone number, company name, IP address, and usage data.",
-    detail: "Usage data may include information such as your device's IP address, browser type and version, pages visited, time and date of visit, time spent on pages, and unique device identifiers.",
+    title: "2. Definitions",
+    summary: "This section defines the key terms used throughout this Privacy Policy, including Service, Personal Data, Usage Data, Cookies, Candidate, Client, Data Controller, Data Processor, Data Subject, and User.",
+    detail: "Personal Data means data about a living individual who can be identified from that data. Usage Data is data collected automatically from use of the Service or its infrastructure. Cookies are small files stored on your device. A Candidate is the person we introduce to a Client for an Engagement, and a Client is the person we introduce to a Candidate for an Engagement. We act as the Data Controller of your data, determining the purposes and means of processing, and may use Data Processors (Service Providers) to process your data on our behalf. A Data Subject is any living individual who is the subject of Personal Data, and the User is the individual using our Service.",
     Icon: FileTextIcon,
   },
   {
-    title: "5. Use of Data",
-    summary: "We use the collected data for various purposes, including to provide and maintain our service, to notify you about changes to our service, and to provide customer support.",
-    detail: "Data is also used to monitor usage of our Service, detect and address technical issues, provide analysis or valuable information to improve the Service, and fulfill any other purpose for which you provide it.",
+    title: "3. Information Collection and Use",
+    summary: "We collect several different types of information for various purposes to provide and improve our Service to you.",
+    detail: "This includes both information you provide directly and information collected automatically as you use the Service, covered in detail in the sections below on the types of data we collect and how we use it.",
     Icon: DatabaseIcon,
   },
   {
-    title: "6. Data Retention",
-    summary: "We will retain your personal information only for as long as is necessary for the purposes set out in this Privacy Policy unless a longer retention period is required or permitted by law.",
-    detail: "We will retain and use your information to the extent necessary to comply with our legal obligations, resolve disputes, and enforce our legal agreements and policies.",
+    title: "4. Types of Data Collected",
+    summary: "We may collect Personal Data such as your email address, name, and phone number, as well as Usage Data and Cookies, whenever you use our Service.",
+    detail: "Personal Data may include your email address, name, and phone number, and cookies and usage data; we may use this to send newsletters, marketing, or promotional materials, and you can opt out anytime by emailing ops@mynextdeveloper.com. Usage Data includes your IP address, browser type and version, the pages you visit, the time and date of your visit, time spent on pages, and device identifiers, collected whenever you access the Service from a computer or mobile device. We also use Tracking Cookies — Session Cookies to operate the Service, Preference Cookies to remember your settings, and Security Cookies for security purposes — and you can instruct your browser to refuse them, though some parts of the Service may not work as intended.",
+    Icon: ChartBarIcon,
+  },
+  {
+    title: "5. Use of Data",
+    summary: "MyNextDeveloper uses the data we collect to provide, maintain, and improve our Service, and to communicate with you.",
+    detail: "We use your data to provide and maintain the Service; notify you of changes; provide customer support; gather analysis to improve the Service; monitor usage; detect and prevent technical issues; fulfil any other purpose for which you provided it; enforce our contracts, including billing and collection; send account and subscription notices; share news, offers, and information about similar goods or services unless you've opted out; and for any other purpose with your consent.",
+    Icon: GearSixIcon,
+  },
+  {
+    title: "6. Retention of Data",
+    summary: "We retain your Personal Data only for as long as necessary for the purposes set out in this Privacy Policy, or as required by law.",
+    detail: "We retain and use your Personal Data to the extent necessary to comply with our legal obligations, resolve disputes, and enforce our agreements and policies. Usage Data is generally retained for a shorter period, unless it's needed to strengthen security, improve functionality, or we're legally obligated to keep it longer.",
     Icon: ClockIcon,
   },
   {
-    title: "7. Data Security",
-    summary: "The security of your data is important to us, and we implement appropriate technical and organizational measures to protect it.",
-    detail: "However, no method of transmission over the Internet or method of electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your data, we cannot guarantee absolute security.",
-    Icon: LockIcon,
-  },
-  {
-    title: "8. Sharing of Data",
-    summary: "We do not sell your personal information. We may share your information with trusted third parties who assist us in operating our website and conducting our business.",
-    detail: "These third parties are required to maintain the confidentiality of your information and are prohibited from using it for any purpose other than to carry out the services they are performing for us.",
-    Icon: UsersIcon,
-  },
-  {
-    title: "9. Third-Party Services",
-    summary: "Our website may contain links to third-party websites. We are not responsible for the privacy practices or the content of those sites.",
-    detail: "We encourage you to read the Privacy Policy of every website you visit. We have no control over and assume no responsibility for the content, privacy policies, or practices of any third-party sites.",
-    Icon: GlobeIcon,
-  },
-  {
-    title: "10. Cookies and Tracking Technologies",
-    summary: "We use cookies and similar tracking technologies to track activity on our website and hold certain information.",
-    detail: "Cookies are files with a small amount of data which may include an anonymous unique identifier. You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent.",
-    Icon: BrowserIcon,
-  },
-  {
-    title: "11. Your Data Protection Rights",
-    summary: "Depending on your location, you may have the right to access, update, or delete the personal information we hold about you.",
-    detail: "These rights may include the right to access, rectification, erasure, restriction of processing, data portability, and to object. To exercise any of these rights, please contact us.",
+    title: "7. Access, Correction and Deletion of Information",
+    summary: "You can request that we remove or modify any information about your account at any time.",
+    detail: "To permanently remove your data, email us at ops@mynextdeveloper.com, and we will remove your data within 30 days of your request.",
     Icon: UserIcon,
   },
   {
-    title: "12. Children's Privacy",
-    summary: "Our website is not intended for children under the age of 13. We do not knowingly collect personal information from children.",
-    detail: "If you are a parent or guardian and you are aware that your child has provided us with personal data, please contact us so that we can take necessary action.",
-    Icon: SmileyIcon,
+    title: "8. Transfer of Data",
+    summary: "Your information, including Personal Data, may be transferred to and processed on computers located outside your state, province, country, or other jurisdiction.",
+    detail: "If you're located in the European Union, please note that we transfer your data outside the EU and process it there; your consent to this Privacy Policy represents your agreement to that transfer. We take all steps reasonably necessary to ensure your data is treated securely, and no transfer of your Personal Data takes place to an organisation or country without adequate controls in place.",
+    Icon: GlobeIcon,
   },
   {
-    title: "13. Changes to This Privacy Policy",
-    summary: "We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page.",
-    detail: "You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.",
-    Icon: ArrowsClockwiseIcon,
+    title: "9. Disclosure of Data",
+    summary: "We may disclose personal information that we collect, or that you provide, to fulfil the purpose for which you provided it.",
+    detail: "Any disclosure of your personal information is limited to what is necessary to fulfil that stated purpose.",
+    Icon: EyeIcon,
   },
   {
-    title: "14. Changes to Our Service",
-    summary: "We may update or discontinue our Service at any time without notice. We are not liable for any modification, suspension, or discontinuance of the Service.",
-    detail: "We reserve the right to modify or terminate the Service for any reason, without notice at any time. We shall not be liable to you or any third party for any termination of your access to the Service.",
-    Icon: WrenchIcon,
+    title: "10. Security of Data",
+    summary: "The security of your data is important to us, but no method of transmission over the Internet or electronic storage is 100% secure.",
+    detail: "While we strive to use commercially acceptable means to protect your Personal Data, we cannot guarantee its absolute security.",
+    Icon: LockIcon,
   },
   {
-    title: "15. Contact Us",
-    summary: "If you have any questions about this Privacy Policy, please contact us.",
-    detail: "You can reach our privacy team at privacy@mnd.ai or by writing to us at our registered address. We aim to respond to all inquiries within 5 business days.",
-    Icon: EnvelopeSimpleIcon,
+    title: "11. Your Data Protection Rights Under the GDPR",
+    summary: "If you're a resident of the EU or EEA, you have certain data protection rights covered by the General Data Protection Regulation (GDPR).",
+    detail: "We aim to take reasonable steps to allow you to correct, amend, delete, or limit the use of your Personal Data — email ops@mynextdeveloper.com to find out what data we hold or to have it removed. In certain circumstances you have the right to access, update, or delete your information; rectify inaccurate or incomplete information; object to our processing; request we restrict processing; receive a copy of your data in a structured, machine-readable format; and withdraw consent at any time. We may ask you to verify your identity before responding, and we may not be able to provide the Service without some necessary data. You also have the right to complain to a Data Protection Authority in the EEA about our collection and use of your Personal Data.",
+    Icon: ShieldCheckIcon,
+  },
+  {
+    title: "12. Your Data Protection Rights Under CalOPPA",
+    summary: "CalOPPA requires commercial websites and online services that collect personally identifiable information from California consumers to post a privacy policy.",
+    detail: "In line with CalOPPA, we agree that: users can visit our site anonymously; our Privacy Policy link includes the word \"Privacy\" and is easy to find on our homepage; users will be notified of any changes on our Privacy Policy page; and users can change their personal information by emailing ops@mynextdeveloper.com.",
+    Icon: ScalesIcon,
+  },
+  {
+    title: "13. Analytics",
+    summary: "We use third-party Service Providers, including Google Analytics, to monitor and analyze the use of our Service.",
+    detail: "Google Analytics tracks and reports website traffic, and Google may use the collected data to contextualise and personalise ads across its own advertising network. You can read more about Google's privacy practices at https://policies.google.com/privacy?hl=en and its data safeguards at https://support.google.com/analytics/answer/6004245.",
+    Icon: ChartLineUpIcon,
+  },
+  {
+    title: "14. Intellectual Property",
+    summary: "The Service and its original content, features, and functionality remain the exclusive property of MyNextDeveloper and its licensors.",
+    detail: "The Service is protected by copyright, trademark, and other applicable laws, and our trademarks and trade dress may not be used without our prior written consent.",
+    Icon: CopyrightIcon,
+  },
+  {
+    title: "15. Payments",
+    summary: "We may offer paid products or services and use third-party payment processors to handle payments; we do not store or collect your card details ourselves.",
+    detail: "Payment information is provided directly to our third-party payment processors, whose use of your information is governed by their own Privacy Policy, and who adhere to PCI-DSS standards for secure handling of payment data. The payment processors we may work with include Razorpay (https://razorpay.com/privacy/) and Stripe (https://stripe.com/en-in/privacy).",
+    Icon: CreditCardIcon,
   },
   {
     title: "16. Links to Other Sites",
-    summary: "Our website may contain links to other websites that are not operated by us. We encourage you to review the Privacy Policy of every site you visit.",
-    detail: "We have no control over and assume no responsibility for the content, privacy policies, or practices of any third-party sites or services.",
+    summary: "Our Service may contain links to third-party sites that are not operated by us.",
+    detail: "We strongly advise you to review the Privacy Policy of every site you visit — we have no control over and assume no responsibility for the content, privacy policies, or practices of any third-party sites or services.",
     Icon: LinkIcon,
   },
   {
-    title: "17. Policy of Privacy",
-    summary: "Only our Privacy Policy governs the collection, use and disclosure of your information by MND.",
-    detail: "Any representations made by our employees or agents that contradict this Policy are not authorized and should be disregarded.",
-    Icon: FileTextIcon,
+    title: "17. Children's Privacy",
+    summary: "Our Services are not intended for use by children under the age of 13, and we do not knowingly collect personal information from them.",
+    detail: "If you become aware that a child has provided us with Personal Data, please contact us; if we discover we've collected data from a child without verified parental consent, we take steps to remove it from our servers.",
+    Icon: SmileyIcon,
   },
   {
-    title: "18. Change to This Privacy Policy",
-    summary: "We may update our Privacy Policy at any time. We will let you know about any changes by posting the new Privacy Policy on this page.",
-    detail: "We will update the \"Last updated\" date of this Privacy Policy when it is revised. It is your responsibility to review this Privacy Policy periodically.",
+    title: "18. Changes to This Privacy Policy",
+    summary: "We may update this Privacy Policy at any time by posting the revised version on this page.",
+    detail: "We may notify you via email and/or a prominent notice on our Service about changes taking effect, and update the effective date at the top of this page. It's your responsibility to review this Privacy Policy periodically — changes are effective as soon as they're posted.",
     Icon: ArrowsClockwiseIcon,
   },
   {
     title: "19. Changes to Service",
-    summary: "We may update or discontinue our Service at any time without notice. We are not liable for any modification, suspension, or discontinuance of the Service.",
-    detail: "MND is constantly updating its offerings and services and may change or discontinue any product or service at any time with or without notice.",
+    summary: "We reserve the right to withdraw or amend our Service, or any part of it, at our sole discretion and without notice.",
+    detail: "We will not be liable if all or any part of the Service is unavailable at any time, and from time to time we may restrict access to some or all of the Service, including for registered users.",
     Icon: WrenchIcon,
   },
   {
-    title: "20. Your Consent and Withdraw",
-    summary: "By using our website, you hereby consent to our Privacy Policy and agree to its terms.",
-    detail: "You may withdraw your consent at any time by contacting us. However, this will not affect the lawfulness of any processing based on consent before its withdrawal.",
-    Icon: ClockIcon,
-  },
-  {
-    title: "21. Governing Law",
-    summary: "This Privacy Policy shall be governed and construed in accordance with the laws of your jurisdiction.",
-    detail: "Our failure to enforce any right or provision of this Privacy Policy will not be considered a waiver of those rights.",
-    Icon: ScalesIcon,
-  },
-  {
-    title: "22. Disclosure of Your Data",
-    summary: "We may disclose your personal data if required to do so by law or in response to valid requests by public authorities.",
-    detail: "We may also disclose your data to enforce our policies, protect ours or others' rights, property, or safety, or in connection with any merger, acquisition, or sale of company assets.",
-    Icon: EyeIcon,
-  },
-  {
-    title: "23. Limitation of Liability",
-    summary: "MND shall not be liable for any indirect, incidental, or consequential damages arising out of or in connection with the use of this website.",
-    detail: "In no event shall MND, its directors, employees, partners, agents, suppliers, or affiliates, be liable for any loss or damage, direct or indirect, incidental, special, punitive, or consequential including loss of profits, data, use, goodwill, or other intangible losses.",
-    Icon: WarningIcon,
-  },
-  {
-    title: "24. Your Feedback",
-    summary: "We welcome your feedback on this Privacy Policy. Please contact us with any questions or suggestions.",
-    detail: "Your feedback helps us improve our policies and practices. We value your input and are committed to continuously improving our approach to privacy.",
+    title: "20. Error Reporting and Feedback",
+    summary: "You may send us feedback, error reports, and suggestions directly at ops@mynextdeveloper.com.",
+    detail: "By submitting feedback you agree that you won't assert any intellectual property rights over it, that we may have similar ideas independently, that it contains no confidential or third-party proprietary information, and that we're under no obligation of confidentiality regarding it. Where ownership transfer isn't legally possible, you grant us an exclusive, transferable, irrevocable, royalty-free, sub-licensable, and perpetual right to use your feedback in any manner and for any purpose.",
     Icon: ChatCircleIcon,
   },
   {
-    title: "25. Acknowledgment",
-    summary: "By using our website, you acknowledge that you have read and understood this Privacy Policy.",
-    detail: "Continued use of our site following the posting of changes to this Privacy Policy will be deemed as your acceptance of those changes.",
+    title: "21. Governing Law",
+    summary: "These Terms are governed by the laws of India, without regard to its conflict of law provisions.",
+    detail: "Our failure to enforce any right or provision of these Terms is not a waiver of those rights. If any provision is held invalid or unenforceable, the remaining provisions remain in effect, and these Terms constitute the entire agreement between us regarding the Service.",
+    Icon: GavelIcon,
+  },
+  {
+    title: "22. Disclaimer of Warranty",
+    summary: "Our services are provided on an \"as is\" and \"as available\" basis, without warranties of any kind, express or implied.",
+    detail: "We make no representations or warranties as to the completeness, security, reliability, accuracy, or availability of the Service, and your use of it is at your sole risk. We disclaim all warranties, including merchantability, non-infringement, and fitness for a particular purpose, except where such disclaimers cannot be excluded or limited under applicable law.",
+    Icon: WarningIcon,
+  },
+  {
+    title: "23. Limitation of Liability",
+    summary: "Except as prohibited by law, you agree to hold us and our officers, directors, employees, and agents harmless for any indirect, punitive, special, incidental, or consequential damages arising from this Agreement.",
+    detail: "If liability is found on our part, it will be limited to the amount paid for the products and/or services, and under no circumstances will there be consequential or punitive damages. Some states do not allow the exclusion or limitation of certain damages, so this limitation may not apply to you.",
+    Icon: ScalesIcon,
+  },
+  {
+    title: "24. Non-Solicitation",
+    summary: "Candidates and Clients acknowledge the significant effort we put into matching them, and agree not to circumvent us or deal directly without our prior written authorisation.",
+    detail: "This restriction applies during the tenure of any contract, or for twenty-four (24) months from the date of introduction, whichever is later, and covers any engagements or introductions. If a Client or Candidate solicits or works together without our consent, they will be liable to pay us a one-time fee equal to two (2) times the yearly cost we charged the Client.",
+    Icon: HandshakeIcon,
+  },
+  {
+    title: "25. Acknowledgement",
+    summary: "By using our Service, you acknowledge that you have read these Terms of Service and agree to be bound by them.",
+    detail: "Continued use of the Service after any changes are posted constitutes your acceptance of those changes.",
     Icon: CheckCircleIcon,
   },
   {
     title: "26. Contact Us",
-    summary: "For any privacy-related inquiries, please contact us.",
-    detail: "Email us at privacy@mnd.ai or write to us at our registered address. We are committed to working with you to obtain a fair resolution.",
-    Icon: EnvelopeSimpleIcon,
+    summary: "If you have any questions about this Privacy Policy, you can reach us by email or post.",
+    detail: "By email: ops@mynextdeveloper.com. By post: MND Technologies Private Limited, 6, 1st Floor, Kamala Niketan, Dr. Bhagvan Indrjit Road, Malabar Hill, Mumbai – 400006.",
+    Icon: MapPinIcon,
   },
 ];
 
@@ -209,8 +214,8 @@ export default function PrivacyPolicy() {
   return (
     <>
       <Head>
-        <title>Privacy Policy – MND</title>
-        <meta name="description" content="MND Privacy Policy" />
+        <title>Privacy Policy – MyNextDeveloper</title>
+        <meta name="description" content="MyNextDeveloper Privacy Policy" />
       </Head>
 
       {/* Page wrapper */}
@@ -228,11 +233,11 @@ export default function PrivacyPolicy() {
             <ShieldCheckIcon size={18} weight="bold" className="text-mnd-charcoal" />
           </div>
           <h1 className="font-playfair text-3xl md:text-5xl font-normal tracking-tight text-mnd-charcoal mb-3">Privacy Policy</h1>
-          <p className="text-sm text-mnd-charcoal">Last updated: May 15, 2024</p>
+          <p className="text-sm text-mnd-charcoal">Last updated: February 1, 2023</p>
           {/* Intro text */}
           <div className="mt-6 space-y-3 text-sm text-mnd-charcoal leading-relaxed">
-            <p>At MND, accessible from <span className="text-mnd-charcoal">https://mnd.ai</span>, one of our main priorities is the privacy of our visitors.</p>
-            <p>This Privacy Policy document contains types of information that is collected and recorded by MND and how we use it.</p>
+            <p>MyNextDeveloper, accessible from <span className="text-mnd-charcoal">https://mynextdeveloper.com</span>, is operated by MND Technologies Private Limited.</p>
+            <p>This Privacy Policy explains how we collect, safeguard, and disclose information that results from your use of our Service, and by using the Service you agree to the collection and use of information in accordance with this policy.</p>
             <p>If you have additional questions or require more information about our Privacy Policy, do not hesitate to contact us.</p>
           </div>
         </div>
@@ -302,7 +307,7 @@ export default function PrivacyPolicy() {
             </div>
             {/* Contact button */}
             <Link
-              href="mailto:privacy@mnd.ai"
+              href="mailto:ops@mynextdeveloper.com"
               className="w-full sm:w-auto text-center px-5 md:px-8 py-2 bg-mnd-navy text-white rounded-full text-[12px] whitespace-nowrap font-semibold uppercase transition-all duration-200 hover:scale-[1.05] hover:shadow-[0_6px_20px_rgba(2,48,71,0.4)] active:scale-[0.96] active:shadow-none"
             >
               Contact Us

@@ -41,7 +41,7 @@ const WorkSection = forwardRef<HTMLElement>((_, ref) => {
       </p>
       {/* Engagement model pills */}
       <div className="flex flex-wrap items-center justify-center gap-3 md:gap-12 pt-4 md:pt-10">
-        {(["BY THE HOUR", "QUICK PLACEMENT & REPLACEMENT", "NO QUESTIONS ASKED"] as const).map((text, i) => {
+        {(["ON YOUR CLOCK", "QUICK PLACEMENT & REPLACEMENT", "NO QUESTIONS ASKED"] as const).map((text, i) => {
           const delays = ["[transition-delay:1300ms]", "[transition-delay:1600ms]", "[transition-delay:1900ms]"];
           return (
             <div key={text} className={`[perspective:600px] cursor-pointer ${animate(delays[i])}`}>

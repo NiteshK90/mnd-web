@@ -5,29 +5,29 @@ const members = [
     name: "JIGAR MEHTA",
     role: "Co-founder",
     image: "/founders/jigar.png",
-    experience: ["B.E. (Computers)", "12+ years of Experience", "Previously Book My Show"],
-    body: "Jigar - As a core engineer at BookMyShow, scaled systems to 100k+ requests per minute and delivered a PWA featured at Google Dev Fest that drove 80% conversion growth within months of launch. He founded MyNextDeveloper to bring that same standard to AI-native products, and has since co-founded Tabb and Transcrisp — proving he can go from idea to product.",
+    experience: ["B.E. (Computers)", "12+ years of Exp.", "Prev. Book My Show"],
+    body: "Jigar has built products that don't break under pressure, from scaling BookMyShow systems to 100k+ requests/min to founding ventures of his own. He knows great engineering starts with great engineers.",
   },
   {
     name: "PALOMI JAIN",
     role: "Co-founder",
     image: "/founders/palomi.png",
-    experience: ["Business Mgt & Entrepreneurship", "7+ years of Experience", "Previously Studysid"],
-    body: "Palomi has spent her career at the sharp end of building startups — driving a 3x increase in student enrolments for an edtech platform, then co-founding a Seed-backed global developer marketplace. She owns growth, operations and client experience end to end, and she knows how to make early-stage businesses scale.",
+    experience: ["Business Mgt", "7+ years of Exp.", "Prev. Studysid"],
+    body: "Palomi turns early ideas into thriving businesses. From scaling an edtech platform to co-founding a global developer marketplace, she knows what ambitious teams really need to succeed.",
   },
   {
     name: "PARTH SHAH",
     role: "Co-founder",
     image: "/founders/parth.png",
-    experience: ["B.E. (Computers)", "12+ years of Experience", "Previously Housing, Mindtickle"],
-    body: "Parth - As CTO and co-founder of Studysid, raised $500K and took a consumer product from idea to launch - then went on to found MyNextDeveloper, bringing the same execution to AI-native products. His engineering foundation was built at Mindtickle, a VC-backed enterprise platform trusted by global sales teams and Housing.com. He's a repeat founder who knows how to build, raise, and ship.",
+    experience: ["B.E. (Computers)", "12+ years of Exp.", "Prev. Mindtickle"],
+    body: "For fifteen years, Parth has turned ideas into products, products into companies, and companies into lessons. A repeat founder and engineer, he brings the rare mix of technical depth and founder instinct to MND.",
   },
   {
     name: "PURAB SHAH",
     role: "Co-founder",
     image: "/founders/purab.png",
-    experience: ["PGD in ML & AI & B.E. (IT)", "12+ years of Experience", "Previously Media.Net"],
-    body: "Purab has already done what most technical founders only claim — built a product, taken it to market, and acquired paying customers with InvoiceStream, his AI invoicing and cash flow platform. He earned that right through a decade of high-stakes product work, including leading Forbes' web platform at 1 million+ users and designing Airpay's payment experience from scratch with a 50% load-time gain. He is the kind of builder who turns ambition into something investors can point to.",
+    experience: ["PGD in ML & AI", "12+ years of Exp.", "Prev. Media.Net"],
+    body: "Purab knows the difference between a product that works and a product that wins. With a decade of building at scale, he brings thoughtful engineering and product craft to MND.",
   },
 ];
 
@@ -73,19 +73,19 @@ const TeamSection = forwardRef<HTMLElement>((_, ref) => {
         </div>
 
         {/* Member card grid */}
-        <div className="flex flex-row md:grid md:grid-cols-2 gap-4 md:gap-6 overflow-x-auto md:overflow-visible w-full md:w-auto pb-3 md:pb-0">
+        <div className="flex flex-row md:grid md:grid-cols-2 gap-8 md:gap-12 overflow-x-auto md:overflow-visible w-full md:w-auto pb-3 md:pb-0">
           {members.map((member, i) => {
             return (
-            <div key={i} className={`bg-white rounded-[20px] md:rounded-[24px] py-4 md:py-4 px-3 md:px-4 shadow-card flex flex-col justify-between gap-1 md:gap-2 flex-shrink-0 w-[72vw] md:w-auto ${base} ${inView ? visible : hidden}`} style={{ transitionDelay: inView ? `${200 + i * 200}ms` : "0ms" }}>
+            <div key={i} className={`bg-white rounded-[20px] md:rounded-[24px] py-4 md:py-6 px-5 md:px-7 shadow-card flex flex-col gap-3 md:gap-4 flex-shrink-0 w-[78vw] md:w-auto md:max-w-[300px] ${base} ${inView ? visible : hidden}`} style={{ transitionDelay: inView ? `${200 + i * 200}ms` : "0ms" }}>
               <div className="flex flex-col gap-2 md:gap-3">
                 {/* Avatar + name/role */}
-                <div className="flex gap-3 md:gap-5 items-start">
-                  <div className="w-[60px] h-[60px] md:w-[72px] md:h-[72px] rounded-full overflow-hidden shrink-0">
+                <div className="flex gap-4 md:gap-5 items-center">
+                  <div className="w-[76px] h-[76px] md:w-[120px] md:h-[120px] rounded-full overflow-hidden shrink-0">
                     <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
                   </div>
                   <div className="flex flex-col gap-1 md:gap-2">
-                    <p className="font-inter text-[10px] font-normal tracking-[0.12em] uppercase text-mnd-charcoal">{member.name}</p>
-                    <div className="font-inter text-[10px] font-normal leading-[1.5] text-mnd-charcoal">
+                    <p className="font-inter text-[12px] font-bold leading-[1.4] tracking-[0.08em] uppercase text-mnd-charcoal">{member.name}</p>
+                    <div className="flex flex-col gap-1 md:gap-2 font-inter text-[10px] font-normal leading-[1.5] tracking-[0] text-mnd-charcoal">
                       <div>{member.role}</div>
                       {member.experience.map((line, j) => (
                         <div key={j}>{line}</div>
@@ -96,7 +96,7 @@ const TeamSection = forwardRef<HTMLElement>((_, ref) => {
               </div>
               <div className="w-[36px] md:w-[40px] h-[3px] bg-mnd-charcoal my-1 md:my-1" />
               {/* Member bio */}
-              <p className="font-inter text-[10px] font-normal leading-widest text-mnd-charcoal max-w-full md:max-w-[280px]">
+              <p className="font-inter text-[10px] font-normal leading-widest text-mnd-charcoal">
                 {member.body}
               </p>
             </div>
