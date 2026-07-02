@@ -2,6 +2,7 @@
 
 import React, { forwardRef, useState, useRef, useEffect } from "react";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { PhoneIcon, PencilLineIcon, MapPinIcon, CaretUpIcon, ArrowRightIcon } from "@phosphor-icons/react";
 
 const navColumns = [
@@ -37,6 +38,7 @@ const navColumns = [
 ];
 
 const FooterSection = forwardRef<HTMLElement, { containerId?: string }>(({ containerId = "landing-container" }, ref) => {
+  const router = useRouter();
   const [inView, setInView] = useState(false);
   const [barInView, setBarInView] = useState(false);
   const footerRef = useRef<HTMLElement | null>(null);
@@ -123,7 +125,7 @@ const FooterSection = forwardRef<HTMLElement, { containerId?: string }>(({ conta
 
           {/* Brand: logo + copyright */}
           <div className="flex flex-col gap-3 flex-[0_0_260px] max-md:flex-none">
-            {(() => { const a = barAnimate(0); return <Link href="/"><img src="/mnd-white-logo.png" alt="MyNextDeveloper" className={`w-36 h-auto block mt-1 ${a.cls}`} style={a.sty} /></Link>; })()}
+            {(() => { const a = barAnimate(0); const isActive = router.pathname === "/"; return <Link href="/" aria-disabled={isActive}><img src="/mnd-white-logo.png" alt="MyNextDeveloper" className={`w-36 h-auto block mt-1 ${isActive ? "cursor-default" : "cursor-pointer"} ${a.cls}`} style={a.sty} /></Link>; })()}
             {(() => { const a = barAnimate(120); return <p className={`text-[10px] font-light italic text-white tracking-wide leading-relaxed ${a.cls}`} style={a.sty}>2026 | All Rights Reserved</p>; })()}
           </div>
 
@@ -140,12 +142,16 @@ const FooterSection = forwardRef<HTMLElement, { containerId?: string }>(({ conta
                   {(() => { const a = barAnimate(seq++ * 120); return <span className={`text-[13px] font-semibold text-white tracking-wide mb-1 ${a.cls}`} style={a.sty}>{col.title}</span>; })()}
                   {col.links.map((link) => {
                     const a = barAnimate(seq++ * 120);
+                    const isActive = link.href.split("#")[0] === router.pathname;
                     return (
                       <div key={link.label} className={a.cls} style={a.sty}>
                         <Link
                           href={link.href}
+                          aria-disabled={isActive}
                           {...("external" in link && link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-                          className="inline-flex items-center gap-1.5 text-[13px] font-normal text-white/70 hover:text-white transition-colors duration-150"
+                          className={`inline-flex items-center gap-1.5 text-[13px] font-normal text-white/70 transition-colors duration-150 ${
+                            isActive ? "cursor-default" : "hover:text-white"
+                          }`}
                         >
                           {"icon" in link && link.icon ? <link.icon size={14} /> : null}
                           {link.label}
