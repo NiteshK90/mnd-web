@@ -50,7 +50,7 @@ const AISection = forwardRef<HTMLElement>((_, ref) => {
             engineers on bench for<br />
             you.
           </p>
-          <Link href="mailto:hello@mynextdeveloper.com?subject=Schedule a Call" className={`flex items-center gap-2 px-4 h-10 bg-mnd-navy text-white rounded-full w-fit transition-all duration-200 hover:scale-[1.05] hover:shadow-[0_6px_20px_rgba(2,48,71,0.4)] active:scale-[0.96] active:shadow-none ${animate("[transition-delay:800ms]")}`}>
+          <Link href="https://cal.com/jigarmehta/immediate-meeting" target="_blank" rel="noopener noreferrer" className={`flex items-center gap-2 px-4 h-10 bg-mnd-navy text-white rounded-full w-fit transition-all duration-200 hover:scale-[1.05] hover:shadow-[0_6px_20px_rgba(2,48,71,0.4)] active:scale-[0.96] active:shadow-none ${animate("[transition-delay:800ms]")}`}>
             <span className="font-inter text-xs font-semibold">Schedule a Call</span>
             <ArrowRight color="white" size={32} strokeWidth={1} />
           </Link>
