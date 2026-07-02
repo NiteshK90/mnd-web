@@ -2,6 +2,7 @@ import { useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
+import FooterSection from "@/components/sections/FooterSection";
 import type { Icon } from "@phosphor-icons/react";
 import {
   InfoIcon,
@@ -310,6 +311,8 @@ export default function PrivacyPolicy() {
         </div>
 
       </div>
+
+      <FooterSection />
     </>
   );
 }

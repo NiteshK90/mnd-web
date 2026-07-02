@@ -9,10 +9,10 @@ interface NavbarProps {
 }
 
 const navLinks = [
-  { label: "The MND way", href: "/mnd-way" },
-  { label: "We do more stuff", href: "/other-stuff" },
-  { label: "The MND Corner", href: "/mnd-corner" },
-  { label: "Be our people", href: "/our-people" },
+  { label: "The MND way", href: "/the-mnd-way" },
+  { label: "We do more stuff", href: "/we-do-more-stuff" },
+  { label: "The MND Corner", href: "/the-mnd-corner" },
+  { label: "Be our people", href: "/be-our-people" },
 ];
 
 export default function Navbar({ minimal = false, showBorder = false }: NavbarProps) {

@@ -8,10 +8,10 @@ const navColumns = [
   {
     title: "Explore",
     links: [
-      { label: "Values", href: "/mnd-way#values" },
-      { label: "Other Services", href: "/other-stuff" },
-      { label: "Resources", href: "/mnd-corner" },
-      { label: "Relationships", href: "/our-people" },
+      { label: "Values", href: "/the-mnd-way#values" },
+      { label: "Other Services", href: "/we-do-more-stuff" },
+      { label: "Resources", href: "/the-mnd-corner" },
+      { label: "Relationships", href: "/be-our-people" },
     ],
   },
   {
@@ -91,7 +91,7 @@ const FooterSection = forwardRef<HTMLElement, { containerId?: string }>(({ conta
         {/* Scroll to top */}
         <div className={`flex justify-center pt-5 ${animate("[transition-delay:0ms]")}`}>
           <button
-            onClick={() => document.getElementById(containerId)?.scrollTo({ top: 0, behavior: "smooth" })}
+            onClick={() => (document.getElementById(containerId) ?? window).scrollTo({ top: 0, behavior: "smooth" })}
             aria-label="Scroll to top"
             className="w-12 h-12 rounded-full border-[1.5px] border-[#0D0D0F] bg-transparent flex items-center justify-center cursor-pointer text-[#0D0D0F] transition-colors duration-150 hover:bg-[#0D0D0F] hover:text-white"
           >
